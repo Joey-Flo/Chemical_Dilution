@@ -1,0 +1,18 @@
+/*
+ * PWMDriver.h
+ *
+ *  Created on: Jul 25, 2025
+ *      Author: joeyf
+ */
+
+#ifndef INC_PWMDRIVER_H_
+#define INC_PWMDRIVER_H_
+
+#include "main.h"
+#include "HAL_Init.h"
+
+void DutyCycleAdjust(TIM_HandleTypeDef* htim, uint32_t channel, uint8_t duty_cycle_percent);
+void FrequencyAdjust(TIM_HandleTypeDef* htim, uint32_t channel, uint32_t frequency_hz);
+
+
+#endif /* INC_PWMDRIVER_H_ */

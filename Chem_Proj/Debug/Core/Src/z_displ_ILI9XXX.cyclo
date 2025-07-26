@@ -1,0 +1,15 @@
+../Core/Src/z_displ_ILI9XXX.c:58:6:Displ_Select	2
+../Core/Src/z_displ_ILI9XXX.c:79:6:Displ_Transmit	6
+../Core/Src/z_displ_ILI9XXX.c:143:6:Displ_WriteCommand	1
+../Core/Src/z_displ_ILI9XXX.c:156:6:Displ_WriteData	2
+../Core/Src/z_displ_ILI9XXX.c:168:6:ILI9XXX_Init	1
+../Core/Src/z_displ_ILI9XXX.c:259:6:Displ_SetAddressWindow	1
+../Core/Src/z_displ_ILI9XXX.c:279:6:Displ_Init	1
+../Core/Src/z_displ_ILI9XXX.c:303:6:Displ_Orientation	5
+../Core/Src/z_displ_ILI9XXX.c:335:6:HAL_SPI_ErrorCallback	2
+../Core/Src/z_displ_ILI9XXX.c:346:6:HAL_SPI_TxCpltCallback	2
+../Core/Src/z_displ_ILI9XXX.c:366:6:Displ_FillArea	11
+../Core/Src/z_displ_ILI9XXX.c:1128:11:Displ_BackLight	12
+../Core/Src/z_displ_ILI9XXX.c:1197:5:touchgfxDisplayDriverTransmitActive	1
+../Core/Src/z_displ_ILI9XXX.c:1211:6:touchgfxDisplayDriverTransmitBlock	1
+../Core/Src/z_displ_ILI9XXX.c:1227:6:HAL_TIM_PeriodElapsedCallback	2

@@ -1,0 +1,13 @@
+2025-07-25 22:06:37,828 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-25 22:18:43,157 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-25 22:18:47,326 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-25 22:18:54,944 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2025-07-25 22:19:00,358 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Read timed out
+2025-07-25 22:19:29,455 [INFO] WebApp:191 - Connection restablished
+2025-07-25 22:20:01,594 [INFO] WebApp:194 - Connection lost
+2025-07-25 22:20:03,058 [INFO] WebApp:191 - Connection restablished
+2025-07-25 22:24:41,281 [ERROR] AdobePublisher:187 - Exception while getting the server answer: java.net.SocketTimeoutException: Read timed out
+2025-07-25 22:24:44,717 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-25 22:24:49,302 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-25 22:26:03,639 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-25 23:56:19,106 [INFO] WebApp:194 - Connection lost

@@ -1,0 +1,26 @@
+/*
+ * MuxDriver.c
+ *
+ *  Created on: Jul 26, 2025
+ *      Author: joeyf
+ */
+#include "MuxDriver.h"
+
+int8_t BinaryLookup[8][3] = {
+    {0,0,0}, // Row 0
+    {0,0,1}, // Row 1
+    {0,1,0}, // Row 2
+    {0,1,1}, // Row 3
+    {1,0,0}, // Row 4
+    {1,0,1}, // Row 5
+    {1,1,0}, // Row 6
+    {1,1,1}  // Row 7
+};
+
+int8_t PinLookup[3] = {MUX_CTRL_A_Pin, MUX_CTRL_B_Pin, MUX_CTRL_C_Pin};
+
+HAL_GPIO_WritePin(GPIOC, uint16_t GPIO_Pin, GPIO_PinState PinState)
+
+void PumpChannelSelect(int8_t outputnum){
+
+}

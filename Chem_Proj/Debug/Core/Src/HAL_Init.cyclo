@@ -1,0 +1,9 @@
+../Core/Src/HAL_Init.c:14:6:SystemClock_Config	4
+../Core/Src/HAL_Init.c:64:6:MX_CRC_Init	2
+../Core/Src/HAL_Init.c:95:6:MX_SPI1_Init	2
+../Core/Src/HAL_Init.c:135:6:MX_TIM2_Init	6
+../Core/Src/HAL_Init.c:194:6:MX_TIM3_Init	4
+../Core/Src/HAL_Init.c:239:6:MX_TIM4_Init	6
+../Core/Src/HAL_Init.c:298:6:MX_TIM5_Init	6
+../Core/Src/HAL_Init.c:355:6:MX_DMA_Init	1
+../Core/Src/HAL_Init.c:373:6:MX_GPIO_Init	1

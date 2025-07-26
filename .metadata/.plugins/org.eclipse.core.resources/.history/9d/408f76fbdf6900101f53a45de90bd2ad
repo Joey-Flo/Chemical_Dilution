@@ -1,0 +1,123 @@
+#include "PWMDriver.h"
+#include "stm32l4xx_hal.h"
+#include "stm32l4xx_hal_rcc.h" // Specifically for RCC macros
+#include "hx711.h"              // For hx711_t and related functions
+#include <math.h>               // For floating point operations like fabsf
+#include "main.h"
+#include "HAL_Init.h"
+/* Private variables ---------------------------------------------------------*/
+// External declarations for HAL Peripheral Handles (must be defined in tim.c)
+extern TIM_HandleTypeDef htim4; // Still needed if WeightPWM specifically uses TIM4
+
+// External declaration for the helper function (must be defined elsewhere in main.c or a linked file)
+extern uint32_t get_tim_clock_freq(TIM_HandleTypeDef* htim);
+
+// Removed TIM4_FIXED_PRESCALER as it will now be read from the htim struct.
+
+/* Function Definitions ------------------------------------------------------*/
+
+/**
+  * @brief  Calculates the actual clock frequency supplied to a given timer.
+  * This accounts for the APB prescaler affecting timer clocks.
+  * @param  htim: Pointer to the TIM_HandleTypeDef structure.
+  * @retval Timer clock frequency in Hz.
+  */
+uint32_t get_tim_clock_freq(TIM_HandleTypeDef* htim) {
+    uint32_t pclk_freq;
+    // Determine which APB bus the timer is on
+    // Explicitly cast htim->Instance to (TIM_TypeDef*) to resolve "comparison of distinct pointer types" warning
+    if ((TIM_TypeDef*)htim->Instance == TIM2 || (TIM_TypeDef*)htim->Instance == TIM3 || (TIM_TypeDef*)htim->Instance == TIM4 || (TIM_TypeDef*)htim->Instance == TIM5 ||
+        (TIM_TypeDef*)htim->Instance == TIM6 || (TIM_TypeDef*)htim->Instance == TIM7 || (TIM_TypeDef*)htim->Instance == LPTIM1) {
+        pclk_freq = HAL_RCC_GetPCLK1Freq();
+        // If APB1 prescaler is not 1, the timer clock is PCLK1 * 2
+        if (__HAL_RCC_GET_APB1_PRESALER() != RCC_HCLK_DIV1) {
+            return pclk_freq * 2;
+        }
+    } else { // Assume APB2 for other timers (TIM1, TIM8, TIM15, TIM16, TIM17)
+        pclk_freq = HAL_RCC_GetPCLK2Freq();
+        // If APB2 prescaler is not 1, the timer clock is PCLK2 * 2
+        if (__HAL_RCC_GET_APB2_PRESALER() != RCC_HCLK_DIV1) {
+            return pclk_freq * 2;
+        }
+    }
+    return pclk_freq;
+}
+
+/**
+  * @brief  Adjusts the PWM duty cycle for a specified timer and channel.
+  * @param  htim: Pointer to the TIM_HandleTypeDef structure for the timer.
+  * @param  channel: The timer channel to adjust (e.g., TIM_CHANNEL_1).
+  * @param  duty_cycle_percent: Desired duty cycle in percentage (0-100).
+  * @retval None
+  */
+void DutyCycleAdjust(TIM_HandleTypeDef* htim, uint32_t channel, uint8_t duty_cycle_percent)
+{
+    // Clamp the input to ensure it's within 0-100%
+    if (duty_cycle_percent > 100) {
+        duty_cycle_percent = 100;
+    }
+
+    // Get the current period (ARR) of the timer
+    uint32_t current_period = __HAL_TIM_GET_AUTORELOAD(htim);
+
+    // Calculate the new pulse value (CCR) based on the desired duty cycle and current period
+    // Pulse = (Duty_Cycle_Percentage / 100.0f) * (Period + 1)
+    uint32_t new_pulse = (uint32_t)(((float)duty_cycle_percent / 100.0f) * (current_period + 1.0f));
+
+    // Update the Capture/Compare Register for the specified channel
+    __HAL_TIM_SET_COMPARE(htim, channel, new_pulse);
+}
+
+/**
+  * @brief  Adjusts the PWM frequency for a specified timer and channel.
+  * This function also attempts to maintain the current percentage duty cycle.
+  * @param  htim: Pointer to the TIM_HandleTypeDef structure for the timer.
+  * @param  channel: The timer channel to adjust (e.g., TIM_CHANNEL_1).
+  * @param  frequency_hz: Desired frequency in Hz.
+  * @retval None
+  */
+void FrequencyAdjust(TIM_HandleTypeDef* htim, uint32_t channel, uint32_t frequency_hz)
+{
+    // Get the timer's input clock frequency
+    uint32_t timer_clock_freq = get_tim_clock_freq(htim);
+
+    // Get the current duty cycle percentage to maintain it
+    uint32_t current_period = __HAL_TIM_GET_AUTORELOAD(htim);
+    uint32_t current_pulse = __HAL_TIM_GET_COMPARE(htim, channel);
+    float current_duty_cycle_percent = 0.0f;
+    // Avoid division by zero if current_period is 0 (shouldn't happen with proper init)
+    if (current_period > 0) {
+        current_duty_cycle_percent = ((float)current_pulse / (current_period + 1.0f)) * 100.0f;
+    }
+
+    // Get the prescaler value used by this specific timer instance
+    uint32_t actual_prescaler = htim->Init.Prescaler; // This is the value set in MX_TIMx_Init
+
+    // Calculate the new period (ARR) for the desired frequency
+    // Period = (Timer_Clock / ((Prescaler + 1) * Frequency)) - 1
+    uint32_t new_period;
+    if (frequency_hz > 0) { // Avoid division by zero
+        new_period = (uint32_t)(((float)timer_clock_freq / ((float)(actual_prescaler + 1) * frequency_hz)) - 1.0f);
+    } else {
+        new_period = 0; // Set to 0 or a very small value to effectively stop/minimize PWM
+    }
+
+    // Ensure period is at least 1 for valid PWM operation
+    if (new_period < 1) {
+        new_period = 1;
+    }
+
+    // Calculate the new pulse (CCR) to maintain the percentage duty cycle with the new period
+    // Pulse = (Current_Duty_Cycle_Percentage / 100.0f) * (New_Period + 1)
+    uint32_t new_pulse = (uint32_t)((current_duty_cycle_percent / 100.0f) * (new_period + 1.0f));
+
+    // Clamp new_pulse to ensure it doesn't exceed new_period + 1
+    if (new_pulse > (new_period + 1)) {
+        new_pulse = (new_period + 1);
+    }
+
+    // Update the Auto-Reload Register (Period)
+    __HAL_TIM_SET_AUTORELOAD(htim, new_period);
+    // Update the Capture/Compare Register (Pulse)
+    __HAL_TIM_SET_COMPARE(htim, channel, new_pulse);
+}

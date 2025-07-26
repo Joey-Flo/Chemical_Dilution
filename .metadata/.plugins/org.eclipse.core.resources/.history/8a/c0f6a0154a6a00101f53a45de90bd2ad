@@ -1,0 +1,156 @@
+/*
+ * BuzzerTest.c
+ *
+ *  Created on: Jul 25, 2025
+ *      Author: joeyf
+ */
+#include "BuzzerTest.h"
+#include "main.h"
+#include "PWMDriver.h"
+
+#define NOTE_C4  262
+#define NOTE_D4  294
+#define NOTE_E4  330
+#define NOTE_F4  349
+#define NOTE_G4  392
+#define NOTE_A4  440
+#define NOTE_AS4 466 // A#4 or Bb4
+#define NOTE_C5  523
+#define NOTE_REST 0  // A frequency of 0 will represent a rest
+
+#define FREQMAX 1500
+#define FREQMIN 500
+
+extern hx711_t my_scale;
+
+
+void PlayHappyBirthday(TIM_HandleTypeDef *htim, uint32_t Channel) {
+
+  // --- Song Data ---
+  // An array of the note frequencies for "Happy Birthday"
+  const int melody[] = {
+    NOTE_C4, NOTE_C4, NOTE_D4, NOTE_C4, NOTE_F4, NOTE_E4, NOTE_REST,
+    NOTE_C4, NOTE_C4, NOTE_D4, NOTE_C4, NOTE_G4, NOTE_F4, NOTE_REST,
+    NOTE_C4, NOTE_C4, NOTE_C5, NOTE_A4, NOTE_F4, NOTE_E4, NOTE_D4, NOTE_REST,
+    NOTE_AS4, NOTE_AS4, NOTE_A4, NOTE_F4, NOTE_G4, NOTE_F4, NOTE_REST
+  };
+
+  // An array of the durations for each note (in milliseconds)
+  const int noteDurations[] = {
+    250, 250, 500, 500, 500, 1000, 250, // "Happy birthday to you"
+    250, 250, 500, 500, 500, 1000, 250, // "Happy birthday to you"
+    250, 250, 500, 500, 500, 500, 1000, 250, // "Happy birthday dear [name]"
+    250, 250, 500, 500, 500, 1000, 500  // "Happy birthday to you"
+  };
+
+  // Calculate the number of notes in the melody
+  const int numNotes = sizeof(melody) / sizeof(melody[0]);
+
+  // --- Main Playback Loop ---
+  // This loop will continue forever, replaying the song.
+  while (1) {
+    // Iterate through each note of the melody
+    for (int i = 0; i < numNotes; i++) {
+      int note = melody[i];
+      int duration = noteDurations[i];
+
+      // Check if the current "note" is a rest
+      if (note == NOTE_REST) {
+        // Set duty cycle to 0% to create silence
+        DutyCycleAdjust(htim, Channel, 0);
+      } else {
+        // It's a musical note, so play it.
+        // 1. Set the frequency for the current note.
+        FrequencyAdjust(htim, Channel, note);
+        // 2. Set the duty cycle to 50% to turn the buzzer on.
+        //    75% as in your example would also work well.
+        DutyCycleAdjust(htim, Channel, 50);
+      }
+
+      // 3. Hold the note (or rest) for its specified duration.
+      HAL_Delay(duration);
+    }
+
+    // --- Silence after song ---
+    // Turn the buzzer off completely before the song repeats.
+    DutyCycleAdjust(htim, Channel, 0);
+    // Wait for 2 seconds before playing the song again.
+    HAL_Delay(2000);
+  }
+}
+
+
+void SwipeDutyCycle(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t step_delay_ms) {
+
+  // This outer loop makes the swipe repeat forever.
+
+    // --- Ramp Up (e.g., LED gets brighter) ---
+    // This loop increases the duty cycle from 0% to 100%.
+    for (uint8_t duty = 0; duty <= 100; duty++) {
+      // Set the new duty cycle
+      DutyCycleAdjust(htim, Channel, duty);
+
+      // Wait for a short period to make the change visible
+      HAL_Delay(step_delay_ms);
+    }
+
+    // --- Ramp Down (e.g., LED gets dimmer) ---
+    // This loop decreases the duty cycle from 100% back down to 0%.
+    // Note: The loop condition `duty > 0` and the post-decrement `duty--` are important
+    // to prevent an infinite loop with an unsigned 8-bit integer.
+    for (uint8_t duty = 100; duty > 0; duty--) {
+      // Set the new duty cycle. `duty - 1` is used to reach 0.
+      DutyCycleAdjust(htim, Channel, duty - 1);
+
+      // Wait for a short period
+      HAL_Delay(step_delay_ms);
+  }
+}
+
+/**
+ * @brief Adjusts PWM frequency and duty cycle based on a weight measurement.
+ * If the weight exceeds the max value, it outputs the maximum frequency.
+ * @param min The sensor reading corresponding to the minimum output.
+ * @param max The sensor reading corresponding to the maximum output.
+ * @param htim Pointer to the timer handle.
+ * @param Channel The timer channel to control.
+ */
+void WeightTest(int min, int max, TIM_HandleTypeDef *htim, uint32_t Channel) {
+    // Define the frequency range for the output.
+    const uint32_t FreqMax = 2000; // Example: 2000 Hz
+    const uint32_t FreqMin = 200;  // Example: 200 Hz
+
+    // 1. Get the raw sensor value and subtract the offset/tare weight.
+    int weightval = hx711_value(&my_scale) - min;
+    int weight_range = max - min;
+
+    // Prevent division by zero and handle invalid range.
+    // Set output to a safe, minimum state and exit.
+    if (weight_range <= 0) {
+        FrequencyAdjust(htim, Channel, FreqMin);
+        DutyCycleAdjust(htim, Channel, 0);
+        return;
+    }
+
+    // 2. Clamp the weight value to the valid range [0, weight_range].
+    // This is the key change: if the measured weight is too high, it's
+    // treated as the maximum allowed weight for the rest of the calculation.
+    if (weightval > weight_range) {
+        weightval = weight_range;
+    }
+    if (weightval < 0) {
+        weightval = 0;
+    }
+
+    // 3. Calculate the ratio using floating-point math.
+    // Because 'weightval' is now clamped, the ratio will always be [0.0, 1.0].
+    float ratio = (float)weightval / weight_range;
+
+    // 4. Calculate the target duty cycle and frequency using linear interpolation.
+    uint8_t targetDuty = (uint8_t)(98.0f * ratio);
+    uint32_t targetFreq = FreqMin + (uint32_t)((FreqMax - FreqMin) * ratio);
+
+    // 5. Apply the new values to the PWM channel.
+    DutyCycleAdjust(htim, Channel, targetDuty);
+    FrequencyAdjust(htim, Channel, targetFreq);
+}

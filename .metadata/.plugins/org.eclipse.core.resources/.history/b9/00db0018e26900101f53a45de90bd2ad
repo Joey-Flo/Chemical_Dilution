@@ -1,0 +1,18 @@
+/*
+ * BuzzerTest.h
+ *
+ *  Created on: Jul 25, 2025
+ *      Author: joeyf
+ */
+
+#ifndef INC_BUZZERTEST_H_
+#define INC_BUZZERTEST_H_
+
+#include "BuzzerTest.h"
+#include "main.h"
+#include "PWMDriver.h"
+
+void PlayHappyBirthday(TIM_HandleTypeDef *htim, uint32_t Channel)();
+
+
+#endif /* INC_BUZZERTEST_H_ */

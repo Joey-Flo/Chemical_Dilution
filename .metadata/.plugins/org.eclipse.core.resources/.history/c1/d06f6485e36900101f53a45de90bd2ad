@@ -1,0 +1,105 @@
+/*
+ * BuzzerTest.c
+ *
+ *  Created on: Jul 25, 2025
+ *      Author: joeyf
+ */
+#include "BuzzerTest.h"
+#include "main.h"
+#include "PWMDriver.h"
+
+#define NOTE_C4  262
+#define NOTE_D4  294
+#define NOTE_E4  330
+#define NOTE_F4  349
+#define NOTE_G4  392
+#define NOTE_A4  440
+#define NOTE_AS4 466 // A#4 or Bb4
+#define NOTE_C5  523
+#define NOTE_REST 0  // A frequency of 0 will represent a rest
+
+
+void PlayHappyBirthday(TIM_HandleTypeDef *htim, uint32_t Channel) {
+
+  // --- Song Data ---
+  // An array of the note frequencies for "Happy Birthday"
+  const int melody[] = {
+    NOTE_C4, NOTE_C4, NOTE_D4, NOTE_C4, NOTE_F4, NOTE_E4, NOTE_REST,
+    NOTE_C4, NOTE_C4, NOTE_D4, NOTE_C4, NOTE_G4, NOTE_F4, NOTE_REST,
+    NOTE_C4, NOTE_C4, NOTE_C5, NOTE_A4, NOTE_F4, NOTE_E4, NOTE_D4, NOTE_REST,
+    NOTE_AS4, NOTE_AS4, NOTE_A4, NOTE_F4, NOTE_G4, NOTE_F4, NOTE_REST
+  };
+
+  // An array of the durations for each note (in milliseconds)
+  const int noteDurations[] = {
+    250, 250, 500, 500, 500, 1000, 250, // "Happy birthday to you"
+    250, 250, 500, 500, 500, 1000, 250, // "Happy birthday to you"
+    250, 250, 500, 500, 500, 500, 1000, 250, // "Happy birthday dear [name]"
+    250, 250, 500, 500, 500, 1000, 500  // "Happy birthday to you"
+  };
+
+  // Calculate the number of notes in the melody
+  const int numNotes = sizeof(melody) / sizeof(melody[0]);
+
+  // --- Main Playback Loop ---
+  // This loop will continue forever, replaying the song.
+  while (1) {
+    // Iterate through each note of the melody
+    for (int i = 0; i < numNotes; i++) {
+      int note = melody[i];
+      int duration = noteDurations[i];
+
+      // Check if the current "note" is a rest
+      if (note == NOTE_REST) {
+        // Set duty cycle to 0% to create silence
+        DutyCycleAdjust(htim, Channel, 0);
+      } else {
+        // It's a musical note, so play it.
+        // 1. Set the frequency for the current note.
+        FrequencyAdjust(htim, Channel, note);
+        // 2. Set the duty cycle to 50% to turn the buzzer on.
+        //    75% as in your example would also work well.
+        DutyCycleAdjust(htim, Channel, 50);
+      }
+
+      // 3. Hold the note (or rest) for its specified duration.
+      HAL_Delay(duration);
+    }
+
+    // --- Silence after song ---
+    // Turn the buzzer off completely before the song repeats.
+    DutyCycleAdjust(htim, Channel, 0);
+    // Wait for 2 seconds before playing the song again.
+    HAL_Delay(2000);
+  }
+}
+
+
+void SwipeDutyCycle(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t step_delay_ms) {
+
+  // This outer loop makes the swipe repeat forever.
+  while (1) {
+
+    // --- Ramp Up (e.g., LED gets brighter) ---
+    // This loop increases the duty cycle from 0% to 100%.
+    for (uint8_t duty = 0; duty <= 100; duty++) {
+      // Set the new duty cycle
+      DutyCycleAdjust(htim, Channel, duty);
+
+      // Wait for a short period to make the change visible
+      HAL_Delay(step_delay_ms);
+    }
+
+    // --- Ramp Down (e.g., LED gets dimmer) ---
+    // This loop decreases the duty cycle from 100% back down to 0%.
+    // Note: The loop condition `duty > 0` and the post-decrement `duty--` are important
+    // to prevent an infinite loop with an unsigned 8-bit integer.
+    for (uint8_t duty = 100; duty > 0; duty--) {
+      // Set the new duty cycle. `duty - 1` is used to reach 0.
+      DutyCycleAdjust(htim, Channel, duty - 1);
+
+      // Wait for a short period
+      HAL_Delay(step_delay_ms);
+    }
+  }
+}
