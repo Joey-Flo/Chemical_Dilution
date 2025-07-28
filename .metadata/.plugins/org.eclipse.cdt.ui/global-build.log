@@ -1,42 +1,20 @@
-16:11:24 **** Incremental Build of configuration Debug for project Chem_Proj ****
+17:32:52 **** Incremental Build of configuration Debug for project Chem_Proj ****
 make -j16 all 
-arm-none-eabi-g++ "../TouchGFX/target/STM32TouchController.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/target/STM32TouchController.d" -MT"TouchGFX/target/STM32TouchController.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/target/STM32TouchController.o"
 arm-none-eabi-g++ -o "Chem_Proj.elf" @"objects.list"  -l:libtouchgfx-float-abi-hard.a -mcpu=cortex-m4 -T"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Chem_Proj.map" -Wl,--gc-sections -static -L"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: Chem_Proj.elf
  
 arm-none-eabi-size  Chem_Proj.elf 
 arm-none-eabi-objdump -h -S Chem_Proj.elf  > "Chem_Proj.list"
    text	   data	    bss	    dec	    hex	filename
-  73758	    488	   9648	  83894	  147b6	Chem_Proj.elf
+ 909018	   1416	  17840	 928274	  e2a12	Chem_Proj.elf
 Finished building: default.size.stdout
  
 Finished building: Chem_Proj.list
  
-16:11:35 **** Incremental Build of configuration Debug for project Chem_Proj ****
+17:33:24 **** Incremental Build of configuration Debug for project Chem_Proj ****
 make -j16 all 
 arm-none-eabi-size  Chem_Proj.elf 
    text	   data	    bss	    dec	    hex	filename
-  73758	    488	   9648	  83894	  147b6	Chem_Proj.elf
+ 909018	   1416	  17840	 928274	  e2a12	Chem_Proj.elf
 Finished building: default.size.stdout
- 
-16:12:11 **** Incremental Build of configuration Debug for project Chem_Proj ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:54:11: warning: unused variable 'raw_value' [-Wunused-variable]
-   54 |   int32_t raw_value;    // Variable to store the raw HX711 reading
-      |           ^~~~~~~~~
-../Core/Src/main.c:53:8: warning: unused variable 'display_str' [-Wunused-variable]
-   53 |   char display_str[50]; // Buffer to hold the string for LCD display
-      |        ^~~~~~~~~~~
-arm-none-eabi-g++ -o "Chem_Proj.elf" @"objects.list"  -l:libtouchgfx-float-abi-hard.a -mcpu=cortex-m4 -T"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Chem_Proj.map" -Wl,--gc-sections -static -L"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: Chem_Proj.elf
- 
-arm-none-eabi-size  Chem_Proj.elf 
-arm-none-eabi-objdump -h -S Chem_Proj.elf  > "Chem_Proj.list"
-   text	   data	    bss	    dec	    hex	filename
- 796838	   1128	  12992	 810958	  c5fce	Chem_Proj.elf
-Finished building: default.size.stdout
- 
-Finished building: Chem_Proj.list
  

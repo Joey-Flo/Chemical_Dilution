@@ -10,6 +10,20 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE;
 // Remap all strings
 TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
-    0, // T___SINGLEUSE_4F11: "APEX AUTO"
-    10 // T___SINGLEUSE_RP2A: "Back"
+    52, // T_ALPHAMODE: "123"
+    56, // T_NUMMODE: "ABC"
+    0,  // T_ENTEREDTEXT: "<>"
+    81, // T___SINGLEUSE_PGS8: "P8"
+    78, // T___SINGLEUSE_H2VV: "P7"
+    75, // T___SINGLEUSE_KWX1: "P6"
+    72, // T___SINGLEUSE_7GIM: "P5"
+    69, // T___SINGLEUSE_ME6Z: "P4"
+    66, // T___SINGLEUSE_5EFV: "P3"
+    63, // T___SINGLEUSE_B0DI: "P2"
+    60, // T___SINGLEUSE_7HYF: "P1"
+    13, // T___SINGLEUSE_WUFW: "Pump Setup"
+    34, // T___SINGLEUSE_13DI: "DISPENSE"
+    43, // T___SINGLEUSE_1OXP: "SETTINGS"
+    24, // T___SINGLEUSE_IQU6: "CHEMICALS"
+    2   // T___SINGLEUSE_EREX: "PUMP SETUP"
 };

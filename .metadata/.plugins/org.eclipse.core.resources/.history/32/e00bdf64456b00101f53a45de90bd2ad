@@ -1,0 +1,19 @@
+#include <gui/homescreen_screen/HomeScreenView.hpp>
+#include <gui/common/CustomKeyboard.hpp>
+#include <gui/containers/CustomKeyboard.hpp>
+
+HomeScreenView::HomeScreenView()
+{
+	keyboard.setPosition (0,16,240,180);
+	add(keyboard);
+}
+
+void HomeScreenView::setupScreen()
+{
+    HomeScreenViewBase::setupScreen();
+}
+
+void HomeScreenView::tearDownScreen()
+{
+    HomeScreenViewBase::tearDownScreen();
+}

@@ -1,1597 +1,238 @@
-2025-07-26 00:22:52,522 [INFO] WebApp:191 - Connection restablished
-2025-07-26 00:25:17,504 [INFO] WebApp:194 - Connection lost
-2025-07-26 00:25:17,706 [INFO] WebApp:191 - Connection restablished
-2025-07-26 00:27:12,506 [INFO] WebApp:194 - Connection lost
-2025-07-26 00:27:12,672 [INFO] WebApp:191 - Connection restablished
-2025-07-26 00:31:35,521 [INFO] WebApp:194 - Connection lost
-2025-07-26 00:31:35,705 [INFO] WebApp:191 - Connection restablished
-2025-07-26 00:31:52,507 [INFO] WebApp:194 - Connection lost
-2025-07-26 00:31:52,621 [INFO] WebApp:191 - Connection restablished
-2025-07-26 00:44:16,512 [INFO] WebApp:194 - Connection lost
-2025-07-26 00:44:16,695 [INFO] WebApp:191 - Connection restablished
-2025-07-26 00:58:32,503 [INFO] WebApp:194 - Connection lost
-2025-07-26 00:58:32,717 [INFO] WebApp:191 - Connection restablished
-2025-07-26 01:05:39,011 [INFO] WebApp:194 - Connection lost
-2025-07-26 01:05:39,220 [INFO] WebApp:191 - Connection restablished
-2025-07-26 01:24:56,497 [INFO] WebApp:194 - Connection lost
-2025-07-26 01:24:56,843 [INFO] WebApp:191 - Connection restablished
-2025-07-26 01:25:23,500 [INFO] WebApp:194 - Connection lost
-2025-07-26 01:25:23,622 [INFO] WebApp:191 - Connection restablished
-2025-07-26 06:38:51,172 [INFO] WebApp:194 - Connection lost
-2025-07-26 06:38:51,662 [INFO] WebApp:191 - Connection restablished
-2025-07-26 06:38:59,549 [INFO] WebApp:194 - Connection lost
-2025-07-26 06:38:59,883 [INFO] WebApp:191 - Connection restablished
-2025-07-26 06:41:08,535 [INFO] WebApp:194 - Connection lost
-2025-07-26 06:41:08,701 [INFO] WebApp:191 - Connection restablished
-2025-07-26 06:41:17,062 [INFO] WebApp:194 - Connection lost
-2025-07-26 06:41:17,282 [INFO] WebApp:191 - Connection restablished
-2025-07-26 06:41:44,538 [INFO] WebApp:194 - Connection lost
-2025-07-26 06:41:44,699 [INFO] WebApp:191 - Connection restablished
-2025-07-26 06:43:53,536 [INFO] WebApp:194 - Connection lost
-2025-07-26 06:43:53,707 [INFO] WebApp:191 - Connection restablished
-2025-07-26 10:47:59,537 [INFO] WebApp:194 - Connection lost
-2025-07-26 10:47:59,841 [INFO] WebApp:191 - Connection restablished
-2025-07-26 11:09:11,534 [INFO] WebApp:194 - Connection lost
-2025-07-26 11:09:11,895 [INFO] WebApp:191 - Connection restablished
-2025-07-26 11:09:27,537 [INFO] WebApp:194 - Connection lost
-2025-07-26 11:09:34,260 [INFO] WebApp:191 - Connection restablished
-2025-07-26 12:25:05,543 [INFO] WebApp:194 - Connection lost
-2025-07-26 12:25:05,799 [INFO] WebApp:191 - Connection restablished
-2025-07-26 12:32:52,035 [INFO] WebApp:194 - Connection lost
-2025-07-26 12:32:52,192 [INFO] WebApp:191 - Connection restablished
-2025-07-26 12:45:33,052 [INFO] MainUpdater:2872 - connection check result : 10
-2025-07-26 12:45:33,053 [INFO] MainUpdater:2872 - connection check result : 10
-2025-07-26 12:45:33,413 [INFO] MicroXplorer:468 - Change Database Path : 
-2025-07-26 12:45:33,413 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.150
-2025-07-26 12:45:33,510 [ERROR] ProjectManagerView:395 - 
-java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()" because the return value of "java.util.List.get(int)" is null
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab$9.caretUpdate(ProjectChoiceTab.java:2706) ~[filemanager.jar:?]
-	at javax.swing.text.JTextComponent.fireCaretUpdate(JTextComponent.java:408) ~[?:?]
-	at javax.swing.text.JTextComponent$MutableCaretEvent.fire(JTextComponent.java:4484) ~[?:?]
-	at javax.swing.text.JTextComponent$MutableCaretEvent.stateChanged(JTextComponent.java:4506) ~[?:?]
-	at javax.swing.text.DefaultCaret.fireStateChanged(DefaultCaret.java:857) ~[?:?]
-	at javax.swing.text.DefaultCaret.changeCaretPosition(DefaultCaret.java:1343) ~[?:?]
-	at javax.swing.text.DefaultCaret.handleSetDot(DefaultCaret.java:1242) ~[?:?]
-	at javax.swing.text.DefaultCaret.setDot(DefaultCaret.java:1223) ~[?:?]
-	at javax.swing.text.DefaultCaret$Handler.insertUpdate(DefaultCaret.java:1819) ~[?:?]
-	at javax.swing.text.AbstractDocument.fireInsertUpdate(AbstractDocument.java:227) ~[?:?]
-	at javax.swing.text.AbstractDocument.handleInsertString(AbstractDocument.java:781) ~[?:?]
-	at javax.swing.text.AbstractDocument.insertString(AbstractDocument.java:740) ~[?:?]
-	at javax.swing.text.PlainDocument.insertString(PlainDocument.java:131) ~[?:?]
-	at javax.swing.text.AbstractDocument.replace(AbstractDocument.java:699) ~[?:?]
-	at javax.swing.text.JTextComponent.setText(JTextComponent.java:1725) ~[?:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.createHeapStackFields(ProjectChoiceTab.java:993) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.buildLinkSettingsPanel(ProjectChoiceTab.java:3813) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.defineWindowsFields(ProjectChoiceTab.java:1987) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.updateSettings(ProjectChoiceTab.java:558) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectSettingsPanel.UpdateDialog(ProjectSettingsPanel.java:247) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.ProjectManagerView.propertyChange(ProjectManagerView.java:392) ~[filemanager.jar:?]
-	at java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343) ~[?:?]
-	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335) ~[?:?]
-	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268) ~[?:?]
-	at com.st.microxplorer.util.MXPropertyChangeSupport.firePropertyChange(MXPropertyChangeSupport.java:54) ~[STM32CubeMX.jar:?]
-	at com.st.microxplorer.mxsystem.MxSystem.closeConfig(MxSystem.java:899) ~[STM32CubeMX.jar:?]
-	at com.st.microxplorer.maingui.MainPanel.closeConfig(MainPanel.java:792) ~[STM32CubeMX.jar:?]
-	at com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.loadConfigurationFile(OpenFileManager.java:288) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:364) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:342) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.filemanager.FileManagerView.getSpecificTask(FileManagerView.java:264) ~[filemanager.jar:?]
-	at com.st.stm32cube.common.mx.editor.CubeMxEditor.getMxTabbedPaneInstance(CubeMxEditor.java:1198) ~[com.st.stm32cube.common.mx_6.15.0.202507011659/:?]
-	at com.st.stm32cube.common.mx.editor.CubeMxEditor$12$1.createSwingComponent(CubeMxEditor.java:1068) ~[com.st.stm32cube.common.mx_6.15.0.202507011659/:?]
-	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite.doComponentCreation(EmbeddedSwingComposite.java:492) ~[com.st.stm32cube.common.mx.oss_6.15.0.202507011659/:?]
-	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite$4.run(EmbeddedSwingComposite.java:291) ~[com.st.stm32cube.common.mx.oss_6.15.0.202507011659/:?]
-	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment$2.run(AwtEnvironment.java:166) ~[com.st.stm32cube.common.mx.oss_6.15.0.202507011659/:?]
-	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
-	at java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
-2025-07-26 12:45:33,515 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
-2025-07-26 12:45:33,515 [INFO] ThirdParty:873 - entering critical section [close project]
-2025-07-26 12:45:33,515 [INFO] ThirdParty:883 - exiting critical section [close project]
-2025-07-26 12:45:33,522 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
-2025-07-26 12:45:33,542 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 813885064 Bytes (1073741824)
-2025-07-26 12:45:33,544 [INFO] MicroXplorer:468 - Change Database Path : 
-2025-07-26 12:45:33,544 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.150
-2025-07-26 12:45:33,544 [INFO] OpenFileManager:355 - Change cursor
-2025-07-26 12:45:33,573 [INFO] Mcu:2029 - Initializing MCU STM32L476R(C-E-G)Tx STM32L476RGTx STM32L476RGT3
-2025-07-26 12:45:35,687 [INFO] Context:786 - Trying to add GPIOservice into a context  which must be forbidden
-2025-07-26 12:45:36,318 [INFO] ApiDbMcu:532 - Load IP Config File for STMicroelectronics.X-CUBE-TOUCHGFX.4.25.0
-2025-07-26 12:45:36,558 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) Pin24 (VP_RIF_VS_RIF1) cannot be retrieved for this MCU
-2025-07-26 12:45:36,759 [INFO] RtosManager:558 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
-2025-07-26 12:45:36,759 [INFO] RtosManager:558 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
-2025-07-26 12:45:36,760 [INFO] RtosManager:558 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
-2025-07-26 12:45:36,760 [INFO] RtosManager:558 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
-2025-07-26 12:45:36,760 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
-2025-07-26 12:45:36,767 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,769 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,769 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,769 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,769 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,769 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,769 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,769 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,769 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,770 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,771 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,772 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,772 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 12:45:36,772 [WARN] ModelPack:524 - Component already loaded: STMicroelectronics:HAL Drivers:0.0.0:STMicroelectronics:Device:STMicro_Driver:XSPI:HAL::0.0.1:HAL_XSPI
-2025-07-26 12:45:37,274 [INFO] ThirdPartyModel:298 - Start build external matchings
-2025-07-26 12:45:37,907 [INFO] ThirdPartyModel:316 - End build external matchings
-2025-07-26 12:45:37,927 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (SPI1_TX) currently not set
-2025-07-26 12:45:37,927 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Request) has Id (SPI1_TX) currently not set
-2025-07-26 12:45:37,928 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (SPI1_TX) currently not set
-2025-07-26 12:45:37,928 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (SPI1_TX) currently not set
-2025-07-26 12:45:37,928 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (SPI1_TX) currently not set
-2025-07-26 12:45:37,928 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (SPI1_TX) currently not set
-2025-07-26 12:45:37,928 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (SPI1_TX) currently not set
-2025-07-26 12:45:37,928 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (SPI1_TX) currently not set
-2025-07-26 12:45:37,928 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (SPI1_TX) currently not set
-2025-07-26 12:45:37,933 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (STMicroelectronics.X-CUBE-TOUCHGFX.4.25.0) : Parameter (ApplicationCcGraphicsJjApplication) has invalid value (TouchGFXOoGenerator)
-2025-07-26 12:45:38,466 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 590772704 Bytes (1073741824)
-2025-07-26 12:45:38,572 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
-2025-07-26 12:45:38,572 [INFO] ThirdParty:835 - entering critical section [change project]
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-PM33A1 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.3.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC9 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.4.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.2
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.1
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Avnet-IotConnect X-CUBE-IoTC-DA16k-PMOD 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-WB05N 1.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.2.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 4.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ST60 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC12 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.25.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 10.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-STBOX1 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.2.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SAFEA1 1.2.2
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DPower 1.2.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :EmbeddedOffice I-CUBE-FS-RTOS 1.0.1
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Cesanta I-CUBE-Mongoose 7.13.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.7.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-WB05N 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.4.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :RealThread X-CUBE-RT-Thread_Nano 4.1.1
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC10 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :quantropi X-CUBE-qispace-sdk-base 1.9.3
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 4.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.3.1
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.2
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.3.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.9.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.24.2
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 10.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ST67W61 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-STAIOTCFT 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.1.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.4.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DPower 1.3.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.3.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 5.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfMQTT 1.19.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.2
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.3
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
-2025-07-26 12:45:38,572 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSH 1.4.17
-2025-07-26 12:45:38,572 [INFO] ThirdParty:841 - exiting critical section [change project]
-2025-07-26 12:45:38,778 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
-2025-07-26 12:45:38,780 [INFO] PinOutPanel:1589 - setPackage(STM32L476RGTx,LQFP64)
-2025-07-26 12:45:39,418 [INFO] UtilMem:75 - Before build in PCC Used Memory: 888018480 Bytes (1073741824)
-2025-07-26 12:45:39,862 [INFO] UtilMem:75 - After build in PCC Used Memory: 972953136 Bytes (1073741824)
-2025-07-26 12:45:39,903 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,904 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,905 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,905 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,905 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,905 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,905 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,905 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,905 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,905 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,905 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,906 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,906 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,906 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,906 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,906 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,906 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,906 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,906 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,907 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,907 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,907 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,907 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,907 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,907 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,908 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,908 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,908 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,908 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,908 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,909 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,909 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,909 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,909 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,909 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,909 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,909 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,909 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,910 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,910 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,910 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,910 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,910 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,911 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,911 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,911 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,911 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,912 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,912 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,912 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 12:45:39,972 [INFO] CADModel:165 - CPN selected for project levelSTM32L476RGT3
-2025-07-26 12:45:39,973 [INFO] CADModel:114 - Register for checkConnection events
-2025-07-26 12:45:40,057 [INFO] OpenFileManager:386 - Restore cursor
-2025-07-26 12:52:00,041 [INFO] WebApp:194 - Connection lost
-2025-07-26 12:52:00,247 [INFO] WebApp:191 - Connection restablished
-2025-07-26 13:11:48,038 [INFO] WebApp:194 - Connection lost
-2025-07-26 13:11:48,223 [INFO] WebApp:191 - Connection restablished
-2025-07-26 13:26:33,549 [INFO] WebApp:194 - Connection lost
-2025-07-26 13:26:33,740 [INFO] WebApp:191 - Connection restablished
-2025-07-26 13:31:46,046 [INFO] WebApp:194 - Connection lost
-2025-07-26 13:31:46,250 [INFO] WebApp:191 - Connection restablished
-2025-07-26 13:32:31,533 [INFO] WebApp:194 - Connection lost
-2025-07-26 13:32:31,709 [INFO] WebApp:191 - Connection restablished
-2025-07-26 13:46:28,554 [INFO] WebApp:194 - Connection lost
-2025-07-26 13:46:28,739 [INFO] WebApp:191 - Connection restablished
-2025-07-26 13:54:29,038 [INFO] WebApp:194 - Connection lost
-2025-07-26 13:54:29,238 [INFO] WebApp:191 - Connection restablished
-2025-07-26 13:57:01,032 [INFO] WebApp:194 - Connection lost
-2025-07-26 13:57:01,306 [INFO] WebApp:191 - Connection restablished
-2025-07-26 13:57:09,550 [INFO] WebApp:194 - Connection lost
-2025-07-26 13:57:16,221 [INFO] WebApp:191 - Connection restablished
-2025-07-26 13:58:28,040 [INFO] WebApp:194 - Connection lost
-2025-07-26 13:58:28,416 [INFO] WebApp:191 - Connection restablished
-2025-07-26 14:01:29,032 [INFO] WebApp:194 - Connection lost
-2025-07-26 14:01:29,246 [INFO] WebApp:191 - Connection restablished
-2025-07-26 14:34:22,050 [INFO] WebApp:194 - Connection lost
-2025-07-26 14:34:22,303 [INFO] WebApp:191 - Connection restablished
-2025-07-26 14:38:38,542 [INFO] WebApp:194 - Connection lost
-2025-07-26 14:38:38,735 [INFO] WebApp:191 - Connection restablished
-2025-07-26 14:41:39,046 [INFO] WebApp:194 - Connection lost
-2025-07-26 14:41:39,206 [INFO] WebApp:191 - Connection restablished
-2025-07-26 14:42:41,540 [INFO] WebApp:194 - Connection lost
-2025-07-26 14:42:41,682 [INFO] WebApp:191 - Connection restablished
-2025-07-26 14:46:53,532 [INFO] WebApp:194 - Connection lost
-2025-07-26 14:46:53,719 [INFO] WebApp:191 - Connection restablished
-2025-07-26 14:57:08,535 [INFO] WebApp:194 - Connection lost
-2025-07-26 14:57:16,826 [INFO] WebApp:191 - Connection restablished
-2025-07-26 14:57:17,544 [INFO] WebApp:194 - Connection lost
-2025-07-26 14:57:17,849 [INFO] WebApp:191 - Connection restablished
-2025-07-26 15:02:40,554 [INFO] WebApp:194 - Connection lost
-2025-07-26 15:02:40,746 [INFO] WebApp:191 - Connection restablished
-2025-07-26 15:05:43,559 [INFO] WebApp:194 - Connection lost
-2025-07-26 15:05:43,780 [INFO] WebApp:191 - Connection restablished
-2025-07-26 15:05:57,041 [INFO] WebApp:194 - Connection lost
-2025-07-26 15:06:03,705 [INFO] WebApp:191 - Connection restablished
-2025-07-26 15:20:15,038 [INFO] WebApp:194 - Connection lost
-2025-07-26 15:20:15,233 [INFO] WebApp:191 - Connection restablished
-2025-07-26 15:20:32,025 [INFO] WebApp:194 - Connection lost
-2025-07-26 15:20:38,765 [INFO] WebApp:191 - Connection restablished
-2025-07-26 15:30:11,398 [INFO] MainUpdater:2872 - connection check result : 10
-2025-07-26 15:30:11,399 [INFO] MainUpdater:2872 - connection check result : 10
-2025-07-26 15:30:11,663 [INFO] MicroXplorer:468 - Change Database Path : 
-2025-07-26 15:30:11,664 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.150
-2025-07-26 15:30:11,738 [ERROR] ProjectManagerView:395 - 
-java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()" because the return value of "java.util.List.get(int)" is null
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab$9.caretUpdate(ProjectChoiceTab.java:2706) ~[filemanager.jar:?]
-	at javax.swing.text.JTextComponent.fireCaretUpdate(JTextComponent.java:408) ~[?:?]
-	at javax.swing.text.JTextComponent$MutableCaretEvent.fire(JTextComponent.java:4484) ~[?:?]
-	at javax.swing.text.JTextComponent$MutableCaretEvent.stateChanged(JTextComponent.java:4506) ~[?:?]
-	at javax.swing.text.DefaultCaret.fireStateChanged(DefaultCaret.java:857) ~[?:?]
-	at javax.swing.text.DefaultCaret.changeCaretPosition(DefaultCaret.java:1343) ~[?:?]
-	at javax.swing.text.DefaultCaret.handleSetDot(DefaultCaret.java:1242) ~[?:?]
-	at javax.swing.text.DefaultCaret.setDot(DefaultCaret.java:1223) ~[?:?]
-	at javax.swing.text.DefaultCaret$Handler.insertUpdate(DefaultCaret.java:1819) ~[?:?]
-	at javax.swing.text.AbstractDocument.fireInsertUpdate(AbstractDocument.java:227) ~[?:?]
-	at javax.swing.text.AbstractDocument.handleInsertString(AbstractDocument.java:781) ~[?:?]
-	at javax.swing.text.AbstractDocument.insertString(AbstractDocument.java:740) ~[?:?]
-	at javax.swing.text.PlainDocument.insertString(PlainDocument.java:131) ~[?:?]
-	at javax.swing.text.AbstractDocument.replace(AbstractDocument.java:699) ~[?:?]
-	at javax.swing.text.JTextComponent.setText(JTextComponent.java:1725) ~[?:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.createHeapStackFields(ProjectChoiceTab.java:993) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.buildLinkSettingsPanel(ProjectChoiceTab.java:3813) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.defineWindowsFields(ProjectChoiceTab.java:1987) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.updateSettings(ProjectChoiceTab.java:558) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.gui.ProjectSettingsPanel.UpdateDialog(ProjectSettingsPanel.java:247) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.projectmanager.ProjectManagerView.propertyChange(ProjectManagerView.java:392) ~[filemanager.jar:?]
-	at java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343) ~[?:?]
-	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335) ~[?:?]
-	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268) ~[?:?]
-	at com.st.microxplorer.util.MXPropertyChangeSupport.firePropertyChange(MXPropertyChangeSupport.java:54) ~[STM32CubeMX.jar:?]
-	at com.st.microxplorer.mxsystem.MxSystem.closeConfig(MxSystem.java:899) ~[STM32CubeMX.jar:?]
-	at com.st.microxplorer.maingui.MainPanel.closeConfig(MainPanel.java:792) ~[STM32CubeMX.jar:?]
-	at com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.loadConfigurationFile(OpenFileManager.java:288) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:364) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:342) ~[filemanager.jar:?]
-	at com.st.microxplorer.plugins.filemanager.FileManagerView.getSpecificTask(FileManagerView.java:264) ~[filemanager.jar:?]
-	at com.st.stm32cube.common.mx.editor.CubeMxEditor.getMxTabbedPaneInstance(CubeMxEditor.java:1198) ~[com.st.stm32cube.common.mx_6.15.0.202507011659/:?]
-	at com.st.stm32cube.common.mx.editor.CubeMxEditor$12$1.createSwingComponent(CubeMxEditor.java:1068) ~[com.st.stm32cube.common.mx_6.15.0.202507011659/:?]
-	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite.doComponentCreation(EmbeddedSwingComposite.java:492) ~[com.st.stm32cube.common.mx.oss_6.15.0.202507011659/:?]
-	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite$4.run(EmbeddedSwingComposite.java:291) ~[com.st.stm32cube.common.mx.oss_6.15.0.202507011659/:?]
-	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment$2.run(AwtEnvironment.java:166) ~[com.st.stm32cube.common.mx.oss_6.15.0.202507011659/:?]
-	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
-	at java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
-2025-07-26 15:30:11,742 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
-2025-07-26 15:30:11,743 [INFO] ThirdParty:873 - entering critical section [close project]
-2025-07-26 15:30:11,743 [INFO] ThirdParty:883 - exiting critical section [close project]
-2025-07-26 15:30:11,748 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
-2025-07-26 15:30:11,767 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 873981488 Bytes (1073741824)
-2025-07-26 15:30:11,769 [INFO] MicroXplorer:468 - Change Database Path : 
-2025-07-26 15:30:11,769 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.150
-2025-07-26 15:30:11,770 [INFO] OpenFileManager:355 - Change cursor
-2025-07-26 15:30:11,804 [INFO] Mcu:2029 - Initializing MCU STM32L476R(C-E-G)Tx STM32L476RGTx STM32L476RGT3
-2025-07-26 15:30:14,578 [INFO] Context:786 - Trying to add GPIOservice into a context  which must be forbidden
-2025-07-26 15:30:15,437 [INFO] ApiDbMcu:532 - Load IP Config File for STMicroelectronics.X-CUBE-TOUCHGFX.4.25.0
-2025-07-26 15:30:15,636 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) Pin24 (VP_RIF_VS_RIF1) cannot be retrieved for this MCU
-2025-07-26 15:30:15,902 [INFO] RtosManager:558 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
-2025-07-26 15:30:15,903 [INFO] RtosManager:558 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
-2025-07-26 15:30:15,903 [INFO] RtosManager:558 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
-2025-07-26 15:30:15,903 [INFO] RtosManager:558 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
-2025-07-26 15:30:15,903 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
-2025-07-26 15:30:15,916 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,917 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,917 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,917 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,917 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,917 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,917 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,917 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,917 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,918 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,918 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,918 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,918 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,918 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,918 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,918 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,918 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,919 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,919 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,919 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,919 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,919 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,919 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,919 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,919 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,919 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,920 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,920 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,920 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,920 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,920 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,920 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,920 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,921 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,921 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
-2025-07-26 15:30:15,921 [WARN] ModelPack:524 - Component already loaded: STMicroelectronics:HAL Drivers:0.0.0:STMicroelectronics:Device:STMicro_Driver:XSPI:HAL::0.0.1:HAL_XSPI
-2025-07-26 15:30:16,311 [INFO] ThirdPartyModel:298 - Start build external matchings
-2025-07-26 15:30:17,130 [INFO] ThirdPartyModel:316 - End build external matchings
-2025-07-26 15:30:17,188 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (SPI1_TX) currently not set
-2025-07-26 15:30:17,188 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Request) has Id (SPI1_TX) currently not set
-2025-07-26 15:30:17,188 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (SPI1_TX) currently not set
-2025-07-26 15:30:17,189 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (SPI1_TX) currently not set
-2025-07-26 15:30:17,189 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (SPI1_TX) currently not set
-2025-07-26 15:30:17,189 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (SPI1_TX) currently not set
-2025-07-26 15:30:17,189 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (SPI1_TX) currently not set
-2025-07-26 15:30:17,190 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (SPI1_TX) currently not set
-2025-07-26 15:30:17,190 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (SPI1_TX) currently not set
-2025-07-26 15:30:17,194 [INFO] ImportTextPane:234 - (OptionalMessage_ERROR) IP (STMicroelectronics.X-CUBE-TOUCHGFX.4.25.0) : Parameter (ApplicationCcGraphicsJjApplication) has invalid value (TouchGFXOoGenerator)
-2025-07-26 15:30:18,262 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 635603544 Bytes (1073741824)
-2025-07-26 15:30:18,405 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
-2025-07-26 15:30:18,406 [INFO] ThirdParty:835 - entering critical section [change project]
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-PM33A1 1.0.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.3.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC9 1.0.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.4.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.2
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.1
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.1.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Avnet-IotConnect X-CUBE-IoTC-DA16k-PMOD 1.0.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-WB05N 1.1.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.1.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.2.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 4.1.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ST60 1.0.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC12 1.0.0
-2025-07-26 15:30:18,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.25.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.1.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 10.1.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-STBOX1 2.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.2.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SAFEA1 1.2.2
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DPower 1.2.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.1.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :EmbeddedOffice I-CUBE-FS-RTOS 1.0.1
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Cesanta I-CUBE-Mongoose 7.13.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.7.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-WB05N 2.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.4.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 2.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :RealThread X-CUBE-RT-Thread_Nano 4.1.1
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
-2025-07-26 15:30:18,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC10 1.0.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :quantropi X-CUBE-qispace-sdk-base 1.9.3
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 4.0.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.3.1
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.2
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.3.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.9.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.24.2
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 10.0.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ST67W61 1.0.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-STAIOTCFT 1.0.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.1.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.1.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.4.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DPower 1.3.0
-2025-07-26 15:30:18,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.3.0
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 5.0.0
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.0.0
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfMQTT 1.19.0
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.2
-2025-07-26 15:30:18,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.3
-2025-07-26 15:30:18,410 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
-2025-07-26 15:30:18,410 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSH 1.4.17
-2025-07-26 15:30:18,410 [INFO] ThirdParty:841 - exiting critical section [change project]
-2025-07-26 15:30:18,643 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
-2025-07-26 15:30:18,648 [INFO] PinOutPanel:1589 - setPackage(STM32L476RGTx,LQFP64)
-2025-07-26 15:30:19,494 [INFO] UtilMem:75 - Before build in PCC Used Memory: 927628872 Bytes (1073741824)
-2025-07-26 15:30:20,280 [INFO] UtilMem:75 - After build in PCC Used Memory: 560214344 Bytes (1073741824)
-2025-07-26 15:30:20,316 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,316 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,317 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,317 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,317 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,317 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,317 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,317 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,318 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,318 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,318 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,318 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,320 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,320 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,320 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,320 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,321 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,321 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,322 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,322 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,322 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,323 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,323 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,323 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,323 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,323 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,324 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,324 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,324 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,324 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,325 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,325 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,325 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,325 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,325 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,326 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,326 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,326 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,327 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,327 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,327 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,328 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,328 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,328 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,329 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,329 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,329 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,330 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,330 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,330 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,331 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,331 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,332 [INFO] IPUIPlugin:80 - create IPUIPlugin
-2025-07-26 15:30:20,427 [INFO] CADModel:165 - CPN selected for project levelSTM32L476RGT3
-2025-07-26 15:30:20,427 [INFO] CADModel:114 - Register for checkConnection events
-2025-07-26 15:30:20,650 [INFO] OpenFileManager:386 - Restore cursor
-2025-07-26 15:33:59,656 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
-2025-07-26 15:34:22,421 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
-2025-07-26 15:35:30,960 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
-2025-07-26 15:37:31,066 [INFO] Gpio:278 - dependency for GPIO [SPI1, TIM1, TIM2, TIM4]
-2025-07-26 15:38:14,560 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 960258416 Bytes (1073741824)
-2025-07-26 15:38:15,907 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 1004296560 Bytes (1073741824)
-2025-07-26 15:38:19,157 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 656144992 Bytes (1073741824)
-2025-07-26 15:38:19,760 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
-2025-07-26 15:38:19,760 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: STMicroelectronics.X-CUBE-TOUCHGFX.4.25.0
-2025-07-26 15:38:19,760 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:38:19,760 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:38:19,760 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:38:19,760 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:38:19,760 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
-2025-07-26 15:38:19,761 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
-2025-07-26 15:38:19,761 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: CRC
-2025-07-26 15:38:19,761 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
-2025-07-26 15:38:19,761 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
-2025-07-26 15:38:19,761 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:38:19,761 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
-2025-07-26 15:38:19,769 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
-2025-07-26 15:38:19,787 [INFO] Argument:325 - Argument : hdmavalue: null
-2025-07-26 15:38:19,787 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:38:19,788 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:38:19,788 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:38:19,788 [INFO] Argument:325 - Argument : Initvalue: null
-2025-07-26 15:38:19,788 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:38:19,788 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:38:19,788 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:38:19,788 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:38:19,788 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:38:19,788 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:38:19,788 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:38:19,788 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:38:19,788 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:38:19,789 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:38:19,789 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:38:19,789 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:38:19,789 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:38:19,789 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:38:19,790 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:38:19,790 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:38:19,790 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:38:19,790 [INFO] Argument:325 - Argument : Lockvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:335 - Argument : Lockvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:325 - Argument : Statevalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:335 - Argument : Statevalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:325 - Argument : Parentvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:335 - Argument : Parentvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:38:19,791 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:325 - Argument : ErrorCodevalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:335 - Argument : ErrorCodevalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:325 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:335 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:325 - Argument : hdmavalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:38:19,792 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:38:19,792 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:38:19,792 [INFO] Argument:325 - Argument : Initvalue: null
-2025-07-26 15:38:19,792 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:38:19,793 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:38:19,793 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:38:19,793 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:38:19,793 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:38:19,793 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:38:19,793 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:38:19,793 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:38:19,793 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:38:19,793 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:38:19,793 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:38:19,793 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:38:19,793 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:38:19,794 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:38:19,794 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:38:19,794 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:38:19,794 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:38:19,794 [INFO] Argument:325 - Argument : Lockvalue: null
-2025-07-26 15:38:19,794 [INFO] Argument:335 - Argument : Lockvalue: null
-2025-07-26 15:38:19,794 [INFO] Argument:325 - Argument : Statevalue: null
-2025-07-26 15:38:19,794 [INFO] Argument:335 - Argument : Statevalue: null
-2025-07-26 15:38:19,794 [INFO] Argument:325 - Argument : Parentvalue: null
-2025-07-26 15:38:19,794 [INFO] Argument:335 - Argument : Parentvalue: null
-2025-07-26 15:38:19,794 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:38:19,794 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:325 - Argument : ErrorCodevalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:335 - Argument : ErrorCodevalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:325 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:335 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:325 - Argument : pSyncConfigvalue: null
-2025-07-26 15:38:19,795 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:38:19,796 [INFO] Argument:325 - Argument : SyncSignalIDvalue: null
-2025-07-26 15:38:19,796 [INFO] Argument:335 - Argument : SyncSignalIDvalue: null
-2025-07-26 15:38:19,796 [INFO] Argument:325 - Argument : SyncPolarityvalue: null
-2025-07-26 15:38:19,796 [INFO] Argument:335 - Argument : SyncPolarityvalue: null
-2025-07-26 15:38:19,796 [INFO] Argument:325 - Argument : SyncEnablevalue: null
-2025-07-26 15:38:19,796 [INFO] Argument:335 - Argument : SyncEnablevalue: null
-2025-07-26 15:38:19,796 [INFO] Argument:325 - Argument : EventEnablevalue: null
-2025-07-26 15:38:19,796 [INFO] Argument:335 - Argument : EventEnablevalue: null
-2025-07-26 15:38:19,797 [INFO] Argument:325 - Argument : RequestNumbervalue: null
-2025-07-26 15:38:19,797 [INFO] Argument:335 - Argument : RequestNumbervalue: null
-2025-07-26 15:38:20,085 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:38:20,086 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:38:20,103 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\license.tmp_save
-2025-07-26 15:38:20,415 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\license.tmp
-2025-07-26 15:38:20,538 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\gpio.tmp_save
-2025-07-26 15:38:20,747 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\gpio.tmp
-2025-07-26 15:38:21,655 [INFO] Middleware:1452 - No code input for Bsp Dependency
-2025-07-26 15:38:21,657 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:38:21,657 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:38:21,669 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp_save
-2025-07-26 15:38:21,819 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp
-2025-07-26 15:38:21,841 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp_save
-2025-07-26 15:38:22,030 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp
-2025-07-26 15:38:22,044 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp_save
-2025-07-26 15:38:22,176 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp
-2025-07-26 15:38:22,188 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp_save
-2025-07-26 15:38:22,341 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp
-2025-07-26 15:38:22,356 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp_save
-2025-07-26 15:38:22,447 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp
-2025-07-26 15:38:22,494 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma.tmp_save
-2025-07-26 15:38:22,572 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma.tmp
-2025-07-26 15:38:22,582 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma_GV.tmp_save
-2025-07-26 15:38:22,660 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma_GV.tmp
-2025-07-26 15:38:22,683 [INFO] Middleware:1452 - No code input for Bsp Dependency
-2025-07-26 15:38:22,683 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:38:22,684 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:38:22,696 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp_save
-2025-07-26 15:38:22,783 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp
-2025-07-26 15:38:22,800 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp_save
-2025-07-26 15:38:22,898 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp
-2025-07-26 15:38:22,918 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp_save
-2025-07-26 15:38:23,002 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp
-2025-07-26 15:38:23,021 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp_save
-2025-07-26 15:38:23,102 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp
-2025-07-26 15:38:23,118 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp_save
-2025-07-26 15:38:23,203 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp
-2025-07-26 15:38:23,225 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.h_save
-2025-07-26 15:38:23,340 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.h
-2025-07-26 15:38:23,362 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\ApplicationTemplate.touchgfx.part_save
-2025-07-26 15:38:23,528 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\ApplicationTemplate.touchgfx.part
-2025-07-26 15:38:23,559 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXConfiguration.cpp_save
-2025-07-26 15:38:23,737 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXConfiguration.cpp
-2025-07-26 15:38:23,777 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.hpp_save
-2025-07-26 15:38:23,963 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.hpp
-2025-07-26 15:38:23,995 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.cpp_save
-2025-07-26 15:38:24,155 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.cpp
-2025-07-26 15:38:24,183 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.hpp_save
-2025-07-26 15:38:24,305 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.hpp
-2025-07-26 15:38:24,329 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.cpp_save
-2025-07-26 15:38:24,441 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.cpp
-2025-07-26 15:38:24,461 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.hpp_save
-2025-07-26 15:38:24,576 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.hpp
-2025-07-26 15:38:24,600 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.cpp_save
-2025-07-26 15:38:24,754 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.cpp
-2025-07-26 15:38:24,824 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.hpp_save
-2025-07-26 15:38:25,040 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.hpp
-2025-07-26 15:38:25,071 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.cpp_save
-2025-07-26 15:38:25,252 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.cpp
-2025-07-26 15:38:25,293 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\OSWrappers.cpp_save
-2025-07-26 15:38:25,490 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\OSWrappers.cpp
-2025-07-26 15:38:25,553 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXGPIO.cpp_save
-2025-07-26 15:38:25,817 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXGPIO.cpp
-2025-07-26 15:38:25,878 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.c_save
-2025-07-26 15:38:26,074 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.c
-2025-07-26 15:38:26,136 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_it.c_save
-2025-07-26 15:38:26,433 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_it.c
-2025-07-26 15:38:26,457 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_it.h_save
-2025-07-26 15:38:26,577 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_it.h
-2025-07-26 15:38:26,596 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:38:26,596 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:38:26,597 [INFO] CodeGenerator:2312 - Add RTE Code Input 
-2025-07-26 15:38:26,621 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\RTE_Components.h_save
-2025-07-26 15:38:26,852 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\RTE_Components.h
-2025-07-26 15:38:27,041 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_hal_msp.c_save
-2025-07-26 15:38:27,376 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_hal_msp.c
-2025-07-26 15:38:27,396 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\system.tmp_save
-2025-07-26 15:38:27,486 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\system.tmp
-2025-07-26 15:38:27,521 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_hal_conf.h_save
-2025-07-26 15:38:27,630 [INFO] CodeEngine:345 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_hal_conf.h
-2025-07-26 15:38:27,695 [INFO] ApiDbMcu:532 - Load IP Config File for CRC
-2025-07-26 15:38:27,700 [INFO] ApiDbMcu:532 - Load IP Config File for SPI1
-2025-07-26 15:38:27,718 [INFO] ApiDbMcu:532 - Load IP Config File for TIM1
-2025-07-26 15:38:27,733 [INFO] ApiDbMcu:532 - Load IP Config File for TIM2
-2025-07-26 15:38:27,749 [INFO] ApiDbMcu:532 - Load IP Config File for TIM3
-2025-07-26 15:38:27,765 [INFO] ApiDbMcu:532 - Load IP Config File for TIM4
-2025-07-26 15:38:27,782 [INFO] ApiDbMcu:532 - Load IP Config File for TIM15
-2025-07-26 15:38:27,787 [INFO] ApiDbMcu:532 - Load IP Config File for RCC
-2025-07-26 15:38:27,793 [WARN] IPConfigManager:3811 - IP not found : TIM
-2025-07-26 15:38:27,798 [WARN] CodeGenerator:4259 - IP not found : null
-2025-07-26 15:38:27,819 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\main.h_save
-2025-07-26 15:38:27,992 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\main.h
-2025-07-26 15:38:28,020 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\main.c_save
-2025-07-26 15:38:28,250 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\main.c
-2025-07-26 15:38:30,055 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 908mS.
-2025-07-26 15:38:30,056 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,057 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,058 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,058 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,058 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,058 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,058 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,059 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,059 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,059 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,059 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,059 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,060 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,061 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,061 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,061 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,061 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,061 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,061 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,061 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,062 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,063 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,064 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,065 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,066 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,067 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,067 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,068 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:38:30,103 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
-2025-07-26 15:38:30,245 [INFO] ConfigFileManager:1595 - The Die is : DIE415
-2025-07-26 15:38:30,253 [INFO] ApiDbMcu:532 - Load IP Config File for FATFS
-2025-07-26 15:38:30,265 [INFO] ApiDbMcu:532 - Load IP Config File for FREERTOS
-2025-07-26 15:38:30,291 [INFO] ApiDbMcu:532 - Load IP Config File for TOUCHSENSING
-2025-07-26 15:38:30,317 [INFO] ApiDbMcu:532 - Load IP Config File for USB_DEVICE
-2025-07-26 15:38:30,330 [INFO] ApiDbMcu:532 - Load IP Config File for USB_HOST
-2025-07-26 15:38:37,161 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 7058mS.
-2025-07-26 15:38:37,173 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 9mS.
-2025-07-26 15:38:37,407 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
-2025-07-26 15:41:10,658 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
-2025-07-26 15:41:23,482 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
-2025-07-26 15:41:51,903 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
-2025-07-26 15:42:12,169 [INFO] Gpio:278 - dependency for GPIO [SPI1, TIM2, TIM4, TIM5]
-2025-07-26 15:43:55,655 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 640643264 Bytes (1073741824)
-2025-07-26 15:43:57,256 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 500650752 Bytes (1073741824)
-2025-07-26 15:44:00,309 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 656362240 Bytes (1073741824)
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: STMicroelectronics.X-CUBE-TOUCHGFX.4.25.0
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: CRC
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:44:00,532 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
-2025-07-26 15:44:00,542 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : hdmavalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Initvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Lockvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Lockvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Statevalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Statevalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Parentvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Parentvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : ErrorCodevalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : ErrorCodevalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : hdmavalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Initvalue: null
-2025-07-26 15:44:00,558 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:44:00,558 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:44:00,558 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : Lockvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : Lockvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : Statevalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : Statevalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : Parentvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : Parentvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : ErrorCodevalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : ErrorCodevalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : pSyncConfigvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : SyncSignalIDvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : SyncSignalIDvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : SyncPolarityvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : SyncPolarityvalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : SyncEnablevalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : SyncEnablevalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : EventEnablevalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : EventEnablevalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:325 - Argument : RequestNumbervalue: null
-2025-07-26 15:44:00,559 [INFO] Argument:335 - Argument : RequestNumbervalue: null
-2025-07-26 15:44:00,675 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:44:00,675 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:44:00,689 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\license.tmp_save
-2025-07-26 15:44:00,970 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\license.tmp
-2025-07-26 15:44:01,086 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\gpio.tmp_save
-2025-07-26 15:44:01,263 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\gpio.tmp
-2025-07-26 15:44:02,247 [INFO] Middleware:1452 - No code input for Bsp Dependency
-2025-07-26 15:44:02,248 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:44:02,248 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:44:02,265 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp_save
-2025-07-26 15:44:02,457 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp
-2025-07-26 15:44:02,474 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp_save
-2025-07-26 15:44:02,764 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp
-2025-07-26 15:44:02,797 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp_save
-2025-07-26 15:44:03,085 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp
-2025-07-26 15:44:03,105 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp_save
-2025-07-26 15:44:03,341 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp
-2025-07-26 15:44:03,359 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp_save
-2025-07-26 15:44:03,492 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp
-2025-07-26 15:44:03,565 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma.tmp_save
-2025-07-26 15:44:03,688 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma.tmp
-2025-07-26 15:44:03,702 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma_GV.tmp_save
-2025-07-26 15:44:03,844 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma_GV.tmp
-2025-07-26 15:44:03,890 [INFO] Middleware:1452 - No code input for Bsp Dependency
-2025-07-26 15:44:03,891 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:44:03,891 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:44:03,921 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp_save
-2025-07-26 15:44:04,087 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp
-2025-07-26 15:44:04,116 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp_save
-2025-07-26 15:44:04,243 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp
-2025-07-26 15:44:04,273 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp_save
-2025-07-26 15:44:04,408 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp
-2025-07-26 15:44:04,431 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp_save
-2025-07-26 15:44:04,566 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp
-2025-07-26 15:44:04,599 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp_save
-2025-07-26 15:44:04,710 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp
-2025-07-26 15:44:04,731 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.h_save
-2025-07-26 15:44:04,853 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.h
-2025-07-26 15:44:04,884 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\ApplicationTemplate.touchgfx.part_save
-2025-07-26 15:44:05,045 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\ApplicationTemplate.touchgfx.part
-2025-07-26 15:44:05,073 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXConfiguration.cpp_save
-2025-07-26 15:44:05,220 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXConfiguration.cpp
-2025-07-26 15:44:05,239 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.hpp_save
-2025-07-26 15:44:05,379 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.hpp
-2025-07-26 15:44:05,412 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.cpp_save
-2025-07-26 15:44:05,577 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.cpp
-2025-07-26 15:44:05,602 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.hpp_save
-2025-07-26 15:44:05,732 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.hpp
-2025-07-26 15:44:05,755 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.cpp_save
-2025-07-26 15:44:05,879 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.cpp
-2025-07-26 15:44:05,903 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.hpp_save
-2025-07-26 15:44:06,022 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.hpp
-2025-07-26 15:44:06,049 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.cpp_save
-2025-07-26 15:44:06,171 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.cpp
-2025-07-26 15:44:06,192 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.hpp_save
-2025-07-26 15:44:06,298 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.hpp
-2025-07-26 15:44:06,319 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.cpp_save
-2025-07-26 15:44:06,446 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.cpp
-2025-07-26 15:44:06,468 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\OSWrappers.cpp_save
-2025-07-26 15:44:06,627 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\OSWrappers.cpp
-2025-07-26 15:44:06,655 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXGPIO.cpp_save
-2025-07-26 15:44:06,793 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXGPIO.cpp
-2025-07-26 15:44:06,821 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.c_save
-2025-07-26 15:44:06,943 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.c
-2025-07-26 15:44:07,007 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_it.c_save
-2025-07-26 15:44:07,232 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_it.c
-2025-07-26 15:44:07,263 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_it.h_save
-2025-07-26 15:44:07,381 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_it.h
-2025-07-26 15:44:07,396 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:44:07,396 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:44:07,396 [INFO] CodeGenerator:2312 - Add RTE Code Input 
-2025-07-26 15:44:07,411 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\RTE_Components.h_save
-2025-07-26 15:44:07,511 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\RTE_Components.h
-2025-07-26 15:44:07,557 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_hal_msp.c_save
-2025-07-26 15:44:07,761 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_hal_msp.c
-2025-07-26 15:44:07,785 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\system.tmp_save
-2025-07-26 15:44:07,885 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\system.tmp
-2025-07-26 15:44:07,922 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_hal_conf.h_save
-2025-07-26 15:44:08,061 [INFO] CodeEngine:345 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_hal_conf.h
-2025-07-26 15:44:08,155 [INFO] ApiDbMcu:532 - Load IP Config File for TIM5
-2025-07-26 15:44:08,159 [WARN] IPConfigManager:3811 - IP not found : TIM
-2025-07-26 15:44:08,164 [WARN] CodeGenerator:4259 - IP not found : null
-2025-07-26 15:44:08,187 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\main.h_save
-2025-07-26 15:44:08,320 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\main.h
-2025-07-26 15:44:08,347 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\main.c_save
-2025-07-26 15:44:08,553 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\main.c
-2025-07-26 15:44:09,852 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 725mS.
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,853 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,854 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,855 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,855 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,855 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,856 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,856 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,856 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,856 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,856 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,856 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,857 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,858 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,859 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,859 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,859 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,859 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,859 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,859 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,859 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,859 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,859 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,860 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,860 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,860 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,860 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,860 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,860 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,861 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,861 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,861 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,862 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,862 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:44:09,889 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
-2025-07-26 15:44:10,014 [INFO] ConfigFileManager:1595 - The Die is : DIE415
-2025-07-26 15:44:14,695 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 4806mS.
-2025-07-26 15:44:14,700 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 3mS.
-2025-07-26 15:44:14,931 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
-2025-07-26 15:46:17,272 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 776881536 Bytes (1073741824)
-2025-07-26 15:46:18,232 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 806241664 Bytes (1073741824)
-2025-07-26 15:46:28,163 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 960904576 Bytes (1073741824)
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: STMicroelectronics.X-CUBE-TOUCHGFX.4.25.0
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8L4
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: CRC
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
-2025-07-26 15:46:28,365 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
-2025-07-26 15:46:28,366 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
-2025-07-26 15:46:28,377 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
-2025-07-26 15:46:28,392 [INFO] Argument:325 - Argument : hdmavalue: null
-2025-07-26 15:46:28,392 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:46:28,392 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:46:28,392 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Initvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Lockvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Lockvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Statevalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Statevalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Parentvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Parentvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : ErrorCodevalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : ErrorCodevalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : hdmavalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel3
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Initvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_1
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
-2025-07-26 15:46:28,393 [INFO] Argument:325 - Argument : Lockvalue: null
-2025-07-26 15:46:28,393 [INFO] Argument:335 - Argument : Lockvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : Statevalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : Statevalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : Parentvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : Parentvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : ErrorCodevalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : ErrorCodevalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : DmaBaseAddressvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : pSyncConfigvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:327 - 	 sub Args: 
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : SyncSignalIDvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : SyncSignalIDvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : SyncPolarityvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : SyncPolarityvalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : SyncEnablevalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : SyncEnablevalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : EventEnablevalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : EventEnablevalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:325 - Argument : RequestNumbervalue: null
-2025-07-26 15:46:28,394 [INFO] Argument:335 - Argument : RequestNumbervalue: null
-2025-07-26 15:46:28,495 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:46:28,495 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:46:28,511 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\license.tmp_save
-2025-07-26 15:46:28,582 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\license.tmp
-2025-07-26 15:46:28,687 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\gpio.tmp_save
-2025-07-26 15:46:28,768 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\gpio.tmp
-2025-07-26 15:46:29,366 [INFO] Middleware:1452 - No code input for Bsp Dependency
-2025-07-26 15:46:29,367 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:46:29,367 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:46:29,377 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp_save
-2025-07-26 15:46:29,444 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp
-2025-07-26 15:46:29,454 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp_save
-2025-07-26 15:46:29,516 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp
-2025-07-26 15:46:29,528 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp_save
-2025-07-26 15:46:29,589 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp
-2025-07-26 15:46:29,599 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp_save
-2025-07-26 15:46:29,661 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp
-2025-07-26 15:46:29,671 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp_save
-2025-07-26 15:46:29,731 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp
-2025-07-26 15:46:29,788 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma.tmp_save
-2025-07-26 15:46:29,861 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma.tmp
-2025-07-26 15:46:29,873 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma_GV.tmp_save
-2025-07-26 15:46:29,935 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\dma_GV.tmp
-2025-07-26 15:46:29,957 [INFO] Middleware:1452 - No code input for Bsp Dependency
-2025-07-26 15:46:29,959 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:46:29,959 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:46:29,973 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp_save
-2025-07-26 15:46:30,041 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_CleanInvalidateDCache.tmp
-2025-07-26 15:46:30,054 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp_save
-2025-07-26 15:46:30,108 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\SCB_InvalidateDCache.tmp
-2025-07-26 15:46:30,123 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp_save
-2025-07-26 15:46:30,193 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_license.tmp
-2025-07-26 15:46:30,207 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp_save
-2025-07-26 15:46:30,277 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\touchgfx_gen_license.tmp
-2025-07-26 15:46:30,294 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp_save
-2025-07-26 15:46:30,357 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\oswrappers_noos.tmp
-2025-07-26 15:46:30,371 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.h_save
-2025-07-26 15:46:30,443 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.h
-2025-07-26 15:46:30,456 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\ApplicationTemplate.touchgfx.part_save
-2025-07-26 15:46:30,522 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\ApplicationTemplate.touchgfx.part
-2025-07-26 15:46:30,539 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXConfiguration.cpp_save
-2025-07-26 15:46:30,622 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXConfiguration.cpp
-2025-07-26 15:46:30,638 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.hpp_save
-2025-07-26 15:46:30,702 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.hpp
-2025-07-26 15:46:30,713 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.cpp_save
-2025-07-26 15:46:30,782 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\TouchGFXGeneratedHAL.cpp
-2025-07-26 15:46:30,794 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.hpp_save
-2025-07-26 15:46:30,853 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.hpp
-2025-07-26 15:46:30,865 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.cpp_save
-2025-07-26 15:46:30,923 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXHAL.cpp
-2025-07-26 15:46:30,934 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.hpp_save
-2025-07-26 15:46:30,992 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.hpp
-2025-07-26 15:46:31,002 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.cpp_save
-2025-07-26 15:46:31,064 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\STM32TouchController.cpp
-2025-07-26 15:46:31,074 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.hpp_save
-2025-07-26 15:46:31,135 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.hpp
-2025-07-26 15:46:31,150 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.cpp_save
-2025-07-26 15:46:31,230 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\STM32DMA.cpp
-2025-07-26 15:46:31,244 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\OSWrappers.cpp_save
-2025-07-26 15:46:31,312 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\generated\OSWrappers.cpp
-2025-07-26 15:46:31,326 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXGPIO.cpp_save
-2025-07-26 15:46:31,396 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\target\TouchGFXGPIO.cpp
-2025-07-26 15:46:31,407 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.c_save
-2025-07-26 15:46:31,467 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\TouchGFX\App\app_touchgfx.c
-2025-07-26 15:46:31,498 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_it.c_save
-2025-07-26 15:46:31,584 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_it.c
-2025-07-26 15:46:31,595 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_it.h_save
-2025-07-26 15:46:31,650 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_it.h
-2025-07-26 15:46:31,659 [INFO] IP:3329 - RTE Config file name : RTE_Component
-2025-07-26 15:46:31,659 [INFO] IP:3347 - RTE template : RTE_Components.ftl
-2025-07-26 15:46:31,660 [INFO] CodeGenerator:2312 - Add RTE Code Input 
-2025-07-26 15:46:31,667 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\RTE_Components.h_save
-2025-07-26 15:46:31,719 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\RTE_Components.h
-2025-07-26 15:46:31,751 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_hal_msp.c_save
-2025-07-26 15:46:31,875 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\stm32l4xx_hal_msp.c
-2025-07-26 15:46:31,894 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\system.tmp_save
-2025-07-26 15:46:31,961 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\MXTmpFiles\system.tmp
-2025-07-26 15:46:31,989 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_hal_conf.h_save
-2025-07-26 15:46:32,064 [INFO] CodeEngine:345 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\stm32l4xx_hal_conf.h
-2025-07-26 15:46:32,106 [WARN] IPConfigManager:3811 - IP not found : TIM
-2025-07-26 15:46:32,107 [WARN] CodeGenerator:4259 - IP not found : null
-2025-07-26 15:46:32,119 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\main.h_save
-2025-07-26 15:46:32,193 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Inc\main.h
-2025-07-26 15:46:32,202 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\main.c_save
-2025-07-26 15:46:32,395 [INFO] CodeEngine:289 - Generated code: C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Core\Src\main.c
-2025-07-26 15:46:33,119 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 421mS.
-2025-07-26 15:46:33,119 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,119 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,120 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,121 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,122 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,122 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,122 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,122 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,122 [ERROR] Middleware:2950 - Invalid RefComponent list
-2025-07-26 15:46:33,133 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
-2025-07-26 15:46:33,196 [INFO] ConfigFileManager:1595 - The Die is : DIE415
-2025-07-26 15:46:35,450 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 2317mS.
-2025-07-26 15:46:35,453 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 2mS.
-2025-07-26 15:46:35,566 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-07-27 17:27:44,209 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-07-27 17:30:59,743 [INFO] Activator:176 - 
+
+
+2025-07-27 17:30:59,748 [INFO] Activator:177 - !SESSION log4j initialized
+2025-07-27 17:31:16,286 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2025-07-27 17:31:19,985 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659
+2025-07-27 17:31:20,040 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/mcu/
+2025-07-27 17:31:20,041 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/boardmanager/
+2025-07-27 17:31:20,043 [WARN] ApiDb:259 - Overriding images path with different value:  => C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/mcufinder/images/
+2025-07-27 17:31:20,079 [INFO] ApiDb:250 - Set database path to: C:\Users\joeyf\.stmcufinder\plugins\mcufinder//mcu/
+2025-07-27 17:31:20,085 [INFO] DbMcusAds:125 - Set database path to: C:\Users\joeyf\.stmcufinder\plugins\mcufinder//mcu/
+2025-07-27 17:31:20,095 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\joeyf\.stmcufinder\plugins\mcufinder//mcu/cs/
+2025-07-27 17:31:20,486 [INFO] RulesReader:64 - Compatibility file has been processed (317 Rules)
+2025-07-27 17:31:20,756 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/mcu/
+2025-07-27 17:31:20,757 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/boardmanager/
+2025-07-27 17:31:20,757 [INFO] ApiDb:261 - Set plugin images path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/mcufinder/images/
+2025-07-27 17:31:20,758 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\joeyf\.stmcufinder\plugins\mcufinder/ => C:\Users\joeyf\.stmcufinder\plugins\mcufinder
+2025-07-27 17:31:20,758 [INFO] ApiDb:250 - Set database path to: C:\Users\joeyf\.stmcufinder\plugins\mcufinder//mcu/
+2025-07-27 17:31:20,759 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\joeyf\.stmcufinder\plugins\mcufinder/ => C:\Users\joeyf\.stmcufinder\plugins\mcufinder
+2025-07-27 17:31:20,759 [INFO] DbMcusAds:125 - Set database path to: C:\Users\joeyf\.stmcufinder\plugins\mcufinder//mcu/
+2025-07-27 17:31:20,759 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\joeyf\.stmcufinder\plugins\mcufinder/ => C:\Users\joeyf\.stmcufinder\plugins\mcufinder
+2025-07-27 17:31:20,760 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\joeyf\.stmcufinder\plugins\mcufinder/ => C:\Users\joeyf\.stmcufinder\plugins\mcufinder
+2025-07-27 17:31:20,760 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\joeyf\.stmcufinder\plugins\mcufinder//mcu/cs/
+2025-07-27 17:31:20,955 [INFO] MainPanel:274 - HeapMemory: 268435456
+2025-07-27 17:31:21,258 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/mcu/
+2025-07-27 17:31:21,258 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/boardmanager/
+2025-07-27 17:31:21,258 [INFO] ApiDb:261 - Set plugin images path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/mcufinder/images/
+2025-07-27 17:31:21,259 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\joeyf\.stmcufinder\plugins\mcufinder/ => C:\Users\joeyf\.stmcufinder\plugins\mcufinder
+2025-07-27 17:31:21,259 [INFO] ApiDb:250 - Set database path to: C:\Users\joeyf\.stmcufinder\plugins\mcufinder//mcu/
+2025-07-27 17:31:21,259 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\joeyf\.stmcufinder\plugins\mcufinder/ => C:\Users\joeyf\.stmcufinder\plugins\mcufinder
+2025-07-27 17:31:21,260 [INFO] DbMcusAds:125 - Set database path to: C:\Users\joeyf\.stmcufinder\plugins\mcufinder//mcu/
+2025-07-27 17:31:21,260 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\joeyf\.stmcufinder\plugins\mcufinder/ => C:\Users\joeyf\.stmcufinder\plugins\mcufinder
+2025-07-27 17:31:21,260 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\joeyf\.stmcufinder\plugins\mcufinder/ => C:\Users\joeyf\.stmcufinder\plugins\mcufinder
+2025-07-27 17:31:21,261 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\joeyf\.stmcufinder\plugins\mcufinder//mcu/cs/
+2025-07-27 17:31:21,312 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659
+2025-07-27 17:31:21,318 [INFO] PluginManage:196 - Search for loadable plugins [exclusion list=, ]
+2025-07-27 17:31:21,325 [INFO] PluginManage:310 - Check plugin analytics
+2025-07-27 17:31:22,040 [INFO] AnalyticsPlugin:253 - Accepted Software Licenses: STM32CubeMX.6.15.0
+2025-07-27 17:31:22,041 [INFO] AnalyticsPlugin:255 - Accepted CMSIS Pack Licenses: STMicroelectronics.X-CUBE-TOUCHGFX.4.25.0
+2025-07-27 17:31:22,042 [INFO] AnalyticsPlugin:257 - Accepted Firmware Licenses: FW.L4.1.18.0
+2025-07-27 17:31:22,058 [INFO] PluginManage:359 - Loaded plugin analytics (category:tool,tabindex:-1)
+2025-07-27 17:31:22,060 [INFO] PluginManage:310 - Check plugin cadmodel
+2025-07-27 17:31:22,083 [INFO] CADModel:105 - Init CAD model plugin
+2025-07-27 17:31:22,084 [INFO] PluginManage:359 - Loaded plugin cadmodel (category:power,tabindex:5)
+2025-07-27 17:31:22,085 [INFO] PluginManage:310 - Check plugin clock
+2025-07-27 17:31:22,133 [INFO] PluginManage:359 - Loaded plugin clock (category:base,tabindex:2)
+2025-07-27 17:31:22,133 [INFO] PluginManage:310 - Check plugin ddr
+2025-07-27 17:31:22,143 [INFO] PluginManage:359 - Loaded plugin ddr (category:tool,tabindex:6)
+2025-07-27 17:31:22,144 [INFO] PluginManage:310 - Check plugin filemanager
+2025-07-27 17:31:22,719 [INFO] PluginManage:359 - Loaded plugin filemanager (category:base,tabindex:10)
+2025-07-27 17:31:22,720 [INFO] PluginManage:310 - Check plugin ipmanager
+2025-07-27 17:31:22,741 [INFO] PluginManage:359 - Loaded plugin ipmanager (category:base,tabindex:5)
+2025-07-27 17:31:22,742 [INFO] PluginManage:310 - Check plugin lpbam
+2025-07-27 17:31:22,766 [INFO] PluginManage:359 - Loaded plugin lpbam (category:base,tabindex:0)
+2025-07-27 17:31:22,767 [INFO] PluginManage:310 - Check plugin memorymap
+2025-07-27 17:31:22,810 [INFO] PluginManage:359 - Loaded plugin memorymap (category:base,tabindex:4)
+2025-07-27 17:31:22,811 [INFO] PluginManage:310 - Check plugin pinoutandconfiguration
+2025-07-27 17:31:22,835 [INFO] PluginManage:359 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2025-07-27 17:31:22,836 [INFO] PluginManage:310 - Check plugin pinoutconfig
+2025-07-27 17:31:23,165 [WARN] SupportedApi:132 - Cannot load RTOS API schema: s4s-elt-must-match.1: The content of 'definitions' must match (annotation?, (simpleType | complexType)?, (unique | key | keyref)*)). A problem was found starting at: attribute.
+2025-07-27 17:31:23,899 [INFO] PluginManage:359 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2025-07-27 17:31:23,899 [INFO] PluginManage:310 - Check plugin power
+2025-07-27 17:31:23,954 [INFO] PluginManage:359 - Loaded plugin power (category:power,tabindex:4)
+2025-07-27 17:31:23,954 [INFO] PluginManage:310 - Check plugin projectmanager
+2025-07-27 17:31:24,022 [INFO] PluginManage:359 - Loaded plugin projectmanager (category:projectmanager,tabindex:4)
+2025-07-27 17:31:24,023 [INFO] PluginManage:310 - Check plugin rif
+2025-07-27 17:31:24,082 [INFO] PluginManage:359 - Loaded plugin rif (category:base,tabindex:3)
+2025-07-27 17:31:24,083 [INFO] PluginManage:310 - Check plugin thirdparty
+2025-07-27 17:31:24,811 [INFO] PluginManage:359 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2025-07-27 17:31:24,811 [WARN] IntegrityCheckThread:84 - waiting for thirdparty lock release [integrity check]
+2025-07-27 17:31:24,813 [INFO] PluginManage:310 - Check plugin tools
+2025-07-27 17:31:24,813 [INFO] IntegrityCheckThread:86 - entering critical section [integrity check]
+2025-07-27 17:31:24,814 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2025-07-27 17:31:24,826 [INFO] PluginManage:359 - Loaded plugin tools (category:base,tabindex:7)
+2025-07-27 17:31:24,827 [INFO] PluginManage:310 - Check plugin tutovideos
+2025-07-27 17:31:25,817 [INFO] PluginManage:359 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2025-07-27 17:31:25,817 [INFO] PluginManage:310 - Check plugin updater
+2025-07-27 17:31:25,893 [INFO] PluginManage:359 - Loaded plugin updater (category:base,tabindex:12)
+2025-07-27 17:31:25,893 [INFO] PluginManage:310 - Check plugin userauth
+2025-07-27 17:31:25,925 [INFO] UserAuth:118 - Init User Auth plugin
+2025-07-27 17:31:25,927 [INFO] PluginManage:359 - Loaded plugin userauth (category:base,tabindex:14)
+2025-07-27 17:31:25,929 [INFO] PluginManage:283 - PluginManage : Loaded plugins [18]
+2025-07-27 17:31:26,980 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
+2025-07-27 17:31:27,546 [INFO] CADModel:165 - CPN selected for project level
+2025-07-27 17:31:27,547 [INFO] CADModel:114 - Register for checkConnection events
+2025-07-27 17:31:27,688 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,689 [INFO] PluginManager:220 - loadIPPluginJar : add adc
+2025-07-27 17:31:27,706 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,707 [INFO] PluginManager:220 - loadIPPluginJar : add aes
+2025-07-27 17:31:27,726 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,727 [INFO] PluginManager:220 - loadIPPluginJar : add can
+2025-07-27 17:31:27,739 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,740 [INFO] PluginManager:220 - loadIPPluginJar : add comp
+2025-07-27 17:31:27,754 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,755 [INFO] PluginManager:220 - loadIPPluginJar : add cryp
+2025-07-27 17:31:27,776 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,778 [INFO] PluginManager:220 - loadIPPluginJar : add ddr_ctrl_phy
+2025-07-27 17:31:27,800 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,800 [INFO] PluginManager:220 - loadIPPluginJar : add dfsdm
+2025-07-27 17:31:27,816 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [2/15]
+2025-07-27 17:31:27,832 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,835 [INFO] PluginManager:220 - loadIPPluginJar : add dma
+2025-07-27 17:31:27,853 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,853 [INFO] PluginManager:220 - loadIPPluginJar : add dma3
+2025-07-27 17:31:27,873 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,874 [INFO] PluginManager:220 - loadIPPluginJar : add extmemmanager
+2025-07-27 17:31:27,884 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,885 [INFO] PluginManager:220 - loadIPPluginJar : add fatfs
+2025-07-27 17:31:27,912 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,912 [INFO] PluginManager:220 - loadIPPluginJar : add fmc
+2025-07-27 17:31:27,952 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,954 [INFO] PluginManager:220 - loadIPPluginJar : add freertos
+2025-07-27 17:31:27,962 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,963 [INFO] PluginManager:220 - loadIPPluginJar : add genericplugin
+2025-07-27 17:31:27,978 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:27,979 [INFO] PluginManager:220 - loadIPPluginJar : add gfxmmu
+2025-07-27 17:31:28,006 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,007 [INFO] PluginManager:220 - loadIPPluginJar : add gic
+2025-07-27 17:31:28,046 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,048 [INFO] PluginManager:220 - loadIPPluginJar : add gpio
+2025-07-27 17:31:28,082 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,083 [INFO] PluginManager:220 - loadIPPluginJar : add gtzc
+2025-07-27 17:31:28,105 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,106 [INFO] PluginManager:220 - loadIPPluginJar : add hash
+2025-07-27 17:31:28,120 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,121 [INFO] PluginManager:220 - loadIPPluginJar : add i2c
+2025-07-27 17:31:28,133 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,135 [INFO] PluginManager:220 - loadIPPluginJar : add i2s
+2025-07-27 17:31:28,152 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,154 [INFO] PluginManager:220 - loadIPPluginJar : add i3c
+2025-07-27 17:31:28,177 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,179 [INFO] PluginManager:220 - loadIPPluginJar : add ipddr
+2025-07-27 17:31:28,213 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,218 [INFO] PluginManager:220 - loadIPPluginJar : add linkedlist
+2025-07-27 17:31:28,233 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,234 [INFO] PluginManager:220 - loadIPPluginJar : add lorawan
+2025-07-27 17:31:28,253 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,254 [INFO] PluginManager:220 - loadIPPluginJar : add ltdc
+2025-07-27 17:31:28,302 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,303 [INFO] PluginManager:220 - loadIPPluginJar : add mdma
+2025-07-27 17:31:28,321 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,322 [INFO] PluginManager:220 - loadIPPluginJar : add nvic
+2025-07-27 17:31:28,347 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,348 [INFO] PluginManager:220 - loadIPPluginJar : add opamp
+2025-07-27 17:31:28,368 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,369 [INFO] PluginManager:220 - loadIPPluginJar : add openamp
+2025-07-27 17:31:28,403 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,403 [INFO] PluginManager:220 - loadIPPluginJar : add pdm2pcm
+2025-07-27 17:31:28,443 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,454 [INFO] PluginManager:220 - loadIPPluginJar : add plateformsettings
+2025-07-27 17:31:28,477 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,479 [INFO] PluginManager:220 - loadIPPluginJar : add quadspi
+2025-07-27 17:31:28,492 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,495 [INFO] PluginManager:220 - loadIPPluginJar : add radio
+2025-07-27 17:31:28,514 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,514 [INFO] PluginManager:220 - loadIPPluginJar : add resmgrutility
+2025-07-27 17:31:28,530 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,531 [INFO] PluginManager:220 - loadIPPluginJar : add sai
+2025-07-27 17:31:28,545 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,547 [INFO] PluginManager:220 - loadIPPluginJar : add spi
+2025-07-27 17:31:28,575 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,576 [INFO] PluginManager:220 - loadIPPluginJar : add stm32_wpan
+2025-07-27 17:31:28,584 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,584 [INFO] PluginManager:220 - loadIPPluginJar : add tim
+2025-07-27 17:31:28,601 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,602 [INFO] PluginManager:220 - loadIPPluginJar : add touchsensing
+2025-07-27 17:31:28,612 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,613 [INFO] PluginManager:220 - loadIPPluginJar : add tracer_emb
+2025-07-27 17:31:28,620 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,621 [INFO] PluginManager:220 - loadIPPluginJar : add ts
+2025-07-27 17:31:28,628 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,630 [INFO] PluginManager:220 - loadIPPluginJar : add tsc
+2025-07-27 17:31:28,640 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,641 [INFO] PluginManager:220 - loadIPPluginJar : add ucpd
+2025-07-27 17:31:28,655 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,656 [INFO] PluginManager:220 - loadIPPluginJar : add usart
+2025-07-27 17:31:28,673 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-27 17:31:28,675 [INFO] PluginManager:220 - loadIPPluginJar : add usbx
+2025-07-27 17:31:29,010 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:29,131 [INFO] RulesReader:64 - Compatibility file has been processed (317 Rules)
+2025-07-27 17:31:29,174 [INFO] RulesReader:64 - Compatibility file has been processed (317 Rules)
+2025-07-27 17:31:29,224 [INFO] CADModel:165 - CPN selected for project level
+2025-07-27 17:31:29,224 [INFO] CADModel:114 - Register for checkConnection events
+2025-07-27 17:31:29,224 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:29,225 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2025-07-27 17:31:29,808 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:29,813 [INFO] CADModel:165 - CPN selected for project level
+2025-07-27 17:31:29,814 [INFO] CADModel:114 - Register for checkConnection events
+2025-07-27 17:31:29,815 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:29,815 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2025-07-27 17:31:29,825 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:30,357 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:30,373 [INFO] DbMcusAds:53 - JSON generation date=Tue Jul 08 01:14:23 PDT 2025 (1751962463562)
+2025-07-27 17:31:30,373 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:30,531 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2025-07-27 17:31:30,819 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [3/15]
+2025-07-27 17:31:30,884 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:30,891 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:30,892 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:30,892 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2025-07-27 17:31:30,896 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:31,128 [ERROR] Updater:1198 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2025-07-27 17:31:31,138 [INFO] Updater:1134 - Updater Version found : 6.15.0
+2025-07-27 17:31:31,229 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659
+2025-07-27 17:31:32,872 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Jul 27, 2025 5:31:32 PM java.util.prefs.WindowsPreferences <init>
+2025-07-27 17:31:32,875 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0xffffffff80000002. Windows RegCreateKeyEx(...) returned error code 5.
+2025-07-27 17:31:32,875 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-07-27 17:31:33,821 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-07-27 17:31:33,823 [ERROR] IntegrityCheckThread:130 - Cannot retrieve database content from updater: error 21
+2025-07-27 17:31:33,824 [INFO] ThirdParty:978 - Integrity check success = false
+2025-07-27 17:31:33,825 [INFO] IntegrityCheckThread:100 - exiting critical section [integrity check]
+2025-07-27 17:31:33,825 [INFO] IntegrityCheckThread:103 - End integrity checks thread
+2025-07-27 17:31:34,309 [INFO] MainUpdater:2872 - connection check result : 10
+2025-07-27 17:31:34,312 [INFO] MainUpdater:289 - Updater Check For Update Now.
+2025-07-27 17:31:34,313 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.150
+2025-07-27 17:31:34,343 [INFO] McuFinderGlobals:63 - Set McuFinder mode to 2 (CubeIDE integrated)
+2025-07-27 17:31:34,348 [INFO] UserAuth:487 - Internet connection configuration mode: 1
+2025-07-27 17:31:34,524 [INFO] JxBrowserEngine:152 - Initiate JxBrowser Engine with user profile folder
+2025-07-27 17:31:34,782 [INFO] CheckServerUpdateThread:120 - End of CheckServer Thread
+2025-07-27 17:31:39,711 [INFO] WebApp:169 - Instantiating new browser for Auth
+2025-07-27 17:31:42,626 [INFO] WebApp:463 - Apply proxy settings
+2025-07-27 17:31:42,627 [INFO] WebApp:548 - Chromium requires no authentication
+2025-07-27 17:31:42,666 [INFO] WebApp:491 - Direct internet connection detected
+2025-07-27 17:31:42,757 [INFO] WebApp:900 - Register for checkConnection events
+2025-07-27 17:31:42,757 [INFO] WebApp:463 - Apply proxy settings
+2025-07-27 17:31:42,758 [INFO] WebApp:548 - Chromium requires no authentication
+2025-07-27 17:31:42,759 [INFO] WebApp:491 - Direct internet connection detected
+2025-07-27 17:31:43,019 [INFO] WebApp:191 - Connection restablished
+2025-07-27 17:31:43,532 [INFO] WebApp:225 - Starting web application
+2025-07-27 17:31:43,533 [INFO] WebApp:593 - Web application path used C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\db\plugins\mcufinder\reactClient1\index.html
+2025-07-27 17:31:44,371 [INFO] UserAuth:487 - Internet connection configuration mode: 1
+2025-07-27 17:51:21,774 [INFO] WebApp:194 - Connection lost
+2025-07-27 17:51:22,247 [INFO] WebApp:191 - Connection restablished
+2025-07-27 17:51:38,261 [INFO] WebApp:194 - Connection lost
+2025-07-27 17:51:44,995 [INFO] WebApp:191 - Connection restablished
+2025-07-27 20:06:04,271 [INFO] WebApp:194 - Connection lost
+2025-07-27 20:06:04,556 [INFO] WebApp:191 - Connection restablished

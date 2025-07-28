@@ -50,8 +50,6 @@ int main(void)
   Displ_BackLight('I');               // Initialize backlight. 'I' for Init, sets to BKLIT_INIT_LEVEL
   Displ_BackLight('F');
 
-  char display_str[50]; // Buffer to hold the string for LCD display
-  int32_t raw_value;    // Variable to store the raw HX711 reading
 //
   HAL_TIM_Base_Start_IT(&TGFX_T);
   MX_TouchGFX_Init();
@@ -72,6 +70,8 @@ int main(void)
   while (1)
   {
   MX_TouchGFX_Process();
+//	  MultiplexerTest();
+//	  PlayHappyBirthday(&htim4, TIM_CHANNEL_1);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

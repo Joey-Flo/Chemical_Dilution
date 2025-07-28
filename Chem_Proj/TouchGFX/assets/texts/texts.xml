@@ -4,19 +4,65 @@
     <Language Id="GB" />
   </Languages>
   <Texts>
-    <TextGroup Id="Group1" />
-    <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_4F11" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">APEX AUTO</Translation>
+    <TextGroup Id="Group1">
+      <Text Id="AlphaMode" Alignment="Center" TypographyId="Mode">
+        <Translation Language="GB">123</Translation>
       </Text>
-      <Text Id="__SingleUse_RP2A" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Back</Translation>
+      <Text Id="NumMode" Alignment="Center" TypographyId="Mode">
+        <Translation Language="GB">ABC</Translation>
+      </Text>
+      <Text Id="EnteredText" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;placeholder&gt;</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_PGS8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P8</Translation>
+      </Text>
+      <Text Id="__SingleUse_H2VV" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P7</Translation>
+      </Text>
+      <Text Id="__SingleUse_KWX1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P6</Translation>
+      </Text>
+      <Text Id="__SingleUse_7GIM" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P5</Translation>
+      </Text>
+      <Text Id="__SingleUse_ME6Z" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P4</Translation>
+      </Text>
+      <Text Id="__SingleUse_5EFV" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P3</Translation>
+      </Text>
+      <Text Id="__SingleUse_B0DI" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P2</Translation>
+      </Text>
+      <Text Id="__SingleUse_7HYF" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P1</Translation>
+      </Text>
+      <Text Id="__SingleUse_WUFW" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pump Setup</Translation>
+      </Text>
+      <Text Id="__SingleUse_13DI" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">DISPENSE</Translation>
+      </Text>
+      <Text Id="__SingleUse_1OXP" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">SETTINGS</Translation>
+      </Text>
+      <Text Id="__SingleUse_IQU6" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">CHEMICALS</Translation>
+      </Text>
+      <Text Id="__SingleUse_EREX" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">PUMP SETUP</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="verdanab.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Display" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Mode" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Keyboard" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
   </Typographies>
 </TextDatabase>
