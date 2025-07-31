@@ -14,7 +14,6 @@ public:
     virtual void tearDownScreen();
 protected:
 
-    CustomKeyboard keyboard;
 };
 
 #endif // HOMESCREENVIEW_HPP

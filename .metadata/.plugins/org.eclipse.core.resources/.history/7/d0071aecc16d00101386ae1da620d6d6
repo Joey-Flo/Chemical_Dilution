@@ -1,0 +1,90 @@
+/*
+ * Flash.c
+ *
+ *  Created on: May 1, 2024
+ *      Author: d.arseniuk
+ *		v1.0.0_29.07.2024
+ */
+
+/************** INCLUDES **************/
+#include "Flash.h"
+
+
+
+/************* FUNCTIONS **************/
+
+
+/*
+ * Function unlocks the flash memory, erases the specified page, and then locks the flash memory again.
+ * 		@ PageAddress: Address of the flash page to be erased. The address must be aligned to the start of a flash page.
+ * 		@ Return: HAL Status. HAL_OK if the operation is successful, otherwise an error code.
+ */
+// In Flash.c
+
+HAL_StatusTypeDef FlashErase(uint32_t PageAddress)
+{
+	HAL_StatusTypeDef status;
+	FLASH_EraseInitTypeDef EraseInitStruct;
+	uint32_t PageError = 0;
+
+	// Unlock the Flash
+	HAL_FLASH_Unlock();
+
+	// Config EraseInit structure
+	EraseInitStruct.TypeErase   = FLASH_TYPEERASE_PAGES;
+	EraseInitStruct.Banks       = FLASH_BANK_1; // Ensure this is the correct bank
+	EraseInitStruct.Page        = (PageAddress - FLASH_BASE_ADDR) / FLASH_PAGE_SIZE;
+	EraseInitStruct.NbPages     = 1;  // <-- THIS LINE IS MISSING AND CRITICAL
+
+	// Erase the specified flash page
+	status = HAL_FLASHEx_Erase(&EraseInitStruct, &PageError);
+
+	// Lock the Flash
+	HAL_FLASH_Lock();
+
+    // Add better error checking
+	if (status != HAL_OK || PageError != 0xFFFFFFFF) {
+		return HAL_ERROR;
+	}
+
+	return HAL_OK;
+}
+
+/*
+ * Function unlocks the flash memory, writes the specified data to the specified address and then locks the flash memory again.
+ * 		@ Address: Address in flash memory where data will be written. The address must be aligned to a double word boundary.
+ * 		@ Data: Data to be written to flash memory. This must be a 64-bit value.
+ * 		@ Return: HAL Status. HAL_OK if the operation is successful, otherwise an error code.
+ *
+ */
+HAL_StatusTypeDef FlashWrite(uint32_t Address, uint64_t Data)
+{
+	HAL_StatusTypeDef status;
+	// Unlock the Flash to enable the flash control register access
+	HAL_FLASH_Unlock();
+	// Program the specified address with the data
+	status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, Address, Data);
+	// Lock the Flash to disable the flash control register access
+	HAL_FLASH_Lock();
+
+	return status;
+}
+
+/*
+ *  Function to reads data from flash memory.
+ * 		@ Address: Address in flash memory to read data from. The address must be aligned to a double word boundary.
+ * 		@ Return: Data read from flash memory.
+ *
+ */
+uint64_t FlashRead(uint32_t Address)
+{
+	return *(uint64_t*)Address;
+}
+
+
+
+
+
+
+
+

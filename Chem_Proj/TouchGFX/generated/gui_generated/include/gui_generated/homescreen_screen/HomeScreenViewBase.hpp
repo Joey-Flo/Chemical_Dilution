@@ -11,6 +11,7 @@
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/containers/Container.hpp>
 
 class HomeScreenViewBase : public touchgfx::View<HomeScreenPresenter>
 {
@@ -28,13 +29,17 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Image image1;
+    touchgfx::Image Background;
     touchgfx::ScrollableContainer scrollableContainer1;
     touchgfx::ButtonWithLabel SettingsButton;
     touchgfx::ButtonWithLabel ChemicalButton;
     touchgfx::ButtonWithLabel PumpSetupButton;
     touchgfx::ButtonWithLabel DispenseButton;
     touchgfx::Box box1;
+    touchgfx::Container KeyboardExtras;
+    touchgfx::Box box1_1;
+    touchgfx::ButtonWithLabel ExitButton;
+    touchgfx::ButtonWithLabel EnterButton;
 
 private:
 

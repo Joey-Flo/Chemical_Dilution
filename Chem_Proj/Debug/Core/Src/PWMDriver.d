@@ -34,7 +34,8 @@ Core/Src/PWMDriver.o: ../Core/Src/PWMDriver.c ../Core/Inc/PWMDriver.h \
  ../Core/Inc/z_touch_XPT2046_menu.h ../Core/Inc/hx711.h \
  ../Core/Inc/hx711Config.h ../Core/Inc/PWMDriver.h \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
- ../Core/Inc/HardwareTest.h ../Core/Inc/HAL_Init.h ../Core/Inc/hx711.h \
+ ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
+ ../Core/Inc/device_config.h ../Core/Inc/HAL_Init.h ../Core/Inc/hx711.h \
  ../Core/Inc/main.h ../Core/Inc/HAL_Init.h
 ../Core/Inc/PWMDriver.h:
 ../Core/Inc/main.h:
@@ -79,6 +80,8 @@ Core/Src/PWMDriver.o: ../Core/Src/PWMDriver.c ../Core/Inc/PWMDriver.h \
 ../Core/Inc/MuxDriver.h:
 ../Core/Inc/HardwareTest.h:
 ../Core/Inc/HardwareTest.h:
+../Core/Inc/Flash.h:
+../Core/Inc/device_config.h:
 ../Core/Inc/HAL_Init.h:
 ../Core/Inc/hx711.h:
 ../Core/Inc/main.h:

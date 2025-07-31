@@ -1,10 +1,17 @@
-17:33:24 **** Incremental Build of configuration Debug for project Chem_Proj ****
+22:20:06 **** Incremental Build of configuration Debug for project Chem_Proj ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Chem_Proj.elf" @"objects.list"  -l:libtouchgfx-float-abi-hard.a -mcpu=cortex-m4 -T"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Chem_Proj.map" -Wl,--gc-sections -static -L"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Chem_Proj.elf
+ 
 arm-none-eabi-size  Chem_Proj.elf 
+arm-none-eabi-objdump -h -S Chem_Proj.elf  > "Chem_Proj.list"
    text	   data	    bss	    dec	    hex	filename
- 909018	   1416	  17840	 928274	  e2a12	Chem_Proj.elf
+ 946642	   1544	  20528	 968714	  ec80a	Chem_Proj.elf
 Finished building: default.size.stdout
  
+Finished building: Chem_Proj.list
+ 
 
-17:33:29 Build Finished. 0 errors, 0 warnings. (took 4s.492ms)
+22:20:11 Build Finished. 0 errors, 0 warnings. (took 4s.144ms)
 

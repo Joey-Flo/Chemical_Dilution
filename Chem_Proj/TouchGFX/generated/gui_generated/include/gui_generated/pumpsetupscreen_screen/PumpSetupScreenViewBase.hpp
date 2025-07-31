@@ -14,6 +14,8 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class PumpSetupScreenViewBase : public touchgfx::View<PumpSetupScreenPresenter>
 {
@@ -21,6 +23,82 @@ public:
     PumpSetupScreenViewBase();
     virtual ~PumpSetupScreenViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void P1KeyboardCall()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P2KeyboardCall()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P3KeyboardCall()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P4KeyboardCall()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P5KeyboardCall()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P6KeyboardCall()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P7KeyboardCall()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P8KeyboardCall()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P1Toggle()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P2Toggle()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P3Toggle()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P4Toggle()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P5Toggle()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P6Toggle()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P7Toggle()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void P8Toggle()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void EnterPressed()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
+    virtual void ExitPressed()
+    {
+        // Override and implement this function in PumpSetupScreen
+    }
 
 protected:
     FrontendApplication& application() {
@@ -31,27 +109,27 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Image BackGround;
+    touchgfx::Image Background;
     touchgfx::BoxWithBorder boxWithBorder1;
     touchgfx::TextArea textArea1;
     touchgfx::Container ToggleContainer;
     touchgfx::ToggleButton toggleButton1;
-    touchgfx::ToggleButton toggleButton1_1;
-    touchgfx::ToggleButton toggleButton1_2;
-    touchgfx::ToggleButton toggleButton1_3;
-    touchgfx::ToggleButton toggleButton1_4;
-    touchgfx::ToggleButton toggleButton1_5;
-    touchgfx::ToggleButton toggleButton1_6;
-    touchgfx::ToggleButton toggleButton1_7;
+    touchgfx::ToggleButton toggleButton2;
+    touchgfx::ToggleButton toggleButton3;
+    touchgfx::ToggleButton toggleButton4;
+    touchgfx::ToggleButton toggleButton5;
+    touchgfx::ToggleButton toggleButton6;
+    touchgfx::ToggleButton toggleButton7;
+    touchgfx::ToggleButton toggleButton8;
     touchgfx::Container EditContainer;
-    touchgfx::Button button1;
-    touchgfx::Button button1_1;
-    touchgfx::Button button1_2;
-    touchgfx::Button button1_3;
-    touchgfx::Button button1_4;
-    touchgfx::Button button1_5;
-    touchgfx::Button button1_6;
-    touchgfx::Button button1_7;
+    touchgfx::Button PEditButton1;
+    touchgfx::Button PEditButton2;
+    touchgfx::Button PEditButton3;
+    touchgfx::Button PEditButton4;
+    touchgfx::Button PEditButton5;
+    touchgfx::Button PEditButton6;
+    touchgfx::Button PEditButton7;
+    touchgfx::Button PEditButton8;
     touchgfx::Container PhotoTextContainer;
     touchgfx::Container PumpNums;
     touchgfx::TextArea textArea2;
@@ -80,8 +158,51 @@ protected:
     touchgfx::Box textbox1_2;
     touchgfx::Box textbox1_1;
     touchgfx::Box textbox1;
+    touchgfx::Button BackButton;
+    touchgfx::Container KeyboardExtras;
+    touchgfx::Box box1_1;
+    touchgfx::ButtonWithLabel ExitButton;
+    touchgfx::ButtonWithLabel EnterButton;
+    touchgfx::TextAreaWithOneWildcard PumpDensity_8;
+    touchgfx::TextAreaWithOneWildcard PumpDensity_7;
+    touchgfx::TextAreaWithOneWildcard PumpDensity_6;
+    touchgfx::TextAreaWithOneWildcard PumpDensity_5;
+    touchgfx::TextAreaWithOneWildcard PumpDensity_4;
+    touchgfx::TextAreaWithOneWildcard PumpDensity_3;
+    touchgfx::TextAreaWithOneWildcard PumpDensity_2;
+    touchgfx::TextAreaWithOneWildcard PumpDensity_1;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t PUMPDENSITY_8_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar PumpDensity_8Buffer[PUMPDENSITY_8_SIZE];
+    static const uint16_t PUMPDENSITY_7_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar PumpDensity_7Buffer[PUMPDENSITY_7_SIZE];
+    static const uint16_t PUMPDENSITY_6_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar PumpDensity_6Buffer[PUMPDENSITY_6_SIZE];
+    static const uint16_t PUMPDENSITY_5_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar PumpDensity_5Buffer[PUMPDENSITY_5_SIZE];
+    static const uint16_t PUMPDENSITY_4_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar PumpDensity_4Buffer[PUMPDENSITY_4_SIZE];
+    static const uint16_t PUMPDENSITY_3_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar PumpDensity_3Buffer[PUMPDENSITY_3_SIZE];
+    static const uint16_t PUMPDENSITY_2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar PumpDensity_2Buffer[PUMPDENSITY_2_SIZE];
+    static const uint16_t PUMPDENSITY_1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar PumpDensity_1Buffer[PUMPDENSITY_1_SIZE];
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<PumpSetupScreenViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

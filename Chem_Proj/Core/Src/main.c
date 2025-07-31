@@ -29,6 +29,7 @@ TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 TIM_HandleTypeDef htim5;
 hx711_t my_scale;
+DeviceConfiguration_t myDeviceConfig;
 
 extern int16_t _width;       								///< (oriented) display width
 extern int16_t _height;      								///< (oriented) display height
@@ -50,6 +51,7 @@ int main(void)
   Displ_BackLight('I');               // Initialize backlight. 'I' for Init, sets to BKLIT_INIT_LEVEL
   Displ_BackLight('F');
 
+
 //
   HAL_TIM_Base_Start_IT(&TGFX_T);
   MX_TouchGFX_Init();
@@ -67,11 +69,33 @@ int main(void)
     }
 
 
+//     1. Load configuration at device startup
+//     This will try to read from Flash. If valid data isn't found, it will load defaults.
+    HAL_StatusTypeDef config_load_status = Config_Load(&myDeviceConfig);
+
+    if (config_load_status == HAL_OK) {
+
+
+    } else {
+        // Configuration was invalid, corrupted, or not found in Flash.
+        // Config_Load automatically called Config_SetDefaults().
+        HAL_StatusTypeDef save_status = Config_Save(&myDeviceConfig);
+        if (save_status == HAL_OK) {
+            // printf("Defaults saved successfully.\r\n");
+        } else {
+            // printf("Failed to save default config!\r\n");
+        }
+    }
+
+
   while (1)
   {
+
+
   MX_TouchGFX_Process();
 //	  MultiplexerTest();
 //	  PlayHappyBirthday(&htim4, TIM_CHANNEL_1);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

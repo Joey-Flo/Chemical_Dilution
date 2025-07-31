@@ -19,6 +19,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:413:10:void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:515:10:void touchgfx::Drawable::setVisible(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:525:10:void touchgfx::Drawable::setTouchable(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:537:10:bool touchgfx::Drawable::isVisible() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:549:10:bool touchgfx::Drawable::isTouchable() const	16	static
@@ -52,27 +53,82 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:48:18:virtual void touchgfx::TextArea::setWidth(int16_t)	40	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:54:18:virtual void touchgfx::TextArea::setHeight(int16_t)	40	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:60:18:virtual touchgfx::Rect touchgfx::TextArea::getSolidRect() const	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:89:18:virtual void touchgfx::TextArea::setAlpha(uint8_t)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	40	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:246:22:const touchgfx::TypedText& touchgfx::TextArea::getTypedText() const	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:403:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextArea::getWildcard2() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:429:9:touchgfx::TextArea::BoundingArea::BoundingArea()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:34:5:touchgfx::Button::Button()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:35:18:virtual void touchgfx::ToggleButton::setBitmaps(const touchgfx::Bitmap&, const touchgfx::Bitmap&)	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:41:7:constexpr touchgfx::TypedText& touchgfx::TypedText::operator=(const touchgfx::TypedText&)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:50:10:void touchgfx::ButtonWithLabel::setLabelText(touchgfx::TypedText)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:77:10:void touchgfx::ButtonWithLabel::setLabelColor(touchgfx::colortype)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:94:10:void touchgfx::ButtonWithLabel::setLabelColorPressed(touchgfx::colortype)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	56	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:touchgfx::TextArea::~TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:virtual touchgfx::TextArea::~TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:36:5:touchgfx::TextAreaWithWildcardBase::TextAreaWithWildcardBase()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:33:7:touchgfx::TextAreaWithWildcardBase::~TextAreaWithWildcardBase()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:33:7:virtual touchgfx::TextAreaWithWildcardBase::~TextAreaWithWildcardBase()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:65:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:79:10:void touchgfx::TextAreaWithOneWildcard::setWildcard1(const touchgfx::Unicode::UnicodeChar*)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:98:10:void touchgfx::TextAreaWithOneWildcard::setWildcard(const touchgfx::Unicode::UnicodeChar*)	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:30:18:virtual void PumpSetupScreenViewBase::P1KeyboardCall()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:34:18:virtual void PumpSetupScreenViewBase::P2KeyboardCall()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:38:18:virtual void PumpSetupScreenViewBase::P3KeyboardCall()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:42:18:virtual void PumpSetupScreenViewBase::P4KeyboardCall()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:46:18:virtual void PumpSetupScreenViewBase::P5KeyboardCall()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:50:18:virtual void PumpSetupScreenViewBase::P6KeyboardCall()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:54:18:virtual void PumpSetupScreenViewBase::P7KeyboardCall()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:58:18:virtual void PumpSetupScreenViewBase::P8KeyboardCall()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:62:18:virtual void PumpSetupScreenViewBase::P1Toggle()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:66:18:virtual void PumpSetupScreenViewBase::P2Toggle()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:70:18:virtual void PumpSetupScreenViewBase::P3Toggle()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:74:18:virtual void PumpSetupScreenViewBase::P4Toggle()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:78:18:virtual void PumpSetupScreenViewBase::P5Toggle()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:82:18:virtual void PumpSetupScreenViewBase::P6Toggle()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:86:18:virtual void PumpSetupScreenViewBase::P7Toggle()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:90:18:virtual void PumpSetupScreenViewBase::P8Toggle()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:94:18:virtual void PumpSetupScreenViewBase::EnterPressed()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:98:18:virtual void PumpSetupScreenViewBase::ExitPressed()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:104:26:FrontendApplication& PumpSetupScreenViewBase::application()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<PumpSetupScreenPresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<PumpSetupScreenPresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:virtual touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:touchgfx::TextArea::~TextArea()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:virtual touchgfx::TextArea::~TextArea()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:touchgfx::ToggleButton::ToggleButton()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:touchgfx::ToggleButton::~ToggleButton()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:virtual touchgfx::ToggleButton::~ToggleButton()	16	static
-../TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.cpp:9:1:PumpSetupScreenViewBase::PumpSetupScreenViewBase()	616	static
-../TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.cpp:226:1:PumpSetupScreenViewBase::~PumpSetupScreenViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.cpp:226:1:virtual PumpSetupScreenViewBase::~PumpSetupScreenViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.cpp:231:6:virtual void PumpSetupScreenViewBase::setupScreen()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:38:7:touchgfx::ButtonWithLabel::~ButtonWithLabel()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:38:7:virtual touchgfx::ButtonWithLabel::~ButtonWithLabel()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<PumpSetupScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<PumpSetupScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
+../TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.cpp:9:1:PumpSetupScreenViewBase::PumpSetupScreenViewBase()	952	static
+../TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.cpp:336:1:PumpSetupScreenViewBase::~PumpSetupScreenViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.cpp:336:1:virtual PumpSetupScreenViewBase::~PumpSetupScreenViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.cpp:341:6:virtual void PumpSetupScreenViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.cpp:346:6:void PumpSetupScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = PumpSetupScreenPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButton&>::GenericCallback()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = PumpSetupScreenViewBase; T1 = const touchgfx::AbstractButton&]	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButton&]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButton&]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = PumpSetupScreenViewBase; T1 = const touchgfx::AbstractButton&]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = PumpSetupScreenViewBase; T1 = const touchgfx::AbstractButton&]	16	static

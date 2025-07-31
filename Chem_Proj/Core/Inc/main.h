@@ -38,6 +38,8 @@ extern "C" {
 #include "PWMDriver.h"
 #include "MuxDriver.h"
 #include "HardwareTest.h"
+#include "Flash.h"
+#include "device_config.h"
 
 extern CRC_HandleTypeDef hcrc;
 extern SPI_HandleTypeDef hspi1;

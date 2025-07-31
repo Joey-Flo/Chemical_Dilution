@@ -1,0 +1,18 @@
+#include <gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp>
+#include <gui/common/CustomKeyboard.hpp>
+
+PumpSetupScreenView::PumpSetupScreenView()
+{
+	keyboard.setPosition (0,115,240,180);
+	add(keyboard);
+}
+
+void PumpSetupScreenView::setupScreen()
+{
+    PumpSetupScreenViewBase::setupScreen();
+}
+
+void PumpSetupScreenView::tearDownScreen()
+{
+    PumpSetupScreenViewBase::tearDownScreen();
+}

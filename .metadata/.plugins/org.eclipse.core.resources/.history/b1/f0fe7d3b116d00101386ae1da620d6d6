@@ -1,0 +1,72 @@
+// Core/Inc/device_config.h
+
+#ifndef INC_DEVICE_CONFIG_H_
+#define INC_DEVICE_CONFIG_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>   // For fixed-width integer types (uint8_t, uint16_t, uint32_t)
+#include "stm32l4xx_hal.h" // For HAL_StatusTypeDef, if Config_Save/Load are defined here
+
+// --- Configuration Constants ---
+
+// A "magic number" to quickly verify if the Flash content looks like your config.
+// Choose any unique 32-bit value.
+#define CONFIG_MAGIC_NUMBER 0xAPEXAUTO
+
+// Define the current version of your configuration structure.
+// Increment this if you change the struct layout in a non-backward-compatible way.
+#define CONFIG_VERSION      1
+
+
+// --- Device Configuration Structure ---
+
+// Use __attribute__((packed)) to prevent the compiler from adding padding bytes
+// within the structure. This is crucial for consistent sizing when writing
+// the struct directly to Flash, especially when writing in fixed 64-bit chunks.
+typedef struct __attribute__((packed))
+{
+    uint32_t magic_number;    // Unique identifier to validate config presence
+    uint16_t config_version;  // Version of this struct layout
+
+    // --- Your Application-Specific Configuration Parameters ---
+    float    pump1_flowRate;    // Example: Flow rate for pump 1 (e.g., L/min)
+    float    pump2_flowRate;    // Example: Flow rate for pump 2
+    uint16_t motor_speed_rpm;   // Example: Motor speed in RPM
+    uint8_t  valve_state;       // Example: State of a valve (e.g., 0=closed, 1=open)
+    char     device_name[16];   // Example: Null-terminated string for device name (fixed size)
+    // Add any other configuration parameters your device needs here
+
+    // --- Data Integrity and Verification ---
+    uint32_t crc32_checksum;  // CRC32 checksum of all data *before* this field.
+                              // This helps detect corrupted data in Flash.
+
+} DeviceConfiguration_t;
+
+
+// --- Function Prototypes for Configuration Management ---
+
+/**
+ * @brief Saves the provided configuration struct from RAM to Flash.
+ * This involves erasing the target Flash page and then writing the struct data.
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to save.
+ * @return HAL_StatusTypeDef HAL_OK if successful, error otherwise.
+ */
+HAL_StatusTypeDef Config_Save(const DeviceConfiguration_t* config);
+
+/**
+ * @brief Loads the configuration struct from Flash into RAM.
+ * Performs integrity checks (magic number, version, CRC).
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to load into.
+ * @return HAL_StatusTypeDef HAL_OK if successful and valid, HAL_ERROR if corrupted/invalid (default loaded).
+ */
+HAL_StatusTypeDef Config_Load(DeviceConfiguration_t* config);
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* INC_DEVICE_CONFIG_H_ */

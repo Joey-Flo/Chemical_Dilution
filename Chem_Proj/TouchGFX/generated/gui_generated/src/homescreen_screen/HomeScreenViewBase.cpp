@@ -13,9 +13,9 @@ HomeScreenViewBase::HomeScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    image1.setXY(0, 0);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_APEX_AUTO_BACKGROUND_ID));
-    add(image1);
+    Background.setXY(0, 0);
+    Background.setBitmap(touchgfx::Bitmap(BITMAP_APEX_AUTO_BACKGROUND_ID));
+    add(Background);
 
     scrollableContainer1.setPosition(0, 8, 240, 312);
     scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(232, 9, 9));
@@ -56,6 +56,28 @@ HomeScreenViewBase::HomeScreenViewBase() :
     scrollableContainer1.add(box1);
 
     add(scrollableContainer1);
+
+    KeyboardExtras.setPosition(0, 0, 250, 320);
+    KeyboardExtras.setVisible(false);
+    box1_1.setPosition(0, 295, 240, 25);
+    box1_1.setColor(touchgfx::Color::getColorFromRGB(196, 196, 196));
+    KeyboardExtras.add(box1_1);
+
+    ExitButton.setXY(9, 296);
+    ExitButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    ExitButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_FVS1));
+    ExitButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    ExitButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    KeyboardExtras.add(ExitButton);
+
+    EnterButton.setXY(170, 296);
+    EnterButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    EnterButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_AC2T));
+    EnterButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    EnterButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    KeyboardExtras.add(EnterButton);
+
+    add(KeyboardExtras);
 }
 
 HomeScreenViewBase::~HomeScreenViewBase()

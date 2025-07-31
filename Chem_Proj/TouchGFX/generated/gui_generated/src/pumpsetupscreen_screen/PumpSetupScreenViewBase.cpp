@@ -6,15 +6,16 @@
 #include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-PumpSetupScreenViewBase::PumpSetupScreenViewBase()
+PumpSetupScreenViewBase::PumpSetupScreenViewBase() :
+    buttonCallback(this, &PumpSetupScreenViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    BackGround.setXY(0, 0);
-    BackGround.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
-    add(BackGround);
+    Background.setXY(0, 0);
+    Background.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
+    add(Background);
 
     boxWithBorder1.setPosition(0, 0, 240, 50);
     boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
@@ -31,70 +32,86 @@ PumpSetupScreenViewBase::PumpSetupScreenViewBase()
     ToggleContainer.setPosition(0, 0, 250, 320);
     toggleButton1.setXY(183, 63);
     toggleButton1.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    toggleButton1.setAction(buttonCallback);
     ToggleContainer.add(toggleButton1);
 
-    toggleButton1_1.setXY(183, 95);
-    toggleButton1_1.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
-    ToggleContainer.add(toggleButton1_1);
+    toggleButton2.setXY(183, 95);
+    toggleButton2.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    toggleButton2.setAction(buttonCallback);
+    ToggleContainer.add(toggleButton2);
 
-    toggleButton1_2.setXY(183, 128);
-    toggleButton1_2.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
-    ToggleContainer.add(toggleButton1_2);
+    toggleButton3.setXY(183, 128);
+    toggleButton3.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    toggleButton3.setAction(buttonCallback);
+    ToggleContainer.add(toggleButton3);
 
-    toggleButton1_3.setXY(183, 160);
-    toggleButton1_3.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
-    ToggleContainer.add(toggleButton1_3);
+    toggleButton4.setXY(183, 160);
+    toggleButton4.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    toggleButton4.setAction(buttonCallback);
+    ToggleContainer.add(toggleButton4);
 
-    toggleButton1_4.setXY(183, 192);
-    toggleButton1_4.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
-    ToggleContainer.add(toggleButton1_4);
+    toggleButton5.setXY(183, 192);
+    toggleButton5.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    toggleButton5.setAction(buttonCallback);
+    ToggleContainer.add(toggleButton5);
 
-    toggleButton1_5.setXY(183, 224);
-    toggleButton1_5.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
-    ToggleContainer.add(toggleButton1_5);
+    toggleButton6.setXY(183, 224);
+    toggleButton6.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    toggleButton6.setAction(buttonCallback);
+    ToggleContainer.add(toggleButton6);
 
-    toggleButton1_6.setXY(183, 256);
-    toggleButton1_6.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
-    ToggleContainer.add(toggleButton1_6);
+    toggleButton7.setXY(183, 256);
+    toggleButton7.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    toggleButton7.setAction(buttonCallback);
+    ToggleContainer.add(toggleButton7);
 
-    toggleButton1_7.setXY(183, 289);
-    toggleButton1_7.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
-    ToggleContainer.add(toggleButton1_7);
+    toggleButton8.setXY(183, 289);
+    toggleButton8.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    toggleButton8.setAction(buttonCallback);
+    ToggleContainer.add(toggleButton8);
 
     add(ToggleContainer);
 
     EditContainer.setPosition(0, 0, 250, 320);
-    button1.setXY(150, 63);
-    button1.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    EditContainer.add(button1);
+    PEditButton1.setXY(150, 63);
+    PEditButton1.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    PEditButton1.setAction(buttonCallback);
+    EditContainer.add(PEditButton1);
 
-    button1_1.setXY(150, 289);
-    button1_1.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    EditContainer.add(button1_1);
+    PEditButton2.setXY(150, 95);
+    PEditButton2.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    PEditButton2.setAction(buttonCallback);
+    EditContainer.add(PEditButton2);
 
-    button1_2.setXY(150, 95);
-    button1_2.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    EditContainer.add(button1_2);
+    PEditButton3.setXY(150, 128);
+    PEditButton3.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    PEditButton3.setAction(buttonCallback);
+    EditContainer.add(PEditButton3);
 
-    button1_3.setXY(150, 128);
-    button1_3.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    EditContainer.add(button1_3);
+    PEditButton4.setXY(150, 160);
+    PEditButton4.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    PEditButton4.setAction(buttonCallback);
+    EditContainer.add(PEditButton4);
 
-    button1_4.setXY(150, 160);
-    button1_4.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    EditContainer.add(button1_4);
+    PEditButton5.setXY(150, 192);
+    PEditButton5.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    PEditButton5.setAction(buttonCallback);
+    EditContainer.add(PEditButton5);
 
-    button1_5.setXY(150, 192);
-    button1_5.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    EditContainer.add(button1_5);
+    PEditButton6.setXY(150, 224);
+    PEditButton6.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    PEditButton6.setAction(buttonCallback);
+    EditContainer.add(PEditButton6);
 
-    button1_6.setXY(150, 224);
-    button1_6.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    EditContainer.add(button1_6);
+    PEditButton7.setXY(150, 256);
+    PEditButton7.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    PEditButton7.setAction(buttonCallback);
+    EditContainer.add(PEditButton7);
 
-    button1_7.setXY(150, 256);
-    button1_7.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    EditContainer.add(button1_7);
+    PEditButton8.setXY(150, 289);
+    PEditButton8.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    PEditButton8.setAction(buttonCallback);
+    EditContainer.add(PEditButton8);
 
     add(EditContainer);
 
@@ -221,6 +238,99 @@ PumpSetupScreenViewBase::PumpSetupScreenViewBase()
     PhotoTextContainer.add(TextBoxes);
 
     add(PhotoTextContainer);
+
+    BackButton.setXY(-4, 0);
+    BackButton.setBitmaps(touchgfx::Bitmap(BITMAP_BACK_UNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_BACK_PRESSED_RESIZED_ID));
+    BackButton.setAction(buttonCallback);
+    add(BackButton);
+
+    KeyboardExtras.setPosition(0, 0, 250, 320);
+    KeyboardExtras.setVisible(false);
+    box1_1.setPosition(0, 295, 240, 25);
+    box1_1.setColor(touchgfx::Color::getColorFromRGB(196, 196, 196));
+    KeyboardExtras.add(box1_1);
+
+    ExitButton.setXY(9, 296);
+    ExitButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    ExitButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LONC));
+    ExitButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    ExitButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ExitButton.setAction(buttonCallback);
+    KeyboardExtras.add(ExitButton);
+
+    EnterButton.setXY(170, 296);
+    EnterButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    EnterButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LMNU));
+    EnterButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    EnterButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    EnterButton.setAction(buttonCallback);
+    KeyboardExtras.add(EnterButton);
+
+    add(KeyboardExtras);
+
+    PumpDensity_8.setPosition(42, 291, 64, 18);
+    PumpDensity_8.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    PumpDensity_8.setLinespacing(0);
+    PumpDensity_8Buffer[0] = 0;
+    PumpDensity_8.setWildcard(PumpDensity_8Buffer);
+    PumpDensity_8.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NC99));
+    add(PumpDensity_8);
+
+    PumpDensity_7.setPosition(42, 258, 64, 18);
+    PumpDensity_7.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    PumpDensity_7.setLinespacing(0);
+    PumpDensity_7Buffer[0] = 0;
+    PumpDensity_7.setWildcard(PumpDensity_7Buffer);
+    PumpDensity_7.setTypedText(touchgfx::TypedText(T___SINGLEUSE_JOWY));
+    add(PumpDensity_7);
+
+    PumpDensity_6.setPosition(42, 226, 64, 18);
+    PumpDensity_6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    PumpDensity_6.setLinespacing(0);
+    PumpDensity_6Buffer[0] = 0;
+    PumpDensity_6.setWildcard(PumpDensity_6Buffer);
+    PumpDensity_6.setTypedText(touchgfx::TypedText(T___SINGLEUSE_502E));
+    add(PumpDensity_6);
+
+    PumpDensity_5.setPosition(42, 194, 64, 18);
+    PumpDensity_5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    PumpDensity_5.setLinespacing(0);
+    PumpDensity_5Buffer[0] = 0;
+    PumpDensity_5.setWildcard(PumpDensity_5Buffer);
+    PumpDensity_5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_928G));
+    add(PumpDensity_5);
+
+    PumpDensity_4.setPosition(42, 162, 64, 18);
+    PumpDensity_4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    PumpDensity_4.setLinespacing(0);
+    PumpDensity_4Buffer[0] = 0;
+    PumpDensity_4.setWildcard(PumpDensity_4Buffer);
+    PumpDensity_4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XZUA));
+    add(PumpDensity_4);
+
+    PumpDensity_3.setPosition(42, 130, 64, 18);
+    PumpDensity_3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    PumpDensity_3.setLinespacing(0);
+    PumpDensity_3Buffer[0] = 0;
+    PumpDensity_3.setWildcard(PumpDensity_3Buffer);
+    PumpDensity_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AGAK));
+    add(PumpDensity_3);
+
+    PumpDensity_2.setPosition(42, 97, 64, 18);
+    PumpDensity_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    PumpDensity_2.setLinespacing(0);
+    PumpDensity_2Buffer[0] = 0;
+    PumpDensity_2.setWildcard(PumpDensity_2Buffer);
+    PumpDensity_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6NWG));
+    add(PumpDensity_2);
+
+    PumpDensity_1.setPosition(42, 65, 64, 18);
+    PumpDensity_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    PumpDensity_1.setLinespacing(0);
+    PumpDensity_1Buffer[0] = 0;
+    PumpDensity_1.setWildcard(PumpDensity_1Buffer);
+    PumpDensity_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QCSG));
+    add(PumpDensity_1);
 }
 
 PumpSetupScreenViewBase::~PumpSetupScreenViewBase()
@@ -231,4 +341,141 @@ PumpSetupScreenViewBase::~PumpSetupScreenViewBase()
 void PumpSetupScreenViewBase::setupScreen()
 {
 
+}
+
+void PumpSetupScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &PEditButton1)
+    {
+        //P1KeyboardCall
+        //When PEditButton1 clicked call virtual function
+        //Call P1KeyboardCall
+        P1KeyboardCall();
+    }
+    if (&src == &PEditButton2)
+    {
+        //P2KeyboardCall
+        //When PEditButton2 clicked call virtual function
+        //Call P2KeyboardCall
+        P2KeyboardCall();
+    }
+    if (&src == &PEditButton3)
+    {
+        //P3KeyboardCall
+        //When PEditButton3 clicked call virtual function
+        //Call P3KeyboardCall
+        P3KeyboardCall();
+    }
+    if (&src == &PEditButton4)
+    {
+        //P4KeyboardCall
+        //When PEditButton4 clicked call virtual function
+        //Call P4KeyboardCall
+        P4KeyboardCall();
+    }
+    if (&src == &PEditButton5)
+    {
+        //P5KeyboardCall
+        //When PEditButton5 clicked call virtual function
+        //Call P5KeyboardCall
+        P5KeyboardCall();
+    }
+    if (&src == &PEditButton6)
+    {
+        //P6KeyboardCall
+        //When PEditButton6 clicked call virtual function
+        //Call P6KeyboardCall
+        P6KeyboardCall();
+    }
+    if (&src == &PEditButton7)
+    {
+        //P7KeyboardCall
+        //When PEditButton7 clicked call virtual function
+        //Call P7KeyboardCall
+        P7KeyboardCall();
+    }
+    if (&src == &PEditButton8)
+    {
+        //P8KeyboardCall
+        //When PEditButton8 clicked call virtual function
+        //Call P8KeyboardCall
+        P8KeyboardCall();
+    }
+    if (&src == &toggleButton1)
+    {
+        //P1Toggle
+        //When toggleButton1 clicked call virtual function
+        //Call P1Toggle
+        P1Toggle();
+    }
+    if (&src == &toggleButton2)
+    {
+        //P2Toggle
+        //When toggleButton2 clicked call virtual function
+        //Call P2Toggle
+        P2Toggle();
+    }
+    if (&src == &toggleButton3)
+    {
+        //P3Toggle
+        //When toggleButton3 clicked call virtual function
+        //Call P3Toggle
+        P3Toggle();
+    }
+    if (&src == &toggleButton4)
+    {
+        //P4Toggle
+        //When toggleButton4 clicked call virtual function
+        //Call P4Toggle
+        P4Toggle();
+    }
+    if (&src == &toggleButton5)
+    {
+        //P5Toggle
+        //When toggleButton5 clicked call virtual function
+        //Call P5Toggle
+        P5Toggle();
+    }
+    if (&src == &toggleButton6)
+    {
+        //P6Toggle
+        //When toggleButton6 clicked call virtual function
+        //Call P6Toggle
+        P6Toggle();
+    }
+    if (&src == &toggleButton7)
+    {
+        //P7Toggle
+        //When toggleButton7 clicked call virtual function
+        //Call P7Toggle
+        P7Toggle();
+    }
+    if (&src == &toggleButton8)
+    {
+        //P8Toggle
+        //When toggleButton8 clicked call virtual function
+        //Call P8Toggle
+        P8Toggle();
+    }
+    if (&src == &BackButton)
+    {
+        //BackButton
+        //When BackButton clicked change screen to HomeScreen
+        //Go to HomeScreen with no screen transition
+        application().gotoHomeScreenScreenNoTransition();
+    }
+    if (&src == &EnterButton)
+    {
+        //EnterPressed
+        //When EnterButton clicked call virtual function
+        //Call EnterPressed
+        EnterPressed();
+    }
+    if (&src == &ExitButton)
+    {
+        //ExitPressed
+        //When ExitButton clicked call virtual function
+        //Call ExitPressed
+        ExitPressed();
+    }
 }

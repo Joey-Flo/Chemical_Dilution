@@ -34,7 +34,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/z_touch_XPT2046_menu.h ../Core/Inc/hx711.h \
  ../Core/Inc/hx711Config.h ../Core/Inc/PWMDriver.h ../Core/Inc/HAL_Init.h \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
- ../Core/Inc/HardwareTest.h ../TouchGFX/App/app_touchgfx.h
+ ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
+ ../Core/Inc/device_config.h ../TouchGFX/App/app_touchgfx.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -79,4 +80,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/MuxDriver.h:
 ../Core/Inc/HardwareTest.h:
 ../Core/Inc/HardwareTest.h:
+../Core/Inc/Flash.h:
+../Core/Inc/device_config.h:
 ../TouchGFX/App/app_touchgfx.h:

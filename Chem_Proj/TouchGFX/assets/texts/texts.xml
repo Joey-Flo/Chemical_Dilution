@@ -16,6 +16,42 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_AGAK" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_XZUA" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_928G" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_502E" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JOWY" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_NC99" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_6NWG" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_QCSG" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_LONC" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Exit</Translation>
+      </Text>
+      <Text Id="__SingleUse_AC2T" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Enter</Translation>
+      </Text>
+      <Text Id="__SingleUse_FVS1" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Exit</Translation>
+      </Text>
+      <Text Id="__SingleUse_LMNU" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Enter</Translation>
+      </Text>
       <Text Id="__SingleUse_PGS8" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">P8</Translation>
       </Text>
