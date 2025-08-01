@@ -113,7 +113,7 @@ main-build: Chem_Proj.elf secondary-outputs
 
 # Tool invocations
 Chem_Proj.elf Chem_Proj.map: $(OBJS) $(USER_OBJS) C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "Chem_Proj.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Chem_Proj.map" -Wl,--gc-sections -static -L"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "Chem_Proj.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Chem_Proj.map" -Wl,--gc-sections -static -L"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -u _printf_float -u _scanf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

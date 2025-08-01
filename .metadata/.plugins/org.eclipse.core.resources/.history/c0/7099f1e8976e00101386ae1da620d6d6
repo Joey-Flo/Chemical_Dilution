@@ -1,0 +1,41 @@
+#ifndef PUMPSETUPSCREENVIEW_HPP
+#define PUMPSETUPSCREENVIEW_HPP
+#include <gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp>
+#include <gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp>
+#include <gui/common/CustomKeyboard.hpp>
+#include <array> // <-- Add this include
+class PumpSetupScreenView : public PumpSetupScreenViewBase
+{
+public:
+PumpSetupScreenView();
+void HandleKeyboard(int8_t index);
+virtual ~PumpSetupScreenView() {}
+virtual void setupScreen();
+virtual void tearDownScreen();
+/*
+ * Virtual Action Handlers
+ */
+virtual void P1KeyboardCall();
+virtual void P2KeyboardCall();
+virtual void P3KeyboardCall();
+virtual void P4KeyboardCall();
+virtual void P5KeyboardCall();
+virtual void P6KeyboardCall();
+virtual void P7KeyboardCall();
+virtual void P8KeyboardCall();
+virtual void P1Toggle();
+virtual void P2Toggle();
+virtual void P3Toggle();
+virtual void P4Toggle();
+virtual void P5Toggle();
+virtual void P6Toggle();
+virtual void P7Toggle();
+virtual void P8Toggle();
+virtual void EnterPressed();
+virtual void ExitPressed();
+
+protected:
+CustomKeyboard keyboard;
+int8_t KeyboardCallFlags[8];
+};
+#endif // PUMPSETUPSCREENVIEW_HPP

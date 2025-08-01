@@ -244,30 +244,6 @@ PumpSetupScreenViewBase::PumpSetupScreenViewBase() :
     BackButton.setAction(buttonCallback);
     add(BackButton);
 
-    KeyboardExtras.setPosition(0, 0, 250, 320);
-    KeyboardExtras.setVisible(false);
-    box1_1.setPosition(0, 295, 240, 25);
-    box1_1.setColor(touchgfx::Color::getColorFromRGB(196, 196, 196));
-    KeyboardExtras.add(box1_1);
-
-    ExitButton.setXY(9, 296);
-    ExitButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
-    ExitButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LONC));
-    ExitButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
-    ExitButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ExitButton.setAction(buttonCallback);
-    KeyboardExtras.add(ExitButton);
-
-    EnterButton.setXY(170, 296);
-    EnterButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
-    EnterButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LMNU));
-    EnterButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
-    EnterButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    EnterButton.setAction(buttonCallback);
-    KeyboardExtras.add(EnterButton);
-
-    add(KeyboardExtras);
-
     PumpDensity_8.setPosition(42, 291, 64, 18);
     PumpDensity_8.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     PumpDensity_8.setLinespacing(0);
@@ -331,6 +307,30 @@ PumpSetupScreenViewBase::PumpSetupScreenViewBase() :
     PumpDensity_1.setWildcard(PumpDensity_1Buffer);
     PumpDensity_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QCSG));
     add(PumpDensity_1);
+
+    KeyboardExtras.setPosition(0, 0, 250, 320);
+    KeyboardExtras.setVisible(false);
+    box1_1.setPosition(0, 295, 240, 25);
+    box1_1.setColor(touchgfx::Color::getColorFromRGB(196, 196, 196));
+    KeyboardExtras.add(box1_1);
+
+    ExitButton.setXY(9, 296);
+    ExitButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    ExitButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LONC));
+    ExitButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    ExitButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ExitButton.setAction(buttonCallback);
+    KeyboardExtras.add(ExitButton);
+
+    EnterButton.setXY(170, 296);
+    EnterButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    EnterButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LMNU));
+    EnterButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    EnterButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    EnterButton.setAction(buttonCallback);
+    KeyboardExtras.add(EnterButton);
+
+    add(KeyboardExtras);
 }
 
 PumpSetupScreenViewBase::~PumpSetupScreenViewBase()
@@ -345,118 +345,6 @@ void PumpSetupScreenViewBase::setupScreen()
 
 void PumpSetupScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &PEditButton1)
-    {
-        //P1KeyboardCall
-        //When PEditButton1 clicked call virtual function
-        //Call P1KeyboardCall
-        P1KeyboardCall();
-    }
-    if (&src == &PEditButton2)
-    {
-        //P2KeyboardCall
-        //When PEditButton2 clicked call virtual function
-        //Call P2KeyboardCall
-        P2KeyboardCall();
-    }
-    if (&src == &PEditButton3)
-    {
-        //P3KeyboardCall
-        //When PEditButton3 clicked call virtual function
-        //Call P3KeyboardCall
-        P3KeyboardCall();
-    }
-    if (&src == &PEditButton4)
-    {
-        //P4KeyboardCall
-        //When PEditButton4 clicked call virtual function
-        //Call P4KeyboardCall
-        P4KeyboardCall();
-    }
-    if (&src == &PEditButton5)
-    {
-        //P5KeyboardCall
-        //When PEditButton5 clicked call virtual function
-        //Call P5KeyboardCall
-        P5KeyboardCall();
-    }
-    if (&src == &PEditButton6)
-    {
-        //P6KeyboardCall
-        //When PEditButton6 clicked call virtual function
-        //Call P6KeyboardCall
-        P6KeyboardCall();
-    }
-    if (&src == &PEditButton7)
-    {
-        //P7KeyboardCall
-        //When PEditButton7 clicked call virtual function
-        //Call P7KeyboardCall
-        P7KeyboardCall();
-    }
-    if (&src == &PEditButton8)
-    {
-        //P8KeyboardCall
-        //When PEditButton8 clicked call virtual function
-        //Call P8KeyboardCall
-        P8KeyboardCall();
-    }
-    if (&src == &toggleButton1)
-    {
-        //P1Toggle
-        //When toggleButton1 clicked call virtual function
-        //Call P1Toggle
-        P1Toggle();
-    }
-    if (&src == &toggleButton2)
-    {
-        //P2Toggle
-        //When toggleButton2 clicked call virtual function
-        //Call P2Toggle
-        P2Toggle();
-    }
-    if (&src == &toggleButton3)
-    {
-        //P3Toggle
-        //When toggleButton3 clicked call virtual function
-        //Call P3Toggle
-        P3Toggle();
-    }
-    if (&src == &toggleButton4)
-    {
-        //P4Toggle
-        //When toggleButton4 clicked call virtual function
-        //Call P4Toggle
-        P4Toggle();
-    }
-    if (&src == &toggleButton5)
-    {
-        //P5Toggle
-        //When toggleButton5 clicked call virtual function
-        //Call P5Toggle
-        P5Toggle();
-    }
-    if (&src == &toggleButton6)
-    {
-        //P6Toggle
-        //When toggleButton6 clicked call virtual function
-        //Call P6Toggle
-        P6Toggle();
-    }
-    if (&src == &toggleButton7)
-    {
-        //P7Toggle
-        //When toggleButton7 clicked call virtual function
-        //Call P7Toggle
-        P7Toggle();
-    }
-    if (&src == &toggleButton8)
-    {
-        //P8Toggle
-        //When toggleButton8 clicked call virtual function
-        //Call P8Toggle
-        P8Toggle();
-    }
     if (&src == &BackButton)
     {
         //BackButton
@@ -477,5 +365,117 @@ void PumpSetupScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButt
         //When ExitButton clicked call virtual function
         //Call ExitPressed
         ExitPressed();
+    }
+    if (&src == &toggleButton1)
+    {
+        //Toggle1
+        //When toggleButton1 clicked execute C++ code
+        //Execute C++ code
+        presenter->pumpToggledHandler(1);
+    }
+    if (&src == &toggleButton2)
+    {
+        //Toggle2
+        //When toggleButton2 clicked execute C++ code
+        //Execute C++ code
+        presenter->pumpToggledHandler(2);
+    }
+    if (&src == &toggleButton3)
+    {
+        //Toggle3
+        //When toggleButton3 clicked execute C++ code
+        //Execute C++ code
+        presenter->pumpToggledHandler(3);
+    }
+    if (&src == &toggleButton4)
+    {
+        //Toggle4
+        //When toggleButton4 clicked execute C++ code
+        //Execute C++ code
+        presenter->pumpToggledHandler(4);
+    }
+    if (&src == &toggleButton5)
+    {
+        //Toggle5
+        //When toggleButton5 clicked execute C++ code
+        //Execute C++ code
+        presenter->pumpToggledHandler(5);
+    }
+    if (&src == &toggleButton6)
+    {
+        //Toggle6
+        //When toggleButton6 clicked execute C++ code
+        //Execute C++ code
+        presenter->pumpToggledHandler(6);
+    }
+    if (&src == &toggleButton7)
+    {
+        //Toggle7
+        //When toggleButton7 clicked execute C++ code
+        //Execute C++ code
+        presenter->pumpToggledHandler(7);
+    }
+    if (&src == &toggleButton8)
+    {
+        //Toggle8
+        //When toggleButton8 clicked execute C++ code
+        //Execute C++ code
+        presenter->pumpToggledHandler(8);
+    }
+    if (&src == &PEditButton1)
+    {
+        //Density1
+        //When PEditButton1 clicked execute C++ code
+        //Execute C++ code
+        presenter->densityFieldClicked(1);
+    }
+    if (&src == &PEditButton2)
+    {
+        //Density2
+        //When PEditButton2 clicked execute C++ code
+        //Execute C++ code
+        presenter->densityFieldClicked(2);
+    }
+    if (&src == &PEditButton3)
+    {
+        //Density3
+        //When PEditButton3 clicked execute C++ code
+        //Execute C++ code
+        presenter->densityFieldClicked(3);
+    }
+    if (&src == &PEditButton4)
+    {
+        //Density4
+        //When PEditButton4 clicked execute C++ code
+        //Execute C++ code
+        presenter->densityFieldClicked(4);
+    }
+    if (&src == &PEditButton5)
+    {
+        //Density5
+        //When PEditButton5 clicked execute C++ code
+        //Execute C++ code
+        presenter->densityFieldClicked(5);
+    }
+    if (&src == &PEditButton6)
+    {
+        //Density6
+        //When PEditButton6 clicked execute C++ code
+        //Execute C++ code
+        presenter->densityFieldClicked(6);
+    }
+    if (&src == &PEditButton7)
+    {
+        //Density7
+        //When PEditButton7 clicked execute C++ code
+        //Execute C++ code
+        presenter->densityFieldClicked(7);
+    }
+    if (&src == &PEditButton8)
+    {
+        //Density8
+        //When PEditButton8 clicked execute C++ code
+        //Execute C++ code
+        presenter->densityFieldClicked(8);
     }
 }

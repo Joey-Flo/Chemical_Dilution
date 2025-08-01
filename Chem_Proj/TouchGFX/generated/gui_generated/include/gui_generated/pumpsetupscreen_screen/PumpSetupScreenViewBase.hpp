@@ -14,8 +14,8 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class PumpSetupScreenViewBase : public touchgfx::View<PumpSetupScreenPresenter>
 {
@@ -27,70 +27,6 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void P1KeyboardCall()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P2KeyboardCall()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P3KeyboardCall()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P4KeyboardCall()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P5KeyboardCall()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P6KeyboardCall()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P7KeyboardCall()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P8KeyboardCall()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P1Toggle()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P2Toggle()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P3Toggle()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P4Toggle()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P5Toggle()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P6Toggle()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P7Toggle()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
-    virtual void P8Toggle()
-    {
-        // Override and implement this function in PumpSetupScreen
-    }
     virtual void EnterPressed()
     {
         // Override and implement this function in PumpSetupScreen
@@ -159,10 +95,6 @@ protected:
     touchgfx::Box textbox1_1;
     touchgfx::Box textbox1;
     touchgfx::Button BackButton;
-    touchgfx::Container KeyboardExtras;
-    touchgfx::Box box1_1;
-    touchgfx::ButtonWithLabel ExitButton;
-    touchgfx::ButtonWithLabel EnterButton;
     touchgfx::TextAreaWithOneWildcard PumpDensity_8;
     touchgfx::TextAreaWithOneWildcard PumpDensity_7;
     touchgfx::TextAreaWithOneWildcard PumpDensity_6;
@@ -171,6 +103,10 @@ protected:
     touchgfx::TextAreaWithOneWildcard PumpDensity_3;
     touchgfx::TextAreaWithOneWildcard PumpDensity_2;
     touchgfx::TextAreaWithOneWildcard PumpDensity_1;
+    touchgfx::Container KeyboardExtras;
+    touchgfx::Box box1_1;
+    touchgfx::ButtonWithLabel ExitButton;
+    touchgfx::ButtonWithLabel EnterButton;
 
     /*
      * Wildcard Buffers

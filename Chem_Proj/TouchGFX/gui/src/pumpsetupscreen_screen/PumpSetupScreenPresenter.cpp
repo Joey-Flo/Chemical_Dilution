@@ -1,5 +1,7 @@
 #include <gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp>
 #include <gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp>
+#include <cstdlib> // For strtof
+#include <gui/common/CustomKeyboard.hpp>
 
 PumpSetupScreenPresenter::PumpSetupScreenPresenter(PumpSetupScreenView& v)
     : view(v)
@@ -15,4 +17,48 @@ void PumpSetupScreenPresenter::activate()
 void PumpSetupScreenPresenter::deactivate()
 {
 
+}
+
+
+void PumpSetupScreenPresenter::pumpToggledHandler(int8_t index)
+{
+    // The Presenter contains the application logic.
+    int array_index = index - 1;
+
+    // Get the current state from the model (the source of truth)
+    // and flip it.
+    bool current_state_is_on = (model->getPumpEnableState(array_index) == 1);
+    bool new_state_is_on = !current_state_is_on;
+
+    // Tell the model to update its data in RAM and save to flash.
+    model->setPumpEnableState(array_index, new_state_is_on);
+}
+
+void PumpSetupScreenPresenter::densityFieldClicked(int8_t index)
+{
+	view.HandleKeyboard(index);
+}
+
+
+// ... your existing implementations ...
+
+void PumpSetupScreenPresenter::newDensityEntered(int8_t index, const char* keyboard_text)
+{
+    int array_index = index - 1;
+
+    // Parse the text to a float (this logic lives in the Presenter)
+    char* end_ptr;
+    float new_value = strtof(keyboard_text, &end_ptr);
+
+    // Validate that the entire string was a valid number
+    if (*end_ptr == '\0' && end_ptr != keyboard_text)
+    {
+        // If valid, tell the Model to update the data.
+        // The Model will handle validation (clamping) and saving.
+        model->setPumpDensity(array_index, new_value);
+    }
+    // ELSE: The input was invalid, so we do nothing.
+
+    // --- Tell the View to refresh its screen to show the final value ---
+    view.setupScreen();
 }

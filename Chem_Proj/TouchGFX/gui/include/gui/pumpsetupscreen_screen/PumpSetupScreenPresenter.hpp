@@ -3,6 +3,7 @@
 
 #include <gui/model/ModelListener.hpp>
 #include <mvp/Presenter.hpp>
+#include <gui/common/CustomKeyboard.hpp>
 
 using namespace touchgfx;
 
@@ -26,6 +27,13 @@ public:
     virtual void deactivate();
 
     virtual ~PumpSetupScreenPresenter() {}
+
+    void pumpToggledHandler(int8_t index);
+
+    void newDensityEntered(int8_t index, const char* keyboard_text);
+
+    void densityFieldClicked(int8_t index);
+
 
 private:
     PumpSetupScreenPresenter();

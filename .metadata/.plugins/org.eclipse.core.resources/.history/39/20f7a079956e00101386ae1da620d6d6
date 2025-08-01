@@ -1,0 +1,161 @@
+#include <gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp>
+#include <gui/common/CustomKeyboard.hpp>
+#include "device_config.h"
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+
+// This external variable allows the UI to access the main device configuration data.
+extern DeviceConfiguration_t myDeviceConfig;
+
+
+PumpSetupScreenView::PumpSetupScreenView()
+{
+    // One-time setup for the keyboard
+    keyboard.setPosition(0, 115, 240, 180);
+    add(keyboard);
+    keyboard.setVisible(false);
+}
+
+void PumpSetupScreenView::setupScreen()
+{
+    PumpSetupScreenViewBase::setupScreen();
+
+    // Reset keyboard flags every time the screen is entered.
+    for (int i = 0; i < 8; ++i) {
+        KeyboardCallFlags[i] = 0;
+    }
+
+    // --- Populate the UI with data from the config struct ---
+
+    // Set up toggle buttons
+    P1Toggle.forceState(myDeviceConfig.PumpEnable[0] == 1);
+    P2Toggle.forceState(myDeviceConfig.PumpEnable[1] == 1);
+    P3Toggle.forceState(myDeviceConfig.PumpEnable[2] == 1);
+    P4Toggle.forceState(myDeviceConfig.PumpEnable[3] == 1);
+    P5Toggle.forceState(myDeviceConfig.PumpEnable[4] == 1);
+    P6Toggle.forceState(myDeviceConfig.PumpEnable[5] == 1);
+    P7Toggle.forceState(myDeviceConfig.PumpEnable[6] == 1);
+    P8Toggle.forceState(myDeviceConfig.PumpEnable[7] == 1);
+
+    // Set up density text fields
+    char tempBuffer[10];
+    snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[0]);
+    Unicode::strncpy(PumpDensity_1Buffer, tempBuffer, PUMPDENSITY_1_SIZE);
+    snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[1]);
+    Unicode::strncpy(PumpDensity_2Buffer, tempBuffer, PUMPDENSITY_2_SIZE);
+    snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[2]);
+    Unicode::strncpy(PumpDensity_3Buffer, tempBuffer, PUMPDENSITY_3_SIZE);
+    snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[3]);
+    Unicode::strncpy(PumpDensity_4Buffer, tempBuffer, PUMPDENSITY_4_SIZE);
+    snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[4]);
+    Unicode::strncpy(PumpDensity_5Buffer, tempBuffer, PUMPDENSITY_5_SIZE);
+    snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[5]);
+    Unicode::strncpy(PumpDensity_6Buffer, tempBuffer, PUMPDENSITY_6_SIZE);
+    snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[6]);
+    Unicode::strncpy(PumpDensity_7Buffer, tempBuffer, PUMPDENSITY_7_SIZE);
+    snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[7]);
+    Unicode::strncpy(PumpDensity_8Buffer, tempBuffer, PUMPDENSITY_8_SIZE);
+
+    // Invalidate all widgets to ensure they redraw with the new data
+    this->invalidate();
+}
+
+void PumpSetupScreenView::tearDownScreen()
+{
+    PumpSetupScreenViewBase::tearDownScreen();
+}
+
+void PumpSetupScreenView::HandleKeyboard(int8_t index) {
+    keyboard.setVisible(true);
+    keyboard.invalidate();
+    KeyboardExtras.setVisible(true);
+    KeyboardExtras.invalidate();
+
+    for (int i = 0; i < 8; i++) {
+        KeyboardCallFlags[i] = (i == (index - 1)) ? 1 : 0;
+    }
+}
+
+/*
+ * Virtual Action Handlers
+ */
+
+// --- Keyboard Call Handlers ---
+void PumpSetupScreenView::P1KeyboardCall() { HandleKeyboard(1); }
+void PumpSetupScreenView::P2KeyboardCall() { HandleKeyboard(2); }
+void PumpSetupScreenView::P3KeyboardCall() { HandleKeyboard(3); }
+void PumpSetupScreenView::P4KeyboardCall() { HandleKeyboard(4); }
+void PumpSetupScreenView::P5KeyboardCall() { HandleKeyboard(5); }
+void PumpSetupScreenView::P6KeyboardCall() { HandleKeyboard(6); }
+void PumpSetupScreenView::P7KeyboardCall() { HandleKeyboard(7); }
+void PumpSetupScreenView::P8KeyboardCall() { HandleKeyboard(8); }
+
+// --- Toggle Button Handlers (Repetitive but Functional) ---
+void PumpSetupScreenView::P1Toggle() { myDeviceConfig.PumpEnable[0] = P1Toggle.getState() ? 1 : 0; Config_Save(&myDeviceConfig); }
+void PumpSetupScreenView::P2Toggle() { myDeviceConfig.PumpEnable[1] = P2Toggle.getState() ? 1 : 0; Config_Save(&myDeviceConfig); }
+void PumpSetupScreenView::P3Toggle() { myDeviceConfig.PumpEnable[2] = P3Toggle.getState() ? 1 : 0; Config_Save(&myDeviceConfig); }
+void PumpSetupScreenView::P4Toggle() { myDeviceConfig.PumpEnable[3] = P4Toggle.getState() ? 1 : 0; Config_Save(&myDeviceConfig); }
+void PumpSetupScreenView::P5Toggle() { myDeviceConfig.PumpEnable[4] = P5Toggle.getState() ? 1 : 0; Config_Save(&myDeviceConfig); }
+void PumpSetupScreenView::P6Toggle() { myDeviceConfig.PumpEnable[5] = P6Toggle.getState() ? 1 : 0; Config_Save(&myDeviceConfig); }
+void PumpSetupScreenView::P7Toggle() { myDeviceConfig.PumpEnable[6] = P7Toggle.getState() ? 1 : 0; Config_Save(&myDeviceConfig); }
+void PumpSetupScreenView::P8Toggle() { myDeviceConfig.PumpEnable[7] = P8Toggle.getState() ? 1 : 0; Config_Save(&myDeviceConfig); }
+
+
+void PumpSetupScreenView::EnterPressed()
+{
+    keyboard.setVisible(false);
+    keyboard.invalidate();
+    KeyboardExtras.setVisible(false);
+    KeyboardExtras.invalidate();
+
+    bool config_was_changed = false;
+
+    // This loop finds which field was active and updates it.
+    for (int i = 0; i < 8; ++i)
+    {
+        if (KeyboardCallFlags[i] == 1)
+        {
+            char utf8_buffer[20];
+            memset(utf8_buffer, 0, 20);
+            Unicode::toUTF8(keyboard.getBuffer(), (uint8_t*)utf8_buffer, 20);
+
+            char* end_ptr;
+            float new_value = strtof(utf8_buffer, &end_ptr);
+
+            if (new_value > 3.0f) { new_value = 3.0f; }
+            if (new_value < 0.1f) { new_value = 0.1f; }
+
+            if (*end_ptr == '\0' && end_ptr != utf8_buffer)
+            {
+                myDeviceConfig.PumpDensity[i] = new_value;
+                config_was_changed = true;
+            }
+
+            KeyboardCallFlags[i] = 0;
+
+            // This is repetitive but necessary without the widget arrays
+            setupScreen(); // Just re-run the whole setup to update the UI
+            break;
+        }
+    }
+
+    keyboard.clearBuffer();
+
+    if (config_was_changed)
+    {
+        #ifndef SIMULATOR
+            Config_Save(&myDeviceConfig);
+        #endif
+    }
+}
+
+
+void PumpSetupScreenView::ExitPressed()
+{
+    keyboard.setVisible(false);
+    keyboard.invalidate();
+    KeyboardExtras.setVisible(false);
+    KeyboardExtras.invalidate();
+    keyboard.clearBuffer();
+}

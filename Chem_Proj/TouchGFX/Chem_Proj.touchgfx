@@ -773,71 +773,6 @@
             "Released": "Back Unpressed Resized.png"
           },
           {
-            "Type": "Container",
-            "Name": "KeyboardExtras",
-            "Width": 250,
-            "Height": 320,
-            "Visible": false,
-            "Components": [
-              {
-                "Type": "Box",
-                "Name": "box1_1",
-                "Y": 295,
-                "Width": 240,
-                "Height": 25,
-                "Color": {
-                  "Red": 196,
-                  "Green": 196,
-                  "Blue": 196
-                }
-              },
-              {
-                "Type": "ButtonWithLabel",
-                "Name": "ExitButton",
-                "X": 9,
-                "Y": 296,
-                "Width": 62,
-                "Height": 23,
-                "Pressed": "LongButtonPressed Resized.png",
-                "Released": "LongButtonUnpressed Resized.png",
-                "TextId": "__SingleUse_LONC",
-                "ReleasedColor": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "PressedColor": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "TextRotation": "0"
-              },
-              {
-                "Type": "ButtonWithLabel",
-                "Name": "EnterButton",
-                "X": 170,
-                "Y": 296,
-                "Width": 62,
-                "Height": 23,
-                "Pressed": "LongButtonPressed Resized.png",
-                "Released": "LongButtonUnpressed Resized.png",
-                "TextId": "__SingleUse_LMNU",
-                "ReleasedColor": {
-                  "Red": 10,
-                  "Green": 10,
-                  "Blue": 10
-                },
-                "PressedColor": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "TextRotation": "0"
-              }
-            ]
-          },
-          {
             "Type": "TextArea",
             "Name": "PumpDensity_8",
             "X": 42,
@@ -948,185 +883,74 @@
               "UseBuffer": true,
               "BufferSize": 10
             }
+          },
+          {
+            "Type": "Container",
+            "Name": "KeyboardExtras",
+            "Width": 250,
+            "Height": 320,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box1_1",
+                "Y": 295,
+                "Width": 240,
+                "Height": 25,
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ExitButton",
+                "X": 9,
+                "Y": 296,
+                "Width": 62,
+                "Height": 23,
+                "Pressed": "LongButtonPressed Resized.png",
+                "Released": "LongButtonUnpressed Resized.png",
+                "TextId": "__SingleUse_LONC",
+                "ReleasedColor": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "EnterButton",
+                "X": 170,
+                "Y": 296,
+                "Width": 62,
+                "Height": 23,
+                "Pressed": "LongButtonPressed Resized.png",
+                "Released": "LongButtonUnpressed Resized.png",
+                "TextId": "__SingleUse_LMNU",
+                "ReleasedColor": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              }
+            ]
           }
         ],
         "Interactions": [
-          {
-            "InteractionName": "P1KeyboardCall",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PEditButton1"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P1KeyboardCall"
-            }
-          },
-          {
-            "InteractionName": "P2KeyboardCall",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PEditButton2"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P2KeyboardCall"
-            }
-          },
-          {
-            "InteractionName": "P3KeyboardCall",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PEditButton3"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P3KeyboardCall"
-            }
-          },
-          {
-            "InteractionName": "P4KeyboardCall",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PEditButton4"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P4KeyboardCall"
-            }
-          },
-          {
-            "InteractionName": "P5KeyboardCall",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PEditButton5"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P5KeyboardCall"
-            }
-          },
-          {
-            "InteractionName": "P6KeyboardCall",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PEditButton6"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P6KeyboardCall"
-            }
-          },
-          {
-            "InteractionName": "P7KeyboardCall",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PEditButton7"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P7KeyboardCall"
-            }
-          },
-          {
-            "InteractionName": "P8KeyboardCall",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PEditButton8"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P8KeyboardCall"
-            }
-          },
-          {
-            "InteractionName": "P1Toggle",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButton1"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P1Toggle"
-            }
-          },
-          {
-            "InteractionName": "P2Toggle",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButton2"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P2Toggle"
-            }
-          },
-          {
-            "InteractionName": "P3Toggle",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButton3"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P3Toggle"
-            }
-          },
-          {
-            "InteractionName": "P4Toggle",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButton4"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P4Toggle"
-            }
-          },
-          {
-            "InteractionName": "P5Toggle",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButton5"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P5Toggle"
-            }
-          },
-          {
-            "InteractionName": "P6Toggle",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButton6"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P6Toggle"
-            }
-          },
-          {
-            "InteractionName": "P7Toggle",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButton7"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P7Toggle"
-            }
-          },
-          {
-            "InteractionName": "P8Toggle",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButton8"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "P8Toggle"
-            }
-          },
           {
             "InteractionName": "BackButton",
             "Trigger": {
@@ -1159,6 +983,182 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "ExitPressed"
+            }
+          },
+          {
+            "InteractionName": "Toggle1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton1"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->pumpToggledHandler(1);"
+            }
+          },
+          {
+            "InteractionName": "Toggle2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton2"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->pumpToggledHandler(2);"
+            }
+          },
+          {
+            "InteractionName": "Toggle3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton3"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->pumpToggledHandler(3);"
+            }
+          },
+          {
+            "InteractionName": "Toggle4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton4"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->pumpToggledHandler(4);"
+            }
+          },
+          {
+            "InteractionName": "Toggle5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton5"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->pumpToggledHandler(5);"
+            }
+          },
+          {
+            "InteractionName": "Toggle6",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton6"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->pumpToggledHandler(6);"
+            }
+          },
+          {
+            "InteractionName": "Toggle7",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton7"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->pumpToggledHandler(7);"
+            }
+          },
+          {
+            "InteractionName": "Toggle8",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton8"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->pumpToggledHandler(8);"
+            }
+          },
+          {
+            "InteractionName": "Density1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PEditButton1"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->densityFieldClicked(1);"
+            }
+          },
+          {
+            "InteractionName": "Density2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PEditButton2"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->densityFieldClicked(2);"
+            }
+          },
+          {
+            "InteractionName": "Density3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PEditButton3"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->densityFieldClicked(3);"
+            }
+          },
+          {
+            "InteractionName": "Density4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PEditButton4"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->densityFieldClicked(4);"
+            }
+          },
+          {
+            "InteractionName": "Density5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PEditButton5"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->densityFieldClicked(5);"
+            }
+          },
+          {
+            "InteractionName": "Density6",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PEditButton6"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->densityFieldClicked(6);"
+            }
+          },
+          {
+            "InteractionName": "Density7",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PEditButton7"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->densityFieldClicked(7);"
+            }
+          },
+          {
+            "InteractionName": "Density8",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PEditButton8"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->densityFieldClicked(8);"
             }
           }
         ]
