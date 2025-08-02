@@ -13,6 +13,8 @@
 #include <gui/homescreen_screen/HomeScreenPresenter.hpp>
 #include <gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp>
 #include <gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp>
+#include <gui/chemicalssetup_screen/ChemicalsSetupView.hpp>
+#include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
 
 using namespace touchgfx;
 

@@ -1,0 +1,31 @@
+#ifndef PUMPDROPDOWNLIST_HPP
+#define PUMPDROPDOWNLIST_HPP
+
+#include <gui_generated/containers/PumpDropdownListBase.hpp>
+#include <gui/containers/PumpOption.hpp>
+#include <touchgfx/Callback.hpp>
+#include <vector>
+
+// FIX: Inherit from the Base class
+class PumpDropdownList : public PumpDropdownListBase
+{
+public:
+    PumpDropdownList();
+    virtual ~PumpDropdownList() {}
+
+    void buildList(const std::vector<int>& enabled_pump_indices);
+    void setOptionSelectedCallback(touchgfx::GenericCallback<int>& callback);
+
+protected:
+    void pumpOptionClickedCallbackHandler(int pumpIndex);
+
+private:
+    PumpOption* pumpOptions[8];
+
+    // FIX: Make this a pointer, not a direct object
+    touchgfx::GenericCallback<int>* optionSelectedCallback;
+
+    // FIX: Create a permanent callback object to pass to children
+    touchgfx::Callback<PumpDropdownList, int> childClickCallback;
+};
+#endif // PUMPDROPDOWNLIST_HPP

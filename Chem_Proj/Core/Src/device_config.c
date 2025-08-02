@@ -2,6 +2,7 @@
 #include "Flash.h"
 #include <string.h>
 #include <stdbool.h>
+#include <stdio.h> // For snprintf
 
 // Define the address where configuration will be stored (the last page)
 // Using FLASH_LAST_PAGE from flash.h makes this more consistent
@@ -12,50 +13,65 @@ extern CRC_HandleTypeDef hcrc;
 static void Config_SetDefaults(DeviceConfiguration_t* config);
 static uint32_t CalculateCRC32(const uint8_t* data, size_t length);
 
-// Default settings function (remains the same)
+// In device_config.c
+
 static void Config_SetDefaults(DeviceConfiguration_t* config)
 {
-    // 1. Initialize all fields to 0 first (good practice to ensure no garbage values)
+    // 1. Initialize the entire struct to zero.
+    // This is a crucial first step. It clears all data, padding, and the future CRC field.
     memset(config, 0, sizeof(DeviceConfiguration_t));
 
-    // 2. Set the header for integrity and versioning (CRITICAL!)
+    // 2. Set the header for integrity and versioning.
     config->magic_number = CONFIG_MAGIC_NUMBER;
-    config->config_version = CONFIG_VERSION;
-    // _header_padding is implicitly zeroed by memset
+    config->config_version = CONFIG_VERSION; // Uses the new version from the header
 
-    // 3. Set System-wide Pump Physical Configuration defaults
-    for (int i = 0; i < 8; i++) {
-        config->PumpEnable[i] = 1;      // Default: All 8 physical pumps are enabled
-        config->PumpDensity[i] = 1.0f;  // Default density (e.g., for water, or a generic liquid)
+    // 3. Set System-wide Physical Pump Configuration Defaults.
+    for (int i = 0; i < NUM_PUMPS; i++) {
+        // --- YOUR NEW REQUIREMENT: Only Pump 1 (index 0) is enabled by default. ---
+        config->PumpEnable[i] = (i == 0) ? 1 : 0;
+
+        // Default density is still 1.0f (e.g., for water).
+        config->PumpDensity[i] = 1.0f;
     }
 
-    // 4. Set Chemical Recipe Definitions defaults (for 8 definable chemicals)
-    // You can customize these default names
-    char default_chem_names[8][20] = {
-        "Chemical_01", "Chemical_02", "Chemical_03", "Chemical_04",
-        "Chemical_05", "Chemical_06", "Chemical_07", "Chemical_08"
-    };
+    // 4. Set the global default for volume units.
+    // Let's default to milliliters as it's a standard scientific unit.
+    config->VolumeUnit = 0; // 0 for mL
 
-    for (int i = 0; i < 8; i++) {
-        // Set default name for each chemical
-        strncpy(config->ChemicalName[i], default_chem_names[i], sizeof(config->ChemicalName[i]) - 1);
-        config->ChemicalName[i][sizeof(config->ChemicalName[i]) - 1] = '\0'; // Ensure null-termination
+    // 5. Set Chemical Recipe Defaults (for all 8 recipes).
+    // This now iterates through the new 'recipes' array of structs.
+    for (int i = 0; i < NUM_CHEMICAL_RECIPES; i++) {
 
-        // Default: Each chemical recipe initially uses 1 pump
-        config->PumpAmountPerChemical[i] = 1;
+        // Access the current recipe we are initializing.
+        ChemicalRecipe_t* current_recipe = &config->recipes[i];
 
-        // Initialize dispense instructions for each chemical recipe
-        for (int j = 0; j < MAX_DISPENSE_OPTIONS_PER_CHEMICAL; j++) {
-            // Use -1 or another clearly invalid value to signify an unused pump option
-            config->ChemicalDispenseInstructions[i][j].pump_index = 0;
-            config->ChemicalDispenseInstructions[i][j].amount = 0.0f; // Default amount is zero
+        // a. Set the default name for each chemical (e.g., "Chemical_01").
+        //    snprintf is a safe and easy way to format strings.
+        snprintf(current_recipe->name, sizeof(current_recipe->name), "Chemical_%02d", i + 1);
+
+        // b. Default the total dispense volume to a safe value (0).
+        current_recipe->total_dispense_volume = 0.0f;
+
+        // c. Initialize all 3 of the pump setups within this recipe to "unused".
+        for (int j = 0; j < MAX_PUMP_SETUPS_PER_CHEMICAL; j++) {
+
+            // Access the current pump setup we are initializing.
+        	PumpSetup_t* current_setup = &current_recipe->pump_setups[j];
+            // Use -1 to clearly indicate that this pump setup slot is empty.
+            current_setup->pump_index = -1;
+
+            // Default all dispense amounts to zero.
+            current_setup->dispense_small = 0.0f;
+            current_setup->dispense_medium = 0.0f;
+            current_setup->dispense_large = 0.0f;
         }
     }
 
-    // _padding_for_flash_alignment is implicitly zeroed by memset
+    // 6. The padding fields (_header_padding and _internal_crc_padding) are already
+    //    zeroed by the initial memset(), so we don't need to touch them.
 
-    // 5. CRC will be calculated and set during the Config_Save operation, so leave it 0 here.
-    config->crc32_checksum = 0;
+    // 7. The crc32_checksum field is also zeroed by memset(). It will be calculated
+    //    and set correctly during the Config_Save operation.
 }
 // CRC calculation function (remains the same)
 

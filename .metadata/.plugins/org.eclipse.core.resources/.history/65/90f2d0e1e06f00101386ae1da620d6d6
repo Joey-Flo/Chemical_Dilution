@@ -1,0 +1,33 @@
+#ifndef PUMPDROPDOWNLIST_HPP
+#define PUMPDROPDOWNLIST_HPP
+
+#include <gui_generated/containers/PumpDropdownListBase.hpp>
+#include <gui/containers/PumpOption.hpp> // We need to know about our child component
+#include <touchgfx/Callback.hpp>
+#include <vector> // We will receive a list of enabled pumps
+
+class PumpDropdownList : public PumpDropdownListBase
+{
+public:
+    PumpDropdownList();
+    virtual ~PumpDropdownList() {}
+
+    // This is the main public function. The screen will call this to build the dynamic list.
+    void buildList(const std::vector<int>& enabled_pump_indices);
+
+    // This sets up the callback for when the user makes a final selection.
+    void setOptionSelectedCallback(touchgfx::GenericCallback<int>& callback);
+
+protected:
+    // This is the internal handler that listens for clicks from any of our PumpOption children.
+    void pumpOptionClickedCallbackHandler(int pumpIndex);
+
+private:
+    // An array of pointers to our 8 child widgets for easy access.
+    PumpOption* pumpOptions[8];
+
+    // The callback to signal the final choice "up" to the screen.
+    touchgfx::GenericCallback<int> optionSelectedCallback;
+};
+
+#endif // PUMPDROPDOWNLIST_HPP

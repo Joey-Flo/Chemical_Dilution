@@ -232,6 +232,30 @@
     <Filter Include="Source Files\generated\gui_generated\pumpsetupscreen_screen">
       <UniqueIdentifier>EC25CE3E-3FAC-36E1-E313-2C978B46FA56</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\containers">
+      <UniqueIdentifier>DA536490-6E70-8760-3198-3307F141D460</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\chemicalssetup_screen">
+      <UniqueIdentifier>7C62D8E5-E2CC-E8BB-F13B-A56E4967CC4B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\chemicalssetup_screen">
+      <UniqueIdentifier>731FED91-8F5B-C04A-B487-299B67FA88D3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\containers">
+      <UniqueIdentifier>B45FEF55-CC8C-8A04-F6F7-BCE382CF3BAE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\chemicalssetup_screen">
+      <UniqueIdentifier>DBBD60B1-F2E1-58DA-78C4-499686DF7C9F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\containers">
+      <UniqueIdentifier>9C5F206E-96EA-BCD2-885A-24A99C84FE40</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\chemicalssetup_screen">
+      <UniqueIdentifier>0A0341DC-DD25-B986-C738-F5DC37B54F63</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\containers">
+      <UniqueIdentifier>B2394B34-0A37-A21D-471E-233C59282456</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -284,6 +308,33 @@
     </ClCompile>
     <ClCompile Include="..\..\gui\src\common\CustomKeyboard.cpp">
       <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\chemicalssetup_screen\ChemicalsSetupPresenter.cpp">
+      <Filter>Source Files\gui\chemicalssetup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\chemicalssetup_screen\ChemicalsSetupView.cpp">
+      <Filter>Source Files\gui\chemicalssetup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\chemicalssetup_screen\ChemicalsSetupViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\chemicalssetup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\PumpDropDownList.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpDropDownListBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\PumpOption.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpOptionBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\PumpSetupWidget.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpSetupWidgetBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -753,6 +804,33 @@
     </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\common\KeyboardLayout.hpp">
       <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\chemicalssetup_screen\ChemicalsSetupPresenter.hpp">
+      <Filter>Header Files\gui\chemicalssetup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\chemicalssetup_screen\ChemicalsSetupView.hpp">
+      <Filter>Header Files\gui\chemicalssetup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\chemicalssetup_screen\ChemicalsSetupViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\chemicalssetup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\PumpDropDownList.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpDropDownListBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\PumpOption.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpOptionBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\PumpSetupWidget.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpSetupWidgetBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

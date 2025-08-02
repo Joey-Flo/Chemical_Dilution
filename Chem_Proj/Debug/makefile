@@ -14,12 +14,17 @@ RM := rm -rf
 -include TouchGFX/gui/src/pumpsetupscreen_screen/subdir.mk
 -include TouchGFX/gui/src/model/subdir.mk
 -include TouchGFX/gui/src/homescreen_screen/subdir.mk
+-include TouchGFX/gui/src/containers/subdir.mk
 -include TouchGFX/gui/src/common/subdir.mk
+-include TouchGFX/gui/src/chemicalssetup_screen/subdir.mk
 -include TouchGFX/generated/texts/src/subdir.mk
+-include TouchGFX/generated/images/src/__generated/subdir.mk
 -include TouchGFX/generated/images/src/subdir.mk
 -include TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/homescreen_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/containers/subdir.mk
 -include TouchGFX/generated/gui_generated/src/common/subdir.mk
+-include TouchGFX/generated/gui_generated/src/chemicalssetup_screen/subdir.mk
 -include TouchGFX/generated/fonts/src/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/hal/simulator/sdl2/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/driver/touch/subdir.mk

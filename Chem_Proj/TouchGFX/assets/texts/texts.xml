@@ -16,6 +16,48 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_H5ZI" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AR5F" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1DTP" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">M</Translation>
+      </Text>
+      <Text Id="__SingleUse_1MHA" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_IK08" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">L</Translation>
+      </Text>
+      <Text Id="__SingleUse_N7MD" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">S</Translation>
+      </Text>
+      <Text Id="__SingleUse_K2E0" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_WAJJ" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_9Y9G" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_39CF" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Add Pump</Translation>
+      </Text>
+      <Text Id="__SingleUse_U0SG" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Chemical 1</Translation>
+      </Text>
+      <Text Id="__SingleUse_OX82" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Volume:</Translation>
+      </Text>
+      <Text Id="__SingleUse_EV8N" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Name:</Translation>
+      </Text>
+      <Text Id="__SingleUse_42WA" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Chemicals</Translation>
+      </Text>
       <Text Id="__SingleUse_AGAK" Alignment="Center" TypographyId="Display">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>

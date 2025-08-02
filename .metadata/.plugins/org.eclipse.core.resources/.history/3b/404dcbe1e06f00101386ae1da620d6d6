@@ -1,0 +1,63 @@
+#include <gui/containers/PumpDropdownList.hpp>
+
+PumpDropdownList::PumpDropdownList()
+{
+    // In the constructor, fill our helper array with pointers to the child widgets
+    // that were created in the Designer.
+    pumpOptions[0] = &pumpOption0;
+    pumpOptions[1] = &pumpOption1;
+    pumpOptions[2] = &pumpOption2;
+    pumpOptions[3] = &pumpOption3;
+    pumpOptions[4] = &pumpOption4;
+    pumpOptions[5] = &pumpOption5;
+    pumpOptions[6] = &pumpOption6;
+    pumpOptions[7] = &pumpOption7;
+}
+
+void PumpDropdownList::buildList(const std::vector<int>& enabled_pump_indices)
+{
+    // First, hide all 8 of our pre-placed option widgets.
+    for (int i = 0; i < 8; ++i) {
+        pumpOptions[i]->setVisible(false);
+    }
+
+    // Now, loop through only the pumps that are ACTUALLY enabled.
+    int visible_option_count = 0;
+    for (int pump_index : enabled_pump_indices) {
+        if (visible_option_count < 8) {
+            PumpOption* option_widget = pumpOptions[visible_option_count];
+
+            // Prepare the name for the pump (e.g., "Pump 3")
+            char name_buffer[10];
+            snprintf(name_buffer, 10, "Pump %d", pump_index + 1);
+
+            // Configure the widget with the correct info and make it visible.
+            option_widget->setup(pump_index, name_buffer);
+            option_widget->setVisible(true);
+
+            // IMPORTANT: Tell this child widget to call OUR internal handler when it gets clicked.
+            option_widget->setClickCallback(
+                touchgfx::Callback<PumpDropdownList, int>(this, &PumpDropdownList::pumpOptionClickedCallbackHandler)
+            );
+
+            visible_option_count++;
+        }
+    }
+
+    // Invalidate the whole container to force a redraw of all its children.
+    this->invalidate();
+}
+
+void PumpDropdownList::setOptionSelectedCallback(touchgfx::GenericCallback<int>& callback)
+{
+    optionSelectedCallback = callback;
+}
+
+void PumpDropdownList::pumpOptionClickedCallbackHandler(int pumpIndex)
+{
+    // One of our children was clicked. This is the final selection.
+    // Now we execute the main callback to signal the result "up" to the screen.
+    if (optionSelectedCallback.isValid()) {
+        optionSelectedCallback.execute(pumpIndex);
+    }
+}

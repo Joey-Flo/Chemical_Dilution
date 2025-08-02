@@ -24,6 +24,8 @@
 
 /* USER CODE BEGIN TouchGFXHAL.hpp */
 
+
+#include <touchgfx/lcd/LCD.hpp>
 #include <TouchGFXGeneratedHAL.hpp>
 
 /**
@@ -37,11 +39,11 @@ class TouchGFXHAL : public TouchGFXGeneratedHAL
 {
 public:
     /**
-     * @fn TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height) : TouchGFXGeneratedHAL(dma, display, tc, width, height)
+     * @fn TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height)
      *
      * @brief Constructor.
      *
-     *        Constructor. Initializes members.
+     *        This constructor is declared here and implemented in the .cpp file.
      *
      * @param [in,out] dma     Reference to DMA interface.
      * @param [in,out] display Reference to LCD interface.
@@ -49,9 +51,9 @@ public:
      * @param width            Width of the display.
      * @param height           Height of the display.
      */
-    TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height) : TouchGFXGeneratedHAL(dma, display, tc, width, height)
-    {
-    }
+    // --- THIS IS THE FIX ---
+    // We only DECLARE the constructor here. The implementation goes in the .cpp file.
+    TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height);
 
     virtual void initialize();
 
@@ -59,8 +61,6 @@ public:
      * @fn virtual void TouchGFXHAL::disableInterrupts();
      *
      * @brief Disables the DMA, LDC, and GPU2D (if enabled) interrupts.
-     *
-     *        Disables the DMA, LDC, and GPU2D (if enabled) interrupts.
      */
     virtual void disableInterrupts();
 
@@ -68,8 +68,6 @@ public:
      * @fn virtual void TouchGFXHAL::enableInterrupts();
      *
      * @brief Enables the DMA, LCD, and GPU2D (if enabled) interrupts.
-     *
-     *        Enables the DMA, LCD, and GPU2D (if enabled) interrupts.
      */
     virtual void enableInterrupts();
 
@@ -77,8 +75,6 @@ public:
      * @fn virtual void TouchGFXHAL::configureInterrupts();
      *
      * @brief Sets the DMA, LCD, and GPU2D (if enabled) interrupt priorities.
-     *
-     *        Sets the DMA, LCD, and GPU2D (if enabled) interrupt priorities.
      */
     virtual void configureInterrupts();
 
@@ -86,24 +82,16 @@ public:
      * @fn virtual void TouchGFXHAL::enableLCDControllerInterrupt();
      *
      * @brief Configure the LCD controller to fire interrupts at VSYNC.
-     *
-     *        Configure the LCD controller to fire interrupts at VSYNC. Called automatically
-     *        once TouchGFX initialization has completed.
      */
     virtual void enableLCDControllerInterrupt();
 
     virtual bool beginFrame();
-
     virtual void endFrame();
 
     /**
      * @fn virtual void TouchGFXHAL::flushFrameBuffer();
      *
      * @brief This function is called whenever the framework has performed a complete draw.
-     *
-     * This specialization is only in place to keep compilers happy. Base impl. will call the
-     * Rect version.
-     * @see HAL::flushFrameBuffer
      */
     virtual void flushFrameBuffer()
     {
@@ -114,12 +102,6 @@ public:
      * @fn virtual void TouchGFXHAL::flushFrameBuffer(const Rect& rect);
      *
      * @brief This function is called whenever the framework has performed a partial draw.
-     *
-     *        This function is called whenever the framework has performed a partial draw.
-     *
-     * @param rect The area of the screen that has been drawn, expressed in absolute coordinates.
-     *
-     * @see flushFrameBuffer().
      */
     virtual void flushFrameBuffer(const touchgfx::Rect& rect);
 
@@ -127,14 +109,6 @@ public:
      * @fn virtual bool TouchGFXHAL::blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint32_t numBytes);
      *
      * @brief This function performs a platform-specific memcpy.
-     *
-     *        This function performs a platform-specific memcpy, if supported by the hardware.
-     *
-     * @param [out] dest Pointer to destination memory.
-     * @param [in] src   Pointer to source memory.
-     * @param numBytes   Number of bytes to copy.
-     *
-     * @return true if the copy succeeded, false if copy was not performed.
      */
     virtual bool blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint32_t numBytes);
 
@@ -143,10 +117,6 @@ protected:
      * @fn virtual uint16_t* TouchGFXHAL::getTFTFrameBuffer() const;
      *
      * @brief Gets the frame buffer address used by the TFT controller.
-     *
-     *        Gets the frame buffer address used by the TFT controller.
-     *
-     * @return The address of the frame buffer currently being displayed on the TFT.
      */
     virtual uint16_t* getTFTFrameBuffer() const;
 
@@ -154,10 +124,6 @@ protected:
      * @fn virtual void TouchGFXHAL::setTFTFrameBuffer(uint16_t* adr);
      *
      * @brief Sets the frame buffer address used by the TFT controller.
-     *
-     *        Sets the frame buffer address used by the TFT controller.
-     *
-     * @param [in,out] adr New frame buffer address.
      */
     virtual void setTFTFrameBuffer(uint16_t* adr);
 };
@@ -165,5 +131,3 @@ protected:
 /* USER CODE END TouchGFXHAL.hpp */
 
 #endif // TouchGFXHAL_HPP
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

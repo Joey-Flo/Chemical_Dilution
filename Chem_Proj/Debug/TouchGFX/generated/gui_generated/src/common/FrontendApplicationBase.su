@@ -43,13 +43,13 @@ C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:19:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:21:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:175:7:constexpr touchgfx::GenericCallback<void>& touchgfx::GenericCallback<void>::operator=(const touchgfx::GenericCallback<void>&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:constexpr touchgfx::Callback<FrontendApplicationBase>& touchgfx::Callback<FrontendApplicationBase>::operator=(touchgfx::Callback<FrontendApplicationBase>&&)	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:38:6:void FrontendApplicationBase::gotoHomeScreenScreenNoTransition()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:44:6:void FrontendApplicationBase::gotoHomeScreenScreenNoTransitionImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:51:6:void FrontendApplicationBase::gotoPumpSetupScreenScreenNoTransition()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:57:6:void FrontendApplicationBase::gotoPumpSetupScreenScreenNoTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:40:6:void FrontendApplicationBase::gotoHomeScreenScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:46:6:void FrontendApplicationBase::gotoHomeScreenScreenNoTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:53:6:void FrontendApplicationBase::gotoPumpSetupScreenScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:59:6:void FrontendApplicationBase::gotoPumpSetupScreenScreenNoTransitionImpl()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:175:7:constexpr touchgfx::GenericCallback<void>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:427:5:touchgfx::Callback<dest_type, void, void, void>::Callback() [with dest_type = FrontendApplicationBase]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:440:5:touchgfx::Callback<dest_type, void, void, void>::Callback(dest_type*, void (dest_type::*)()) [with dest_type = FrontendApplicationBase]	24	static
@@ -65,10 +65,10 @@ C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = PumpSetupScreenPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:touchgfx::NoTransition::~NoTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:virtual touchgfx::NoTransition::~NoTransition()	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:60:1:void __static_initialization_and_destruction_0()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:1:void __static_initialization_and_destruction_0()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:60:1:void __static_initialization_and_destruction_1()	8	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:1:void __static_initialization_and_destruction_1()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = FrontendApplicationBase]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = FrontendApplicationBase]	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:60:1:cpp)	8	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:60:1:cpp)	8	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:1:cpp)	8	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:1:cpp)	8	static

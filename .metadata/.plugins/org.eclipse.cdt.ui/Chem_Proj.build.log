@@ -1,10 +1,143 @@
-00:01:42 **** Incremental Build of configuration Debug for project Chem_Proj ****
+16:03:34 **** Incremental Build of configuration Debug for project Chem_Proj ****
 make -j16 all 
-arm-none-eabi-size  Chem_Proj.elf 
-   text	   data	    bss	    dec	    hex	filename
- 956730	   1592	  21048	 979370	  ef1aa	Chem_Proj.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-g++ "../TouchGFX/target/STM32TouchController.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/target/STM32TouchController.d" -MT"TouchGFX/target/STM32TouchController.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/target/STM32TouchController.o"
+arm-none-eabi-g++ "../TouchGFX/target/TouchGFXGPIO.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/target/TouchGFXGPIO.d" -MT"TouchGFX/target/TouchGFXGPIO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/target/TouchGFXGPIO.o"
+arm-none-eabi-g++ "../TouchGFX/target/TouchGFXHAL.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/target/TouchGFXHAL.d" -MT"TouchGFX/target/TouchGFXHAL.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/target/TouchGFXHAL.o"
+arm-none-eabi-gcc "../Core/Src/HAL_Init.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/HAL_Init.d" -MT"Core/Src/HAL_Init.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/HAL_Init.o"
+arm-none-eabi-gcc "../Core/Src/HardwareTest.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/HardwareTest.d" -MT"Core/Src/HardwareTest.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/HardwareTest.o"
+arm-none-eabi-gcc "../Core/Src/MuxDriver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MuxDriver.d" -MT"Core/Src/MuxDriver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MuxDriver.o"
+arm-none-eabi-gcc "../Core/Src/PWMDriver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/PWMDriver.d" -MT"Core/Src/PWMDriver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/PWMDriver.o"
+arm-none-eabi-gcc "../Core/Src/hx711.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hx711.d" -MT"Core/Src/hx711.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hx711.o"
+../TouchGFX/target/TouchGFXHAL.cpp:53:2: warning: #warning "A user must call touchgfx::startNewTransfer(); once touchgfxDisplayDriverTransmitBlock() has succesfully sent a block." [-Wcpp]
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+   53 | #warning "A user must call touchgfx::startNewTransfer(); once touchgfxDisplayDriverTransmitBlock() has succesfully sent a block."
+      |  ^~~~~~~
+../TouchGFX/target/TouchGFXHAL.cpp:54:2: warning: #warning "A user must implement C-methods touchgfxDisplayDriverTransmitActive() and touchgfxDisplayDriverTransmitBlock() used by the Partial Framebuffer Strategy." [-Wcpp]
+   54 | #warning "A user must implement C-methods touchgfxDisplayDriverTransmitActive() and touchgfxDisplayDriverTransmitBlock() used by the Partial Framebuffer Strategy."
+      |  ^~~~~~~
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/z_displ_ILI9XXX.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/z_displ_ILI9XXX.d" -MT"Core/Src/z_displ_ILI9XXX.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/z_displ_ILI9XXX.o"
+arm-none-eabi-gcc "../Core/Src/z_displ_ILI9XXX_test.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/z_displ_ILI9XXX_test.d" -MT"Core/Src/z_displ_ILI9XXX_test.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/z_displ_ILI9XXX_test.o"
+arm-none-eabi-gcc "../Core/Src/z_touch_XPT2046.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/z_touch_XPT2046.d" -MT"Core/Src/z_touch_XPT2046.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/z_touch_XPT2046.o"
+arm-none-eabi-gcc "../Core/Src/z_touch_XPT2046_menu.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/z_touch_XPT2046_menu.d" -MT"Core/Src/z_touch_XPT2046_menu.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/z_touch_XPT2046_menu.o"
+In file included from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../TouchGFX/target/TouchGFXHAL.cpp:27:
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1325:29: error: expected identifier before '(' token
+ 1325 | #define LCD                 ((LCD_TypeDef *) LCD_BASE)
+      |                             ^
+../TouchGFX/target/TouchGFXHAL.cpp:31:66: note: in expansion of macro 'LCD'
+   31 | TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height)
+      |                                                                  ^~~
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1173:31: error: expected ')' before '(' token
+ 1173 | #define LCD_BASE              (APB1PERIPH_BASE + 0x2400UL)
+      |                               ^
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1325:46: note: in expansion of macro 'LCD_BASE'
+ 1325 | #define LCD                 ((LCD_TypeDef *) LCD_BASE)
+      |                                              ^~~~~~~~
+../TouchGFX/target/TouchGFXHAL.cpp:31:66: note: in expansion of macro 'LCD'
+   31 | TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height)
+      |                                                                  ^~~
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1325:29: note: to match this '('
+ 1325 | #define LCD                 ((LCD_TypeDef *) LCD_BASE)
+      |                             ^
+../TouchGFX/target/TouchGFXHAL.cpp:31:66: note: in expansion of macro 'LCD'
+   31 | TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height)
+      |                                                                  ^~~
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1173:31: error: expected ')' before '(' token
+ 1173 | #define LCD_BASE              (APB1PERIPH_BASE + 0x2400UL)
+      |                               ^
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1325:46: note: in expansion of macro 'LCD_BASE'
+ 1325 | #define LCD                 ((LCD_TypeDef *) LCD_BASE)
+      |                                              ^~~~~~~~
+../TouchGFX/target/TouchGFXHAL.cpp:31:66: note: in expansion of macro 'LCD'
+   31 | TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height)
+      |                                                                  ^~~
+../TouchGFX/target/TouchGFXHAL.cpp:31:25: note: to match this '('
+   31 | TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height)
+      |                         ^
+../TouchGFX/target/TouchGFXHAL.cpp:31:1: error: no declaration matches 'TouchGFXHAL::TouchGFXHAL(...)'
+   31 | TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height)
+      | ^~~~~~~~~~~
+In file included from ../TouchGFX/target/TouchGFXHAL.cpp:23:
+../TouchGFX/target/TouchGFXHAL.hpp:38:7: note: candidates are: 'constexpr TouchGFXHAL::TouchGFXHAL(TouchGFXHAL&&)'
+   38 | class TouchGFXHAL : public TouchGFXGeneratedHAL
+      |       ^~~~~~~~~~~
+../TouchGFX/target/TouchGFXHAL.hpp:38:7: note:                 'constexpr TouchGFXHAL::TouchGFXHAL(const TouchGFXHAL&)'
+../TouchGFX/target/TouchGFXHAL.hpp:56:5: note:                 'TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, uint16_t, uint16_t)'
+   56 |     TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height);
+      |     ^~~~~~~~~~~
+../TouchGFX/target/TouchGFXHAL.hpp:38:7: note: 'class TouchGFXHAL' defined here
+   38 | class TouchGFXHAL : public TouchGFXGeneratedHAL
+      |       ^~~~~~~~~~~
+make: *** [TouchGFX/target/subdir.mk:25: TouchGFX/target/TouchGFXHAL.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/PWMDriver.c: In function 'get_tim_clock_freq':
+../Core/Src/PWMDriver.c:30:118: warning: comparison of distinct pointer types lacks a cast
+   30 |         (TIM_TypeDef*)htim->Instance == TIM6 || (TIM_TypeDef*)htim->Instance == TIM7 || (TIM_TypeDef*)htim->Instance == LPTIM1) {
+      |                                                                                                                      ^~
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'testLines':
+../Core/Src/z_displ_ILI9XXX_test.c:55:5: warning: implicit declaration of function 'Displ_CLS' [-Wimplicit-function-declaration]
+   55 |     Displ_CLS(BLACK);
+      |     ^~~~~~~~~
+../Core/Src/z_displ_ILI9XXX_test.c:60:35: warning: implicit declaration of function 'Displ_Line'; did you mean 'Displ_Init'? [-Wimplicit-function-declaration]
+   60 |     for (x2 = 0; x2 < w; x2 += 6) Displ_Line(x1, y1, x2, y2, color);
+      |                                   ^~~~~~~~~~
+      |                                   Displ_Init
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'testRects':
+../Core/Src/z_displ_ILI9XXX_test.c:119:17: warning: implicit declaration of function 'Displ_Border' [-Wimplicit-function-declaration]
+  119 |                 Displ_Border(cx - i2, cy - i2, i, i, 1, color);
+      |                 ^~~~~~~~~~~~
+../Core/Src/z_touch_XPT2046_menu.c: In function 'DrawMenuItem':
+../Core/Src/z_touch_XPT2046_menu.c:105:9: warning: implicit declaration of function 'Displ_CString' [-Wimplicit-function-declaration]
+  105 |         Displ_CString(item->X, item->Y, item->X+item->W-1, item->Y+item->H-1,item->Desc,item->font,item->fontSize,ink,bkg);
+      |         ^~~~~~~~~~~~~
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'testFilledCircles':
+../Core/Src/z_displ_ILI9XXX_test.c:150:17: warning: implicit declaration of function 'Displ_fillCircle'; did you mean 'Displ_FillArea'? [-Wimplicit-function-declaration]
+  150 |                 Displ_fillCircle(x, y, radius, color);
+      |                 ^~~~~~~~~~~~~~~~
+      |                 Displ_FillArea
+../Core/Src/z_touch_XPT2046_menu.c:106:9: warning: implicit declaration of function 'Displ_Border' [-Wimplicit-function-declaration]
+  106 |         Displ_Border(item->X, item->Y, item->W, item->H,1,bor);
+      |         ^~~~~~~~~~~~
+../Core/Src/z_touch_XPT2046_menu.c: In function 'DrawMenu':
+../Core/Src/z_touch_XPT2046_menu.c:122:9: warning: implicit declaration of function 'Displ_CLS' [-Wimplicit-function-declaration]
+  122 |         Displ_CLS(BLACK);
+      |         ^~~~~~~~~
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'testCircles':
+../Core/Src/z_displ_ILI9XXX_test.c:169:13: warning: implicit declaration of function 'Displ_drawCircle' [-Wimplicit-function-declaration]
+  169 |             Displ_drawCircle(x, y, radius, color);
+      |             ^~~~~~~~~~~~~~~~
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'testTriangles':
+../Core/Src/z_displ_ILI9XXX_test.c:187:9: warning: implicit declaration of function 'Displ_drawTriangle' [-Wimplicit-function-declaration]
+  187 |         Displ_drawTriangle(
+      |         ^~~~~~~~~~~~~~~~~~
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'testFilledTriangles':
+../Core/Src/z_displ_ILI9XXX_test.c:205:9: warning: implicit declaration of function 'Displ_fillTriangle'; did you mean 'Displ_FillArea'? [-Wimplicit-function-declaration]
+  205 |         Displ_fillTriangle(cx, cy - i, cx - i, cy + i, cx + i, cy + i, color565(0, i, i));
+      |         ^~~~~~~~~~~~~~~~~~
+      |         Displ_FillArea
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'testRoundRects':
+../Core/Src/z_displ_ILI9XXX_test.c:227:9: warning: implicit declaration of function 'Displ_drawRoundRect' [-Wimplicit-function-declaration]
+  227 |         Displ_drawRoundRect(cx - i2, cy - i2, i, i, i / 8, color565(red, 0, 0));
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'testFilledRoundRects':
+../Core/Src/z_displ_ILI9XXX_test.c:246:9: warning: implicit declaration of function 'Displ_fillRoundRect' [-Wimplicit-function-declaration]
+  246 |         Displ_fillRoundRect(cx - i2, cy - i2, i, i, i / 8, color565(0, green, 0));
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'TestChar':
+../Core/Src/z_displ_ILI9XXX_test.c:265:17: warning: implicit declaration of function 'Displ_WChar' [-Wimplicit-function-declaration]
+  265 |                 Displ_WChar(x, y, c, Font16, 1, YELLOW, RED);
+      |                 ^~~~~~~~~~~
+../Core/Src/z_displ_ILI9XXX_test.c: In function 'Displ_Page':
+../Core/Src/z_displ_ILI9XXX_test.c:339:9: warning: implicit declaration of function 'Displ_CString' [-Wimplicit-function-declaration]
+  339 |         Displ_CString(1,21, _width-1, 21+24, str1, Font24, 1, col1,bcol1);
+      |         ^~~~~~~~~~~~~
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
 
-00:01:44 Build Finished. 0 errors, 0 warnings. (took 1s.877ms)
+16:03:37 Build Failed. 6 errors, 17 warnings. (took 2s.916ms)
 

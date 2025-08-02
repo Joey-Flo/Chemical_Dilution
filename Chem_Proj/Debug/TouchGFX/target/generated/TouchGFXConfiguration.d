@@ -76,6 +76,12 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../TouchGFX/gui/include/gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
+ ../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp \
+ ../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
@@ -189,6 +195,12 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../TouchGFX/gui/include/gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp:
+../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:

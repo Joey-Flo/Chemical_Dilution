@@ -1,0 +1,66 @@
+// In TouchGFX/gui/include/gui/containers/PumpSetupWidget.hpp
+
+#ifndef PUMPSETUPWIDGET_HPP
+#define PUMPSETUPWIDGET_HPP
+
+#include <gui_generated/containers/PumpSetupWidgetBase.hpp>
+#include <gui/containers/PumpDropdownList.hpp> // We use the dropdown
+#include "device_config.h" // We need to know about the PumpSetup_t struct
+#include <vector>
+
+class PumpSetupWidget : public PumpSetupWidgetBase
+{
+public:
+    PumpSetupWidget();
+    virtual ~PumpSetupWidget() {}
+
+    // --- PUBLIC INTERFACE ---
+
+    // Main function called from the screen to populate this widget's data
+    void setup(int setup_index, const PumpSetup_t& data);
+
+    // Called from the screen to give us the list of available pumps for our dropdown
+    void setAvailablePumps(const std::vector<int>& enabled_pumps);
+
+
+    // --- CALLBACKS TO THE SCREEN/PRESENTER ---
+
+    // This signals that the user wants to edit one of the volume fields (S, M, or L)
+    // Parameter 1: Our own index (0, 1, or 2)
+    // Parameter 2: Which field was clicked (0=S, 1=M, 2=L)
+    touchgfx::Callback<int, int> volumeEditClickedCallback;
+
+    // This signals that the data inside this widget has changed and needs to be saved
+    // Parameter 1: Our own index (0, 1, or 2)
+    // Parameter 2: A copy of our complete, updated data
+    touchgfx::Callback<int, const PumpSetup_t&> saveDataCallback;
+
+
+protected:
+    // --- INTERNAL EVENT HANDLERS ---
+
+    // Called when the main "SelectPumpButton" toggle button is clicked
+    void selectPumpButtonClickHandler(const touchgfx::AbstractButton& src);
+
+    // Called when a pump is chosen from our internal dropdown list
+    void dropdownPumpSelectedHandler(int pump_index);
+
+    // Called when one of the S/M/L edit buttons is clicked
+    void editS_ButtonClicked();
+    void editM_ButtonClicked();
+    void editL_ButtonClicked();
+
+private:
+    int setupIndex; // Remembers if we are setup #0, #1, or #2
+    std::vector<int> availablePumps; // Stores the list of enabled pumps
+    PumpSetup_t currentData; // A local copy of our data
+
+    // Permanent callback objects for internal connections
+    touchgfx::Callback<PumpSetupWidget, const touchgfx::AbstractButton&> selectPumpCallback;
+    touchgfx::Callback<PumpSetupWidget, int> dropdownCallback;
+    touchgfx::Callback<PumpSetupWidget> editS_Callback;
+    touchgfx::Callback<PumpSetupWidget> editM_Callback;
+    touchgfx::Callback<PumpSetupWidget> editL_Callback;
+};
+
+#endif // PUMPSETUPWIDGET_HPP

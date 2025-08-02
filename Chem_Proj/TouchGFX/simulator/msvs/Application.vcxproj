@@ -28,6 +28,15 @@
     <ClCompile Include="..\..\gui\src\pumpsetupscreen_screen\PumpSetupScreenView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\pumpsetupscreen_screen\PumpSetupScreenViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\common\CustomKeyboard.cpp"/>
+    <ClCompile Include="..\..\gui\src\chemicalssetup_screen\ChemicalsSetupPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\chemicalssetup_screen\ChemicalsSetupView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\chemicalssetup_screen\ChemicalsSetupViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\PumpDropDownList.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpDropDownListBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\PumpOption.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpOptionBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\PumpSetupWidget.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpSetupWidgetBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -187,6 +196,15 @@
     <ClInclude Include="..\..\gui\include\gui\common\CustomKeyboard.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\common\KeyboardKeyMapping.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\common\KeyboardLayout.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\chemicalssetup_screen\ChemicalsSetupPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\chemicalssetup_screen\ChemicalsSetupView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\chemicalssetup_screen\ChemicalsSetupViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\PumpDropDownList.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpDropDownListBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\PumpOption.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpOptionBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\PumpSetupWidget.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpSetupWidgetBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

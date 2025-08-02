@@ -21,6 +21,18 @@
 /* USER CODE END Header */
 
 #include <TouchGFXHAL.hpp>
+// --- START OF MODIFICATIONS ---
+
+// 1. Include the main ST HAL header file.
+#include <stm32l4xx_hal.h>
+
+
+// --- END OF MODIFICATIONS ---
+TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height)
+    : TouchGFXGeneratedHAL(dma, display, tc, width, height)
+{
+    // The constructor body can be empty.
+}
 
 /* USER CODE BEGIN TouchGFXHAL.cpp */
 

@@ -1,0 +1,129 @@
+// In TouchGFX/gui/src/gui/containers/PumpSetupWidget.cpp
+
+#include <gui/containers/PumpSetupWidget.hpp>
+
+PumpSetupWidget::PumpSetupWidget() :
+    // Initialize all our internal callback objects
+    selectPumpCallback(this, &PumpSetupWidget::selectPumpButtonClickHandler),
+    dropdownCallback(this, &PumpSetupWidget::dropdownPumpSelectedHandler),
+    editS_Callback(this, &PumpSetupWidget::editS_ButtonClicked),
+    editM_Callback(this, &PumpSetupWidget::editM_ButtonClicked),
+    editL_Callback(this, &PumpSetupWidget::editL_ButtonClicked)
+{
+    // --- Connect Internal Widgets to their Handlers ---
+
+    // 1. Connect the main toggle button
+    SelectPumpButton.setAction(selectPumpCallback);
+
+    // 2. Connect our internal dropdown to its handler
+    pumpDropDownList1.setOptionSelectedCallback(dropdownCallback);
+
+    // 3. Connect the three small edit buttons
+    SEditButton.setAction(editS_Callback);
+    MEditButton.setAction(editM_Callback);
+    LEditButton.setAction(editL_Callback);
+}
+
+
+void PumpSetupWidget::setup(int setup_index, const PumpSetup_t& data)
+{
+    setupIndex = setup_index;
+    currentData = data; // Make a local copy of our data
+
+    // --- Configure the UI based on the provided data ---
+
+    // 1. Update the "Selected Pump" button's label
+    if (currentData.pump_index != -1) {
+        Unicode::snprintf(LTextEditBuffer, LTEXTEDIT_SIZE, "Pump %d", currentData.pump_index + 1);
+    } else {
+        Unicode::strncpy(LTextEditBuffer, "Select Pump", LTEXTEDIT_SIZE);
+    }
+    LTextEdit.invalidate();
+
+    // 2. Update the three volume text fields
+    Unicode::snprintfFloat(STextEditBuffer, STEXTEDIT_SIZE, "%.2f", currentData.dispense_small);
+    STextEdit.invalidate();
+    Unicode::snprintfFloat(MTextEditBuffer, MTEXTEDIT_SIZE, "%.2f", currentData.dispense_medium);
+    MTextEdit.invalidate();
+    Unicode::snprintfFloat(LTextEditBuffer, LTEXTEDIT_SIZE, "%.2f", currentData.dispense_large);
+    LTextEdit.invalidate();
+
+    // 3. Ensure dropdown is hidden and button is not toggled initially
+    pumpDropDownList1.setVisible(false);
+    SelectPumpButton.forceState(false);
+    SelectPumpButton.invalidate();
+}
+
+
+void PumpSetupWidget::setAvailablePumps(const std::vector<int>& enabled_pumps)
+{
+    availablePumps = enabled_pumps;
+}
+
+
+// --- Internal Handler Implementations ---
+
+void PumpSetupWidget::selectPumpButtonClickHandler(const touchgfx::AbstractButton& src)
+{
+    // The user clicked the main toggle button. Get its new state.
+    bool showDropdown = SelectPumpButton.getState();
+
+    if (showDropdown) {
+        // If the button is now ON, build the list and show the dropdown.
+        pumpDropDownList1.buildList(availablePumps);
+        pumpDropDownList1.setVisible(true);
+    } else {
+        // If the button is now OFF, hide the dropdown.
+        pumpDropDownList1.setVisible(false);
+    }
+    pumpDropDownList1.invalidate();
+}
+
+void PumpSetupWidget::dropdownPumpSelectedHandler(int pump_index)
+{
+    // The user chose a pump from the dropdown.
+
+    // 1. Hide the dropdown and untoggle the main button.
+    pumpDropDownList1.setVisible(false);
+    pumpDropDownList1.invalidate();
+    SelectPumpButton.forceState(false);
+    SelectPumpButton.invalidate();
+
+    // 2. Update our local data copy.
+    currentData.pump_index = pump_index;
+
+    // 3. Update the button label to show the new selection.
+    Unicode::snprintf(LTextEditBuffer, LTEXTEDIT_SIZE, "Pump %d", currentData.pump_index + 1);
+    LTextEdit.invalidate();
+
+    // 4. Signal to the main screen that our data has changed and needs saving.
+    if (saveDataCallback.isValid()) {
+        saveDataCallback.execute(setupIndex, currentData);
+    }
+}
+
+// --- Edit Button Click Handlers ---
+
+void PumpSetupWidget::editS_ButtonClicked()
+{
+    // Signal to the main screen that the user wants to edit our "Small" field.
+    if (volumeEditClickedCallback.isValid()) {
+        volumeEditClickedCallback.execute(setupIndex, 0); // 0 for Small
+    }
+}
+
+void PumpSetupWidget::editM_ButtonClicked()
+{
+    // Signal to the main screen that the user wants to edit our "Medium" field.
+    if (volumeEditClickedCallback.isValid()) {
+        volumeEditClickedCallback.execute(setupIndex, 1); // 1 for Medium
+    }
+}
+
+void PumpSetupWidget::editL_ButtonClicked()
+{
+    // Signal to the main screen that the user wants to edit our "Large" field.
+    if (volumeEditClickedCallback.isValid()) {
+        volumeEditClickedCallback.execute(setupIndex, 2); // 2 for Large
+    }
+}
