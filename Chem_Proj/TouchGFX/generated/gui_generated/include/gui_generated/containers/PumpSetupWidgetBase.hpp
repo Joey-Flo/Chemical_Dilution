@@ -50,8 +50,8 @@ protected:
     touchgfx::PainterRGB565 BottonDivideLinePainter;
     touchgfx::Line TopDivideLine;
     touchgfx::PainterRGB565 TopDivideLinePainter;
-    PumpDropDownList pumpDropDownList1;
     touchgfx::TextAreaWithOneWildcard textArea2;
+    PumpDropDownList PumpDropDown;
 
     /*
      * Wildcard Buffers

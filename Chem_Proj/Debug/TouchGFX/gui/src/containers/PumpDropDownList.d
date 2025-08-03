@@ -1,7 +1,7 @@
 TouchGFX/gui/src/containers/PumpDropDownList.o: \
  ../TouchGFX/gui/src/containers/PumpDropDownList.cpp \
  ../TouchGFX/gui/include/gui/containers/PumpDropDownList.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpDropDownListBase.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpDropdownListBase.hpp \
  ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -70,7 +70,7 @@ TouchGFX/gui/src/containers/PumpDropDownList.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp
 ../TouchGFX/gui/include/gui/containers/PumpDropDownList.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpDropDownListBase.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpDropdownListBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:

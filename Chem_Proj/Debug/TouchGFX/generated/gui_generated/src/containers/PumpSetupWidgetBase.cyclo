@@ -91,8 +91,10 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:47:18:virtual void touchgfx::PainterRGB565::setColor(touchgfx::colortype)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:virtual touchgfx::Box::~Box()	1
-../TouchGFX/gui/include/gui/containers/PumpDropDownList.hpp:10:13:PumpDropDownList::~PumpDropDownList()	1
-../TouchGFX/gui/include/gui/containers/PumpDropDownList.hpp:10:13:virtual PumpDropDownList::~PumpDropDownList()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<PumpDropDownList, int>::~Callback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<PumpDropDownList, int>::~Callback()	1
+../TouchGFX/gui/include/gui/containers/PumpDropDownList.hpp:14:13:PumpDropDownList::~PumpDropDownList()	1
+../TouchGFX/gui/include/gui/containers/PumpDropDownList.hpp:14:13:virtual PumpDropDownList::~PumpDropDownList()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
@@ -112,6 +114,10 @@
 ../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:123:1:PumpSetupWidgetBase::~PumpSetupWidgetBase()	1
 ../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:123:1:virtual PumpSetupWidgetBase::~PumpSetupWidgetBase()	1
 ../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:128:6:virtual void PumpSetupWidgetBase::initialize()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:95:10:void touchgfx::Line::setStart(T, T) [with T = int]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:171:10:void touchgfx::Line::setEnd(T, T) [with T = int]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:248:10:void touchgfx::Line::setLineWidth(T) [with T = int]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = PumpDropDownList; T1 = int]	2
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = PumpDropDownList; T1 = int]	5

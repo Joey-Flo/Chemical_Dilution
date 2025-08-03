@@ -107,10 +107,6 @@ PumpSetupWidgetBase::PumpSetupWidgetBase()
     TopDivideLine.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     add(TopDivideLine);
 
-    pumpDropDownList1.setXY(59, 35);
-    pumpDropDownList1.setVisible(false);
-    add(pumpDropDownList1);
-
     textArea2.setPosition(66, 11, 80, 23);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
@@ -118,6 +114,10 @@ PumpSetupWidgetBase::PumpSetupWidgetBase()
     textArea2.setWildcard(textArea2Buffer);
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RBPU));
     add(textArea2);
+
+    PumpDropDown.setXY(59, 40);
+    PumpDropDown.setVisible(false);
+    add(PumpDropDown);
 }
 
 PumpSetupWidgetBase::~PumpSetupWidgetBase()
@@ -127,5 +127,5 @@ PumpSetupWidgetBase::~PumpSetupWidgetBase()
 
 void PumpSetupWidgetBase::initialize()
 {
-    pumpDropDownList1.initialize();
+    PumpDropDown.initialize();
 }

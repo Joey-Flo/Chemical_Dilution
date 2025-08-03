@@ -1741,16 +1741,6 @@
             "LineEndingStyle": "Round"
           },
           {
-            "Type": "CustomContainerInstance",
-            "Name": "pumpDropDownList1",
-            "X": 59,
-            "Y": 35,
-            "Width": 93,
-            "Height": 212,
-            "Visible": false,
-            "CustomContainerDefinitionName": "PumpDropDownList"
-          },
-          {
             "Type": "TextArea",
             "Name": "textArea2",
             "X": 66,
@@ -1763,6 +1753,16 @@
               "UseBuffer": true,
               "BufferSize": 10
             }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "PumpDropDown",
+            "X": 59,
+            "Y": 40,
+            "Width": 93,
+            "Height": 212,
+            "Visible": false,
+            "CustomContainerDefinitionName": "PumpDropDownList"
           }
         ],
         "Interactions": []

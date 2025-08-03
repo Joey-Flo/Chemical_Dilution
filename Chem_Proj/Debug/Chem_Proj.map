@@ -7588,7 +7588,14 @@ Discarded input sections
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .group         0x00000000        0x8 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .group         0x00000000        0x8 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
@@ -7722,8 +7729,12 @@ Discarded input sections
                 0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .rodata._ZN8touchgfxL18TYPED_TEXT_INVALIDE
                 0x00000000        0x2 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
- .text._ZN10PumpOptionD2Ev
+ .text._ZN8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvED2Ev
                 0x00000000       0x24 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .text._ZN8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvED0Ev
+                0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .text._ZN10PumpOptionD2Ev
+                0x00000000       0x30 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .text._ZN10PumpOptionD0Ev
                 0x00000000       0x22 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .text._ZN8touchgfx19ScrollableContainerD2Ev
@@ -7738,10 +7749,24 @@ Discarded input sections
                 0x00000000       0x22 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .text._ZN20PumpDropDownListBase10initializeEv
                 0x00000000       0x6e ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .text._ZN8touchgfx15GenericCallbackIRKNS_23AbstractButtonContainerEvvED2Ev
+                0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .text._ZN8touchgfx15GenericCallbackIRKNS_23AbstractButtonContainerEvvED0Ev
+                0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .rodata._ZTV20PumpDropDownListBase
                 0x00000000       0x94 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .rodata._ZTV10PumpOption
+                0x00000000       0x94 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .rodata._ZTVN8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvEE
+                0x00000000       0x18 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .rodata._ZTVN8touchgfx15GenericCallbackIRKNS_23AbstractButtonContainerEvvEE
+                0x00000000       0x18 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .rodata._ZTVN8touchgfx6WidgetE
                 0x00000000       0x68 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .text._ZN8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvE7executeES4_
+                0x00000000       0x4a ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .text._ZNK8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvE7isValidEv
+                0x00000000       0x40 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .debug_macro   0x00000000      0xbb0 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .debug_macro   0x00000000      0x1f2 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .debug_macro   0x00000000       0x10 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
@@ -8264,11 +8289,40 @@ Discarded input sections
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000       0x14 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0x8 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0x8 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000        0xc ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
@@ -8539,8 +8593,14 @@ Discarded input sections
                 0x00000000       0x24 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .text._ZN8touchgfx3BoxD0Ev
                 0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
- .text._ZN16PumpDropDownListD2Ev
+ .rodata._ZStL19piecewise_construct
+                0x00000000        0x1 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .text._ZN8touchgfx8CallbackI16PumpDropDownListivvED2Ev
                 0x00000000       0x24 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .text._ZN8touchgfx8CallbackI16PumpDropDownListivvED0Ev
+                0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .text._ZN16PumpDropDownListD2Ev
+                0x00000000       0x30 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .text._ZN16PumpDropDownListD0Ev
                 0x00000000       0x22 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .rodata._ZL73BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_OFF_NORMAL_ID
@@ -8636,13 +8696,17 @@ Discarded input sections
  .text._ZN8touchgfx13PainterRGB565D0Ev
                 0x00000000       0x26 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .text._ZN19PumpSetupWidgetBaseC2Ev
-                0x00000000     0x11e0 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+                0x00000000     0x11f0 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .text._ZN19PumpSetupWidgetBaseD2Ev
                 0x00000000      0x118 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .text._ZN19PumpSetupWidgetBaseD0Ev
                 0x00000000       0x22 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .text._ZN19PumpSetupWidgetBase10initializeEv
                 0x00000000       0x1c ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .text._ZN8touchgfx15GenericCallbackIivvED2Ev
+                0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .text._ZN8touchgfx15GenericCallbackIivvED0Ev
+                0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .text._ZN8touchgfx4Line8setStartIiEEvT_S2_
                 0x00000000       0x4c ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .text._ZN8touchgfx4Line6setEndIiEEvT_S2_
@@ -8651,6 +8715,12 @@ Discarded input sections
                 0x00000000       0x30 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .rodata._ZTV19PumpSetupWidgetBase
                 0x00000000       0x94 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .rodata._ZTV16PumpDropDownList
+                0x00000000       0x94 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .rodata._ZTVN8touchgfx8CallbackI16PumpDropDownListivvEE
+                0x00000000       0x18 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .rodata._ZTVN8touchgfx15GenericCallbackIivvEE
+                0x00000000       0x18 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .rodata._ZTVN8touchgfx21AbstractPainterRGB565E
                 0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .rodata._ZTVN8touchgfx20AbstractPainterColorE
@@ -8663,6 +8733,10 @@ Discarded input sections
                 0x00000000       0x10 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .rodata._ZTVN8touchgfx6WidgetE
                 0x00000000       0x68 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .text._ZN8touchgfx8CallbackI16PumpDropDownListivvE7executeEi
+                0x00000000       0x4a ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .text._ZNK8touchgfx8CallbackI16PumpDropDownListivvE7isValidEv
+                0x00000000       0x40 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .debug_macro   0x00000000      0xbb0 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .debug_macro   0x00000000      0x1f2 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .debug_macro   0x00000000       0x10 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
@@ -8707,6 +8781,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .debug_macro   0x00000000       0x3c ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .debug_macro   0x00000000       0x20 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x00000000       0x18 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .group         0x00000000        0x8 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
  .group         0x00000000        0x8 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
  .group         0x00000000        0x8 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
@@ -11084,7 +11159,56 @@ Discarded input sections
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .group         0x00000000       0x14 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000       0x14 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000       0x14 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpDropDownList.o
@@ -11172,29 +11296,72 @@ Discarded input sections
                 0x00000000       0x16 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .text._ZN8touchgfx8Drawable15handleTickEventEv
                 0x00000000       0x14 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN8touchgfx8Drawable10setVisibleEb
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .text._ZN8touchgfx8Drawable6moveToEss
                 0x00000000       0x46 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .text._ZN8touchgfx9Container13getFirstChildEv
                 0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .rodata._ZN8touchgfxL18TYPED_TEXT_INVALIDE
                 0x00000000        0x2 ./TouchGFX/gui/src/containers/PumpDropDownList.o
- .text._ZN16PumpDropDownListD2Ev
+ .rodata._ZStL19piecewise_construct
+                0x00000000        0x1 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN8touchgfx8CallbackI16PumpDropDownListivvED2Ev
                 0x00000000       0x24 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN8touchgfx8CallbackI16PumpDropDownListivvED0Ev
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN16PumpDropDownListD2Ev
+                0x00000000       0x30 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .text._ZN16PumpDropDownListD0Ev
                 0x00000000       0x22 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .text._ZN16PumpDropDownListC2Ev
-                0x00000000       0x24 ./TouchGFX/gui/src/containers/PumpDropDownList.o
- .text._ZN16PumpDropDownList10initializeEv
+                0x00000000       0xac ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .rodata        0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN16PumpDropDownList9buildListERKSt6vectorIiSaIiEE
+                0x00000000       0xe4 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN16PumpDropDownList25setOptionSelectedCallbackERN8touchgfx15GenericCallbackIivvEE
+                0x00000000       0x1e ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN16PumpDropDownList32pumpOptionClickedCallbackHandlerEi
+                0x00000000       0x5a ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN8touchgfx15GenericCallbackIivvED2Ev
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN8touchgfx15GenericCallbackIivvED0Ev
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN8touchgfx15GenericCallbackIivvEC2Ev
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN8touchgfx8CallbackI16PumpDropDownListivvEC2EPS1_MS1_FviE
+                0x00000000       0x40 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZNKSt6vectorIiSaIiEE5beginEv
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZNKSt6vectorIiSaIiEE3endEv
+                0x00000000       0x22 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN9__gnu_cxxneIPKiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESB_
+                0x00000000       0x30 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEppEv
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZNK9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEdeEv
                 0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEEC2ERKS2_
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZNK9__gnu_cxx17__normal_iteratorIPKiSt6vectorIiSaIiEEE4baseEv
+                0x00000000       0x16 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .rodata._ZTV16PumpDropDownList
                 0x00000000       0x94 ./TouchGFX/gui/src/containers/PumpDropDownList.o
- .debug_info    0x00000000     0x6698 ./TouchGFX/gui/src/containers/PumpDropDownList.o
- .debug_abbrev  0x00000000      0x99a ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .rodata._ZTVN8touchgfx8CallbackI16PumpDropDownListivvEE
+                0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .rodata._ZTVN8touchgfx15GenericCallbackIivvEE
+                0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZN8touchgfx8CallbackI16PumpDropDownListivvE7executeEi
+                0x00000000       0x4a ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .text._ZNK8touchgfx8CallbackI16PumpDropDownListivvE7isValidEv
+                0x00000000       0x40 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_info    0x00000000     0x9393 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_abbrev  0x00000000      0xcf6 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .debug_aranges
-                0x00000000       0x98 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+                0x00000000      0x128 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .debug_rnglists
-                0x00000000       0x6d ./TouchGFX/gui/src/containers/PumpDropDownList.o
- .debug_macro   0x00000000      0x485 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+                0x00000000       0xdb ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000      0x6af ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .debug_macro   0x00000000      0xbb0 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .debug_macro   0x00000000      0x1f2 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpDropDownList.o
@@ -11231,10 +11398,42 @@ Discarded input sections
  .debug_macro   0x00000000      0x18a ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .debug_macro   0x00000000       0x16 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpDropDownList.o
- .debug_line    0x00000000     0x143c ./TouchGFX/gui/src/containers/PumpDropDownList.o
- .debug_str     0x00000000    0x1212d ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x1c ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x4f ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x41 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x1f ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x27 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x28 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x2e ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x19 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x88 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x19 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x32 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x11 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x11 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x27 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x11 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x11 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x1c ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x26 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x1c ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x3c ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x58 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x8e ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000      0x185 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000       0x16 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000      0x138 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_macro   0x00000000      0x11d ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_line    0x00000000     0x1e87 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_str     0x00000000    0x18817 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .comment       0x00000000       0x44 ./TouchGFX/gui/src/containers/PumpDropDownList.o
- .debug_frame   0x00000000      0x278 ./TouchGFX/gui/src/containers/PumpDropDownList.o
+ .debug_frame   0x00000000      0x528 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .ARM.attributes
                 0x00000000       0x34 ./TouchGFX/gui/src/containers/PumpDropDownList.o
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpOption.o
@@ -11249,7 +11448,17 @@ Discarded input sections
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpOption.o
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpOption.o
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpOption.o
  .group         0x00000000       0x14 ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000       0x14 ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000       0x14 ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpOption.o
+ .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpOption.o
  .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpOption.o
  .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpOption.o
  .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpOption.o
@@ -11341,24 +11550,50 @@ Discarded input sections
                 0x00000000       0x46 ./TouchGFX/gui/src/containers/PumpOption.o
  .text._ZN8touchgfx9Container13getFirstChildEv
                 0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN8touchgfx23AbstractButtonContainer9setActionERNS_15GenericCallbackIRKS0_vvEE
+                0x00000000       0x1c ./TouchGFX/gui/src/containers/PumpOption.o
  .rodata._ZN8touchgfxL18TYPED_TEXT_INVALIDE
                 0x00000000        0x2 ./TouchGFX/gui/src/containers/PumpOption.o
- .text._ZN10PumpOptionD2Ev
+ .text._ZN8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvED2Ev
                 0x00000000       0x24 ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvED0Ev
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN10PumpOptionD2Ev
+                0x00000000       0x30 ./TouchGFX/gui/src/containers/PumpOption.o
  .text._ZN10PumpOptionD0Ev
                 0x00000000       0x22 ./TouchGFX/gui/src/containers/PumpOption.o
  .text._ZN10PumpOptionC2Ev
-                0x00000000       0x24 ./TouchGFX/gui/src/containers/PumpOption.o
- .text._ZN10PumpOption10initializeEv
-                0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpOption.o
+                0x00000000       0x60 ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN10PumpOption5setupEiPKc
+                0x00000000       0x36 ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN10PumpOption16setClickCallbackERN8touchgfx15GenericCallbackIivvEE
+                0x00000000       0x1e ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN10PumpOption21buttonClickedCallbackERKN8touchgfx23AbstractButtonContainerE
+                0x00000000       0x5e ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN8touchgfx15GenericCallbackIRKNS_23AbstractButtonContainerEvvED2Ev
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN8touchgfx15GenericCallbackIRKNS_23AbstractButtonContainerEvvED0Ev
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN8touchgfx15GenericCallbackIRKNS_23AbstractButtonContainerEvvEC2Ev
+                0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvEC2EPS1_MS1_FvS4_E
+                0x00000000       0x40 ./TouchGFX/gui/src/containers/PumpOption.o
  .rodata._ZTV10PumpOption
                 0x00000000       0x94 ./TouchGFX/gui/src/containers/PumpOption.o
- .debug_info    0x00000000     0x5dad ./TouchGFX/gui/src/containers/PumpOption.o
- .debug_abbrev  0x00000000      0x996 ./TouchGFX/gui/src/containers/PumpOption.o
+ .rodata._ZTVN8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvEE
+                0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpOption.o
+ .rodata._ZTVN8touchgfx15GenericCallbackIRKNS_23AbstractButtonContainerEvvEE
+                0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZN8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvE7executeES4_
+                0x00000000       0x4a ./TouchGFX/gui/src/containers/PumpOption.o
+ .text._ZNK8touchgfx8CallbackI10PumpOptionRKNS_23AbstractButtonContainerEvvE7isValidEv
+                0x00000000       0x40 ./TouchGFX/gui/src/containers/PumpOption.o
+ .debug_info    0x00000000     0x62b7 ./TouchGFX/gui/src/containers/PumpOption.o
+ .debug_abbrev  0x00000000      0xa32 ./TouchGFX/gui/src/containers/PumpOption.o
  .debug_aranges
-                0x00000000       0x98 ./TouchGFX/gui/src/containers/PumpOption.o
+                0x00000000       0xf0 ./TouchGFX/gui/src/containers/PumpOption.o
  .debug_rnglists
-                0x00000000       0x6d ./TouchGFX/gui/src/containers/PumpOption.o
+                0x00000000       0xaf ./TouchGFX/gui/src/containers/PumpOption.o
  .debug_macro   0x00000000      0x467 ./TouchGFX/gui/src/containers/PumpOption.o
  .debug_macro   0x00000000      0xbb0 ./TouchGFX/gui/src/containers/PumpOption.o
  .debug_macro   0x00000000      0x1f2 ./TouchGFX/gui/src/containers/PumpOption.o
@@ -11396,10 +11631,10 @@ Discarded input sections
  .debug_macro   0x00000000      0x18a ./TouchGFX/gui/src/containers/PumpOption.o
  .debug_macro   0x00000000       0x16 ./TouchGFX/gui/src/containers/PumpOption.o
  .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpOption.o
- .debug_line    0x00000000     0x13e7 ./TouchGFX/gui/src/containers/PumpOption.o
- .debug_str     0x00000000    0x111e5 ./TouchGFX/gui/src/containers/PumpOption.o
+ .debug_line    0x00000000     0x15b6 ./TouchGFX/gui/src/containers/PumpOption.o
+ .debug_str     0x00000000    0x11783 ./TouchGFX/gui/src/containers/PumpOption.o
  .comment       0x00000000       0x44 ./TouchGFX/gui/src/containers/PumpOption.o
- .debug_frame   0x00000000      0x278 ./TouchGFX/gui/src/containers/PumpOption.o
+ .debug_frame   0x00000000      0x418 ./TouchGFX/gui/src/containers/PumpOption.o
  .ARM.attributes
                 0x00000000       0x34 ./TouchGFX/gui/src/containers/PumpOption.o
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
@@ -11415,6 +11650,28 @@ Discarded input sections
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .group         0x00000000        0x8 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .group         0x00000000       0x14 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .group         0x00000000        0xc ./TouchGFX/gui/src/containers/PumpSetupWidget.o
@@ -11517,6 +11774,8 @@ Discarded input sections
                 0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .rodata._ZN8touchgfxL18TYPED_TEXT_INVALIDE
                 0x00000000        0x2 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .rodata._ZStL19piecewise_construct
+                0x00000000        0x1 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .text._ZN15PumpSetupWidgetD2Ev
                 0x00000000       0x24 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .text._ZN15PumpSetupWidgetD0Ev
@@ -11527,13 +11786,13 @@ Discarded input sections
                 0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .rodata._ZTV15PumpSetupWidget
                 0x00000000       0x94 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
- .debug_info    0x00000000     0xb7c8 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
- .debug_abbrev  0x00000000      0xba6 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_info    0x00000000     0xbc70 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_abbrev  0x00000000      0xc14 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .debug_aranges
                 0x00000000       0x98 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .debug_rnglists
                 0x00000000       0x6d ./TouchGFX/gui/src/containers/PumpSetupWidget.o
- .debug_macro   0x00000000      0x5ae ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000      0x781 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .debug_macro   0x00000000      0xbb0 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .debug_macro   0x00000000      0x1f2 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
@@ -11579,8 +11838,30 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .debug_macro   0x00000000       0x3c ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .debug_macro   0x00000000       0x20 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
- .debug_line    0x00000000     0x1714 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
- .debug_str     0x00000000    0x1aa31 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x1c ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x4f ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x41 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x1f ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x18 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x27 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x28 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x2e ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x19 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x88 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x19 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x32 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x11 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x11 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x27 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x11 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x11 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x1c ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_macro   0x00000000       0x26 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_line    0x00000000     0x1df3 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
+ .debug_str     0x00000000    0x1caec ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .comment       0x00000000       0x44 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .debug_frame   0x00000000      0x278 ./TouchGFX/gui/src/containers/PumpSetupWidget.o
  .ARM.attributes
@@ -12876,6 +13157,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
  .debug_macro   0x00000000      0x185 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
  .debug_macro   0x00000000       0x16 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_macro   0x00000000      0x138 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_macro   0x00000000      0x11d ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
  .debug_macro   0x00000000       0x10 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
  .debug_macro   0x00000000       0x16 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
  .debug_macro   0x00000000       0x16 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
@@ -22940,7 +23223,7 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0xd223a
+.debug_info     0x00000000    0xd2b1e
  .debug_info    0x00000000      0x236 ./Core/Src/Flash.o
  .debug_info    0x00000236     0x1692 ./Core/Src/HAL_Init.o
  .debug_info    0x000018c8      0x744 ./Core/Src/device_config.o
@@ -22987,63 +23270,63 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_info    0x00029ca2     0x14c9 ./TouchGFX/generated/fonts/src/Table_verdanab_20_4bpp.o
  .debug_info    0x0002b16b     0x95ba ./TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.o
  .debug_info    0x00034725     0xe566 ./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o
- .debug_info    0x00042c8b     0x6f0b ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
- .debug_info    0x00049b96     0x74ab ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
- .debug_info    0x00051041     0xe832 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
- .debug_info    0x0005f873     0x7950 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
- .debug_info    0x000671c3     0x9a1e ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
- .debug_info    0x00070be1     0x10ca ./TouchGFX/generated/images/src/BitmapDatabase.o
- .debug_info    0x00071cab       0x61 ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
- .debug_info    0x00071d0c       0x5f ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
- .debug_info    0x00071d6b       0x5f ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
- .debug_info    0x00071dca       0x61 ./TouchGFX/generated/images/src/image_Background.o
- .debug_info    0x00071e2b       0x5f ./TouchGFX/generated/images/src/image_Button1_large.o
- .debug_info    0x00071e8a       0x5f ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
- .debug_info    0x00071ee9       0x5f ./TouchGFX/generated/images/src/image_Density.o
- .debug_info    0x00071f48       0x5f ./TouchGFX/generated/images/src/image_Edit_Pressed.o
- .debug_info    0x00071fa7       0x5f ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
- .debug_info    0x00072006       0x61 ./TouchGFX/generated/images/src/image_Flo_electronics.o
- .debug_info    0x00072067       0x5f ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
- .debug_info    0x000720c6       0x5f ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
- .debug_info    0x00072125       0x5f ./TouchGFX/generated/images/src/image_Minus_Pressed.o
- .debug_info    0x00072184       0x5f ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
- .debug_info    0x000721e3       0x5f ./TouchGFX/generated/images/src/image_Plus_Pressed.o
- .debug_info    0x00072242       0x5f ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
- .debug_info    0x000722a1       0x5f ./TouchGFX/generated/images/src/image_Toggle_Off.o
- .debug_info    0x00072300       0x5f ./TouchGFX/generated/images/src/image_Toggle_On.o
- .debug_info    0x0007235f       0x5f ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
- .debug_info    0x000723be       0x5f ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
- .debug_info    0x0007241d       0x5f ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
- .debug_info    0x0007247c       0x5f ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
- .debug_info    0x000724db       0x5f ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
- .debug_info    0x0007253a       0x61 ./TouchGFX/generated/images/src/image_keyboard_background.o
- .debug_info    0x0007259b       0x5f ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
- .debug_info    0x000725fa       0x5f ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
- .debug_info    0x00072659       0x5f ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
- .debug_info    0x000726b8       0x5f ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
- .debug_info    0x00072717       0x5f ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
- .debug_info    0x00072776       0x5f ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
- .debug_info    0x000727d5       0x5f ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
- .debug_info    0x00072834      0x208 ./TouchGFX/generated/texts/src/LanguageGb.o
- .debug_info    0x00072a3c     0x3e94 ./TouchGFX/generated/texts/src/Texts.o
- .debug_info    0x000768d0     0x167b ./TouchGFX/generated/texts/src/TypedTextDatabase.o
- .debug_info    0x00077f4b     0x7544 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
- .debug_info    0x0007f48f     0x5f79 ./TouchGFX/gui/src/common/CustomKeyboard.o
- .debug_info    0x00085408     0x4003 ./TouchGFX/gui/src/common/FrontendApplication.o
- .debug_info    0x0008940b     0x7509 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
- .debug_info    0x00090914     0x7443 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
- .debug_info    0x00097d57      0x854 ./TouchGFX/gui/src/model/Model.o
- .debug_info    0x000985ab     0x7fff ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
- .debug_info    0x000a05aa     0x99f2 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_info    0x000a9f9c      0xb30 ./TouchGFX/target/STM32TouchController.o
- .debug_info    0x000aaacc      0x889 ./TouchGFX/target/TouchGFXGPIO.o
- .debug_info    0x000ab355     0x70b2 ./TouchGFX/target/TouchGFXHAL.o
- .debug_info    0x000b2407     0x6659 ./TouchGFX/target/generated/OSWrappers.o
- .debug_info    0x000b8a60     0x1040 ./TouchGFX/target/generated/STM32DMA.o
- .debug_info    0x000b9aa0     0xd252 ./TouchGFX/target/generated/TouchGFXConfiguration.o
- .debug_info    0x000c6cf2     0xb548 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
+ .debug_info    0x00042c8b     0x71f6 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .debug_info    0x00049e81     0x74ab ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
+ .debug_info    0x0005132c     0xee2b ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_info    0x00060157     0x7950 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
+ .debug_info    0x00067aa7     0x9a1e ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
+ .debug_info    0x000714c5     0x10ca ./TouchGFX/generated/images/src/BitmapDatabase.o
+ .debug_info    0x0007258f       0x61 ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
+ .debug_info    0x000725f0       0x5f ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
+ .debug_info    0x0007264f       0x5f ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
+ .debug_info    0x000726ae       0x61 ./TouchGFX/generated/images/src/image_Background.o
+ .debug_info    0x0007270f       0x5f ./TouchGFX/generated/images/src/image_Button1_large.o
+ .debug_info    0x0007276e       0x5f ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
+ .debug_info    0x000727cd       0x5f ./TouchGFX/generated/images/src/image_Density.o
+ .debug_info    0x0007282c       0x5f ./TouchGFX/generated/images/src/image_Edit_Pressed.o
+ .debug_info    0x0007288b       0x5f ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
+ .debug_info    0x000728ea       0x61 ./TouchGFX/generated/images/src/image_Flo_electronics.o
+ .debug_info    0x0007294b       0x5f ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
+ .debug_info    0x000729aa       0x5f ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
+ .debug_info    0x00072a09       0x5f ./TouchGFX/generated/images/src/image_Minus_Pressed.o
+ .debug_info    0x00072a68       0x5f ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
+ .debug_info    0x00072ac7       0x5f ./TouchGFX/generated/images/src/image_Plus_Pressed.o
+ .debug_info    0x00072b26       0x5f ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
+ .debug_info    0x00072b85       0x5f ./TouchGFX/generated/images/src/image_Toggle_Off.o
+ .debug_info    0x00072be4       0x5f ./TouchGFX/generated/images/src/image_Toggle_On.o
+ .debug_info    0x00072c43       0x5f ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
+ .debug_info    0x00072ca2       0x5f ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
+ .debug_info    0x00072d01       0x5f ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
+ .debug_info    0x00072d60       0x5f ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
+ .debug_info    0x00072dbf       0x5f ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
+ .debug_info    0x00072e1e       0x61 ./TouchGFX/generated/images/src/image_keyboard_background.o
+ .debug_info    0x00072e7f       0x5f ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
+ .debug_info    0x00072ede       0x5f ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
+ .debug_info    0x00072f3d       0x5f ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
+ .debug_info    0x00072f9c       0x5f ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
+ .debug_info    0x00072ffb       0x5f ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
+ .debug_info    0x0007305a       0x5f ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
+ .debug_info    0x000730b9       0x5f ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
+ .debug_info    0x00073118      0x208 ./TouchGFX/generated/texts/src/LanguageGb.o
+ .debug_info    0x00073320     0x3e94 ./TouchGFX/generated/texts/src/Texts.o
+ .debug_info    0x000771b4     0x167b ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .debug_info    0x0007882f     0x7544 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
+ .debug_info    0x0007fd73     0x5f79 ./TouchGFX/gui/src/common/CustomKeyboard.o
+ .debug_info    0x00085cec     0x4003 ./TouchGFX/gui/src/common/FrontendApplication.o
+ .debug_info    0x00089cef     0x7509 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
+ .debug_info    0x000911f8     0x7443 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
+ .debug_info    0x0009863b      0x854 ./TouchGFX/gui/src/model/Model.o
+ .debug_info    0x00098e8f     0x7fff ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+ .debug_info    0x000a0e8e     0x99f2 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_info    0x000aa880      0xb30 ./TouchGFX/target/STM32TouchController.o
+ .debug_info    0x000ab3b0      0x889 ./TouchGFX/target/TouchGFXGPIO.o
+ .debug_info    0x000abc39     0x70b2 ./TouchGFX/target/TouchGFXHAL.o
+ .debug_info    0x000b2ceb     0x6659 ./TouchGFX/target/generated/OSWrappers.o
+ .debug_info    0x000b9344     0x1040 ./TouchGFX/target/generated/STM32DMA.o
+ .debug_info    0x000ba384     0xd252 ./TouchGFX/target/generated/TouchGFXConfiguration.o
+ .debug_info    0x000c75d6     0xb548 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
 
-.debug_abbrev   0x00000000    0x16712
+.debug_abbrev   0x00000000    0x167d6
  .debug_abbrev  0x00000000      0x148 ./Core/Src/Flash.o
  .debug_abbrev  0x00000148      0x252 ./Core/Src/HAL_Init.o
  .debug_abbrev  0x0000039a      0x1fb ./Core/Src/device_config.o
@@ -23090,63 +23373,63 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_abbrev  0x00007125      0x4d0 ./TouchGFX/generated/fonts/src/Table_verdanab_20_4bpp.o
  .debug_abbrev  0x000075f5      0xb8e ./TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.o
  .debug_abbrev  0x00008183      0xdc1 ./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o
- .debug_abbrev  0x00008f44      0xa5d ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
- .debug_abbrev  0x000099a1      0xa7f ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
- .debug_abbrev  0x0000a420      0xd49 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
- .debug_abbrev  0x0000b169      0xb5e ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
- .debug_abbrev  0x0000bcc7      0xbe9 ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
- .debug_abbrev  0x0000c8b0      0x36d ./TouchGFX/generated/images/src/BitmapDatabase.o
- .debug_abbrev  0x0000cc1d       0x4c ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
- .debug_abbrev  0x0000cc69       0x4c ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
- .debug_abbrev  0x0000ccb5       0x4c ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
- .debug_abbrev  0x0000cd01       0x4c ./TouchGFX/generated/images/src/image_Background.o
- .debug_abbrev  0x0000cd4d       0x4c ./TouchGFX/generated/images/src/image_Button1_large.o
- .debug_abbrev  0x0000cd99       0x4c ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
- .debug_abbrev  0x0000cde5       0x4c ./TouchGFX/generated/images/src/image_Density.o
- .debug_abbrev  0x0000ce31       0x4c ./TouchGFX/generated/images/src/image_Edit_Pressed.o
- .debug_abbrev  0x0000ce7d       0x4c ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
- .debug_abbrev  0x0000cec9       0x4c ./TouchGFX/generated/images/src/image_Flo_electronics.o
- .debug_abbrev  0x0000cf15       0x4c ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
- .debug_abbrev  0x0000cf61       0x4c ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
- .debug_abbrev  0x0000cfad       0x4c ./TouchGFX/generated/images/src/image_Minus_Pressed.o
- .debug_abbrev  0x0000cff9       0x4c ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
- .debug_abbrev  0x0000d045       0x4c ./TouchGFX/generated/images/src/image_Plus_Pressed.o
- .debug_abbrev  0x0000d091       0x4c ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
- .debug_abbrev  0x0000d0dd       0x4c ./TouchGFX/generated/images/src/image_Toggle_Off.o
- .debug_abbrev  0x0000d129       0x4c ./TouchGFX/generated/images/src/image_Toggle_On.o
- .debug_abbrev  0x0000d175       0x4c ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
- .debug_abbrev  0x0000d1c1       0x4c ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
- .debug_abbrev  0x0000d20d       0x4c ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
- .debug_abbrev  0x0000d259       0x4c ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
- .debug_abbrev  0x0000d2a5       0x4c ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
- .debug_abbrev  0x0000d2f1       0x4c ./TouchGFX/generated/images/src/image_keyboard_background.o
- .debug_abbrev  0x0000d33d       0x4c ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
- .debug_abbrev  0x0000d389       0x4c ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
- .debug_abbrev  0x0000d3d5       0x4c ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
- .debug_abbrev  0x0000d421       0x4c ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
- .debug_abbrev  0x0000d46d       0x4c ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
- .debug_abbrev  0x0000d4b9       0x4c ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
- .debug_abbrev  0x0000d505       0x4c ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
- .debug_abbrev  0x0000d551       0xc6 ./TouchGFX/generated/texts/src/LanguageGb.o
- .debug_abbrev  0x0000d617      0x8dd ./TouchGFX/generated/texts/src/Texts.o
- .debug_abbrev  0x0000def4      0x511 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
- .debug_abbrev  0x0000e405      0x998 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
- .debug_abbrev  0x0000ed9d      0xa23 ./TouchGFX/gui/src/common/CustomKeyboard.o
- .debug_abbrev  0x0000f7c0      0x853 ./TouchGFX/gui/src/common/FrontendApplication.o
- .debug_abbrev  0x00010013      0x9fa ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
- .debug_abbrev  0x00010a0d      0xa70 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
- .debug_abbrev  0x0001147d      0x265 ./TouchGFX/gui/src/model/Model.o
- .debug_abbrev  0x000116e2      0xaef ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
- .debug_abbrev  0x000121d1      0xc7a ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_abbrev  0x00012e4b      0x38a ./TouchGFX/target/STM32TouchController.o
- .debug_abbrev  0x000131d5      0x284 ./TouchGFX/target/TouchGFXGPIO.o
- .debug_abbrev  0x00013459      0x973 ./TouchGFX/target/TouchGFXHAL.o
- .debug_abbrev  0x00013dcc      0x905 ./TouchGFX/target/generated/OSWrappers.o
- .debug_abbrev  0x000146d1      0x4c2 ./TouchGFX/target/generated/STM32DMA.o
- .debug_abbrev  0x00014b93      0xdb8 ./TouchGFX/target/generated/TouchGFXConfiguration.o
- .debug_abbrev  0x0001594b      0xdc7 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
+ .debug_abbrev  0x00008f44      0xa8d ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .debug_abbrev  0x000099d1      0xa7f ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
+ .debug_abbrev  0x0000a450      0xddd ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_abbrev  0x0000b22d      0xb5e ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
+ .debug_abbrev  0x0000bd8b      0xbe9 ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
+ .debug_abbrev  0x0000c974      0x36d ./TouchGFX/generated/images/src/BitmapDatabase.o
+ .debug_abbrev  0x0000cce1       0x4c ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
+ .debug_abbrev  0x0000cd2d       0x4c ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
+ .debug_abbrev  0x0000cd79       0x4c ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
+ .debug_abbrev  0x0000cdc5       0x4c ./TouchGFX/generated/images/src/image_Background.o
+ .debug_abbrev  0x0000ce11       0x4c ./TouchGFX/generated/images/src/image_Button1_large.o
+ .debug_abbrev  0x0000ce5d       0x4c ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
+ .debug_abbrev  0x0000cea9       0x4c ./TouchGFX/generated/images/src/image_Density.o
+ .debug_abbrev  0x0000cef5       0x4c ./TouchGFX/generated/images/src/image_Edit_Pressed.o
+ .debug_abbrev  0x0000cf41       0x4c ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
+ .debug_abbrev  0x0000cf8d       0x4c ./TouchGFX/generated/images/src/image_Flo_electronics.o
+ .debug_abbrev  0x0000cfd9       0x4c ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
+ .debug_abbrev  0x0000d025       0x4c ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
+ .debug_abbrev  0x0000d071       0x4c ./TouchGFX/generated/images/src/image_Minus_Pressed.o
+ .debug_abbrev  0x0000d0bd       0x4c ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
+ .debug_abbrev  0x0000d109       0x4c ./TouchGFX/generated/images/src/image_Plus_Pressed.o
+ .debug_abbrev  0x0000d155       0x4c ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
+ .debug_abbrev  0x0000d1a1       0x4c ./TouchGFX/generated/images/src/image_Toggle_Off.o
+ .debug_abbrev  0x0000d1ed       0x4c ./TouchGFX/generated/images/src/image_Toggle_On.o
+ .debug_abbrev  0x0000d239       0x4c ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
+ .debug_abbrev  0x0000d285       0x4c ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
+ .debug_abbrev  0x0000d2d1       0x4c ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
+ .debug_abbrev  0x0000d31d       0x4c ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
+ .debug_abbrev  0x0000d369       0x4c ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
+ .debug_abbrev  0x0000d3b5       0x4c ./TouchGFX/generated/images/src/image_keyboard_background.o
+ .debug_abbrev  0x0000d401       0x4c ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
+ .debug_abbrev  0x0000d44d       0x4c ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
+ .debug_abbrev  0x0000d499       0x4c ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
+ .debug_abbrev  0x0000d4e5       0x4c ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
+ .debug_abbrev  0x0000d531       0x4c ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
+ .debug_abbrev  0x0000d57d       0x4c ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
+ .debug_abbrev  0x0000d5c9       0x4c ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
+ .debug_abbrev  0x0000d615       0xc6 ./TouchGFX/generated/texts/src/LanguageGb.o
+ .debug_abbrev  0x0000d6db      0x8dd ./TouchGFX/generated/texts/src/Texts.o
+ .debug_abbrev  0x0000dfb8      0x511 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .debug_abbrev  0x0000e4c9      0x998 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
+ .debug_abbrev  0x0000ee61      0xa23 ./TouchGFX/gui/src/common/CustomKeyboard.o
+ .debug_abbrev  0x0000f884      0x853 ./TouchGFX/gui/src/common/FrontendApplication.o
+ .debug_abbrev  0x000100d7      0x9fa ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
+ .debug_abbrev  0x00010ad1      0xa70 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
+ .debug_abbrev  0x00011541      0x265 ./TouchGFX/gui/src/model/Model.o
+ .debug_abbrev  0x000117a6      0xaef ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+ .debug_abbrev  0x00012295      0xc7a ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_abbrev  0x00012f0f      0x38a ./TouchGFX/target/STM32TouchController.o
+ .debug_abbrev  0x00013299      0x284 ./TouchGFX/target/TouchGFXGPIO.o
+ .debug_abbrev  0x0001351d      0x973 ./TouchGFX/target/TouchGFXHAL.o
+ .debug_abbrev  0x00013e90      0x905 ./TouchGFX/target/generated/OSWrappers.o
+ .debug_abbrev  0x00014795      0x4c2 ./TouchGFX/target/generated/STM32DMA.o
+ .debug_abbrev  0x00014c57      0xdb8 ./TouchGFX/target/generated/TouchGFXConfiguration.o
+ .debug_abbrev  0x00015a0f      0xdc7 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
 
-.debug_aranges  0x00000000     0x4518
+.debug_aranges  0x00000000     0x4578
  .debug_aranges
                 0x00000000       0x30 ./Core/Src/Flash.o
  .debug_aranges
@@ -23240,118 +23523,118 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_aranges
                 0x00001c28      0x268 ./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o
  .debug_aranges
-                0x00001e90      0x160 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+                0x00001e90      0x190 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .debug_aranges
-                0x00001ff0      0x328 ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
+                0x00002020      0x328 ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
  .debug_aranges
-                0x00002318      0x3d8 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+                0x00002348      0x408 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .debug_aranges
-                0x000026f0      0x2b0 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
+                0x00002750      0x2b0 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
  .debug_aranges
-                0x000029a0      0x3f0 ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
+                0x00002a00      0x3f0 ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
  .debug_aranges
-                0x00002d90       0x28 ./TouchGFX/generated/images/src/BitmapDatabase.o
+                0x00002df0       0x28 ./TouchGFX/generated/images/src/BitmapDatabase.o
  .debug_aranges
-                0x00002db8       0x18 ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
+                0x00002e18       0x18 ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
  .debug_aranges
-                0x00002dd0       0x18 ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
+                0x00002e30       0x18 ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
  .debug_aranges
-                0x00002de8       0x18 ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
+                0x00002e48       0x18 ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
  .debug_aranges
-                0x00002e00       0x18 ./TouchGFX/generated/images/src/image_Background.o
+                0x00002e60       0x18 ./TouchGFX/generated/images/src/image_Background.o
  .debug_aranges
-                0x00002e18       0x18 ./TouchGFX/generated/images/src/image_Button1_large.o
+                0x00002e78       0x18 ./TouchGFX/generated/images/src/image_Button1_large.o
  .debug_aranges
-                0x00002e30       0x18 ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
+                0x00002e90       0x18 ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
  .debug_aranges
-                0x00002e48       0x18 ./TouchGFX/generated/images/src/image_Density.o
+                0x00002ea8       0x18 ./TouchGFX/generated/images/src/image_Density.o
  .debug_aranges
-                0x00002e60       0x18 ./TouchGFX/generated/images/src/image_Edit_Pressed.o
+                0x00002ec0       0x18 ./TouchGFX/generated/images/src/image_Edit_Pressed.o
  .debug_aranges
-                0x00002e78       0x18 ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
+                0x00002ed8       0x18 ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
  .debug_aranges
-                0x00002e90       0x18 ./TouchGFX/generated/images/src/image_Flo_electronics.o
+                0x00002ef0       0x18 ./TouchGFX/generated/images/src/image_Flo_electronics.o
  .debug_aranges
-                0x00002ea8       0x18 ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
+                0x00002f08       0x18 ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
  .debug_aranges
-                0x00002ec0       0x18 ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
+                0x00002f20       0x18 ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
  .debug_aranges
-                0x00002ed8       0x18 ./TouchGFX/generated/images/src/image_Minus_Pressed.o
+                0x00002f38       0x18 ./TouchGFX/generated/images/src/image_Minus_Pressed.o
  .debug_aranges
-                0x00002ef0       0x18 ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
+                0x00002f50       0x18 ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
  .debug_aranges
-                0x00002f08       0x18 ./TouchGFX/generated/images/src/image_Plus_Pressed.o
+                0x00002f68       0x18 ./TouchGFX/generated/images/src/image_Plus_Pressed.o
  .debug_aranges
-                0x00002f20       0x18 ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
+                0x00002f80       0x18 ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
  .debug_aranges
-                0x00002f38       0x18 ./TouchGFX/generated/images/src/image_Toggle_Off.o
+                0x00002f98       0x18 ./TouchGFX/generated/images/src/image_Toggle_Off.o
  .debug_aranges
-                0x00002f50       0x18 ./TouchGFX/generated/images/src/image_Toggle_On.o
+                0x00002fb0       0x18 ./TouchGFX/generated/images/src/image_Toggle_On.o
  .debug_aranges
-                0x00002f68       0x18 ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
+                0x00002fc8       0x18 ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
  .debug_aranges
-                0x00002f80       0x18 ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
+                0x00002fe0       0x18 ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
  .debug_aranges
-                0x00002f98       0x18 ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
+                0x00002ff8       0x18 ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
  .debug_aranges
-                0x00002fb0       0x18 ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
+                0x00003010       0x18 ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
  .debug_aranges
-                0x00002fc8       0x18 ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
+                0x00003028       0x18 ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
  .debug_aranges
-                0x00002fe0       0x18 ./TouchGFX/generated/images/src/image_keyboard_background.o
+                0x00003040       0x18 ./TouchGFX/generated/images/src/image_keyboard_background.o
  .debug_aranges
-                0x00002ff8       0x18 ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
+                0x00003058       0x18 ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
  .debug_aranges
-                0x00003010       0x18 ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
+                0x00003070       0x18 ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
  .debug_aranges
-                0x00003028       0x18 ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
+                0x00003088       0x18 ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
  .debug_aranges
-                0x00003040       0x18 ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
+                0x000030a0       0x18 ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
  .debug_aranges
-                0x00003058       0x18 ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
+                0x000030b8       0x18 ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
  .debug_aranges
-                0x00003070       0x18 ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
+                0x000030d0       0x18 ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
  .debug_aranges
-                0x00003088       0x18 ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
+                0x000030e8       0x18 ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
  .debug_aranges
-                0x000030a0       0x18 ./TouchGFX/generated/texts/src/LanguageGb.o
+                0x00003100       0x18 ./TouchGFX/generated/texts/src/LanguageGb.o
  .debug_aranges
-                0x000030b8       0xc0 ./TouchGFX/generated/texts/src/Texts.o
+                0x00003118       0xc0 ./TouchGFX/generated/texts/src/Texts.o
  .debug_aranges
-                0x00003178       0x50 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+                0x000031d8       0x50 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
  .debug_aranges
-                0x000031c8       0x90 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
+                0x00003228       0x90 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
  .debug_aranges
-                0x00003258      0x310 ./TouchGFX/gui/src/common/CustomKeyboard.o
+                0x000032b8      0x310 ./TouchGFX/gui/src/common/CustomKeyboard.o
  .debug_aranges
-                0x00003568      0x108 ./TouchGFX/gui/src/common/FrontendApplication.o
+                0x000035c8      0x108 ./TouchGFX/gui/src/common/FrontendApplication.o
  .debug_aranges
-                0x00003670       0xe0 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
+                0x000036d0       0xe0 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
  .debug_aranges
-                0x00003750       0xb0 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
+                0x000037b0       0xb0 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
  .debug_aranges
-                0x00003800       0x48 ./TouchGFX/gui/src/model/Model.o
+                0x00003860       0x48 ./TouchGFX/gui/src/model/Model.o
  .debug_aranges
-                0x00003848       0xf8 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+                0x000038a8       0xf8 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
  .debug_aranges
-                0x00003940      0x2d0 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+                0x000039a0      0x2d0 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
  .debug_aranges
-                0x00003c10       0x48 ./TouchGFX/target/STM32TouchController.o
+                0x00003c70       0x48 ./TouchGFX/target/STM32TouchController.o
  .debug_aranges
-                0x00003c58       0x40 ./TouchGFX/target/TouchGFXGPIO.o
+                0x00003cb8       0x40 ./TouchGFX/target/TouchGFXGPIO.o
  .debug_aranges
-                0x00003c98      0x140 ./TouchGFX/target/TouchGFXHAL.o
+                0x00003cf8      0x140 ./TouchGFX/target/TouchGFXHAL.o
  .debug_aranges
-                0x00003dd8       0x78 ./TouchGFX/target/generated/OSWrappers.o
+                0x00003e38       0x78 ./TouchGFX/target/generated/OSWrappers.o
  .debug_aranges
-                0x00003e50       0xb0 ./TouchGFX/target/generated/STM32DMA.o
+                0x00003eb0       0xb0 ./TouchGFX/target/generated/STM32DMA.o
  .debug_aranges
-                0x00003f00      0x390 ./TouchGFX/target/generated/TouchGFXConfiguration.o
+                0x00003f60      0x390 ./TouchGFX/target/generated/TouchGFXConfiguration.o
  .debug_aranges
-                0x00004290      0x288 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
+                0x000042f0      0x288 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
 
 .debug_rnglists
-                0x00000000     0x30fb
+                0x00000000     0x3143
  .debug_rnglists
                 0x00000000       0x1f ./Core/Src/Flash.o
  .debug_rnglists
@@ -23427,53 +23710,53 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_rnglists
                 0x000014cc      0x1cd ./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o
  .debug_rnglists
-                0x00001699      0x105 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+                0x00001699      0x129 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .debug_rnglists
-                0x0000179e      0x25d ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
+                0x000017c2      0x25d ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
  .debug_rnglists
-                0x000019fb      0x2e1 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+                0x00001a1f      0x305 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
  .debug_rnglists
-                0x00001cdc      0x202 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
+                0x00001d24      0x202 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
  .debug_rnglists
-                0x00001ede      0x2f5 ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
+                0x00001f26      0x2f5 ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
  .debug_rnglists
-                0x000021d3       0x19 ./TouchGFX/generated/images/src/BitmapDatabase.o
+                0x0000221b       0x19 ./TouchGFX/generated/images/src/BitmapDatabase.o
  .debug_rnglists
-                0x000021ec       0x8d ./TouchGFX/generated/texts/src/Texts.o
+                0x00002234       0x8d ./TouchGFX/generated/texts/src/Texts.o
  .debug_rnglists
-                0x00002279       0x37 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+                0x000022c1       0x37 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
  .debug_rnglists
-                0x000022b0       0x67 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
+                0x000022f8       0x67 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
  .debug_rnglists
-                0x00002317      0x24b ./TouchGFX/gui/src/common/CustomKeyboard.o
+                0x0000235f      0x24b ./TouchGFX/gui/src/common/CustomKeyboard.o
  .debug_rnglists
-                0x00002562       0xc1 ./TouchGFX/gui/src/common/FrontendApplication.o
+                0x000025aa       0xc1 ./TouchGFX/gui/src/common/FrontendApplication.o
  .debug_rnglists
-                0x00002623       0xa4 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
+                0x0000266b       0xa4 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
  .debug_rnglists
-                0x000026c7       0x80 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
+                0x0000270f       0x80 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
  .debug_rnglists
-                0x00002747       0x31 ./TouchGFX/gui/src/model/Model.o
+                0x0000278f       0x31 ./TouchGFX/gui/src/model/Model.o
  .debug_rnglists
-                0x00002778       0xb6 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+                0x000027c0       0xb6 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
  .debug_rnglists
-                0x0000282e      0x21c ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+                0x00002876      0x21c ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
  .debug_rnglists
-                0x00002a4a       0x31 ./TouchGFX/target/STM32TouchController.o
+                0x00002a92       0x31 ./TouchGFX/target/STM32TouchController.o
  .debug_rnglists
-                0x00002a7b       0x2b ./TouchGFX/target/TouchGFXGPIO.o
+                0x00002ac3       0x2b ./TouchGFX/target/TouchGFXGPIO.o
  .debug_rnglists
-                0x00002aa6       0xeb ./TouchGFX/target/TouchGFXHAL.o
+                0x00002aee       0xeb ./TouchGFX/target/TouchGFXHAL.o
  .debug_rnglists
-                0x00002b91       0x55 ./TouchGFX/target/generated/OSWrappers.o
+                0x00002bd9       0x55 ./TouchGFX/target/generated/OSWrappers.o
  .debug_rnglists
-                0x00002be6       0x7f ./TouchGFX/target/generated/STM32DMA.o
+                0x00002c2e       0x7f ./TouchGFX/target/generated/STM32DMA.o
  .debug_rnglists
-                0x00002c65      0x2aa ./TouchGFX/target/generated/TouchGFXConfiguration.o
+                0x00002cad      0x2aa ./TouchGFX/target/generated/TouchGFXConfiguration.o
  .debug_rnglists
-                0x00002f0f      0x1ec ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
+                0x00002f57      0x1ec ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
 
-.debug_macro    0x00000000    0x34677
+.debug_macro    0x00000000    0x3490e
  .debug_macro   0x00000000      0x1e4 ./Core/Src/Flash.o
  .debug_macro   0x000001e4      0xad8 ./Core/Src/Flash.o
  .debug_macro   0x00000cbc      0x1ad ./Core/Src/Flash.o
@@ -23640,70 +23923,89 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0002cdba      0x50b ./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o
  .debug_macro   0x0002d2c5      0x485 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
  .debug_macro   0x0002d74a      0x471 ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
- .debug_macro   0x0002dbbb      0x5c4 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
- .debug_macro   0x0002e17f       0x16 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
- .debug_macro   0x0002e195      0x403 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
- .debug_macro   0x0002e598      0x461 ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
- .debug_macro   0x0002e9f9       0xc7 ./TouchGFX/generated/images/src/BitmapDatabase.o
- .debug_macro   0x0002eac0       0x1a ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
- .debug_macro   0x0002eada       0x1a ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
- .debug_macro   0x0002eaf4       0x1a ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
- .debug_macro   0x0002eb0e       0x1a ./TouchGFX/generated/images/src/image_Background.o
- .debug_macro   0x0002eb28       0x1a ./TouchGFX/generated/images/src/image_Button1_large.o
- .debug_macro   0x0002eb42       0x1a ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
- .debug_macro   0x0002eb5c       0x1a ./TouchGFX/generated/images/src/image_Density.o
- .debug_macro   0x0002eb76       0x1a ./TouchGFX/generated/images/src/image_Edit_Pressed.o
- .debug_macro   0x0002eb90       0x1a ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
- .debug_macro   0x0002ebaa       0x1a ./TouchGFX/generated/images/src/image_Flo_electronics.o
- .debug_macro   0x0002ebc4       0x1a ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
- .debug_macro   0x0002ebde       0x1a ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
- .debug_macro   0x0002ebf8       0x1a ./TouchGFX/generated/images/src/image_Minus_Pressed.o
- .debug_macro   0x0002ec12       0x1a ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
- .debug_macro   0x0002ec2c       0x1a ./TouchGFX/generated/images/src/image_Plus_Pressed.o
- .debug_macro   0x0002ec46       0x1a ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
- .debug_macro   0x0002ec60       0x1a ./TouchGFX/generated/images/src/image_Toggle_Off.o
- .debug_macro   0x0002ec7a       0x1a ./TouchGFX/generated/images/src/image_Toggle_On.o
- .debug_macro   0x0002ec94       0x1a ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
- .debug_macro   0x0002ecae       0x1a ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
- .debug_macro   0x0002ecc8       0x1a ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
- .debug_macro   0x0002ece2       0x1a ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
- .debug_macro   0x0002ecfc       0x1a ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
- .debug_macro   0x0002ed16       0x1a ./TouchGFX/generated/images/src/image_keyboard_background.o
- .debug_macro   0x0002ed30       0x1a ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
- .debug_macro   0x0002ed4a       0x1a ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
- .debug_macro   0x0002ed64       0x1a ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
- .debug_macro   0x0002ed7e       0x1a ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
- .debug_macro   0x0002ed98       0x1a ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
- .debug_macro   0x0002edb2       0x1a ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
- .debug_macro   0x0002edcc       0x1a ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
- .debug_macro   0x0002ede6       0xcc ./TouchGFX/generated/texts/src/LanguageGb.o
- .debug_macro   0x0002eeb2      0x2f5 ./TouchGFX/generated/texts/src/Texts.o
- .debug_macro   0x0002f1a7      0x102 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
- .debug_macro   0x0002f2a9      0x42b ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
- .debug_macro   0x0002f6d4      0x2b7 ./TouchGFX/gui/src/common/CustomKeyboard.o
- .debug_macro   0x0002f98b      0x36d ./TouchGFX/gui/src/common/FrontendApplication.o
- .debug_macro   0x0002fcf8      0x457 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
- .debug_macro   0x0003014f      0x457 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
- .debug_macro   0x000305a6      0x22a ./TouchGFX/gui/src/model/Model.o
- .debug_macro   0x000307d0     0x1011 ./TouchGFX/gui/src/model/Model.o
- .debug_macro   0x000317e1      0x4e2 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
- .debug_macro   0x00031cc3       0x10 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
- .debug_macro   0x00031cd3       0x1c ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
- .debug_macro   0x00031cef       0xde ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
- .debug_macro   0x00031dcd      0x6e4 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_macro   0x000324b1       0x56 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_macro   0x00032507      0x138 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_macro   0x0003263f      0x11d ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_macro   0x0003275c       0x16 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_macro   0x00032772      0x438 ./TouchGFX/target/STM32TouchController.o
- .debug_macro   0x00032baa      0x40f ./TouchGFX/target/TouchGFXGPIO.o
- .debug_macro   0x00032fb9      0x2eb ./TouchGFX/target/TouchGFXHAL.o
- .debug_macro   0x000332a4      0x44e ./TouchGFX/target/generated/OSWrappers.o
- .debug_macro   0x000336f2      0x1f1 ./TouchGFX/target/generated/STM32DMA.o
- .debug_macro   0x000338e3      0x6d7 ./TouchGFX/target/generated/TouchGFXConfiguration.o
- .debug_macro   0x00033fba      0x6bd ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
+ .debug_macro   0x0002dbbb      0x797 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e352       0x16 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e368       0x1c ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e384       0x4f ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e3d3       0x41 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e414       0x1f ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e433       0x18 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e44b       0x27 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e472       0x28 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e49a       0x2e ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e4c8       0x19 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e4e1       0x88 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e569       0x19 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e582       0x32 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e5b4       0x11 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e5c5       0x10 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e5d5       0x11 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e5e6       0x27 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e60d       0x10 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e61d       0x11 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e62e       0x11 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e63f       0x1c ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e65b       0x26 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_macro   0x0002e681      0x403 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
+ .debug_macro   0x0002ea84      0x461 ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
+ .debug_macro   0x0002eee5       0xc7 ./TouchGFX/generated/images/src/BitmapDatabase.o
+ .debug_macro   0x0002efac       0x1a ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
+ .debug_macro   0x0002efc6       0x1a ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
+ .debug_macro   0x0002efe0       0x1a ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
+ .debug_macro   0x0002effa       0x1a ./TouchGFX/generated/images/src/image_Background.o
+ .debug_macro   0x0002f014       0x1a ./TouchGFX/generated/images/src/image_Button1_large.o
+ .debug_macro   0x0002f02e       0x1a ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
+ .debug_macro   0x0002f048       0x1a ./TouchGFX/generated/images/src/image_Density.o
+ .debug_macro   0x0002f062       0x1a ./TouchGFX/generated/images/src/image_Edit_Pressed.o
+ .debug_macro   0x0002f07c       0x1a ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
+ .debug_macro   0x0002f096       0x1a ./TouchGFX/generated/images/src/image_Flo_electronics.o
+ .debug_macro   0x0002f0b0       0x1a ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
+ .debug_macro   0x0002f0ca       0x1a ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
+ .debug_macro   0x0002f0e4       0x1a ./TouchGFX/generated/images/src/image_Minus_Pressed.o
+ .debug_macro   0x0002f0fe       0x1a ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
+ .debug_macro   0x0002f118       0x1a ./TouchGFX/generated/images/src/image_Plus_Pressed.o
+ .debug_macro   0x0002f132       0x1a ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
+ .debug_macro   0x0002f14c       0x1a ./TouchGFX/generated/images/src/image_Toggle_Off.o
+ .debug_macro   0x0002f166       0x1a ./TouchGFX/generated/images/src/image_Toggle_On.o
+ .debug_macro   0x0002f180       0x1a ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
+ .debug_macro   0x0002f19a       0x1a ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
+ .debug_macro   0x0002f1b4       0x1a ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
+ .debug_macro   0x0002f1ce       0x1a ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
+ .debug_macro   0x0002f1e8       0x1a ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
+ .debug_macro   0x0002f202       0x1a ./TouchGFX/generated/images/src/image_keyboard_background.o
+ .debug_macro   0x0002f21c       0x1a ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
+ .debug_macro   0x0002f236       0x1a ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
+ .debug_macro   0x0002f250       0x1a ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
+ .debug_macro   0x0002f26a       0x1a ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
+ .debug_macro   0x0002f284       0x1a ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
+ .debug_macro   0x0002f29e       0x1a ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
+ .debug_macro   0x0002f2b8       0x1a ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
+ .debug_macro   0x0002f2d2       0xcc ./TouchGFX/generated/texts/src/LanguageGb.o
+ .debug_macro   0x0002f39e      0x2f5 ./TouchGFX/generated/texts/src/Texts.o
+ .debug_macro   0x0002f693      0x102 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .debug_macro   0x0002f795      0x42b ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
+ .debug_macro   0x0002fbc0      0x2b7 ./TouchGFX/gui/src/common/CustomKeyboard.o
+ .debug_macro   0x0002fe77      0x36d ./TouchGFX/gui/src/common/FrontendApplication.o
+ .debug_macro   0x000301e4      0x457 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
+ .debug_macro   0x0003063b      0x457 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
+ .debug_macro   0x00030a92      0x22a ./TouchGFX/gui/src/model/Model.o
+ .debug_macro   0x00030cbc     0x1011 ./TouchGFX/gui/src/model/Model.o
+ .debug_macro   0x00031ccd      0x4e2 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+ .debug_macro   0x000321af       0x10 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+ .debug_macro   0x000321bf       0x1c ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+ .debug_macro   0x000321db       0xde ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+ .debug_macro   0x000322b9      0x6e4 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_macro   0x0003299d       0x56 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_macro   0x000329f3       0x16 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_macro   0x00032a09      0x438 ./TouchGFX/target/STM32TouchController.o
+ .debug_macro   0x00032e41      0x40f ./TouchGFX/target/TouchGFXGPIO.o
+ .debug_macro   0x00033250      0x2eb ./TouchGFX/target/TouchGFXHAL.o
+ .debug_macro   0x0003353b      0x44e ./TouchGFX/target/generated/OSWrappers.o
+ .debug_macro   0x00033989      0x1f1 ./TouchGFX/target/generated/STM32DMA.o
+ .debug_macro   0x00033b7a      0x6d7 ./TouchGFX/target/generated/TouchGFXConfiguration.o
+ .debug_macro   0x00034251      0x6bd ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
 
-.debug_line     0x00000000    0x47be7
+.debug_line     0x00000000    0x484c4
  .debug_line    0x00000000      0x7d5 ./Core/Src/Flash.o
  .debug_line    0x000007d5      0xd54 ./Core/Src/HAL_Init.o
  .debug_line    0x00001529      0xa80 ./Core/Src/device_config.o
@@ -23750,165 +24052,165 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x0001f945      0x718 ./TouchGFX/generated/fonts/src/Table_verdanab_20_4bpp.o
  .debug_line    0x0002005d     0x2636 ./TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.o
  .debug_line    0x00022693     0x20e6 ./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o
- .debug_line    0x00024779     0x182d ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
- .debug_line    0x00025fa6     0x2059 ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
- .debug_line    0x00027fff     0x2adb ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
- .debug_line    0x0002aada     0x2073 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
- .debug_line    0x0002cb4d     0x33cb ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
- .debug_line    0x0002ff18      0x615 ./TouchGFX/generated/images/src/BitmapDatabase.o
- .debug_line    0x0003052d       0xa8 ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
- .debug_line    0x000305d5       0xa8 ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
- .debug_line    0x0003067d       0xaa ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
- .debug_line    0x00030727       0x9e ./TouchGFX/generated/images/src/image_Background.o
- .debug_line    0x000307c5       0xa1 ./TouchGFX/generated/images/src/image_Button1_large.o
- .debug_line    0x00030866       0xa9 ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
- .debug_line    0x0003090f       0x9b ./TouchGFX/generated/images/src/image_Density.o
- .debug_line    0x000309aa       0xa0 ./TouchGFX/generated/images/src/image_Edit_Pressed.o
- .debug_line    0x00030a4a       0xa2 ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
- .debug_line    0x00030aec       0xa3 ./TouchGFX/generated/images/src/image_Flo_electronics.o
- .debug_line    0x00030b8f       0xad ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
- .debug_line    0x00030c3c       0xaf ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
- .debug_line    0x00030ceb       0xa1 ./TouchGFX/generated/images/src/image_Minus_Pressed.o
- .debug_line    0x00030d8c       0xa3 ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
- .debug_line    0x00030e2f       0xa0 ./TouchGFX/generated/images/src/image_Plus_Pressed.o
- .debug_line    0x00030ecf       0xa2 ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
- .debug_line    0x00030f71       0x9e ./TouchGFX/generated/images/src/image_Toggle_Off.o
- .debug_line    0x0003100f       0x9d ./TouchGFX/generated/images/src/image_Toggle_On.o
- .debug_line    0x000310ac       0xa3 ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
- .debug_line    0x0003114f       0xa5 ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
- .debug_line    0x000311f4       0xaa ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
- .debug_line    0x0003129e       0xad ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
- .debug_line    0x0003134b       0xa9 ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
- .debug_line    0x000313f4       0xa7 ./TouchGFX/generated/images/src/image_keyboard_background.o
- .debug_line    0x0003149b       0xb3 ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
- .debug_line    0x0003154e       0xac ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
- .debug_line    0x000315fa       0xb0 ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
- .debug_line    0x000316aa       0xb2 ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
- .debug_line    0x0003175c       0xae ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
- .debug_line    0x0003180a       0xdf ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
- .debug_line    0x000318e9       0xde ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
- .debug_line    0x000319c7      0x5ab ./TouchGFX/generated/texts/src/LanguageGb.o
- .debug_line    0x00031f72      0xfb3 ./TouchGFX/generated/texts/src/Texts.o
- .debug_line    0x00032f25      0x77c ./TouchGFX/generated/texts/src/TypedTextDatabase.o
- .debug_line    0x000336a1     0x12b6 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
- .debug_line    0x00034957     0x1866 ./TouchGFX/gui/src/common/CustomKeyboard.o
- .debug_line    0x000361bd     0x12ed ./TouchGFX/gui/src/common/FrontendApplication.o
- .debug_line    0x000374aa     0x1592 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
- .debug_line    0x00038a3c     0x150b ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
- .debug_line    0x00039f47      0xa97 ./TouchGFX/gui/src/model/Model.o
- .debug_line    0x0003a9de     0x169a ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
- .debug_line    0x0003c078     0x23a1 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_line    0x0003e419      0xe5f ./TouchGFX/target/STM32TouchController.o
- .debug_line    0x0003f278      0xdc0 ./TouchGFX/target/TouchGFXGPIO.o
- .debug_line    0x00040038     0x103e ./TouchGFX/target/TouchGFXHAL.o
- .debug_line    0x00041076     0x1061 ./TouchGFX/target/generated/OSWrappers.o
- .debug_line    0x000420d7      0xa71 ./TouchGFX/target/generated/STM32DMA.o
- .debug_line    0x00042b48     0x2795 ./TouchGFX/target/generated/TouchGFXConfiguration.o
- .debug_line    0x000452dd     0x290a ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
+ .debug_line    0x00024779     0x192c ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .debug_line    0x000260a5     0x2059 ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
+ .debug_line    0x000280fe     0x32b9 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_line    0x0002b3b7     0x2073 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
+ .debug_line    0x0002d42a     0x33cb ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
+ .debug_line    0x000307f5      0x615 ./TouchGFX/generated/images/src/BitmapDatabase.o
+ .debug_line    0x00030e0a       0xa8 ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
+ .debug_line    0x00030eb2       0xa8 ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
+ .debug_line    0x00030f5a       0xaa ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
+ .debug_line    0x00031004       0x9e ./TouchGFX/generated/images/src/image_Background.o
+ .debug_line    0x000310a2       0xa1 ./TouchGFX/generated/images/src/image_Button1_large.o
+ .debug_line    0x00031143       0xa9 ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
+ .debug_line    0x000311ec       0x9b ./TouchGFX/generated/images/src/image_Density.o
+ .debug_line    0x00031287       0xa0 ./TouchGFX/generated/images/src/image_Edit_Pressed.o
+ .debug_line    0x00031327       0xa2 ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
+ .debug_line    0x000313c9       0xa3 ./TouchGFX/generated/images/src/image_Flo_electronics.o
+ .debug_line    0x0003146c       0xad ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
+ .debug_line    0x00031519       0xaf ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
+ .debug_line    0x000315c8       0xa1 ./TouchGFX/generated/images/src/image_Minus_Pressed.o
+ .debug_line    0x00031669       0xa3 ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
+ .debug_line    0x0003170c       0xa0 ./TouchGFX/generated/images/src/image_Plus_Pressed.o
+ .debug_line    0x000317ac       0xa2 ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
+ .debug_line    0x0003184e       0x9e ./TouchGFX/generated/images/src/image_Toggle_Off.o
+ .debug_line    0x000318ec       0x9d ./TouchGFX/generated/images/src/image_Toggle_On.o
+ .debug_line    0x00031989       0xa3 ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
+ .debug_line    0x00031a2c       0xa5 ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
+ .debug_line    0x00031ad1       0xaa ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
+ .debug_line    0x00031b7b       0xad ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
+ .debug_line    0x00031c28       0xa9 ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
+ .debug_line    0x00031cd1       0xa7 ./TouchGFX/generated/images/src/image_keyboard_background.o
+ .debug_line    0x00031d78       0xb3 ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
+ .debug_line    0x00031e2b       0xac ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
+ .debug_line    0x00031ed7       0xb0 ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
+ .debug_line    0x00031f87       0xb2 ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
+ .debug_line    0x00032039       0xae ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
+ .debug_line    0x000320e7       0xdf ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
+ .debug_line    0x000321c6       0xde ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
+ .debug_line    0x000322a4      0x5ab ./TouchGFX/generated/texts/src/LanguageGb.o
+ .debug_line    0x0003284f      0xfb3 ./TouchGFX/generated/texts/src/Texts.o
+ .debug_line    0x00033802      0x77c ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .debug_line    0x00033f7e     0x12b6 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
+ .debug_line    0x00035234     0x1866 ./TouchGFX/gui/src/common/CustomKeyboard.o
+ .debug_line    0x00036a9a     0x12ed ./TouchGFX/gui/src/common/FrontendApplication.o
+ .debug_line    0x00037d87     0x1592 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
+ .debug_line    0x00039319     0x150b ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
+ .debug_line    0x0003a824      0xa97 ./TouchGFX/gui/src/model/Model.o
+ .debug_line    0x0003b2bb     0x169a ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+ .debug_line    0x0003c955     0x23a1 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_line    0x0003ecf6      0xe5f ./TouchGFX/target/STM32TouchController.o
+ .debug_line    0x0003fb55      0xdc0 ./TouchGFX/target/TouchGFXGPIO.o
+ .debug_line    0x00040915     0x103e ./TouchGFX/target/TouchGFXHAL.o
+ .debug_line    0x00041953     0x1061 ./TouchGFX/target/generated/OSWrappers.o
+ .debug_line    0x000429b4      0xa71 ./TouchGFX/target/generated/STM32DMA.o
+ .debug_line    0x00043425     0x2795 ./TouchGFX/target/generated/TouchGFXConfiguration.o
+ .debug_line    0x00045bba     0x290a ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
 
-.debug_str      0x00000000   0x117197
- .debug_str     0x00000000   0x117197 ./Core/Src/Flash.o
+.debug_str      0x00000000   0x11926b
+ .debug_str     0x00000000   0x11926b ./Core/Src/Flash.o
                               0xe8273 (size before relaxing)
- .debug_str     0x00117197    0xedba8 ./Core/Src/HAL_Init.o
- .debug_str     0x00117197    0xebec2 ./Core/Src/device_config.o
- .debug_str     0x00117197    0xed437 ./Core/Src/main.o
- .debug_str     0x00117197    0xed872 ./Core/Src/stm32l4xx_hal_msp.o
- .debug_str     0x00117197    0xed09c ./Core/Src/stm32l4xx_it.o
- .debug_str     0x00117197     0x9a0d ./Core/Src/syscalls.o
- .debug_str     0x00117197     0x77ab ./Core/Src/sysmem.o
- .debug_str     0x00117197    0xe8305 ./Core/Src/system_stm32l4xx.o
- .debug_str     0x00117197    0xed303 ./Core/Src/z_displ_ILI9XXX.o
- .debug_str     0x00117197    0xed4a3 ./Core/Src/z_touch_XPT2046.o
- .debug_str     0x00117197       0xad ./Core/Startup/startup_stm32l476rgtx.o
- .debug_str     0x00117197    0xe8e98 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
- .debug_str     0x00117197    0xe8b7e ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
- .debug_str     0x00117197    0xe83c2 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc.o
- .debug_str     0x00117197    0xe837c ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc_ex.o
- .debug_str     0x00117197    0xe856f ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
- .debug_str     0x00117197    0xe85b1 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o
- .debug_str     0x00117197    0xe860f ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o
- .debug_str     0x00117197    0xe847e ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
- .debug_str     0x00117197    0xe8860 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
- .debug_str     0x00117197    0xe894b ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
- .debug_str     0x00117197    0xe8b20 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
- .debug_str     0x00117197    0xe9645 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o
- .debug_str     0x00117197    0xe8f59 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o
- .debug_str     0x00117197     0x2f1d ./TouchGFX/App/app_touchgfx.o
- .debug_str     0x00117197     0x61bb ./TouchGFX/generated/fonts/src/ApplicationFontProvider.o
- .debug_str     0x00117197     0x7239 ./TouchGFX/generated/fonts/src/CachedFont.o
- .debug_str     0x00117197    0x122d0 ./TouchGFX/generated/fonts/src/CompressedFontCache.o
- .debug_str     0x00117197     0xd706 ./TouchGFX/generated/fonts/src/FontCache.o
- .debug_str     0x00117197     0x4e24 ./TouchGFX/generated/fonts/src/Font_verdana_10_4bpp_0.o
- .debug_str     0x00117197     0x4e24 ./TouchGFX/generated/fonts/src/Font_verdana_15_4bpp_0.o
- .debug_str     0x00117197     0x4e24 ./TouchGFX/generated/fonts/src/Font_verdana_15_4bpp_4.o
- .debug_str     0x00117197     0x4e24 ./TouchGFX/generated/fonts/src/Font_verdana_40_4bpp_0.o
- .debug_str     0x00117197     0x4e26 ./TouchGFX/generated/fonts/src/Font_verdanab_20_4bpp_0.o
- .debug_str     0x00117197     0xd26b ./TouchGFX/generated/fonts/src/GeneratedFont.o
- .debug_str     0x00117197     0x5525 ./TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.o
- .debug_str     0x00117197     0x5525 ./TouchGFX/generated/fonts/src/Kerning_verdana_15_4bpp.o
- .debug_str     0x00117197     0x5525 ./TouchGFX/generated/fonts/src/Kerning_verdana_40_4bpp.o
- .debug_str     0x00117197     0x5527 ./TouchGFX/generated/fonts/src/Kerning_verdanab_20_4bpp.o
- .debug_str     0x00117197     0x649d ./TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.o
- .debug_str     0x00117197     0x64b8 ./TouchGFX/generated/fonts/src/Table_verdana_15_4bpp.o
- .debug_str     0x00117197     0x649d ./TouchGFX/generated/fonts/src/Table_verdana_40_4bpp.o
- .debug_str     0x00117197     0x64a5 ./TouchGFX/generated/fonts/src/Table_verdanab_20_4bpp.o
- .debug_str     0x00117197    0x1461b ./TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.o
- .debug_str     0x00117197    0x1d046 ./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o
- .debug_str     0x00117197    0x1272f ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
- .debug_str     0x00117197    0x11d6a ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
- .debug_str     0x00117197    0x1d9ae ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
- .debug_str     0x00117197    0x123fd ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
- .debug_str     0x00117197    0x13baa ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
- .debug_str     0x00117197     0x6813 ./TouchGFX/generated/images/src/BitmapDatabase.o
- .debug_str     0x00117197     0x38d7 ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
- .debug_str     0x00117197     0x38d7 ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
- .debug_str     0x00117197     0x38db ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
- .debug_str     0x00117197     0x38c3 ./TouchGFX/generated/images/src/image_Background.o
- .debug_str     0x00117197     0x38c9 ./TouchGFX/generated/images/src/image_Button1_large.o
- .debug_str     0x00117197     0x38d9 ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
- .debug_str     0x00117197     0x38bd ./TouchGFX/generated/images/src/image_Density.o
- .debug_str     0x00117197     0x38c7 ./TouchGFX/generated/images/src/image_Edit_Pressed.o
- .debug_str     0x00117197     0x38cb ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
- .debug_str     0x00117197     0x38cd ./TouchGFX/generated/images/src/image_Flo_electronics.o
- .debug_str     0x00117197     0x38e1 ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
- .debug_str     0x00117197     0x38e5 ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
- .debug_str     0x00117197     0x38c9 ./TouchGFX/generated/images/src/image_Minus_Pressed.o
- .debug_str     0x00117197     0x38cd ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
- .debug_str     0x00117197     0x38c7 ./TouchGFX/generated/images/src/image_Plus_Pressed.o
- .debug_str     0x00117197     0x38cb ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
- .debug_str     0x00117197     0x38c3 ./TouchGFX/generated/images/src/image_Toggle_Off.o
- .debug_str     0x00117197     0x38c1 ./TouchGFX/generated/images/src/image_Toggle_On.o
- .debug_str     0x00117197     0x38cd ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
- .debug_str     0x00117197     0x38d1 ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
- .debug_str     0x00117197     0x38db ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
- .debug_str     0x00117197     0x38e1 ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
- .debug_str     0x00117197     0x38d9 ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
- .debug_str     0x00117197     0x38d5 ./TouchGFX/generated/images/src/image_keyboard_background.o
- .debug_str     0x00117197     0x38ed ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
- .debug_str     0x00117197     0x38df ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
- .debug_str     0x00117197     0x38e7 ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
- .debug_str     0x00117197     0x38eb ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
- .debug_str     0x00117197     0x38e3 ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
- .debug_str     0x00117197     0x3939 ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
- .debug_str     0x00117197     0x3937 ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
- .debug_str     0x00117197     0x4f60 ./TouchGFX/generated/texts/src/LanguageGb.o
- .debug_str     0x00117197     0xe18b ./TouchGFX/generated/texts/src/Texts.o
- .debug_str     0x00117197     0x6828 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
- .debug_str     0x00117197    0x13479 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
- .debug_str     0x00117197     0xee1c ./TouchGFX/gui/src/common/CustomKeyboard.o
- .debug_str     0x00117197     0xe574 ./TouchGFX/gui/src/common/FrontendApplication.o
- .debug_str     0x00117197    0x131ec ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
- .debug_str     0x00117197    0x13140 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
- .debug_str     0x00117197    0xea6bc ./TouchGFX/gui/src/model/Model.o
- .debug_str     0x00117197    0x14f97 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
- .debug_str     0x00117197    0xf9fad ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_str     0x00117197    0xef3a8 ./TouchGFX/target/STM32TouchController.o
- .debug_str     0x00117197    0xeeadd ./TouchGFX/target/TouchGFXGPIO.o
- .debug_str     0x00117197    0x1257b ./TouchGFX/target/TouchGFXHAL.o
- .debug_str     0x00117197    0xf60db ./TouchGFX/target/generated/OSWrappers.o
- .debug_str     0x00117197     0x9e58 ./TouchGFX/target/generated/STM32DMA.o
- .debug_str     0x00117197    0xff315 ./TouchGFX/target/generated/TouchGFXConfiguration.o
- .debug_str     0x00117197    0xfba18 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
+ .debug_str     0x0011926b    0xedba8 ./Core/Src/HAL_Init.o
+ .debug_str     0x0011926b    0xebec2 ./Core/Src/device_config.o
+ .debug_str     0x0011926b    0xed437 ./Core/Src/main.o
+ .debug_str     0x0011926b    0xed872 ./Core/Src/stm32l4xx_hal_msp.o
+ .debug_str     0x0011926b    0xed09c ./Core/Src/stm32l4xx_it.o
+ .debug_str     0x0011926b     0x9a0d ./Core/Src/syscalls.o
+ .debug_str     0x0011926b     0x77ab ./Core/Src/sysmem.o
+ .debug_str     0x0011926b    0xe8305 ./Core/Src/system_stm32l4xx.o
+ .debug_str     0x0011926b    0xed303 ./Core/Src/z_displ_ILI9XXX.o
+ .debug_str     0x0011926b    0xed4a3 ./Core/Src/z_touch_XPT2046.o
+ .debug_str     0x0011926b       0xad ./Core/Startup/startup_stm32l476rgtx.o
+ .debug_str     0x0011926b    0xe8e98 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
+ .debug_str     0x0011926b    0xe8b7e ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
+ .debug_str     0x0011926b    0xe83c2 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc.o
+ .debug_str     0x0011926b    0xe837c ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc_ex.o
+ .debug_str     0x0011926b    0xe856f ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
+ .debug_str     0x0011926b    0xe85b1 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o
+ .debug_str     0x0011926b    0xe860f ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o
+ .debug_str     0x0011926b    0xe847e ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
+ .debug_str     0x0011926b    0xe8860 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
+ .debug_str     0x0011926b    0xe894b ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
+ .debug_str     0x0011926b    0xe8b20 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
+ .debug_str     0x0011926b    0xe9645 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o
+ .debug_str     0x0011926b    0xe8f59 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o
+ .debug_str     0x0011926b     0x2f1d ./TouchGFX/App/app_touchgfx.o
+ .debug_str     0x0011926b     0x61bb ./TouchGFX/generated/fonts/src/ApplicationFontProvider.o
+ .debug_str     0x0011926b     0x7239 ./TouchGFX/generated/fonts/src/CachedFont.o
+ .debug_str     0x0011926b    0x122d0 ./TouchGFX/generated/fonts/src/CompressedFontCache.o
+ .debug_str     0x0011926b     0xd706 ./TouchGFX/generated/fonts/src/FontCache.o
+ .debug_str     0x0011926b     0x4e24 ./TouchGFX/generated/fonts/src/Font_verdana_10_4bpp_0.o
+ .debug_str     0x0011926b     0x4e24 ./TouchGFX/generated/fonts/src/Font_verdana_15_4bpp_0.o
+ .debug_str     0x0011926b     0x4e24 ./TouchGFX/generated/fonts/src/Font_verdana_15_4bpp_4.o
+ .debug_str     0x0011926b     0x4e24 ./TouchGFX/generated/fonts/src/Font_verdana_40_4bpp_0.o
+ .debug_str     0x0011926b     0x4e26 ./TouchGFX/generated/fonts/src/Font_verdanab_20_4bpp_0.o
+ .debug_str     0x0011926b     0xd26b ./TouchGFX/generated/fonts/src/GeneratedFont.o
+ .debug_str     0x0011926b     0x5525 ./TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.o
+ .debug_str     0x0011926b     0x5525 ./TouchGFX/generated/fonts/src/Kerning_verdana_15_4bpp.o
+ .debug_str     0x0011926b     0x5525 ./TouchGFX/generated/fonts/src/Kerning_verdana_40_4bpp.o
+ .debug_str     0x0011926b     0x5527 ./TouchGFX/generated/fonts/src/Kerning_verdanab_20_4bpp.o
+ .debug_str     0x0011926b     0x649d ./TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.o
+ .debug_str     0x0011926b     0x64b8 ./TouchGFX/generated/fonts/src/Table_verdana_15_4bpp.o
+ .debug_str     0x0011926b     0x649d ./TouchGFX/generated/fonts/src/Table_verdana_40_4bpp.o
+ .debug_str     0x0011926b     0x64a5 ./TouchGFX/generated/fonts/src/Table_verdanab_20_4bpp.o
+ .debug_str     0x0011926b    0x1461b ./TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.o
+ .debug_str     0x0011926b    0x1d046 ./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o
+ .debug_str     0x0011926b    0x12b24 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .debug_str     0x0011926b    0x11d6a ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
+ .debug_str     0x0011926b    0x1fb19 ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_str     0x0011926b    0x123fd ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
+ .debug_str     0x0011926b    0x13baa ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
+ .debug_str     0x0011926b     0x6813 ./TouchGFX/generated/images/src/BitmapDatabase.o
+ .debug_str     0x0011926b     0x38d7 ./TouchGFX/generated/images/src/image_Apex_Auto_Background.o
+ .debug_str     0x0011926b     0x38d7 ./TouchGFX/generated/images/src/image_Back_Pressed_Resized.o
+ .debug_str     0x0011926b     0x38db ./TouchGFX/generated/images/src/image_Back_Unpressed_Resized.o
+ .debug_str     0x0011926b     0x38c3 ./TouchGFX/generated/images/src/image_Background.o
+ .debug_str     0x0011926b     0x38c9 ./TouchGFX/generated/images/src/image_Button1_large.o
+ .debug_str     0x0011926b     0x38d9 ./TouchGFX/generated/images/src/image_Button1_large_clicked.o
+ .debug_str     0x0011926b     0x38bd ./TouchGFX/generated/images/src/image_Density.o
+ .debug_str     0x0011926b     0x38c7 ./TouchGFX/generated/images/src/image_Edit_Pressed.o
+ .debug_str     0x0011926b     0x38cb ./TouchGFX/generated/images/src/image_Edit_Unpressed.o
+ .debug_str     0x0011926b     0x38cd ./TouchGFX/generated/images/src/image_Flo_electronics.o
+ .debug_str     0x0011926b     0x38e1 ./TouchGFX/generated/images/src/image_LongButtonPressed_Resized.o
+ .debug_str     0x0011926b     0x38e5 ./TouchGFX/generated/images/src/image_LongButtonUnpressed_Resized.o
+ .debug_str     0x0011926b     0x38c9 ./TouchGFX/generated/images/src/image_Minus_Pressed.o
+ .debug_str     0x0011926b     0x38cd ./TouchGFX/generated/images/src/image_Minus_Unpressed.o
+ .debug_str     0x0011926b     0x38c7 ./TouchGFX/generated/images/src/image_Plus_Pressed.o
+ .debug_str     0x0011926b     0x38cb ./TouchGFX/generated/images/src/image_Plus_Unpressed.o
+ .debug_str     0x0011926b     0x38c3 ./TouchGFX/generated/images/src/image_Toggle_Off.o
+ .debug_str     0x0011926b     0x38c1 ./TouchGFX/generated/images/src/image_Toggle_On.o
+ .debug_str     0x0011926b     0x38cd ./TouchGFX/generated/images/src/image_Upbuttonpressed.o
+ .debug_str     0x0011926b     0x38d1 ./TouchGFX/generated/images/src/image_Upbuttonunpressed.o
+ .debug_str     0x0011926b     0x38db ./TouchGFX/generated/images/src/image_icon_keyboard_even_row.o
+ .debug_str     0x0011926b     0x38e1 ./TouchGFX/generated/images/src/image_icon_keyboard_highlighted.o
+ .debug_str     0x0011926b     0x38d9 ./TouchGFX/generated/images/src/image_icon_keyboard_odd_row.o
+ .debug_str     0x0011926b     0x38d5 ./TouchGFX/generated/images/src/image_keyboard_background.o
+ .debug_str     0x0011926b     0x38ed ./TouchGFX/generated/images/src/image_keyboard_key_delete_highlighted.o
+ .debug_str     0x0011926b     0x38df ./TouchGFX/generated/images/src/image_keyboard_key_highlighted.o
+ .debug_str     0x0011926b     0x38e7 ./TouchGFX/generated/images/src/image_keyboard_key_num_highlighted.o
+ .debug_str     0x0011926b     0x38eb ./TouchGFX/generated/images/src/image_keyboard_key_shift_highlighted.o
+ .debug_str     0x0011926b     0x38e3 ./TouchGFX/generated/images/src/image_keyboard_space_highlighted.o
+ .debug_str     0x0011926b     0x3939 ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o
+ .debug_str     0x0011926b     0x3937 ./TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o
+ .debug_str     0x0011926b     0x4f60 ./TouchGFX/generated/texts/src/LanguageGb.o
+ .debug_str     0x0011926b     0xe18b ./TouchGFX/generated/texts/src/Texts.o
+ .debug_str     0x0011926b     0x6828 ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .debug_str     0x0011926b    0x13479 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
+ .debug_str     0x0011926b     0xee1c ./TouchGFX/gui/src/common/CustomKeyboard.o
+ .debug_str     0x0011926b     0xe574 ./TouchGFX/gui/src/common/FrontendApplication.o
+ .debug_str     0x0011926b    0x131ec ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
+ .debug_str     0x0011926b    0x13140 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
+ .debug_str     0x0011926b    0xea6bc ./TouchGFX/gui/src/model/Model.o
+ .debug_str     0x0011926b    0x14f97 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+ .debug_str     0x0011926b    0xf9fad ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_str     0x0011926b    0xef3a8 ./TouchGFX/target/STM32TouchController.o
+ .debug_str     0x0011926b    0xeeadd ./TouchGFX/target/TouchGFXGPIO.o
+ .debug_str     0x0011926b    0x1257b ./TouchGFX/target/TouchGFXHAL.o
+ .debug_str     0x0011926b    0xf60db ./TouchGFX/target/generated/OSWrappers.o
+ .debug_str     0x0011926b     0x9e58 ./TouchGFX/target/generated/STM32DMA.o
+ .debug_str     0x0011926b    0xff315 ./TouchGFX/target/generated/TouchGFXConfiguration.o
+ .debug_str     0x0011926b    0xfba18 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
 
 .comment        0x00000000       0xc2
  .comment       0x00000000       0xc2 ./Core/Src/Flash.o
@@ -24047,7 +24349,7 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .comment       0x000000c2       0x80 C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Dilute_Workspace\Chemical_Dilution\Chem_Proj\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc\libtouchgfx-float-abi-hard.a(stm32_crc_lock.o)
  .comment       0x000000c2       0x80 C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Dilute_Workspace\Chemical_Dilution\Chem_Proj\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc\libtouchgfx-float-abi-hard.a(Gestures.o)
 
-.debug_frame    0x00000000    0x13088
+.debug_frame    0x00000000    0x13248
  .debug_frame   0x00000000       0x80 ./Core/Src/Flash.o
  .debug_frame   0x00000080      0x144 ./Core/Src/HAL_Init.o
  .debug_frame   0x000001c4       0xa8 ./Core/Src/device_config.o
@@ -24084,101 +24386,101 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_frame   0x00005ecc      0x12c ./TouchGFX/generated/fonts/src/Table_verdanab_20_4bpp.o
  .debug_frame   0x00005ff8     0x103c ./TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.o
  .debug_frame   0x00007034      0xae4 ./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o
- .debug_frame   0x00007b18      0x61c ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
- .debug_frame   0x00008134      0xe94 ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
- .debug_frame   0x00008fc8     0x117c ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
- .debug_frame   0x0000a144      0xc54 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
- .debug_frame   0x0000ad98     0x121c ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
- .debug_frame   0x0000bfb4       0x50 ./TouchGFX/generated/images/src/BitmapDatabase.o
- .debug_frame   0x0000c004      0x368 ./TouchGFX/generated/texts/src/Texts.o
- .debug_frame   0x0000c36c       0xfc ./TouchGFX/generated/texts/src/TypedTextDatabase.o
- .debug_frame   0x0000c468      0x224 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
- .debug_frame   0x0000c68c      0xdf8 ./TouchGFX/gui/src/common/CustomKeyboard.o
- .debug_frame   0x0000d484      0x478 ./TouchGFX/gui/src/common/FrontendApplication.o
- .debug_frame   0x0000d8fc      0x388 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
- .debug_frame   0x0000dc84      0x2c8 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
- .debug_frame   0x0000df4c       0xf8 ./TouchGFX/gui/src/model/Model.o
- .debug_frame   0x0000e044      0x3f4 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
- .debug_frame   0x0000e438      0xcd0 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
- .debug_frame   0x0000f108       0xf0 ./TouchGFX/target/STM32TouchController.o
- .debug_frame   0x0000f1f8       0xd0 ./TouchGFX/target/TouchGFXGPIO.o
- .debug_frame   0x0000f2c8      0x578 ./TouchGFX/target/TouchGFXHAL.o
- .debug_frame   0x0000f840      0x190 ./TouchGFX/target/generated/OSWrappers.o
- .debug_frame   0x0000f9d0      0x2d8 ./TouchGFX/target/generated/STM32DMA.o
- .debug_frame   0x0000fca8     0x1024 ./TouchGFX/target/generated/TouchGFXConfiguration.o
- .debug_frame   0x00010ccc      0xb74 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
- .debug_frame   0x00011840       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(atexit_arm.o)
- .debug_frame   0x00011860       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(del_ops.o)
- .debug_frame   0x00011880       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(guard.o)
- .debug_frame   0x000118c0       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(pure.o)
- .debug_frame   0x00011900       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(del_op.o)
- .debug_frame   0x00011920       0xb0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(eh_terminate.o)
- .debug_frame   0x000119d0       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-abort.o)
- .debug_frame   0x000119f8       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-assert.o)
- .debug_frame   0x00011a38       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-atexit.o)
- .debug_frame   0x00011a58       0x30 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-malloc.o)
- .debug_frame   0x00011a88       0x50 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mallocr.o)
- .debug_frame   0x00011ad8       0x30 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mlock.o)
- .debug_frame   0x00011b08      0x11c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-strtod.o)
- .debug_frame   0x00011c24       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-cxa_atexit.o)
- .debug_frame   0x00011c4c       0x90 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-vfprintf_float.o)
- .debug_frame   0x00011cdc       0x60 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_frame   0x00011d3c       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-vfscanf_float.o)
- .debug_frame   0x00011d7c      0x144 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o)
- .debug_frame   0x00011ec0       0x64 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-fprintf.o)
- .debug_frame   0x00011f24       0x34 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-fwalk.o)
- .debug_frame   0x00011f58       0x7c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-snprintf.o)
- .debug_frame   0x00011fd4       0x74 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-sprintf.o)
- .debug_frame   0x00012048       0x88 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-stdio.o)
- .debug_frame   0x000120d0       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
- .debug_frame   0x000120f0       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-strncmp.o)
- .debug_frame   0x00012118       0xcc C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-signal.o)
- .debug_frame   0x000121e4       0x48 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-locale.o)
- .debug_frame   0x0001222c       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-localeconv.o)
- .debug_frame   0x0001226c       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-closer.o)
- .debug_frame   0x00012298       0x38 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-reent.o)
- .debug_frame   0x000122d0       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-lseekr.o)
- .debug_frame   0x000122fc       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-readr.o)
- .debug_frame   0x00012328       0x3c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-signalr.o)
- .debug_frame   0x00012364       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-sbrkr.o)
- .debug_frame   0x00012390       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-writer.o)
- .debug_frame   0x000123bc       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-errno.o)
- .debug_frame   0x000123dc       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
- .debug_frame   0x00012408       0xb0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-lock.o)
- .debug_frame   0x000124b8       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
- .debug_frame   0x000124e0       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libm_a-s_nan.o)
- .debug_frame   0x00012500       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libm_a-sf_nan.o)
- .debug_frame   0x00012520       0x34 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-__atexit.o)
- .debug_frame   0x00012554       0x48 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-__call_atexit.o)
- .debug_frame   0x0001259c       0x70 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-dtoa.o)
- .debug_frame   0x0001260c       0x38 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-freer.o)
- .debug_frame   0x00012644       0x74 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-gdtoa-gethex.o)
- .debug_frame   0x000126b8       0x78 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-gdtoa-hexnan.o)
- .debug_frame   0x00012730       0x48 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mbtowc_r.o)
- .debug_frame   0x00012778      0x260 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mprec.o)
- .debug_frame   0x000129d8       0x64 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-strtol.o)
- .debug_frame   0x00012a3c       0x3c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-wctomb_r.o)
- .debug_frame   0x00012a78       0x90 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-svfprintf.o)
- .debug_frame   0x00012b08       0xa8 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-vfprintf.o)
- .debug_frame   0x00012bb0       0x5c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-fflush.o)
- .debug_frame   0x00012c0c       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-wbuf.o)
- .debug_frame   0x00012c4c       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-wsetup.o)
- .debug_frame   0x00012c78       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memmove.o)
- .debug_frame   0x00012ca0       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-callocr.o)
- .debug_frame   0x00012ccc       0x3c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-reallocr.o)
- .debug_frame   0x00012d08       0x58 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-makebuf.o)
- .debug_frame   0x00012d60       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-fstatr.o)
- .debug_frame   0x00012d8c       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-isattyr.o)
- .debug_frame   0x00012db8       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-msizer.o)
- .debug_frame   0x00012dd8       0xac C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00012e84       0x50 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00012ed4       0xc4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x00012f98       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_unorddf2.o)
- .debug_frame   0x00012fb8       0x24 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x00012fdc       0x24 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixunsdfsi.o)
- .debug_frame   0x00013000       0x24 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_truncdfsf2.o)
- .debug_frame   0x00013024       0x38 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_fixdfdi.o)
- .debug_frame   0x0001305c       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_fixunsdfdi.o)
+ .debug_frame   0x00007b18      0x6fc ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o
+ .debug_frame   0x00008214      0xe94 ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o
+ .debug_frame   0x000090a8     0x125c ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o
+ .debug_frame   0x0000a304      0xc54 ./TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.o
+ .debug_frame   0x0000af58     0x121c ./TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/PumpSetupScreenViewBase.o
+ .debug_frame   0x0000c174       0x50 ./TouchGFX/generated/images/src/BitmapDatabase.o
+ .debug_frame   0x0000c1c4      0x368 ./TouchGFX/generated/texts/src/Texts.o
+ .debug_frame   0x0000c52c       0xfc ./TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .debug_frame   0x0000c628      0x224 ./TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o
+ .debug_frame   0x0000c84c      0xdf8 ./TouchGFX/gui/src/common/CustomKeyboard.o
+ .debug_frame   0x0000d644      0x478 ./TouchGFX/gui/src/common/FrontendApplication.o
+ .debug_frame   0x0000dabc      0x388 ./TouchGFX/gui/src/homescreen_screen/HomeScreenPresenter.o
+ .debug_frame   0x0000de44      0x2c8 ./TouchGFX/gui/src/homescreen_screen/HomeScreenView.o
+ .debug_frame   0x0000e10c       0xf8 ./TouchGFX/gui/src/model/Model.o
+ .debug_frame   0x0000e204      0x3f4 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenPresenter.o
+ .debug_frame   0x0000e5f8      0xcd0 ./TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o
+ .debug_frame   0x0000f2c8       0xf0 ./TouchGFX/target/STM32TouchController.o
+ .debug_frame   0x0000f3b8       0xd0 ./TouchGFX/target/TouchGFXGPIO.o
+ .debug_frame   0x0000f488      0x578 ./TouchGFX/target/TouchGFXHAL.o
+ .debug_frame   0x0000fa00      0x190 ./TouchGFX/target/generated/OSWrappers.o
+ .debug_frame   0x0000fb90      0x2d8 ./TouchGFX/target/generated/STM32DMA.o
+ .debug_frame   0x0000fe68     0x1024 ./TouchGFX/target/generated/TouchGFXConfiguration.o
+ .debug_frame   0x00010e8c      0xb74 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o
+ .debug_frame   0x00011a00       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(atexit_arm.o)
+ .debug_frame   0x00011a20       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(del_ops.o)
+ .debug_frame   0x00011a40       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(guard.o)
+ .debug_frame   0x00011a80       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(pure.o)
+ .debug_frame   0x00011ac0       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(del_op.o)
+ .debug_frame   0x00011ae0       0xb0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a(eh_terminate.o)
+ .debug_frame   0x00011b90       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-abort.o)
+ .debug_frame   0x00011bb8       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-assert.o)
+ .debug_frame   0x00011bf8       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-atexit.o)
+ .debug_frame   0x00011c18       0x30 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-malloc.o)
+ .debug_frame   0x00011c48       0x50 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mallocr.o)
+ .debug_frame   0x00011c98       0x30 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mlock.o)
+ .debug_frame   0x00011cc8      0x11c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-strtod.o)
+ .debug_frame   0x00011de4       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-cxa_atexit.o)
+ .debug_frame   0x00011e0c       0x90 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-vfprintf_float.o)
+ .debug_frame   0x00011e9c       0x60 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_frame   0x00011efc       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-vfscanf_float.o)
+ .debug_frame   0x00011f3c      0x144 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o)
+ .debug_frame   0x00012080       0x64 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-fprintf.o)
+ .debug_frame   0x000120e4       0x34 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-fwalk.o)
+ .debug_frame   0x00012118       0x7c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-snprintf.o)
+ .debug_frame   0x00012194       0x74 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-sprintf.o)
+ .debug_frame   0x00012208       0x88 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-stdio.o)
+ .debug_frame   0x00012290       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
+ .debug_frame   0x000122b0       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-strncmp.o)
+ .debug_frame   0x000122d8       0xcc C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-signal.o)
+ .debug_frame   0x000123a4       0x48 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-locale.o)
+ .debug_frame   0x000123ec       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-localeconv.o)
+ .debug_frame   0x0001242c       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-closer.o)
+ .debug_frame   0x00012458       0x38 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-reent.o)
+ .debug_frame   0x00012490       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-lseekr.o)
+ .debug_frame   0x000124bc       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-readr.o)
+ .debug_frame   0x000124e8       0x3c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-signalr.o)
+ .debug_frame   0x00012524       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-sbrkr.o)
+ .debug_frame   0x00012550       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-writer.o)
+ .debug_frame   0x0001257c       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-errno.o)
+ .debug_frame   0x0001259c       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
+ .debug_frame   0x000125c8       0xb0 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-lock.o)
+ .debug_frame   0x00012678       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x000126a0       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libm_a-s_nan.o)
+ .debug_frame   0x000126c0       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libm_a-sf_nan.o)
+ .debug_frame   0x000126e0       0x34 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-__atexit.o)
+ .debug_frame   0x00012714       0x48 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-__call_atexit.o)
+ .debug_frame   0x0001275c       0x70 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-dtoa.o)
+ .debug_frame   0x000127cc       0x38 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-freer.o)
+ .debug_frame   0x00012804       0x74 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-gdtoa-gethex.o)
+ .debug_frame   0x00012878       0x78 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-gdtoa-hexnan.o)
+ .debug_frame   0x000128f0       0x48 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mbtowc_r.o)
+ .debug_frame   0x00012938      0x260 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mprec.o)
+ .debug_frame   0x00012b98       0x64 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-strtol.o)
+ .debug_frame   0x00012bfc       0x3c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-wctomb_r.o)
+ .debug_frame   0x00012c38       0x90 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-svfprintf.o)
+ .debug_frame   0x00012cc8       0xa8 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-nano-vfprintf.o)
+ .debug_frame   0x00012d70       0x5c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-fflush.o)
+ .debug_frame   0x00012dcc       0x40 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-wbuf.o)
+ .debug_frame   0x00012e0c       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-wsetup.o)
+ .debug_frame   0x00012e38       0x28 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memmove.o)
+ .debug_frame   0x00012e60       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-callocr.o)
+ .debug_frame   0x00012e8c       0x3c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-reallocr.o)
+ .debug_frame   0x00012ec8       0x58 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-makebuf.o)
+ .debug_frame   0x00012f20       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-fstatr.o)
+ .debug_frame   0x00012f4c       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-isattyr.o)
+ .debug_frame   0x00012f78       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-msizer.o)
+ .debug_frame   0x00012f98       0xac C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00013044       0x50 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00013094       0xc4 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x00013158       0x20 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x00013178       0x24 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0001319c       0x24 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x000131c0       0x24 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_truncdfsf2.o)
+ .debug_frame   0x000131e4       0x38 C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_fixdfdi.o)
+ .debug_frame   0x0001321c       0x2c C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_fixunsdfdi.o)
 
 .debug_line_str
                 0x00000000       0x91

@@ -67,7 +67,7 @@ TouchGFX/gui/src/containers/PumpSetupWidget.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
  ../TouchGFX/gui/include/gui/containers/PumpDropDownList.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpDropDownListBase.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpDropdownListBase.hpp \
  ../TouchGFX/gui/include/gui/containers/PumpOption.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpOptionBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
@@ -155,7 +155,7 @@ TouchGFX/gui/src/containers/PumpSetupWidget.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
 ../TouchGFX/gui/include/gui/containers/PumpDropDownList.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpDropDownListBase.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpDropdownListBase.hpp:
 ../TouchGFX/gui/include/gui/containers/PumpOption.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpOptionBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
