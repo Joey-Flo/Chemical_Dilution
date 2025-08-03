@@ -1,0 +1,169 @@
+
+#include <gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp>
+#include <gui/common/CustomKeyboard.hpp>
+#include "device_config.h"
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+
+extern DeviceConfiguration_t myDeviceConfig;
+
+
+// --- CHANGE: The constructor is now very simple. ---
+PumpSetupScreenView::PumpSetupScreenView()
+{
+    // The constructor body only contains one-time setup.
+    // NOTE: The arrays are NOT initialized here anymore.
+}
+
+
+// --- CHANGE: All setup, including array initialization, is now in setupScreen(). ---
+// This is the most robust place for it.
+void PumpSetupScreenView::setupScreen()
+{
+    PumpSetupScreenViewBase::setupScreen();
+
+    // --- Array Initialization is now done here ---
+    // Because we are inside a class method, we have full access to the protected members.
+    pumpToggleButtons[0] = &P1Toggle;
+    pumpToggleButtons[1] = &P2Toggle;
+    pumpToggleButtons[2] = &P3Toggle;
+    pumpToggleButtons[3] = &P4Toggle;
+    pumpToggleButtons[4] = &P5Toggle;
+    pumpToggleButtons[5] = &P6Toggle;
+    pumpToggleButtons[6] = &P7Toggle;
+    pumpToggleButtons[7] = &P8Toggle;
+
+    densityTextAreas[0] = &PumpDensity_1;
+    densityTextAreas[1] = &PumpDensity_2;
+    // ... and so on for all 8 text areas
+
+    // You would continue this pattern for densityBuffers and densityBufferSizes
+
+    // Reset keyboard flags
+    for (int i = 0; i < NUM_PUMPS; ++i) {
+        KeyboardCallFlags[i] = 0;
+    }
+
+    // Loop to set toggle button states
+    for (int i = 0; i < NUM_PUMPS; ++i)
+    {
+        bool is_enabled = (myDeviceConfig.PumpEnable[i] == 1);
+        pumpToggleButtons[i]->forceState(is_enabled);
+        pumpToggleButtons[i]->invalidate();
+    }
+
+    // Loop to set density field text
+    char tempBuffer[10];
+    for (int i = 0; i < NUM_PUMPS; ++i)
+    {
+        snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[i]);
+        Unicode::strncpy(densityBuffers[i], tempBuffer, densityBufferSizes[i]);
+        densityTextAreas[i]->invalidate();
+    }
+}
+
+
+void PumpSetupScreenView::tearDownScreen()
+{
+    PumpSetupScreenViewBase::tearDownScreen();
+}
+
+void PumpSetupScreenView::HandleKeyboard(int8_t index) {
+    keyboard.setVisible(true);
+    keyboard.invalidate();
+    KeyboardExtras.setVisible(true);
+    KeyboardExtras.invalidate();
+
+    for (int i = 0; i < NUM_PUMPS; i++) {
+        KeyboardCallFlags[i] = (i == (index - 1)) ? 1 : 0;
+    }
+}
+
+
+/*
+ * New Consolidated Virtual Action Handlers
+ */
+
+void PumpSetupScreenView::densityFieldClicked(int8_t index)
+{
+    HandleKeyboard(index);
+}
+
+void PumpSetupScreenView::pumpToggledHandler(int8_t index)
+{
+    int array_index = index - 1;
+
+    bool new_state = pumpToggleButtons[array_index]->getState();
+
+    myDeviceConfig.PumpEnable[array_index] = new_state ? 1 : 0;
+
+    #ifndef SIMULATOR
+        Config_Save(&myDeviceConfig);
+    #endif
+}
+
+
+/*
+ * Keyboard Event Handlers
+ */
+
+void PumpSetupScreenView::EnterPressed()
+{
+    keyboard.setVisible(false);
+    keyboard.invalidate();
+    KeyboardExtras.setVisible(false);
+    KeyboardExtras.invalidate();
+
+    bool config_was_changed = false;
+
+    for (int i = 0; i < NUM_PUMPS; ++i)
+    {
+        if (KeyboardCallFlags[i] == 1)
+        {
+            char utf8_buffer[20];
+            memset(utf8_buffer, 0, 20);
+            Unicode::toUTF8(keyboard.getBuffer(), (uint8_t*)utf8_buffer, 20);
+
+            char* end_ptr;
+            float new_value = strtof(utf8_buffer, &end_ptr);
+
+            if (new_value > 3.0f) { new_value = 3.0f; }
+            if (new_value < 0.1f) { new_value = 0.1f; }
+
+            if (*end_ptr == '\0' && end_ptr != utf8_buffer)
+            {
+                myDeviceConfig.PumpDensity[i] = new_value;
+                config_was_changed = true;
+            }
+
+            KeyboardCallFlags[i] = 0;
+
+            char tempBuffer[10];
+            snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[i]);
+            Unicode::strncpy(densityBuffers[i], tempBuffer, densityBufferSizes[i]);
+            densityTextAreas[i]->invalidate();
+
+            break;
+        }
+    }
+
+    keyboard.clearBuffer();
+
+    if (config_was_changed)
+    {
+        #ifndef SIMULATOR
+            Config_Save(&myDeviceConfig);
+        #endif
+    }
+}
+
+
+void PumpSetupScreenView::ExitPressed()
+{
+    keyboard.setVisible(false);
+    keyboard.invalidate();
+    KeyboardExtras.setVisible(false);
+    KeyboardExtras.invalidate();
+    keyboard.clearBuffer();
+}

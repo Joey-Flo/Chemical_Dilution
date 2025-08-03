@@ -1,0 +1,255 @@
+#include <gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp>
+#include <gui/common/CustomKeyboard.hpp>
+#include "device_config.h"
+#include <cstdio> // <--- ADD THIS LINE
+#include <stdlib.h> // You MUST include this for strtof()
+#include <cstring>
+//
+extern DeviceConfiguration_t myDeviceConfig;
+PumpSetupScreenView::PumpSetupScreenView()
+{
+keyboard.setPosition (0,115,240,180);
+add(keyboard);
+keyboard.setVisible(false);
+keyboard.invalidate();
+for (int i = 0; i < 8; ++i) {
+KeyboardCallFlags[i] = 0;
+}
+const int NUM_DENSITY_FIELDS = 8;
+
+// 2. Create an array of pointers to your TextAreaWithWildcard widgets.
+//    (These widgets must be named PumpDensity_1, PumpDensity_2, etc. in TouchGFX Designer)
+touchgfx::TextAreaWithOneWildcard* densityTextAreas[] = {
+    &PumpDensity_1,
+    &PumpDensity_2,
+    &PumpDensity_3,
+    &PumpDensity_4,
+    &PumpDensity_5,
+    &PumpDensity_6,
+    &PumpDensity_7,
+    &PumpDensity_8
+};
+
+// 3. Create an array of pointers to their corresponding buffers.
+touchgfx::Unicode::UnicodeChar* densityBuffers[] = {
+    PumpDensity_1Buffer,
+    PumpDensity_2Buffer,
+    PumpDensity_3Buffer,
+    PumpDensity_4Buffer,
+    PumpDensity_5Buffer,
+    PumpDensity_6Buffer,
+    PumpDensity_7Buffer,
+    PumpDensity_8Buffer
+
+};
+
+// 4. Create an array of the buffer sizes.
+uint16_t densityBufferSizes[] = {
+    PUMPDENSITY_1_SIZE,
+    PUMPDENSITY_2_SIZE,
+    PUMPDENSITY_3_SIZE,
+    PUMPDENSITY_4_SIZE,
+    PUMPDENSITY_5_SIZE,
+    PUMPDENSITY_6_SIZE,
+    PUMPDENSITY_7_SIZE,
+    PUMPDENSITY_8_SIZE
+};
+
+char tempBuffer[10];
+
+// Loop through and set the text from your actual device configuration
+for (int i = 0; i < NUM_DENSITY_FIELDS; ++i)
+{
+    // STEP 1: Convert the float into a standard text string (char*).
+    // The "%.2f" format specifier means "format this float with 2 decimal places".
+    snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[i]);
+
+    // STEP 2: Copy the newly created text string into the TouchGFX Unicode buffer.
+    // Unicode::strncpy knows how to handle a standard char* string.
+    Unicode::strncpy(densityBuffers[i], tempBuffer, densityBufferSizes[i]);
+
+    // Invalidate the widget to force TouchGFX to redraw it with the new text.
+    densityTextAreas[i]->invalidate();
+}
+}
+void PumpSetupScreenView::HandleKeyboard(int8_t index){
+keyboard.setVisible(true);
+keyboard.invalidate();
+KeyboardExtras.setVisible(true);
+KeyboardExtras.invalidate();
+Generated code
+for (int i = 0; i < 8; i++){
+	if (i == (index - 1)){
+		KeyboardCallFlags[i] = 1;
+	}
+	else{
+		KeyboardCallFlags[i] = 0;
+	}
+}
+}
+void PumpSetupScreenView::setupScreen()
+{
+PumpSetupScreenViewBase::setupScreen();
+}
+void PumpSetupScreenView::tearDownScreen()
+{
+PumpSetupScreenViewBase::tearDownScreen();
+}
+/*
+Virtual Action Handlers
+*/
+void PumpSetupScreenView::P1KeyboardCall()
+{
+// Override and implement this function in PumpSetupScreen
+HandleKeyboard(1);
+}
+void PumpSetupScreenView::P2KeyboardCall()
+{
+// Override and implement this function in PumpSetupScreen
+HandleKeyboard(2);
+}
+void PumpSetupScreenView::P3KeyboardCall()
+{
+// Override and implement this function in PumpSetupScreen
+HandleKeyboard(3);
+}
+void PumpSetupScreenView::P4KeyboardCall()
+{
+// Override and implement this function in PumpSetupScreen
+HandleKeyboard(4);
+}
+void PumpSetupScreenView::P5KeyboardCall()
+{
+// Override and implement this function in PumpSetupScreen
+HandleKeyboard(5);
+}
+void PumpSetupScreenView::P6KeyboardCall()
+{
+// Override and implement this function in PumpSetupScreen
+HandleKeyboard(6);
+}
+void PumpSetupScreenView::P7KeyboardCall()
+{
+// Override and implement this function in PumpSetupScreen
+HandleKeyboard(7);
+}
+void PumpSetupScreenView::P8KeyboardCall()
+{
+// Override and implement this function in PumpSetupScreen
+HandleKeyboard(8);
+}
+void PumpSetupScreenView::P1Toggle()
+{
+// Override and implement this function in PumpSetupScreen
+}
+void PumpSetupScreenView::P2Toggle()
+{
+// Override and implement this function in PumpSetupScreen
+}
+void PumpSetupScreenView::P3Toggle()
+{
+// Override and implement this function in PumpSetupScreen
+}
+void PumpSetupScreenView::P4Toggle()
+{
+// Override and implement this function in PumpSetupScreen
+}
+void PumpSetupScreenView::P5Toggle()
+{
+// Override and implement this function in PumpSetupScreen
+}
+void PumpSetupScreenView::P6Toggle()
+{
+// Override and implement this function in PumpSetupScreen
+}
+void PumpSetupScreenView::P7Toggle()
+{
+// Override and implement this function in PumpSetupScreen
+}
+void PumpSetupScreenView::P8Toggle()
+{
+// Override and implement this function in PumpSetupScreen
+}
+// ... other code ...
+void PumpSetupScreenView::EnterPressed()
+{
+// 1. Hide the keyboard first for a clean UI transition
+keyboard.setVisible(false);
+keyboard.invalidate();
+KeyboardExtras.setVisible(false);
+KeyboardExtras.invalidate();
+Generated code
+// --- Static arrays for efficiency (your code is good here) ---
+static const int NUM_DENSITY_FIELDS = 8;
+static touchgfx::TextAreaWithOneWildcard* densityTextAreas[] = {
+    &PumpDensity_1, &PumpDensity_2, &PumpDensity_3, &PumpDensity_4,
+    &PumpDensity_5, &PumpDensity_6, &PumpDensity_7, &PumpDensity_8
+};
+static touchgfx::Unicode::UnicodeChar* densityBuffers[] = {
+    PumpDensity_1Buffer, PumpDensity_2Buffer, PumpDensity_3Buffer, PumpDensity_4Buffer,
+    PumpDensity_5Buffer, PumpDensity_6Buffer, PumpDensity_7Buffer, PumpDensity_8Buffer
+};
+static uint16_t densityBufferSizes[] = {
+    PUMPDENSITY_1_SIZE, PUMPDENSITY_2_SIZE, PUMPDENSITY_3_SIZE, PUMPDENSITY_4_SIZE,
+    PUMPDENSITY_5_SIZE, PUMPDENSITY_6_SIZE, PUMPDENSITY_7_SIZE, PUMPDENSITY_8_SIZE
+};
+
+bool config_was_changed = false;
+
+for (int i = 0; i < NUM_DENSITY_FIELDS; ++i)
+{
+    if (KeyboardCallFlags[i] == 1)
+    {
+        // --- This is the corrected conversion block ---
+        char utf8_buffer[20];
+        memset(utf8_buffer, 0, 20); // FIX 1: memset is now known.
+
+        // FIX 2: Removed the redundant cast on keyboard.getBuffer()
+        Unicode::toUTF8(keyboard.getBuffer(), (uint8_t*)utf8_buffer, 20);
+
+        char* end_ptr;
+        float new_value = strtof(utf8_buffer, &end_ptr);
+
+        // --- The rest of your excellent logic ---
+        if (new_value > 3.0f){
+            new_value = 3.0f;
+        }
+        if(new_value < 0.1f){
+            new_value = 0.1f;
+        }
+
+        if (*end_ptr == '\0' && end_ptr != utf8_buffer)
+        {
+            myDeviceConfig.PumpDensity[i] = new_value;
+            config_was_changed = true;
+        }
+
+        KeyboardCallFlags[i] = 0;
+
+        char tempBuffer[10];
+        snprintf(tempBuffer, 10, "%.2f", myDeviceConfig.PumpDensity[i]);
+        Unicode::strncpy(densityBuffers[i], tempBuffer, densityBufferSizes[i]);
+        densityTextAreas[i]->invalidate();
+
+        break;
+    }
+}
+
+keyboard.clearBuffer();
+
+if (config_was_changed)
+{
+    #ifndef SIMULATOR
+        Config_Save(&myDeviceConfig);
+    #endif
+}
+}
+void PumpSetupScreenView::ExitPressed()
+{
+// Override and implement this function in PumpSetupScreen
+keyboard.setVisible(false);
+keyboard.invalidate();
+KeyboardExtras.setVisible(false);
+KeyboardExtras.invalidate();
+keyboard.clearBuffer();
+}

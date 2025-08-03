@@ -1,0 +1,129 @@
+// Core/Src/device_config.c
+
+#include "device_config.h" // Includes your struct definition and constants
+#include "Flash.h"         // Includes your Flash write/read/erase functions
+#include <string.h>        // For memcpy, memset
+#include <stdbool.h>       // For bool type
+
+// Define the address where configuration will be stored (the last page)
+#define CONFIG_FLASH_ADDRESS 0x080FF800
+
+// --- Internal Helper Function Prototypes ---
+static void Config_SetDefaults(DeviceConfiguration_t* config);
+static uint32_t CalculateCRC32(const uint8_t* data, size_t length);
+
+// Global or extern declaration for the CRC peripheral handle, if you use it directly
+// extern CRC_HandleTypeDef hcrc; // Uncomment if you are using the hardware CRC peripheral
+
+
+/**
+ * @brief Sets default values for the device configuration struct.
+ * @param config A pointer to the DeviceConfiguration_t struct to initialize.
+ */
+static void Config_SetDefaults(DeviceConfiguration_t* config)
+{
+    // 1. Initialize all fields to 0 first (good practice to ensure no garbage values)
+    memset(config, 0, sizeof(DeviceConfiguration_t));
+
+    // 2. Set the header for integrity and versioning (CRITICAL!)
+    config->magic_number = CONFIG_MAGIC_NUMBER;
+    config->config_version = CONFIG_VERSION;
+    // _header_padding is implicitly zeroed by memset
+
+    // 3. Set System-wide Pump Physical Configuration defaults
+    for (int i = 0; i < 8; i++) {
+        config->PumpEnable[i] = 1;      // Default: All 8 physical pumps are enabled
+        config->PumpDensity[i] = 1.0f;  // Default density (e.g., for water, or a generic liquid)
+    }
+
+    // 4. Set Chemical Recipe Definitions defaults (for 8 definable chemicals)
+    // You can customize these default names
+    char default_chem_names[8][20] = {
+        "Chemical_01", "Chemical_02", "Chemical_03", "Chemical_04",
+        "Chemical_05", "Chemical_06", "Chemical_07", "Chemical_08"
+    };
+
+    for (int i = 0; i < 8; i++) {
+        // Set default name for each chemical
+        strncpy(config->ChemicalName[i], default_chem_names[i], sizeof(config->ChemicalName[i]) - 1);
+        config->ChemicalName[i][sizeof(config->ChemicalName[i]) - 1] = '\0'; // Ensure null-termination
+
+        // Default: Each chemical recipe initially uses 1 pump
+        config->PumpAmountPerChemical[i] = 1;
+
+        // Initialize dispense instructions for each chemical recipe
+        for (int j = 0; j < MAX_DISPENSE_OPTIONS_PER_CHEMICAL; j++) {
+            // Use -1 or another clearly invalid value to signify an unused pump option
+            config->ChemicalDispenseInstructions[i][j].pump_index = 0;
+            config->ChemicalDispenseInstructions[i][j].amount = 0.0f; // Default amount is zero
+        }
+    }
+
+    // _padding_for_flash_alignment is implicitly zeroed by memset
+
+    // 5. CRC will be calculated and set during the Config_Save operation, so leave it 0 here.
+    config->crc32_checksum = 0;
+}
+
+
+/**
+ * @brief Calculates a CRC32 checksum for the given data.
+ * You should enable and use the hardware CRC peripheral for efficiency.
+ * This is a placeholder software CRC for demonstration.
+ * @param data Pointer to the data buffer.
+ * @param length Length of the data buffer in bytes.
+ * @return The calculated CRC32 checksum.
+ */
+static uint32_t CalculateCRC32(const uint8_t* data, size_t length)
+{
+    // IMPORTANT: For production, enable and use the STM32's hardware CRC peripheral!
+    // It's much faster and more reliable.
+    // Example using HAL CRC:
+    // HAL_CRC_Accumulate(&hcrc, (uint32_t*)data, length / 4); // For word-aligned data
+    // Or simpler: __HAL_RCC_CRC_CLK_ENABLE(); then use HAL_CRC_Calculate.
+
+    // --- Placeholder Software CRC32 (NOT RECOMMENDED for production) ---
+    uint32_t crc = 0xFFFFFFFFUL; // Initial value for CRC-32 (IEEE 802.3)
+    for (size_t i = 0; i < length; i++) {
+        crc ^= data[i];
+        for (int j = 0; j < 8; j++) {
+            if (crc & 0x00000001UL) {
+                crc = (crc >> 1) ^ 0xEDB88320UL;
+            } else {
+                crc >>= 1;
+            }
+        }
+    }
+    return crc ^ 0xFFFFFFFFUL; // Final XOR
+    // --- End Placeholder CRC32 ---
+}
+
+
+/**
+ * @brief Saves the provided configuration struct from RAM to Flash.
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to save.
+ * @return HAL_StatusTypeDef HAL_OK if successful, error otherwise.
+ */
+HAL_StatusTypeDef Config_Save(const DeviceConfiguration_t* config)
+{
+    if (config == NULL) {
+        return HAL_ERROR;
+    }
+
+    FlashErase(FLASH_LAST_PAGE);
+    FlashWrite(FLASH_LAST_PAGE, config);
+
+
+}
+
+
+/**
+ * @brief Loads the configuration struct from Flash into RAM.
+ * Performs integrity checks (magic number, version, CRC).
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to load into.
+ * @return HAL_StatusTypeDef HAL_OK if successful and valid, HAL_ERROR if corrupted/invalid (default loaded).
+ */
+HAL_StatusTypeDef Config_Load(DeviceConfiguration_t* config)
+{
+	config = FlashRead(FLASH_LAST_PAGE);
+}

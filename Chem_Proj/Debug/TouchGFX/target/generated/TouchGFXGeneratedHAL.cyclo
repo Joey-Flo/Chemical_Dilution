@@ -1,6 +1,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:114:5:touchgfx::colortype::operator uint32_t() const	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:127:5:touchgfx::Rect::Rect()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:110:13:touchgfx::FrameBufferAllocator::~FrameBufferAllocator()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:110:13:virtual touchgfx::FrameBufferAllocator::~FrameBufferAllocator()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:106:13:touchgfx::HAL::~HAL()	1
@@ -29,6 +30,9 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:1378:18:virtual void touchgfx::HAL::FlushCache()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:1388:18:virtual void touchgfx::HAL::InvalidateTextureCache()	1
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:106:18:virtual void TouchGFXGeneratedHAL::flushFrameBuffer()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp:32:6:void touchgfx::paint::setL8Palette(const uint8_t*)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp:37:6:void touchgfx::paint::tearDown()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp:41:6:void touchgfx::paint::flushLine(uint32_t*, int)	1
@@ -61,6 +65,7 @@
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:30:7:TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	1
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:30:7:virtual TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	1
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp:201:1:void __static_initialization_and_destruction_0()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	1
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp:201:1:void __static_initialization_and_destruction_1()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:159:22:uint16_t touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::allocateBlock(uint16_t, uint16_t, uint16_t, uint16_t, uint8_t**) [with long unsigned int block_size = 2048; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	3
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:183:18:void touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::markBlockReadyForTransfer() [with long unsigned int block_size = 2048; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	1

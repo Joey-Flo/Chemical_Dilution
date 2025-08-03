@@ -142,29 +142,17 @@
     <Filter Include="Source Files\gui\model">
       <UniqueIdentifier>136C7980-D2BF-6D8F-F0A2-D788CB062104</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen1_screen">
-      <UniqueIdentifier>1788FD4E-41C5-151D-C17C-74747DEAE2AC</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\gui_generated">
       <UniqueIdentifier>625A1A3B-5A2D-0221-CF02-A3FA81D5B348</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\gui\common">
       <UniqueIdentifier>F6F85442-A954-B741-13D0-3AD70297BD66</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen1_screen">
-      <UniqueIdentifier>1E5D2FD9-7FF2-339C-C559-805768CE57DE</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\generated\gui_generated">
       <UniqueIdentifier>C7792706-1AC9-9DE2-5F97-EABF3EEEAF14</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gui\common">
       <UniqueIdentifier>D3B566A5-0686-2A67-2AE6-D4ED047FE933</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>EEDA0656-4F77-AC5A-89ED-EA886944BD89</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>28CA7E27-FE0D-ECC0-7514-3BDBA2985A94</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\simulator\include">
       <UniqueIdentifier>5FE20E92-3C4D-5388-37B4-00FB12BCE8FC</UniqueIdentifier>
@@ -184,29 +172,53 @@
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>C781C844-7AB7-7E86-9DC8-75B0728427F2</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen2_screen">
-      <UniqueIdentifier>BF1A6FCC-3205-54A8-8C52-9AE247FE2B91</UniqueIdentifier>
+    <Filter Include="Header Files\gui\pumpsetupscreen_screen">
+      <UniqueIdentifier>F26E66C2-2BAE-CDB2-E3A4-29FB4FEB6060</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen2_screen">
-      <UniqueIdentifier>1917EC1E-4B05-165C-FD7E-FA61549AE00B</UniqueIdentifier>
+    <Filter Include="Header Files\gui\homescreen_screen">
+      <UniqueIdentifier>D45FBE90-3054-5424-5EF4-69811A72A6FF</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen2_screen">
-      <UniqueIdentifier>49B7602A-A968-353D-AE9D-5416C077D4A9</UniqueIdentifier>
+    <Filter Include="Source Files\gui\pumpsetupscreen_screen">
+      <UniqueIdentifier>6EB358C9-6637-A571-801C-91DE44F8C9D6</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen2_screen">
-      <UniqueIdentifier>FA760318-494C-BC12-F3F7-6EE76FDDF91B</UniqueIdentifier>
+    <Filter Include="Source Files\gui\homescreen_screen">
+      <UniqueIdentifier>FD96925C-D709-FA08-2F5A-E8F5C46669C6</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen3_screen">
-      <UniqueIdentifier>020BDCED-B059-BE2A-3206-256DE8C0E6BC</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\pumpsetupscreen_screen">
+      <UniqueIdentifier>6ACCEE32-EB68-348D-18EF-ED7C4ECEBDE1</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen3_screen">
-      <UniqueIdentifier>C68E571F-3B00-FEB4-2524-4A0A1C76FEA2</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\homescreen_screen">
+      <UniqueIdentifier>9FB5FFBA-6041-238B-3D70-2B0D2A5A40E1</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen3_screen">
-      <UniqueIdentifier>C2B73896-978C-C730-F4B2-2AC6C5E8D6E5</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\homescreen_screen">
+      <UniqueIdentifier>AF775CA8-3AC4-15AB-3222-0931F39D771C</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen3_screen">
-      <UniqueIdentifier>490C574C-0251-F5BC-70A1-87F8E6F88DC6</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\pumpsetupscreen_screen">
+      <UniqueIdentifier>EC25CE3E-3FAC-36E1-E313-2C978B46FA56</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\containers">
+      <UniqueIdentifier>3B1A5E10-D545-C60C-B77D-F778D90892AB</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\chemicalssetup_screen">
+      <UniqueIdentifier>ECF00E78-2ED0-709F-710A-1A812DB81D00</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\chemicalssetup_screen">
+      <UniqueIdentifier>5AD2C4B3-F855-0784-D666-98826EED8F3F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\containers">
+      <UniqueIdentifier>B16ABAB1-E253-4D73-2B5E-1419520673C4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\chemicalssetup_screen">
+      <UniqueIdentifier>3D4B9E62-39A7-27CE-3247-5FDD0BF61A50</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\containers">
+      <UniqueIdentifier>618118AB-EB94-B3A2-DC0F-B386484476E2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\chemicalssetup_screen">
+      <UniqueIdentifier>6EFF0716-3B20-95A9-BEAE-12E90025B6B9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\containers">
+      <UniqueIdentifier>755A64DC-5CE2-DF98-A67E-118D1E42CC82</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -237,35 +249,56 @@
     <ClCompile Include="..\..\gui\src\model\Model.cpp">
       <Filter>Source Files\gui\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1Presenter.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1View.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen1_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen2_screen\Screen2Presenter.cpp">
-      <Filter>Source Files\gui\screen2_screen</Filter>
+    <ClCompile Include="..\..\gui\src\homescreen_screen\HomeScreenPresenter.cpp">
+      <Filter>Source Files\gui\homescreen_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen2_screen\Screen2View.cpp">
-      <Filter>Source Files\gui\screen2_screen</Filter>
+    <ClCompile Include="..\..\gui\src\homescreen_screen\HomeScreenView.cpp">
+      <Filter>Source Files\gui\homescreen_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen2_screen\Screen2ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen2_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\homescreen_screen\HomeScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\homescreen_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen3_screen\Screen3Presenter.cpp">
-      <Filter>Source Files\gui\screen3_screen</Filter>
+    <ClCompile Include="..\..\gui\src\pumpsetupscreen_screen\PumpSetupScreenPresenter.cpp">
+      <Filter>Source Files\gui\pumpsetupscreen_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen3_screen\Screen3View.cpp">
-      <Filter>Source Files\gui\screen3_screen</Filter>
+    <ClCompile Include="..\..\gui\src\pumpsetupscreen_screen\PumpSetupScreenView.cpp">
+      <Filter>Source Files\gui\pumpsetupscreen_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen3_screen\Screen3ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen3_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\pumpsetupscreen_screen\PumpSetupScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\pumpsetupscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\CustomKeyboard.cpp">
+      <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\chemicalssetup_screen\ChemicalsSetupPresenter.cpp">
+      <Filter>Source Files\gui\chemicalssetup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\chemicalssetup_screen\ChemicalsSetupView.cpp">
+      <Filter>Source Files\gui\chemicalssetup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\chemicalssetup_screen\ChemicalsSetupViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\chemicalssetup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\PumpDropDownList.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpDropDownListBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\PumpOption.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpOptionBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\PumpSetupWidget.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpSetupWidgetBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -703,38 +736,65 @@
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp">
       <Filter>Header Files\gui\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1Presenter.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen1_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen2_screen\Screen2Presenter.hpp">
-      <Filter>Header Files\gui\screen2_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\homescreen_screen\HomeScreenPresenter.hpp">
+      <Filter>Header Files\gui\homescreen_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen2_screen\Screen2View.hpp">
-      <Filter>Header Files\gui\screen2_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\homescreen_screen\HomeScreenView.hpp">
+      <Filter>Header Files\gui\homescreen_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen2_screen\Screen2ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen2_screen</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\homescreen_screen\HomeScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\homescreen_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen3_screen\Screen3Presenter.hpp">
-      <Filter>Header Files\gui\screen3_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\pumpsetupscreen_screen\PumpSetupScreenPresenter.hpp">
+      <Filter>Header Files\gui\pumpsetupscreen_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen3_screen\Screen3View.hpp">
-      <Filter>Header Files\gui\screen3_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\pumpsetupscreen_screen\PumpSetupScreenView.hpp">
+      <Filter>Header Files\gui\pumpsetupscreen_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen3_screen\Screen3ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen3_screen</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\pumpsetupscreen_screen\PumpSetupScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\pumpsetupscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\CustomKeyboard.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\KeyboardKeyMapping.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\KeyboardLayout.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\chemicalssetup_screen\ChemicalsSetupPresenter.hpp">
+      <Filter>Header Files\gui\chemicalssetup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\chemicalssetup_screen\ChemicalsSetupView.hpp">
+      <Filter>Header Files\gui\chemicalssetup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\chemicalssetup_screen\ChemicalsSetupViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\chemicalssetup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\PumpDropDownList.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpDropDownListBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\PumpOption.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpOptionBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\PumpSetupWidget.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpSetupWidgetBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

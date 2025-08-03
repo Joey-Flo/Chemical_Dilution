@@ -1,0 +1,9 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
+../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:11:13:ChemicalsSetupView::~ChemicalsSetupView()	16	static
+../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:11:13:virtual ChemicalsSetupView::~ChemicalsSetupView()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:3:1:ChemicalsSetupView::ChemicalsSetupView()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:8:6:virtual void ChemicalsSetupView::setupScreen()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:13:6:virtual void ChemicalsSetupView::tearDownScreen()	16	static

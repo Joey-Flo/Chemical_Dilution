@@ -1,0 +1,47 @@
+/*
+ * Flash.h
+ *
+ *  Created on: May 1, 2024
+ *      Author: d.arseniuk
+ *		v1.0.0_29.07.2024
+ */
+
+#ifndef INC_FLASH_H_
+#define INC_FLASH_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "stm32l4xx_hal.h"
+#include "FlashAdresses.h"
+
+
+// Define last page address based on memory size
+//#if defined(MEMORY_128KB)
+//#define FLASH_LAST_PAGE ADDR_FLASH_PAGE_63
+//#elif defined(MEMORY_256KB)
+//#define FLASH_LASH_PAGE ADDR_FLASH_PAGE_127
+//#elif defined(MEMORY_512KB)
+//#define FLASH_LAST_PAGE ADDR_FLASH_PAGE_255
+//#endif
+
+#define FLASH_LAST_PAGE 0x080FF800
+
+
+/******** FUNCTION PROTOTYPES *********/
+
+// Function to erase a flash page
+HAL_StatusTypeDef FlashErase(uint32_t PageAddress);
+// Function to write data to flash
+HAL_StatusTypeDef FlashWrite(uint32_t Address, uint64_t Data);
+// Function to read data from flash
+uint64_t FlashRead(uint32_t Address);
+
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* INC_FLASH_H_ */

@@ -1,2 +1,6 @@
-../TouchGFX/gui/src/model/Model.cpp:4:1:Model::Model()	1
-../TouchGFX/gui/src/model/Model.cpp:9:6:void Model::tick()	1
+../TouchGFX/gui/src/model/Model.cpp:6:1:Model::Model()	1
+../TouchGFX/gui/src/model/Model.cpp:11:6:void Model::tick()	1
+../TouchGFX/gui/src/model/Model.cpp:17:8:int8_t Model::getPumpEnableState(int8_t)	3
+../TouchGFX/gui/src/model/Model.cpp:25:6:void Model::setPumpEnableState(int8_t, bool)	4
+../TouchGFX/gui/src/model/Model.cpp:37:7:float Model::getPumpDensity(int8_t)	3
+../TouchGFX/gui/src/model/Model.cpp:45:6:void Model::setPumpDensity(int8_t, float)	5

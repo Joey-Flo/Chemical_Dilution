@@ -35,7 +35,8 @@ TouchGFX/target/TouchGFXGPIO.o: ../TouchGFX/target/TouchGFXGPIO.cpp \
  ../Core/Inc/z_touch_XPT2046_menu.h ../Core/Inc/hx711.h \
  ../Core/Inc/hx711Config.h ../Core/Inc/PWMDriver.h ../Core/Inc/HAL_Init.h \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
- ../Core/Inc/HardwareTest.h
+ ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
+ ../Core/Inc/device_config.h
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
@@ -81,3 +82,5 @@ TouchGFX/target/TouchGFXGPIO.o: ../TouchGFX/target/TouchGFXGPIO.cpp \
 ../Core/Inc/MuxDriver.h:
 ../Core/Inc/HardwareTest.h:
 ../Core/Inc/HardwareTest.h:
+../Core/Inc/Flash.h:
+../Core/Inc/device_config.h:

@@ -1,0 +1,220 @@
+// Core/Src/device_config.c
+
+#include "device_config.h" // Includes your struct definition and constants
+#include "Flash.h"         // Includes your Flash write/read/erase functions
+#include <string.h>        // For memcpy, memset
+#include <stdbool.h>       // For bool type
+
+// Define the address where configuration will be stored (the last page)
+#define CONFIG_FLASH_ADDRESS FLASH_LAST_PAGE
+
+// --- Internal Helper Function Prototypes ---
+static void Config_SetDefaults(DeviceConfiguration_t* config);
+static uint32_t CalculateCRC32(const uint8_t* data, size_t length);
+
+// Global or extern declaration for the CRC peripheral handle, if you use it directly
+// extern CRC_HandleTypeDef hcrc; // Uncomment if you are using the hardware CRC peripheral
+
+
+/**
+ * @brief Sets default values for the device configuration struct.
+ * @param config A pointer to the DeviceConfiguration_t struct to initialize.
+ */
+static void Config_SetDefaults(DeviceConfiguration_t* config)
+{
+    // Initialize all fields to 0 first (good practice)
+    memset(config, 0, sizeof(DeviceConfiguration_t));
+
+    // Set the magic number and version
+    config->magic_number = CONFIG_MAGIC_NUMBER;
+    config->config_version = CONFIG_VERSION;
+
+    // Set your application-specific default values
+    config->pump1_flowRate = 10.0f;
+    config->pump2_flowRate = 5.0f;
+    config->motor_speed_rpm = 1500;
+    config->valve_state = 0; // Closed
+    strncpy(config->device_name, "My_STM32_Device", sizeof(config->device_name) - 1);
+    config->device_name[sizeof(config->device_name) - 1] = '\0'; // Ensure null-termination
+
+    // CRC will be calculated during Config_Save, so leave it 0 here.
+}
+
+
+/**
+ * @brief Calculates a CRC32 checksum for the given data.
+ * You should enable and use the hardware CRC peripheral for efficiency.
+ * This is a placeholder software CRC for demonstration.
+ * @param data Pointer to the data buffer.
+ * @param length Length of the data buffer in bytes.
+ * @return The calculated CRC32 checksum.
+ */
+static uint32_t CalculateCRC32(const uint8_t* data, size_t length)
+{
+    // IMPORTANT: For production, enable and use the STM32's hardware CRC peripheral!
+    // It's much faster and more reliable.
+    // Example using HAL CRC:
+    // HAL_CRC_Accumulate(&hcrc, (uint32_t*)data, length / 4); // For word-aligned data
+    // Or simpler: __HAL_RCC_CRC_CLK_ENABLE(); then use HAL_CRC_Calculate.
+
+    // --- Placeholder Software CRC32 (NOT RECOMMENDED for production) ---
+    uint32_t crc = 0xFFFFFFFFUL; // Initial value for CRC-32 (IEEE 802.3)
+    for (size_t i = 0; i < length; i++) {
+        crc ^= data[i];
+        for (int j = 0; j < 8; j++) {
+            if (crc & 0x00000001UL) {
+                crc = (crc >> 1) ^ 0xEDB88320UL;
+            } else {
+                crc >>= 1;
+            }
+        }
+    }
+    return crc ^ 0xFFFFFFFFUL; // Final XOR
+    // --- End Placeholder CRC32 ---
+}
+
+
+/**
+ * @brief Saves the provided configuration struct from RAM to Flash.
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to save.
+ * @return HAL_StatusTypeDef HAL_OK if successful, error otherwise.
+ */
+HAL_StatusTypeDef Config_Save(const DeviceConfiguration_t* config)
+{
+    if (config == NULL) {
+        return HAL_ERROR;
+    }
+
+    HAL_StatusTypeDef status = HAL_ERROR;
+    FLASH_EraseInitTypeDef EraseInitStruct;
+    uint32_t PageError = 0;
+    uint32_t address_offset = 0; // Offset from the start of the Flash page
+
+    // Create a mutable copy to calculate CRC and set it
+    // Don't modify the 'const config' directly
+    DeviceConfiguration_t config_to_save;
+    memcpy(&config_to_save, config, sizeof(DeviceConfiguration_t));
+
+    // 1. Calculate CRC for the data (excluding the crc32_checksum itself)
+    config_to_save.crc32_checksum = CalculateCRC32(
+        (uint8_t*)&config_to_save,
+        sizeof(DeviceConfiguration_t) - sizeof(config_to_save.crc32_checksum)
+    );
+
+    // 2. Unlock Flash
+    if (HAL_FLASH_Unlock() != HAL_OK) {
+        return HAL_ERROR;
+    }
+
+    // 3. Erase the target Flash page
+    EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
+    EraseInitStruct.Page = (CONFIG_FLASH_ADDRESS - FLASH_BASE_ADDR) / HAL_FLASH_PAGE_SIZE;
+    EraseInitStruct.NbPages = 1; // Erase only one page
+
+    status = HAL_FLASHEx_Erase(&EraseInitStruct, &PageError);
+
+    if (status == HAL_OK)
+    {
+        // 4. Write the struct data to Flash (in 64-bit double words)
+        // Ensure struct size is a multiple of 8 bytes for clean writing
+        if (sizeof(DeviceConfiguration_t) % sizeof(uint64_t) != 0) {
+            // This should not happen if __attribute__((packed)) is used correctly
+            // and the struct members sum up to a multiple of 8,
+            // or if you added padding to make it a multiple of 8.
+            // If it happens, you'll need to handle the last partial word carefully.
+            // For now, let's assume it's a multiple of 8.
+            status = HAL_ERROR; // Or handle partial write
+        } else {
+            uint64_t* data_ptr = (uint64_t*)&config_to_save;
+            size_t num_double_words = sizeof(DeviceConfiguration_t) / sizeof(uint64_t);
+
+            for (size_t i = 0; i < num_double_words; i++)
+            {
+                status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD,
+                                           CONFIG_FLASH_ADDRESS + address_offset,
+                                           data_ptr[i]);
+                if (status != HAL_OK) {
+                    break; // Exit on first error
+                }
+                address_offset += sizeof(uint64_t); // Move to next 64-bit address
+            }
+        }
+    }
+
+    // 5. Lock Flash
+    HAL_FLASH_Lock();
+
+    return status;
+}
+
+
+/**
+ * @brief Loads the configuration struct from Flash into RAM.
+ * Performs integrity checks (magic number, version, CRC).
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to load into.
+ * @return HAL_StatusTypeDef HAL_OK if successful and valid, HAL_ERROR if corrupted/invalid (default loaded).
+ */
+HAL_StatusTypeDef Config_Load(DeviceConfiguration_t* config)
+{
+    if (config == NULL) {
+        return HAL_ERROR;
+    }
+
+    // Temporary struct to read data into before validation
+    DeviceConfiguration_t loaded_config;
+    memset(&loaded_config, 0, sizeof(DeviceConfiguration_t));
+
+    // 1. Read the struct data from Flash
+    uint32_t address_offset = 0;
+    uint64_t* dest_ptr = (uint64_t*)&loaded_config;
+    size_t num_double_words = sizeof(DeviceConfiguration_t) / sizeof(uint64_t);
+
+    for (size_t i = 0; i < num_double_words; i++)
+    {
+        dest_ptr[i] = FlashRead(CONFIG_FLASH_ADDRESS + address_offset);
+        address_offset += sizeof(uint64_t);
+    }
+
+    // 2. Perform Validation Checks
+    bool isValid = true;
+
+    // Check Magic Number
+    if (loaded_config.magic_number != CONFIG_MAGIC_NUMBER) {
+        isValid = false;
+        // printf("Config Load Error: Invalid Magic Number\r\n"); // For debugging
+    }
+
+    // Check Configuration Version (Optional: handle migrations here if needed)
+    if (loaded_config.config_version != CONFIG_VERSION) {
+        // This is a warning, not necessarily an error, depending on your update strategy.
+        // You might decide to load defaults or attempt a migration.
+        // printf("Config Load Warning: Version mismatch (Expected %d, Got %d)\r\n", CONFIG_VERSION, loaded_config.config_version);
+        // For simplicity, we'll treat it as invalid for now.
+        isValid = false;
+    }
+
+    // Calculate CRC of the loaded data (excluding the stored CRC itself)
+    uint32_t calculated_crc = CalculateCRC32(
+        (uint8_t*)&loaded_config,
+        sizeof(DeviceConfiguration_t) - sizeof(loaded_config.crc32_checksum)
+    );
+
+    // Check CRC
+    if (calculated_crc != loaded_config.crc32_checksum) {
+        isValid = false;
+        // printf("Config Load Error: CRC mismatch (Calculated %lx, Stored %lx)\r\n", calculated_crc, loaded_config.crc32_checksum);
+    }
+
+    // 3. Act based on Validation Result
+    if (isValid) {
+        // All checks passed, copy validated data to user's struct
+        memcpy(config, &loaded_config, sizeof(DeviceConfiguration_t));
+        return HAL_OK;
+    } else {
+        // Validation failed, load default values
+        Config_SetDefaults(config);
+        // And optionally save defaults back to Flash if you want to fix invalid state
+        // Config_Save(config);
+        return HAL_ERROR; // Indicate that loaded config was invalid
+    }
+}

@@ -11,35 +11,34 @@ RM := rm -rf
 -include sources.mk
 -include TouchGFX/target/generated/subdir.mk
 -include TouchGFX/target/subdir.mk
--include TouchGFX/gui/src/screen3_screen/subdir.mk
--include TouchGFX/gui/src/screen2_screen/subdir.mk
--include TouchGFX/gui/src/screen1_screen/subdir.mk
+-include TouchGFX/gui/src/pumpsetupscreen_screen/subdir.mk
 -include TouchGFX/gui/src/model/subdir.mk
+-include TouchGFX/gui/src/homescreen_screen/subdir.mk
+-include TouchGFX/gui/src/containers/subdir.mk
 -include TouchGFX/gui/src/common/subdir.mk
+-include TouchGFX/gui/src/chemicalssetup_screen/subdir.mk
 -include TouchGFX/generated/texts/src/subdir.mk
 -include TouchGFX/generated/images/src/__generated/subdir.mk
 -include TouchGFX/generated/images/src/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen3_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen2_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen1_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/homescreen_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/containers/subdir.mk
 -include TouchGFX/generated/gui_generated/src/common/subdir.mk
+-include TouchGFX/generated/gui_generated/src/chemicalssetup_screen/subdir.mk
 -include TouchGFX/generated/fonts/src/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/hal/simulator/sdl2/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/driver/touch/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/simulator/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen3_screen/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen2_screen/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen1_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/pumpsetupscreen_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/model/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/homescreen_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/common/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/texts/src/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src/video/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen3_screen/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen2_screen/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen1_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/pumpsetupscreen_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/homescreen_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/common/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/subdir.mk
 -include TouchGFX/App/subdir.mk
@@ -118,8 +117,8 @@ all: main-build
 main-build: Chem_Proj.elf secondary-outputs
 
 # Tool invocations
-Chem_Proj.elf Chem_Proj.map: $(OBJS) $(USER_OBJS) C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "Chem_Proj.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Chem_Proj.map" -Wl,--gc-sections -static -L"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Proj_Workspace\Chem_Proj\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Chem_Proj.elf Chem_Proj.map: $(OBJS) $(USER_OBJS) C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Dilute_Workspace\Chemical_Dilution\Chem_Proj\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "Chem_Proj.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Dilute_Workspace\Chemical_Dilution\Chem_Proj\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Chem_Proj.map" -Wl,--gc-sections -static -L"C:\Users\joeyf\OneDrive\Documents\Joeys_Projects\Chem_Dilute_Workspace\Chemical_Dilution\Chem_Proj\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -u _printf_float -u _scanf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

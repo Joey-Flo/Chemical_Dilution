@@ -1,0 +1,258 @@
+Skip to main content
+
+key
+Get API key
+Studio
+Dashboard
+Documentation
+open_in_new
+Joey Florent
+STM32 Flash Page Writing
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+ThinkingThoughts
+(experimental)
+Auto
+Expand to view model thoughts
+
+chevron_right
+Thank you for providing all the necessary files. I have analyzed the code and the device specifications to provide a complete solution.
+Based on the information, the goal is to correctly save the entire DeviceConfiguration_t struct to a specific page in the STM32L476RG's flash memory and then load it back safely, ensuring data integrity.
+Analysis of the Problem
+The provided device_config.c file has several critical issues in the Config_Save and Config_Load functions that prevent them from working as intended:
+Incorrect FlashWrite Usage: The FlashWrite function is designed to write a single 64-bit (8-byte) "double word" at a time. The original Config_Save function attempts to pass the entire DeviceConfiguration_t struct pointer to it, which is incorrect. The struct must be written in sequential 8-byte chunks.
+Incorrect FlashRead Usage: The Config_Load function attempts to assign the return value of FlashRead (a single 64-bit integer) to the config pointer. This is a type mismatch and logically incorrect. The data must be read from flash chunk-by-chunk into the RAM location pointed to by config.
+Missing CRC Handling: The Config_Save function never calculates the CRC checksum before writing to flash. The Config_Load function never verifies the checksum after reading, which defeats the purpose of having a CRC for data integrity.
+Missing FLASH_PAGE_SIZE: The FlashAdresses.h file has the FLASH_PAGE_SIZE macro commented out. This value is essential for the FlashErase function to work correctly. For the STM32L476RG, the flash page size is 2048 bytes.
+Corrected Implementation
+Here is the corrected and complete code for the files. These changes address all the issues identified above to create a robust save and load mechanism.
+1. Corrected FlashAdresses.h
+First, define the FLASH_PAGE_SIZE.
+Generated c
+/*
+ * FlashAdresses.h
+ *
+ *  Created on: Jul 26, 2024
+ *      Author: d.arseniuk
+ *		v1.0.0_29.07.2024
+ */
+
+#ifndef INC_FLASHADRESSES_H_
+#define INC_FLASHADRESSES_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Base address of the Flash memory
+#define FLASH_BASE_ADDR       0x08000000U
+
+// --- CORRECTED ---
+// Flash memory page size in bytes for STM32L476RG is 2KB
+#define FLASH_PAGE_SIZE       2048U
+
+// Flash memory pages addresses (shortened for brevity)
+#define ADDR_FLASH_PAGE_0     (FLASH_BASE_ADDR + FLASH_PAGE_SIZE * 0)
+// ... all other page definitions ...
+#define ADDR_FLASH_PAGE_255   (FLASH_BASE_ADDR + FLASH_PAGE_SIZE * 255)
+
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* INC_FLASHADRESSES_H_ */
+Use code with caution.
+C
+2. Corrected flash.c and flash.h
+The FlashWrite function prototype in flash.h and its definition in flash.c should accept a uint64_t to match the 64-bit double word operation, which avoids potential compiler warnings and type-casting issues.
+flash.h (Corrected)
+Generated c
+// ... other includes ...
+
+/******** FUNCTION PROTOTYPES *********/
+
+// Function to erase a flash page
+HAL_StatusTypeDef FlashErase(uint32_t PageAddress);
+// --- CORRECTED ---
+// Function to write data to flash (Data parameter changed to uint64_t)
+HAL_StatusTypeDef FlashWrite(uint32_t Address, uint64_t Data);
+// Function to read data from flash
+uint64_t FlashRead(uint32_t Address);
+
+// ... rest of the file ...
+Use code with caution.
+C
+flash.c (Corrected)
+Generated c
+#include "Flash.h"
+
+// ... FlashErase and FlashRead functions remain the same ...
+
+
+/*
+ * Function unlocks the flash memory, writes the specified data to the specified address and then locks the flash memory again.
+ * 		@ Address: Address in flash memory where data will be written. The address must be aligned to a double word boundary.
+ * 		@ Data: Data to be written to flash memory. This must be a 64-bit value.
+ * 		@ Return: HAL Status. HAL_OK if the operation is successful, otherwise an error code.
+ *
+ */
+// --- CORRECTED ---
+// Data parameter changed to uint64_t
+HAL_StatusTypeDef FlashWrite(uint32_t Address, uint64_t Data)
+{
+	HAL_StatusTypeDef status;
+	// Unlock the Flash to enable the flash control register access
+	HAL_FLASH_Unlock();
+	// Program the specified address with the data
+	status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, Address, Data);
+	// Lock the Flash to disable the flash control register access
+	HAL_FLASH_Lock();
+
+	return status;
+}
+
+// ... FlashRead function remains the same ...
+Use code with caution.
+C
+3. Corrected device_config.c
+This file contains the most significant changes to the logic. The Config_Save and Config_Load functions are completely rewritten to handle the data correctly and perform integrity checks.
+Generated c
+// Core/Src/device_config.c
+
+#include "device_config.h"
+#include "Flash.h"
+#include <string.h>
+#include <stdbool.h>
+
+// Define the address where configuration will be stored (the last page)
+// Using FLASH_LAST_PAGE from flash.h makes this more consistent
+#define CONFIG_FLASH_ADDRESS FLASH_LAST_PAGE
+
+// --- Internal Helper Function Prototypes ---
+static void Config_SetDefaults(DeviceConfiguration_t* config);
+static uint32_t CalculateCRC32(const uint8_t* data, size_t length);
+
+// Default settings function (remains the same)
+static void Config_SetDefaults(DeviceConfiguration_t* config) {
+    // ... no changes here, your default implementation is good ...
+}
+
+// CRC calculation function (remains the same)
+static uint32_t CalculateCRC32(const uint8_t* data, size_t length) {
+    // ... no changes here, your placeholder implementation is fine for now ...
+}
+
+/**
+ * @brief Saves the provided configuration struct from RAM to Flash.
+ * This version correctly calculates the CRC and writes the struct in 8-byte chunks.
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to save.
+ * @return HAL_StatusTypeDef HAL_OK if successful, error otherwise.
+ */
+HAL_StatusTypeDef Config_Save(const DeviceConfiguration_t* config)
+{
+    if (config == NULL) {
+        return HAL_ERROR;
+    }
+
+    HAL_StatusTypeDef status;
+    DeviceConfiguration_t temp_config;
+
+    // 1. Copy the source config to a temporary modifiable struct
+    memcpy(&temp_config, config, sizeof(DeviceConfiguration_t));
+
+    // 2. Calculate CRC on all data *before* the checksum field itself
+    // The size for CRC calculation is the total struct size minus the size of the CRC field.
+    size_t crc_data_size = sizeof(DeviceConfiguration_t) - sizeof(temp_config.crc32_checksum);
+    temp_config.crc32_checksum = CalculateCRC32((const uint8_t*)&temp_config, crc_data_size);
+
+    // 3. Erase the target flash page
+    status = FlashErase(CONFIG_FLASH_ADDRESS);
+    if (status != HAL_OK) {
+        return status; // Return on erase failure
+    }
+
+    // 4. Write the entire struct to flash in 64-bit (8-byte) chunks
+    uint64_t* data_ptr = (uint64_t*)&temp_config;
+    uint32_t write_address = CONFIG_FLASH_ADDRESS;
+    // Calculate how many 8-byte chunks to write.
+    // Use ceiling division in case the struct size is not a perfect multiple of 8.
+    int chunks = (sizeof(DeviceConfiguration_t) + 7) / 8;
+
+    for (int i = 0; i < chunks; i++) {
+        status = FlashWrite(write_address, data_ptr[i]);
+        if (status != HAL_OK) {
+            // If any write fails, the data is corrupt. It's best to return an error.
+            // The page is already erased, so it will contain default 0xFF values.
+            return status;
+        }
+        write_address += 8; // Move to the next 8-byte boundary
+    }
+
+    return HAL_OK;
+}
+
+/**
+ * @brief Loads the configuration struct from Flash into RAM.
+ * This version reads the data and performs full integrity checks.
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to load into.
+ * @return HAL_StatusTypeDef HAL_OK if load was successful and data is valid.
+ *         HAL_ERROR if data is invalid/corrupt (in which case, defaults are loaded).
+ */
+HAL_StatusTypeDef Config_Load(DeviceConfiguration_t* config)
+{
+    if (config == NULL) {
+        return HAL_ERROR;
+    }
+
+    // 1. Read the entire struct's worth of data from Flash into the provided RAM struct.
+    uint64_t* dest_ptr = (uint64_t*)config;
+    uint32_t read_address = CONFIG_FLASH_ADDRESS;
+    int chunks = (sizeof(DeviceConfiguration_t) + 7) / 8;
+
+    for (int i = 0; i < chunks; i++) {
+        dest_ptr[i] = FlashRead(read_address);
+        read_address += 8;
+    }
+
+    // --- 2. Perform Integrity and Validity Checks ---
+
+    // Check 1: Is the magic number correct?
+    // This is the first and most basic check to see if the data looks like our config.
+    if (config->magic_number != CONFIG_MAGIC_NUMBER) {
+        Config_SetDefaults(config);
+        return HAL_ERROR;
+    }
+
+    // Check 2: Is the configuration version what we expect?
+    // For now, we only support one version.
+    if (config->config_version != CONFIG_VERSION) {
+        Config_SetDefaults(config);
+        return HAL_ERROR;
+    }
+
+    // Check 3: Is the CRC checksum valid?
+    uint32_t stored_crc = config->crc32_checksum;
+    size_t crc_data_size = sizeof(DeviceConfiguration_t) - sizeof(config->crc32_checksum);
+    uint32_t calculated_crc = CalculateCRC32((const uint8_t*)config, crc_data_size);
+
+    if (stored_crc != calculated_crc) {
+        // CRC mismatch means data corruption. Load defaults for safety.
+        Config_SetDefaults(config);
+        return HAL_ERROR;
+    }
+
+    // If all checks pass, the data is valid.
+    return HAL_OK;
+}```
+
+
+
+
+
+

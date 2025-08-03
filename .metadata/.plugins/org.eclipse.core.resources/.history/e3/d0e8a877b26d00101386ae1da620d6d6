@@ -1,0 +1,120 @@
+/* USER CODE BEGIN Includes */
+#include <stdio.h>
+#include <string.h>
+#include "device_config.h"
+/* USER CODE END Includes */
+
+/* Private variables ---------------------------------------------------------*/
+// ... your other private variables for HAL (UART_HandleTypeDef, etc.)
+
+/* USER CODE BEGIN PV */
+// Declare a global instance of our device configuration
+DeviceConfiguration_t my_config;
+/* USER CODE END PV */
+
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
+int main(void)
+{
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* Initialize all configured peripherals */
+  // (e.g., MX_GPIO_Init(), MX_USART2_UART_Init(), etc.)
+
+  // NOTE: For printf to work, you need to have a UART initialized and
+  // the syscalls retargeted. This is standard in many STM32CubeIDE projects.
+
+  printf("--- System Boot ---\r\n");
+
+  // --- 1. LOAD CONFIGURATION AT STARTUP ---
+  printf("Attempting to load configuration from Flash...\r\n");
+  HAL_StatusTypeDef load_status = Config_Load(&my_config);
+
+  if (load_status == HAL_OK) {
+    printf("SUCCESS: Configuration loaded successfully from Flash.\r\n");
+    printf("  -> Magic Number: 0x%lX\r\n", my_config.magic_number);
+    printf("  -> Config Version: %u\r\n", my_config.config_version);
+  } else {
+    // This block runs if Config_Load fails due to:
+    // - No valid magic number (first boot)
+    // - Incorrect version
+    // - CRC checksum mismatch (data corruption)
+    printf("WARNING: Failed to load valid config. Initializing with default values.\r\n");
+    // The Config_Load function already calls Config_SetDefaults on failure,
+    // so my_config is already populated with defaults here.
+
+    // You could optionally try to save the default config right away
+    // printf("Saving default configuration to Flash...\r\n");
+    // Config_Save(&my_config);
+  }
+
+  // At this point, `my_config` is guaranteed to have either valid loaded data or safe defaults.
+  printf("Current Chemical #1 Name: '%s'\r\n", my_config.ChemicalName[0]);
+
+
+  // --- 2. MODIFY AND SAVE A NEW CONFIGURATION ---
+  printf("\r\n--- Modifying and Saving New Configuration ---\r\n");
+
+  // Let's change a setting. For example, rename the first chemical.
+  printf("Changing Chemical #1 name from '%s' to 'Aqua-Cure'\r\n", my_config.ChemicalName[0]);
+  strncpy(my_config.ChemicalName[0], "Aqua-Cure", sizeof(my_config.ChemicalName[0]) - 1);
+  my_config.ChemicalName[0][sizeof(my_config.ChemicalName[0]) - 1] = '\0'; // Ensure null termination
+
+  // Now, save the entire `my_config` struct to flash.
+  // This will erase the page, calculate a new CRC, and write all data.
+  printf("Saving new configuration to Flash...\r\n");
+  HAL_StatusTypeDef save_status = Config_Save(&my_config);
+
+  if (save_status == HAL_OK) {
+    printf("SUCCESS: Configuration saved.\r\n");
+  } else {
+    printf("ERROR: Failed to save configuration! Status: %d\r\n", save_status);
+    // Handle error: maybe blink an LED, log the error, etc.
+  }
+
+
+  // --- 3. VERIFY THE SAVE BY LOADING INTO A DIFFERENT STRUCT ---
+  printf("\r\n--- Verifying Flash Data ---\r\n");
+  printf("Loading configuration from Flash into a new variable for verification...\r\n");
+
+  DeviceConfiguration_t loaded_config; // Declare a second, temporary struct
+  memset(&loaded_config, 0, sizeof(DeviceConfiguration_t)); // Clear it first
+
+  // Load from flash into the new struct
+  load_status = Config_Load(&loaded_config);
+
+  if (load_status == HAL_OK) {
+    printf("SUCCESS: Verification load complete.\r\n");
+    printf("  -> Loaded Chemical #1 Name: '%s'\r\n", loaded_config.ChemicalName[0]);
+
+    // Final check to see if the loaded data matches our intended change
+    if (strcmp(loaded_config.ChemicalName[0], "Aqua-Cure") == 0) {
+      printf("VERIFICATION PASSED: The name was correctly updated in Flash.\r\n");
+    } else {
+      printf("VERIFICATION FAILED: Data mismatch after loading!\r\n");
+    }
+  } else {
+    printf("ERROR: Failed to load the configuration for verification!\r\n");
+  }
+
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+    /* USER CODE END WHILE */
+    // Your main application logic would go here.
+    HAL_Delay(1000);
+    /* USER CODE BEGIN 3 */
+  }
+  /* USER CODE END 3 */
+}

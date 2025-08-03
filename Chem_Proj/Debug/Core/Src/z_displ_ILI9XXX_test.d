@@ -34,7 +34,8 @@ Core/Src/z_displ_ILI9XXX_test.o: ../Core/Src/z_displ_ILI9XXX_test.c \
  ../Core/Inc/z_touch_XPT2046_menu.h ../Core/Inc/hx711.h \
  ../Core/Inc/hx711Config.h ../Core/Inc/PWMDriver.h ../Core/Inc/HAL_Init.h \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
- ../Core/Inc/HardwareTest.h ../Core/Inc/z_displ_ILI9XXX.h \
+ ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
+ ../Core/Inc/device_config.h ../Core/Inc/z_displ_ILI9XXX.h \
  ../Core/Inc/z_displ_ILI9XXX_test.h ../Core/Inc/fonts.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
@@ -80,6 +81,8 @@ Core/Src/z_displ_ILI9XXX_test.o: ../Core/Src/z_displ_ILI9XXX_test.c \
 ../Core/Inc/MuxDriver.h:
 ../Core/Inc/HardwareTest.h:
 ../Core/Inc/HardwareTest.h:
+../Core/Inc/Flash.h:
+../Core/Inc/device_config.h:
 ../Core/Inc/z_displ_ILI9XXX.h:
 ../Core/Inc/z_displ_ILI9XXX_test.h:
 ../Core/Inc/fonts.h:

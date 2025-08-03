@@ -1,0 +1,96 @@
+#include <gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp>
+#include <gui/common/CustomKeyboard.hpp>
+
+PumpSetupScreenView::PumpSetupScreenView()
+{
+	keyboard.setPosition (0,115,240,180);
+	add(keyboard);
+	keyboard.setVisible(false);
+	keyboard.invalidate();
+}
+
+void PumpSetupScreenView::setupScreen()
+{
+    PumpSetupScreenViewBase::setupScreen();
+}
+
+void PumpSetupScreenView::tearDownScreen()
+{
+    PumpSetupScreenViewBase::tearDownScreen();
+}
+
+/*
+ * Virtual Action Handlers
+ */
+virtual void P1KeyboardCall()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P2KeyboardCall()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P3KeyboardCall()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P4KeyboardCall()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P5KeyboardCall()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P6KeyboardCall()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P7KeyboardCall()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P8KeyboardCall()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P1Toggle()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P2Toggle()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P3Toggle()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P4Toggle()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P5Toggle()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P6Toggle()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P7Toggle()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void P8Toggle()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void EnterPressed()
+{
+    // Override and implement this function in PumpSetupScreen
+}
+virtual void ExitPressed()
+{
+    // Override and implement this function in PumpSetupScreen
+}

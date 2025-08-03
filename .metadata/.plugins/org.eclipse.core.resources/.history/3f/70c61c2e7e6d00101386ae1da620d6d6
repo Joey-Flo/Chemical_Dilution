@@ -1,0 +1,97 @@
+// Core/Inc/device_config.h
+
+#ifndef INC_DEVICE_CONFIG_H_
+#define INC_DEVICE_CONFIG_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>   // For fixed-width integer types (uint8_t, uint16_t, uint32_t)
+#include "stm32l4xx_hal.h" // For HAL_StatusTypeDef, if Config_Save/Load are defined here
+
+// --- Configuration Constants ---
+
+// A "magic number" to quickly verify if the Flash content looks like your config.
+// Choose any unique 32-bit value.
+#define CONFIG_MAGIC_NUMBER 0xDEADBEEF
+
+// Define the current version of your configuration structure.
+// Increment this if you change the struct layout in a non-backward-compatible way.
+#define CONFIG_VERSION      1
+
+
+// --- Device Configuration Structure ---
+
+// Use __attribute__((packed)) to prevent the compiler from adding padding bytes
+// within the structure. This is crucial for consistent sizing when writing
+// the struct directly to Flash, especially when writing in fixed 64-bit chunks.
+typedef struct __attribute__((packed))
+{
+	// There are 8 different pumps to choose from, in order to make a specific chemical,
+	// the user can choose to synthesize the contents of multiple different pumps
+
+	int8_t PumpEnable[8];  //enable pumps
+    float  PumpDensity[8];  // chemical densities on each pump
+
+    char Chemical1Name[20];
+    char Chemical2Name[20];
+    char Chemical3Name[20];
+    char Chemical4Name[20]; // chozen name for each chemical
+    char Chemical5Name[20];
+    char Chemical6Name[20];
+    char Chemical7Name[20];
+    char Chemical8Name[20];
+
+    int8_t PumpAmountPerChemical[8]; //How many pumps to dispense from to make each chemical
+
+    int8_t PumpOption1[8]; // each chemical can choose the first pump to dispense from
+    float PumpAmount1[8]; //Determines how much of the first pump to dispense from
+
+    int8_t PumpOption2[8]; // each chemical can choose the second pump to dispense from
+    float PumpAmount2[8]; //Determines how much of the second pump to dispense from
+
+    int8_t PumpOption3[8]; // each chemical can choose the third pump to dispense from
+    float PumpAmount3[8]; //Determines how much of the third pump to dispense from
+
+
+
+
+
+
+
+
+
+    // Add any other configuration parameters your device needs here
+
+    // --- Data Integrity and Verification ---
+    uint32_t crc32_checksum;  // CRC32 checksum of all data *before* this field.
+                              // This helps detect corrupted data in Flash.
+
+} DeviceConfiguration_t;
+
+
+// --- Function Prototypes for Configuration Management ---
+
+/**
+ * @brief Saves the provided configuration struct from RAM to Flash.
+ * This involves erasing the target Flash page and then writing the struct data.
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to save.
+ * @return HAL_StatusTypeDef HAL_OK if successful, error otherwise.
+ */
+HAL_StatusTypeDef Config_Save(const DeviceConfiguration_t* config);
+
+/**
+ * @brief Loads the configuration struct from Flash into RAM.
+ * Performs integrity checks (magic number, version, CRC).
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to load into.
+ * @return HAL_StatusTypeDef HAL_OK if successful and valid, HAL_ERROR if corrupted/invalid (default loaded).
+ */
+HAL_StatusTypeDef Config_Load(DeviceConfiguration_t* config);
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* INC_DEVICE_CONFIG_H_ */

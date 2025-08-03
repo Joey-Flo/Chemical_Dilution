@@ -1,0 +1,53 @@
+2025-07-30 12:20:10,217 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-30 13:19:37,762 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-30 14:43:48,186 [INFO] WebApp:194 - Connection lost
+2025-07-30 14:43:53,095 [INFO] WebApp:191 - Connection restablished
+2025-07-30 14:43:55,650 [INFO] WebApp:194 - Connection lost
+2025-07-30 14:43:55,805 [INFO] WebApp:191 - Connection restablished
+2025-07-30 14:48:52,057 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Read timed out
+2025-07-30 14:49:01,107 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-30 14:50:22,697 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-07-30 17:10:10,689 [INFO] WebApp:194 - Connection lost
+2025-07-30 18:31:47,328 [INFO] WebApp:191 - Connection restablished
+2025-07-30 18:31:49,510 [INFO] WebApp:194 - Connection lost
+2025-07-30 18:31:49,711 [INFO] WebApp:191 - Connection restablished
+2025-07-30 18:35:05,118 [INFO] WebApp:194 - Connection lost
+2025-07-30 18:35:05,396 [INFO] WebApp:191 - Connection restablished
+2025-07-30 18:40:07,159 [INFO] WebApp:194 - Connection lost
+2025-07-30 18:40:07,931 [INFO] WebApp:191 - Connection restablished
+2025-07-30 18:40:15,128 [INFO] WebApp:194 - Connection lost
+2025-07-30 18:40:15,259 [INFO] WebApp:191 - Connection restablished
+2025-07-30 18:41:21,142 [INFO] WebApp:194 - Connection lost
+2025-07-30 18:41:21,343 [INFO] WebApp:191 - Connection restablished
+2025-07-30 19:09:36,628 [INFO] WebApp:194 - Connection lost
+2025-07-30 19:09:38,729 [INFO] WebApp:191 - Connection restablished
+2025-07-30 19:19:06,139 [INFO] WebApp:194 - Connection lost
+2025-07-30 19:19:06,329 [INFO] WebApp:191 - Connection restablished
+2025-07-30 19:24:16,625 [INFO] WebApp:194 - Connection lost
+2025-07-30 19:24:16,814 [INFO] WebApp:191 - Connection restablished
+2025-07-30 21:09:26,151 [INFO] WebApp:194 - Connection lost
+2025-07-30 21:09:26,394 [INFO] WebApp:191 - Connection restablished
+2025-07-30 21:22:08,150 [INFO] WebApp:194 - Connection lost
+2025-07-30 21:22:08,452 [INFO] WebApp:191 - Connection restablished
+2025-07-30 21:59:56,637 [INFO] WebApp:194 - Connection lost
+2025-07-30 21:59:56,900 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:11:17,136 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:11:17,742 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:15:27,118 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:15:27,351 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:22:24,626 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:22:24,819 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:42:06,125 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:42:06,464 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:42:14,638 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:42:14,822 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:43:02,631 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:43:02,880 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:43:11,629 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:43:11,918 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:51:32,126 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:51:32,332 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:54:34,627 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:54:34,803 [INFO] WebApp:191 - Connection restablished
+2025-07-30 22:57:45,638 [INFO] WebApp:194 - Connection lost
+2025-07-30 22:57:45,881 [INFO] WebApp:191 - Connection restablished

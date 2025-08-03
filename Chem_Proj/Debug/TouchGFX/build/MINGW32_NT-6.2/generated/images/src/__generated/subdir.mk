@@ -9,6 +9,8 @@ O_SRCS += \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/image_alternate_theme_images_backgrounds_240x320_waves.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_off_normal.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/image_alternate_theme_images_widgets_swipecontainer_medium_on_active.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/image_alternate_theme_images_widgets_togglebutton_medium_rounded_off_light.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/image_alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/image_icon_theme_images_action_done_50_50_E8F6FB.svg.o 

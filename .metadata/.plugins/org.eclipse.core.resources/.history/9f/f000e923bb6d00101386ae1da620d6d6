@@ -1,0 +1,93 @@
+// Core/Inc/device_config.h
+
+#ifndef INC_DEVICE_CONFIG_H_
+#define INC_DEVICE_CONFIG_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>   // For fixed-width integer types (uint8_t, uint16_t, uint32_t)
+#include "stm32l4xx_hal.h" // For HAL_StatusTypeDef, if Config_Save/Load are defined here
+
+// --- Configuration Constants ---
+
+// --- Configuration Constants ---
+#define CONFIG_MAGIC_NUMBER 0xFEEDC0DE // A new unique magic number example
+#define CONFIG_VERSION      0          // Starting version for your struct layout
+
+// Max number of pumps a single chemical can draw from (your PumpOption1/2/3 implies 3)
+#define MAX_DISPENSE_OPTIONS_PER_CHEMICAL 3
+
+
+// --- Device Configuration Structure ---
+
+// Use __attribute__((packed)) to prevent the compiler from adding padding bytes
+// within the structure. This is crucial for consistent sizing when writing
+// the struct directly to Flash, especially when writing in fixed 64-bit chunks.
+typedef struct __attribute__((packed)) {
+    int8_t  pump_index; // Which pump (0-7). Use -1 or a specific value (e.g., 255) to indicate unused.
+    float   amount;     // How much of that pump's content to dispense
+} PumpDispenseInstruction_t;
+
+
+// --- Main Device Configuration Structure ---
+typedef struct __attribute__((packed))
+{
+    // --- Header for integrity and versioning (CRITICAL!) ---
+    uint32_t magic_number;    // Unique identifier to validate config presence in Flash
+    uint16_t config_version;  // Version of this struct layout (for future compatibility)
+    uint16_t _header_padding; // Padding to align header to an 8-byte boundary, makes calculation cleaner if needed later.
+                              // (4 + 2 + 2 = 8 bytes for header block)
+
+    // --- System-wide Pump Physical Configuration ---
+    int8_t PumpEnable[8];     // Enable/disable each physical pump (e.g., 0=disabled, 1=enabled)
+    float  PumpDensity[8];    // Chemical densities associated with each physical pump (e.g., g/ml)
+
+
+    // --- Chemical Recipe Definitions (for 8 definable chemicals) ---
+    char ChemicalName[8][20]; // User-defined names for each of the 8 chemical recipes
+
+    int8_t PumpAmountPerChemical[8]; // How many *active* dispense options for each chemical recipe
+                                      // (max value would be MAX_DISPENSE_OPTIONS_PER_CHEMICAL)
+
+    // Array of structs: ChemicalDispenseInstructions[chemical_index][option_index]
+    // This organizes 'PumpOptionX' and 'PumpAmountX' much more logically.
+    PumpDispenseInstruction_t ChemicalDispenseInstructions[8][MAX_DISPENSE_OPTIONS_PER_CHEMICAL];
+
+
+    // --- Data Integrity and Final Padding ---
+    // Calculate CRC over all fields *before* this crc32_checksum.
+    uint8_t _padding_for_flash_alignment[6]; // <--- PADDING ADDED HERE to make total size a multiple of 8 bytes
+                                              // (Calculated: (338 bytes total without padding or CRC) + 6 bytes = 344 bytes)
+                                              // (Then + 4 bytes for CRC = 348 bytes, which is a multiple of 8)
+
+    uint32_t crc32_checksum;  // CRC32 checksum of all data *before* this field.
+
+} DeviceConfiguration_t;
+
+
+// --- Function Prototypes for Configuration Management ---
+
+/**
+ * @brief Saves the provided configuration struct from RAM to Flash.
+ * This involves erasing the target Flash page and then writing the struct data.
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to save.
+ * @return HAL_StatusTypeDef HAL_OK if successful, error otherwise.
+ */
+HAL_StatusTypeDef Config_Save(const DeviceConfiguration_t* config);
+
+/**
+ * @brief Loads the configuration struct from Flash into RAM.
+ * Performs integrity checks (magic number, version, CRC).
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to load into.
+ * @return HAL_StatusTypeDef HAL_OK if successful and valid, HAL_ERROR if corrupted/invalid (default loaded).
+ */
+HAL_StatusTypeDef Config_Load(DeviceConfiguration_t* config);
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* INC_DEVICE_CONFIG_H_ */

@@ -1,0 +1,29 @@
+// In Flash.h (create this file if it doesn't exist)
+
+#ifndef INC_FLASH_H_
+#define INC_FLASH_H_
+
+#include "stm32l4xx_hal.h" // Or your specific HAL header
+
+// === IMPORTANT: DEFINE THESE FOR YOUR SPECIFIC MCU ===
+
+// Base address of the Flash memory for STM32L4 series
+#define FLASH_BASE_ADDR   ((uint32_t)0x08000000)
+
+// Page size for STM32L4 series is 2KB (2048 bytes)
+#define FLASH_PAGE_SIZE   ((uint32_t)0x800)
+
+// Address of the last page to use for storage.
+// This is an EXAMPLE for a 1MB chip. YOU MUST CALCULATE THIS FOR YOUR CHIP.
+// (1MB = 512 pages. Last page is 511. Address = 0x08000000 + 511 * 2048 = 0x080FF800)
+#define FLASH_LAST_PAGE   ((uint32_t)0x080FF800)
+
+
+// --- Function Prototypes ---
+
+HAL_StatusTypeDef FlashErase(uint32_t PageAddress);
+HAL_StatusTypeDef FlashWrite(uint32_t Address, uint64_t Data); // <-- Also fix this to use 64-bit data as discussed previously
+uint64_t FlashRead(uint32_t Address);
+
+
+#endif /* INC_FLASH_H_ */
