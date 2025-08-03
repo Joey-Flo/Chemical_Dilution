@@ -60,3 +60,16 @@ void FrontendApplicationBase::gotoPumpSetupScreenScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<PumpSetupScreenView, PumpSetupScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
+
+// ChemicalsSetup
+
+void FrontendApplicationBase::gotoChemicalsSetupScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoChemicalsSetupScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoChemicalsSetupScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<ChemicalsSetupView, ChemicalsSetupPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}

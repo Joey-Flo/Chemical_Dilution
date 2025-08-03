@@ -81,11 +81,11 @@ PumpSetupWidgetBase::PumpSetupWidgetBase()
     scrollableContainer1.setScrollbarsAlpha(255);
     add(scrollableContainer1);
 
-    PumpSelectBox.setPosition(66, 11, 80, 23);
+    PumpSelectBox.setPosition(68, 11, 80, 23);
     PumpSelectBox.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(PumpSelectBox);
 
-    SelectPumpButton.setXY(152, 11);
+    SelectPumpButton.setXY(150, 11);
     SelectPumpButton.setBitmaps(touchgfx::Bitmap(BITMAP_UPBUTTONUNPRESSED_ID), touchgfx::Bitmap(BITMAP_UPBUTTONPRESSED_ID));
     add(SelectPumpButton);
 
@@ -107,7 +107,7 @@ PumpSetupWidgetBase::PumpSetupWidgetBase()
     TopDivideLine.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     add(TopDivideLine);
 
-    textArea2.setPosition(66, 11, 80, 23);
+    textArea2.setPosition(68, 11, 80, 23);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
     textArea2Buffer[0] = 0;

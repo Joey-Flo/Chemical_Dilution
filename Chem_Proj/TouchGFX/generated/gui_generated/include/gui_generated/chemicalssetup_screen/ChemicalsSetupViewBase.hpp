@@ -15,6 +15,7 @@
 #include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
+#include <gui/containers/PumpSetupWidget.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
@@ -37,10 +38,13 @@ protected:
     touchgfx::Image image1;
     touchgfx::BoxWithBorder boxWithBorder1;
     touchgfx::Button BackButton;
-    touchgfx::TextArea textArea1;
+    touchgfx::TextArea Title;
     touchgfx::SwipeContainer swipeContainer1;
     touchgfx::Container Page1;
     touchgfx::ScrollableContainer scrollableContainer1;
+    PumpSetupWidget pumpSetupWidget1;
+    PumpSetupWidget pumpSetupWidget2;
+    PumpSetupWidget pumpSetupWidget3;
     touchgfx::Box NameBox;
     touchgfx::Box VolumeBox;
     touchgfx::TextArea ChemVolumeText;
@@ -72,6 +76,12 @@ protected:
     touchgfx::Unicode::UnicodeChar VolumeEditTextBuffer[VOLUMEEDITTEXT_SIZE];
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 3600;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

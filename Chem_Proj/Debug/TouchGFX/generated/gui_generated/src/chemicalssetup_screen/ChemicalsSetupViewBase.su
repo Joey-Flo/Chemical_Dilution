@@ -19,6 +19,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:413:10:void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:515:10:void touchgfx::Drawable::setVisible(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:525:10:void touchgfx::Drawable::setTouchable(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:537:10:bool touchgfx::Drawable::isVisible() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:549:10:bool touchgfx::Drawable::isTouchable() const	16	static
@@ -68,7 +69,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:429:9:touchgfx::TextArea::BoundingArea::BoundingArea()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:35:18:virtual void touchgfx::ToggleButton::setBitmaps(const touchgfx::Bitmap&, const touchgfx::Bitmap&)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:touchgfx::TextArea::~TextArea()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:virtual touchgfx::TextArea::~TextArea()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:36:5:touchgfx::TextAreaWithWildcardBase::TextAreaWithWildcardBase()	16	static
@@ -80,7 +80,10 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:79:10:void touchgfx::TextAreaWithOneWildcard::setWildcard1(const touchgfx::Unicode::UnicodeChar*)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:98:10:void touchgfx::TextAreaWithOneWildcard::setWildcard(const touchgfx::Unicode::UnicodeChar*)	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp:29:26:FrontendApplication& ChemicalsSetupViewBase::application()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:35:18:virtual void touchgfx::ToggleButton::setBitmaps(const touchgfx::Bitmap&, const touchgfx::Bitmap&)	24	static
+../TouchGFX/gui/include/gui/containers/PumpSetupWidget.hpp:10:13:PumpSetupWidget::~PumpSetupWidget()	16	static
+../TouchGFX/gui/include/gui/containers/PumpSetupWidget.hpp:10:13:virtual PumpSetupWidget::~PumpSetupWidget()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp:30:26:FrontendApplication& ChemicalsSetupViewBase::application()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<ChemicalsSetupPresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<ChemicalsSetupPresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
@@ -96,11 +99,11 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<ChemicalsSetupViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<ChemicalsSetupViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:9:1:ChemicalsSetupViewBase::ChemicalsSetupViewBase()	400	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:158:1:ChemicalsSetupViewBase::~ChemicalsSetupViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:158:1:virtual ChemicalsSetupViewBase::~ChemicalsSetupViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:163:6:virtual void ChemicalsSetupViewBase::setupScreen()	16	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:168:6:void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:10:1:ChemicalsSetupViewBase::ChemicalsSetupViewBase()	400	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:172:1:ChemicalsSetupViewBase::~ChemicalsSetupViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:172:1:virtual ChemicalsSetupViewBase::~ChemicalsSetupViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:177:6:virtual void ChemicalsSetupViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:184:6:void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = ChemicalsSetupPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButton&>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = ChemicalsSetupViewBase; T1 = const touchgfx::AbstractButton&]	24	static

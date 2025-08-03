@@ -34,8 +34,8 @@
       <Text Id="__SingleUse_W5GW" Alignment="Center" TypographyId="Display">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_5VAJ" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">New Text</Translation>
+      <Text Id="__SingleUse_5VAJ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Chemicals</Translation>
       </Text>
       <Text Id="__SingleUse_RBPU" Alignment="Center" TypographyId="Display">
         <Translation Language="GB">&lt;value&gt;</Translation>

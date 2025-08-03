@@ -50,12 +50,15 @@ C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:46:6:void FrontendApplicationBase::gotoHomeScreenScreenNoTransitionImpl()	24	static
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:53:6:void FrontendApplicationBase::gotoPumpSetupScreenScreenNoTransition()	48	static
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:59:6:void FrontendApplicationBase::gotoPumpSetupScreenScreenNoTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:66:6:void FrontendApplicationBase::gotoChemicalsSetupScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:72:6:void FrontendApplicationBase::gotoChemicalsSetupScreenNoTransitionImpl()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:175:7:constexpr touchgfx::GenericCallback<void>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:427:5:touchgfx::Callback<dest_type, void, void, void>::Callback() [with dest_type = FrontendApplicationBase]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:440:5:touchgfx::Callback<dest_type, void, void, void>::Callback(dest_type*, void (dest_type::*)()) [with dest_type = FrontendApplicationBase]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:touchgfx::NoTransition::NoTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(Screen**, Presenter**, MVPHeap&, Transition**, ModelType*) [with ScreenType = HomeScreenView; PresenterType = HomeScreenPresenter; TransType = NoTransition; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(Screen**, Presenter**, MVPHeap&, Transition**, ModelType*) [with ScreenType = PumpSetupScreenView; PresenterType = PumpSetupScreenPresenter; TransType = NoTransition; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(Screen**, Presenter**, MVPHeap&, Transition**, ModelType*) [with ScreenType = ChemicalsSetupView; PresenterType = ChemicalsSetupPresenter; TransType = NoTransition; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = HomeScreenView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = HomeScreenPresenter]	16	static
@@ -63,12 +66,15 @@ C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = PumpSetupScreenView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = PumpSetupScreenPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = PumpSetupScreenPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ChemicalsSetupView]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ChemicalsSetupPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = ChemicalsSetupPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:touchgfx::NoTransition::~NoTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:virtual touchgfx::NoTransition::~NoTransition()	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:1:void __static_initialization_and_destruction_0()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:75:1:void __static_initialization_and_destruction_0()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:1:void __static_initialization_and_destruction_1()	8	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:75:1:void __static_initialization_and_destruction_1()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = FrontendApplicationBase]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = FrontendApplicationBase]	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:1:cpp)	8	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:1:cpp)	8	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:75:1:cpp)	8	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:75:1:cpp)	8	static

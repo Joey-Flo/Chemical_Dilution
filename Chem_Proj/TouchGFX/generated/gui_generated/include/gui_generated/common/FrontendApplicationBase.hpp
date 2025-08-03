@@ -26,6 +26,9 @@ public:
     // PumpSetupScreen
     void gotoPumpSetupScreenScreenNoTransition();
 
+    // ChemicalsSetup
+    void gotoChemicalsSetupScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -36,6 +39,9 @@ protected:
 
     // PumpSetupScreen
     void gotoPumpSetupScreenScreenNoTransitionImpl();
+
+    // ChemicalsSetup
+    void gotoChemicalsSetupScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

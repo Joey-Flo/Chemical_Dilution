@@ -33,6 +33,7 @@ HomeScreenViewBase::HomeScreenViewBase() :
     ChemicalButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_IQU6));
     ChemicalButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     ChemicalButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ChemicalButton.setAction(buttonCallback);
     scrollableContainer1.add(ChemicalButton);
 
     PumpSetupButton.setXY(0, 331);
@@ -98,5 +99,12 @@ void HomeScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //When PumpSetupButton clicked change screen to PumpSetupScreen
         //Go to PumpSetupScreen with no screen transition
         application().gotoPumpSetupScreenScreenNoTransition();
+    }
+    if (&src == &ChemicalButton)
+    {
+        //Interaction2
+        //When ChemicalButton clicked change screen to ChemicalsSetup
+        //Go to ChemicalsSetup with no screen transition
+        application().gotoChemicalsSetupScreenNoTransition();
     }
 }

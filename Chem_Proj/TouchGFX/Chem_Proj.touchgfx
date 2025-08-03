@@ -205,6 +205,18 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "PumpSetupScreen"
             }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ChemicalButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "ChemicalsSetup"
+            }
           }
         ]
       },
@@ -1165,6 +1177,7 @@
       },
       {
         "Name": "ChemicalsSetup",
+        "CanvasBufferSize": 3600,
         "Components": [
           {
             "Type": "Image",
@@ -1201,10 +1214,10 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1",
+            "Name": "Title",
             "X": 64,
             "Y": 13,
-            "Width": 106,
+            "Width": 113,
             "Height": 24,
             "TextId": "__SingleUse_5VAJ",
             "TextRotation": "0",
@@ -1244,8 +1257,40 @@
                     "HorizontalScrollEnabled": true,
                     "VerticalScrollEnabled": true,
                     "ScrollbarsVisibleOnPressed": true,
+                    "ScrollbarsColor": {
+                      "Red": 255
+                    },
                     "ScrollbarsAlpha": 255,
-                    "Components": []
+                    "Components": [
+                      {
+                        "Type": "CustomContainerInstance",
+                        "Name": "pumpSetupWidget1",
+                        "Y": -2,
+                        "Width": 240,
+                        "Height": 108,
+                        "CustomContainerDefinitionName": "PumpSetupWidget"
+                      },
+                      {
+                        "Type": "CustomContainerInstance",
+                        "Name": "pumpSetupWidget2",
+                        "X": 1,
+                        "Y": 106,
+                        "Width": 240,
+                        "Height": 108,
+                        "Visible": false,
+                        "CustomContainerDefinitionName": "PumpSetupWidget"
+                      },
+                      {
+                        "Type": "CustomContainerInstance",
+                        "Name": "pumpSetupWidget3",
+                        "X": 1,
+                        "Y": 214,
+                        "Width": 240,
+                        "Height": 108,
+                        "Visible": false,
+                        "CustomContainerDefinitionName": "PumpSetupWidget"
+                      }
+                    ]
                   },
                   {
                     "Type": "Box",
@@ -1686,7 +1731,7 @@
           {
             "Type": "Box",
             "Name": "PumpSelectBox",
-            "X": 66,
+            "X": 68,
             "Y": 11,
             "Width": 80,
             "Height": 23,
@@ -1699,7 +1744,7 @@
           {
             "Type": "ToggleButton",
             "Name": "SelectPumpButton",
-            "X": 152,
+            "X": 150,
             "Y": 11,
             "Width": 23,
             "Height": 23,
@@ -1743,7 +1788,7 @@
           {
             "Type": "TextArea",
             "Name": "textArea2",
-            "X": 66,
+            "X": 68,
             "Y": 11,
             "Width": 80,
             "Height": 23,
