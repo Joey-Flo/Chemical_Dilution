@@ -17,7 +17,6 @@ extern "C" {
 
 
 
-
 // --- The Main Device Configuration Structure ---
 typedef struct __attribute__((packed))
 {
@@ -57,6 +56,7 @@ typedef struct __attribute__((packed))
 HAL_StatusTypeDef Config_Save(const DeviceConfiguration_t* config);
 HAL_StatusTypeDef Config_Load(DeviceConfiguration_t* config);
 
+void Config_SetDefaults(DeviceConfiguration_t* config);
 
 #ifdef __cplusplus
 }

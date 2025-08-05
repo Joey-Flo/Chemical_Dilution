@@ -1,17 +1,18 @@
 #include "device_config.h"
 #include "Flash.h"
 #include <string.h>
-#include <stdio.h>
+#include <stdbool.h>
+#include <stdio.h> // For snprintf
 
+// Define the address where configuration will be stored (the last page)
+// Using FLASH_LAST_PAGE from flash.h makes this more consistent
 #define CONFIG_FLASH_ADDRESS FLASH_LAST_PAGE
-
 extern CRC_HandleTypeDef hcrc;
 
-void Config_SetDefaults(DeviceConfiguration_t* config);
-static uint32_t Calculate_Config_CRC(const DeviceConfiguration_t* config);
+// --- Internal Helper Function Prototypes ---
+static uint32_t CalculateCRC32(const uint8_t* data, size_t length);
 
-
-// In Core/Src/device_config.c
+// In device_config.c
 
 void Config_SetDefaults(DeviceConfiguration_t* config)
 {
@@ -29,7 +30,7 @@ void Config_SetDefaults(DeviceConfiguration_t* config)
     }
 
     // 4. Set the global default for volume units.
-    config->VolumeUnit = 0; // 0 for mL
+    config->VolumeUnit = 1; // 0 for mL
 
     // 5. Set Chemical Recipe Defaults.
     const char* default_names[] = {
@@ -46,7 +47,7 @@ void Config_SetDefaults(DeviceConfiguration_t* config)
         config->recipes[i].name[sizeof(config->recipes[i].name) - 1] = '\0';
 
         // b. Set the total volume
-        config->recipes[i].total_dispense_volume = 100.0f;
+        config->recipes[i].total_dispense_volume = 32.0f;
 
         // c. Initialize the pump setups for this recipe
         for (int j = 0; j < MAX_PUMP_SETUPS_PER_CHEMICAL; j++) {
@@ -60,9 +61,9 @@ void Config_SetDefaults(DeviceConfiguration_t* config)
 
             // Explicitly set the float values
             if (i == 0 && j == 0) {
-                config->recipes[i].pump_setups[j].dispense_small = 5.0f;
-                config->recipes[i].pump_setups[j].dispense_medium = 10.0f;
-                config->recipes[i].pump_setups[j].dispense_large = 15.0f;
+                config->recipes[i].pump_setups[j].dispense_small = 3.0f;
+                config->recipes[i].pump_setups[j].dispense_medium = 5.0f;
+                config->recipes[i].pump_setups[j].dispense_large = 7.0f;
             } else {
                 config->recipes[i].pump_setups[j].dispense_small = 0.0f;
                 config->recipes[i].pump_setups[j].dispense_medium = 0.0f;
@@ -71,85 +72,114 @@ void Config_SetDefaults(DeviceConfiguration_t* config)
         }
     }
 }
+// CRC calculation function (remains the same)
 
-// --- MODIFIED: The CRC calculation is now brutally explicit ---
-static uint32_t Calculate_Config_CRC(const DeviceConfiguration_t* config)
+static uint32_t CalculateCRC32(const uint8_t* data, size_t length)
 {
-    // We will manually add the size of every single field that comes before the checksum.
-    // This is verbose, but it is 100% immune to compiler padding/packing quirks.
-    size_t crc_data_size = 0;
-    crc_data_size += sizeof(config->magic_number);
-    crc_data_size += sizeof(config->config_version);
-    crc_data_size += sizeof(config->_header_padding);
-    crc_data_size += sizeof(config->PumpEnable);
-    crc_data_size += sizeof(config->PumpDensity);
-    crc_data_size += sizeof(config->VolumeUnit);
-    crc_data_size += sizeof(config->recipes);
-    crc_data_size += sizeof(config->_internal_crc_padding);
-
-    // Sanity check: Ensure the calculated size is a multiple of 4 for the hardware CRC
-    if ((crc_data_size % 4) != 0) {
-        // If you hit this, something is very wrong with the struct definition.
-        // You would need to adjust the _internal_crc_padding.
-        return 0; // Return an invalid CRC
-    }
-
-    return HAL_CRC_Calculate(&hcrc, (uint32_t*)config, crc_data_size / 4);
+    // Use the STM32's hardware CRC peripheral.
+    // NOTE: The hardware unit works on 32-bit words. The length passed to it
+    // should be the number of words, not bytes.
+    return HAL_CRC_Calculate(&hcrc, (uint32_t*)data, length / 4);
 }
-
-
+/**
+ * @brief Saves the provided configuration struct from RAM to Flash.
+ * This version correctly calculates the CRC and writes the struct in 8-byte chunks.
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to save.
+ * @return HAL_StatusTypeDef HAL_OK if successful, error otherwise.
+ */
 HAL_StatusTypeDef Config_Save(const DeviceConfiguration_t* config)
 {
     if (config == NULL) {
         return HAL_ERROR;
     }
+
     HAL_StatusTypeDef status;
     DeviceConfiguration_t temp_config;
+
+    // 1. Copy the source config to a temporary modifiable struct
     memcpy(&temp_config, config, sizeof(DeviceConfiguration_t));
 
-    // The checksum is calculated on the data BEFORE it's stored in the field.
-    // So we calculate it, then store it.
-    temp_config.crc32_checksum = Calculate_Config_CRC(&temp_config);
+    // 2. Calculate CRC on all data *before* the checksum field itself
+    // The size for CRC calculation is the total struct size minus the size of the CRC field.
+    size_t crc_data_size = sizeof(DeviceConfiguration_t) - sizeof(temp_config.crc32_checksum);
+    temp_config.crc32_checksum = CalculateCRC32((const uint8_t*)&temp_config, crc_data_size);
 
+    // 3. Erase the target flash page
     status = FlashErase(CONFIG_FLASH_ADDRESS);
     if (status != HAL_OK) {
-        return status;
+        return status; // Return on erase failure
     }
 
+    // 4. Write the entire struct to flash in 64-bit (8-byte) chunks
     uint64_t* data_ptr = (uint64_t*)&temp_config;
     uint32_t write_address = CONFIG_FLASH_ADDRESS;
+    // Calculate how many 8-byte chunks to write.
+    // Use ceiling division in case the struct size is not a perfect multiple of 8.
     int chunks = (sizeof(DeviceConfiguration_t) + 7) / 8;
+
     for (int i = 0; i < chunks; i++) {
         status = FlashWrite(write_address, data_ptr[i]);
         if (status != HAL_OK) {
+            // If any write fails, the data is corrupt. It's best to return an error.
+            // The page is already erased, so it will contain default 0xFF values.
             return status;
         }
-        write_address += 8;
+        write_address += 8; // Move to the next 8-byte boundary
     }
+
     return HAL_OK;
 }
 
-
+/**
+ * @brief Loads the configuration struct from Flash into RAM.
+ * This version reads the data and performs full integrity checks.
+ * @param config A pointer to the DeviceConfiguration_t struct in RAM to load into.
+ * @return HAL_StatusTypeDef HAL_OK if load was successful and data is valid.
+ *         HAL_ERROR if data is invalid/corrupt (in which case, defaults are loaded).
+ */
 HAL_StatusTypeDef Config_Load(DeviceConfiguration_t* config)
 {
     if (config == NULL) {
         return HAL_ERROR;
     }
+
+    // 1. Read the entire struct's worth of data from Flash into the provided RAM struct.
     uint64_t* dest_ptr = (uint64_t*)config;
     uint32_t read_address = CONFIG_FLASH_ADDRESS;
     int chunks = (sizeof(DeviceConfiguration_t) + 7) / 8;
+
     for (int i = 0; i < chunks; i++) {
         dest_ptr[i] = FlashRead(read_address);
+        read_address += 8;
     }
 
-    uint32_t stored_crc = config->crc32_checksum;
-    uint32_t calculated_crc = Calculate_Config_CRC(config);
+    // --- 2. Perform Integrity and Validity Checks ---
 
-   if ( (config->magic_number != CONFIG_MAGIC_NUMBER) ||
-         (config->config_version != CONFIG_VERSION))
-    {
+    // Check 1: Is the magic number correct?
+    // This is the first and most basic check to see if the data looks like our config.
+    if (config->magic_number != CONFIG_MAGIC_NUMBER) {
         Config_SetDefaults(config);
         return HAL_ERROR;
     }
+
+    // Check 2: Is the configuration version what we expect?
+    // For now, we only support one version.
+    if (config->config_version != CONFIG_VERSION) {
+        Config_SetDefaults(config);
+        return HAL_ERROR;
+    }
+
+    // Check 3: Is the CRC checksum valid?
+    uint32_t stored_crc = config->crc32_checksum;
+    size_t crc_data_size = sizeof(DeviceConfiguration_t) - sizeof(config->crc32_checksum);
+    uint32_t calculated_crc = CalculateCRC32((const uint8_t*)config, crc_data_size);
+
+    if (stored_crc != calculated_crc) {
+        // CRC mismatch means data corruption. Load defaults for safety.
+        Config_SetDefaults(config);
+        return HAL_ERROR;
+    }
+
+    // If all checks pass, the data is valid.
     return HAL_OK;
 }

@@ -8,6 +8,7 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
 #include <gui/containers/PumpOption.hpp>
+#include <touchgfx/widgets/Box.hpp>
 
 class PumpDropDownListBase : public touchgfx::Container
 {
@@ -33,6 +34,7 @@ protected:
     PumpOption pumpOption5;
     PumpOption pumpOption6;
     PumpOption pumpOption7;
+    touchgfx::Box box1;
 
 private:
 

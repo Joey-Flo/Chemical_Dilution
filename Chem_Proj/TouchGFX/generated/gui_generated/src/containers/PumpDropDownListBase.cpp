@@ -36,6 +36,11 @@ PumpDropDownListBase::PumpDropDownListBase()
     scrollableContainer.add(pumpOption7);
 
     add(scrollableContainer);
+
+    box1.setPosition(21, 205, 50, 15);
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setAlpha(0);
+    add(box1);
 }
 
 PumpDropDownListBase::~PumpDropDownListBase()

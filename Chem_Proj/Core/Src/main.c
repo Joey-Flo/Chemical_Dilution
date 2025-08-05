@@ -85,6 +85,8 @@ int main(void)
             // printf("Failed to save default config!\r\n");
         }
     }
+//    Config_SetDefaults(&myDeviceConfig);
+//    Config_Save(&myDeviceConfig);
 
   while (1)
   {

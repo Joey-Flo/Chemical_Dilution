@@ -1887,6 +1887,20 @@
                 "CustomContainerDefinitionName": "PumpOption"
               }
             ]
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "X": 21,
+            "Y": 205,
+            "Width": 50,
+            "Height": 15,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 0
           }
         ],
         "Interactions": []
