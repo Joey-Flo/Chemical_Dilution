@@ -30,7 +30,7 @@ Core/Src/device_config.o: ../Core/Src/device_config.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
- ../Core/Inc/Flash.h
+ ../Core/Inc/shared_types.h ../Core/Inc/Flash.h
 ../Core/Inc/device_config.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -62,4 +62,5 @@ Core/Src/device_config.o: ../Core/Src/device_config.c \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
+../Core/Inc/shared_types.h:
 ../Core/Inc/Flash.h:

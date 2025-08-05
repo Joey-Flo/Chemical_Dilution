@@ -42,7 +42,7 @@ TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
- ../TouchGFX/gui/include/gui/model/Model.hpp \
+ ../TouchGFX/gui/include/gui/model/Model.hpp ../Core/Inc/shared_types.h \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -94,7 +94,8 @@ TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp
 ../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -138,6 +139,7 @@ TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
+../Core/Inc/shared_types.h:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
@@ -190,3 +192,4 @@ TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp:

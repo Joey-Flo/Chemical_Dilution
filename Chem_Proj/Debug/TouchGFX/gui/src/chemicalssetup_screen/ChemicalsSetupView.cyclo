@@ -1,9 +1,43 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:515:10:void touchgfx::Drawable::setVisible(bool)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:11:13:ChemicalsSetupView::~ChemicalsSetupView()	1
-../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:11:13:virtual ChemicalsSetupView::~ChemicalsSetupView()	1
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:3:1:ChemicalsSetupView::ChemicalsSetupView()	1
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:8:6:virtual void ChemicalsSetupView::setupScreen()	1
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:13:6:virtual void ChemicalsSetupView::tearDownScreen()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<ChemicalsSetupView, int>::~Callback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<ChemicalsSetupView, int>::~Callback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:touchgfx::Callback<ChemicalsSetupView, int, const PumpSetup_t&>::~Callback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:virtual touchgfx::Callback<ChemicalsSetupView, int, const PumpSetup_t&>::~Callback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:touchgfx::Callback<ChemicalsSetupView, int, int>::~Callback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:virtual touchgfx::Callback<ChemicalsSetupView, int, int>::~Callback()	1
+../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:17:13:ChemicalsSetupView::~ChemicalsSetupView()	1
+../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:17:13:virtual ChemicalsSetupView::~ChemicalsSetupView()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:6:1:ChemicalsSetupView::ChemicalsSetupView()	2
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:28:6:virtual void ChemicalsSetupView::setupScreen()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:40:6:virtual void ChemicalsSetupView::tearDownScreen()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:46:6:void ChemicalsSetupView::displayData(const ChemicalRecipe_t&, const std::vector<int>&, int8_t)	4
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:97:6:void ChemicalsSetupView::swipeContainer1PageChangedCallback(int)	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:106:6:void ChemicalsSetupView::pumpSetupSaveDataCallbackHandler(int, const PumpSetup_t&)	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:114:6:void ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler(int, int)	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:125:6:void ChemicalsSetupView::addPumpClicked()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:130:6:void ChemicalsSetupView::removePumpClicked()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:135:6:void ChemicalsSetupView::nameEditClicked()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:140:6:void ChemicalsSetupView::volumeEditClicked()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:145:6:void ChemicalsSetupView::unitToggleButtonClicked()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:94:13:touchgfx::GenericCallback<T1, T2, void>::~GenericCallback() [with T1 = int; T2 = const PumpSetup_t&]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:94:13:touchgfx::GenericCallback<T1, T2, void>::~GenericCallback() [with T1 = int; T2 = const PumpSetup_t&]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:94:13:touchgfx::GenericCallback<T1, T2, void>::~GenericCallback() [with T1 = int; T2 = int]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:94:13:touchgfx::GenericCallback<T1, T2, void>::~GenericCallback() [with T1 = int; T2 = int]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<int>::GenericCallback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:360:5:touchgfx::Callback<dest_type, T1, void, void>::Callback() [with dest_type = ChemicalsSetupView; T1 = int]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:90:7:constexpr touchgfx::GenericCallback<int, const PumpSetup_t&>::GenericCallback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:306:5:touchgfx::Callback<dest_type, T1, T2, void>::Callback(dest_type*, void (dest_type::*)(T1, T2)) [with dest_type = ChemicalsSetupView; T1 = int; T2 = const PumpSetup_t&]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:90:7:constexpr touchgfx::GenericCallback<int, int>::GenericCallback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:306:5:touchgfx::Callback<dest_type, T1, T2, void>::Callback(dest_type*, void (dest_type::*)(T1, T2)) [with dest_type = ChemicalsSetupView; T1 = int; T2 = int]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:318:18:void touchgfx::Callback<dest_type, T1, T2, void>::execute(T1, T2) [with dest_type = ChemicalsSetupView; T1 = int; T2 = int]	2
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:328:18:bool touchgfx::Callback<dest_type, T1, T2, void>::isValid() const [with dest_type = ChemicalsSetupView; T1 = int; T2 = int]	5
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:318:18:void touchgfx::Callback<dest_type, T1, T2, void>::execute(T1, T2) [with dest_type = ChemicalsSetupView; T1 = int; T2 = const PumpSetup_t&]	2
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:328:18:bool touchgfx::Callback<dest_type, T1, T2, void>::isValid() const [with dest_type = ChemicalsSetupView; T1 = int; T2 = const PumpSetup_t&]	5
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = ChemicalsSetupView; T1 = int]	2
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = ChemicalsSetupView; T1 = int]	5

@@ -72,7 +72,6 @@ int main(void)
 //     1. Load configuration at device startup
 //     This will try to read from Flash. If valid data isn't found, it will load defaults.
     HAL_StatusTypeDef config_load_status = Config_Load(&myDeviceConfig);
-
     if (config_load_status == HAL_OK) {
 
 
@@ -86,7 +85,6 @@ int main(void)
             // printf("Failed to save default config!\r\n");
         }
     }
-
 
   while (1)
   {

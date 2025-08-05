@@ -40,6 +40,7 @@ extern "C" {
 #include "HardwareTest.h"
 #include "Flash.h"
 #include "device_config.h"
+#include "shared_types.h"
 
 extern CRC_HandleTypeDef hcrc;
 extern SPI_HandleTypeDef hspi1;
@@ -118,6 +119,7 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
+
 
 #ifdef __cplusplus
 }

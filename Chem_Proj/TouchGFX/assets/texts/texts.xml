@@ -29,10 +29,10 @@
         <Translation Language="GB">Add Pump:</Translation>
       </Text>
       <Text Id="__SingleUse_4GQ5" Alignment="Center" TypographyId="Display">
-        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value1&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_W5GW" Alignment="Center" TypographyId="Display">
-        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value2&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_5VAJ" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">Chemicals</Translation>

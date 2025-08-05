@@ -57,3 +57,74 @@ void Model::setPumpDensity(int8_t index, float new_density)
         #endif
     }
 }
+
+const ChemicalRecipe_t& Model::getRecipeData(int recipe_index) const
+{
+    // Safety check to prevent reading out of the array bounds
+    if (recipe_index < 0 || recipe_index >= NUM_CHEMICAL_RECIPES) {
+        recipe_index = 0;
+    }
+    return myDeviceConfig.recipes[recipe_index];
+}
+
+std::vector<int> Model::getEnabledPumpIndices() const
+{
+    std::vector<int> enabled_pumps;
+    for (int i = 0; i < NUM_PUMPS; ++i) {
+        if (myDeviceConfig.PumpEnable[i] == 1) {
+            enabled_pumps.push_back(i);
+        }
+    }
+    return enabled_pumps;
+}
+
+int8_t Model::getVolumeUnit() const
+{
+    return myDeviceConfig.VolumeUnit;
+}
+
+
+// --- SETTER IMPLEMENTATIONS (Placeholders for now) ---
+// We will fill these in later when we wire up the buttons.
+// For now, they just need to exist so the program can compile.
+
+void Model::updatePumpSetup(int recipe_index, int setup_index, const PumpSetup_t& data)
+{
+    // A safety check
+    if (recipe_index >= 0 && recipe_index < NUM_CHEMICAL_RECIPES &&
+        setup_index >= 0 && setup_index < MAX_PUMP_SETUPS_PER_CHEMICAL) {
+
+        // 1. Update the master data structure in RAM
+        myDeviceConfig.recipes[recipe_index].pump_setups[setup_index] = data;
+
+        // 2. Save the entire configuration to flash
+        #ifndef SIMULATOR
+        Config_Save(&myDeviceConfig);
+        #endif
+    }
+}
+
+void Model::addPumpToRecipe(int recipe_index)
+{
+    // Future logic will go here
+}
+
+void Model::removePumpFromRecipe(int recipe_index)
+{
+    // Future logic will go here
+}
+
+void Model::updateChemicalName(int recipe_index, const char* name)
+{
+    // Future logic will go here
+}
+
+void Model::updateTotalVolume(int recipe_index, float volume)
+{
+    // Future logic will go here
+}
+
+void Model::updateVolumeUnit(int8_t unit)
+{
+    // Future logic will go here
+}

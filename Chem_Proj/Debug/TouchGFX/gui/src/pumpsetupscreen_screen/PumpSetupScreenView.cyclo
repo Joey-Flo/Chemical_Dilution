@@ -66,8 +66,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<CustomKeyboard, short unsigned int>::~Callback()	1
 ../TouchGFX/gui/include/gui/common/CustomKeyboard.hpp:25:13:CustomKeyboard::~CustomKeyboard()	1
 ../TouchGFX/gui/include/gui/common/CustomKeyboard.hpp:25:13:virtual CustomKeyboard::~CustomKeyboard()	1
-../TouchGFX/gui/include/gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp:12:13:PumpSetupScreenView::~PumpSetupScreenView()	1
-../TouchGFX/gui/include/gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp:12:13:virtual PumpSetupScreenView::~PumpSetupScreenView()	1
+../TouchGFX/gui/include/gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp:13:13:PumpSetupScreenView::~PumpSetupScreenView()	1
+../TouchGFX/gui/include/gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp:13:13:virtual PumpSetupScreenView::~PumpSetupScreenView()	1
 ../TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.cpp:13:1:PumpSetupScreenView::PumpSetupScreenView()	1
 ../TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.cpp:36:6:virtual void PumpSetupScreenView::setupScreen()	4
 ../TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.cpp:65:6:virtual void PumpSetupScreenView::tearDownScreen()	1

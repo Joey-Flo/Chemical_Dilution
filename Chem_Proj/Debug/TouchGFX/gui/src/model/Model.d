@@ -1,5 +1,5 @@
 TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
- ../TouchGFX/gui/include/gui/model/Model.hpp \
+ ../TouchGFX/gui/include/gui/model/Model.hpp ../Core/Inc/shared_types.h \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../Core/Inc/device_config.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
@@ -31,8 +31,10 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
+ ../Core/Inc/shared_types.h
 ../TouchGFX/gui/include/gui/model/Model.hpp:
+../Core/Inc/shared_types.h:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../Core/Inc/device_config.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
@@ -65,3 +67,4 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
+../Core/Inc/shared_types.h:

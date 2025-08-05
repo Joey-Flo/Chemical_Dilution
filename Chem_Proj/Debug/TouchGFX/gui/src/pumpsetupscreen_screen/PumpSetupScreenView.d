@@ -42,7 +42,7 @@ TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
- ../TouchGFX/gui/include/gui/model/Model.hpp \
+ ../TouchGFX/gui/include/gui/model/Model.hpp ../Core/Inc/shared_types.h \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -96,7 +96,8 @@ TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
+ ../Core/Inc/shared_types.h
 ../TouchGFX/gui/include/gui/pumpsetupscreen_screen/PumpSetupScreenView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -140,6 +141,7 @@ TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
+../Core/Inc/shared_types.h:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
@@ -194,3 +196,4 @@ TouchGFX/gui/src/pumpsetupscreen_screen/PumpSetupScreenView.o: \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
+../Core/Inc/shared_types.h:

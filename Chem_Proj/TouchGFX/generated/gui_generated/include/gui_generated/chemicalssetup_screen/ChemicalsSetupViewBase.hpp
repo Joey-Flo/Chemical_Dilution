@@ -49,7 +49,7 @@ protected:
     touchgfx::Box VolumeBox;
     touchgfx::TextArea ChemVolumeText;
     touchgfx::TextArea ChemNameText;
-    touchgfx::TextArea ChemicalNumber;
+    touchgfx::TextArea chemicalLabel1;
     touchgfx::Button NameEdit;
     touchgfx::Button VolumeEdit;
     touchgfx::ToggleButton toggleButton1;
@@ -70,9 +70,9 @@ protected:
     /*
      * Wildcard Buffers
      */
-    static const uint16_t NAMEEDITTEXT_SIZE = 10;
+    static const uint16_t NAMEEDITTEXT_SIZE = 20;
     touchgfx::Unicode::UnicodeChar NameEditTextBuffer[NAMEEDITTEXT_SIZE];
-    static const uint16_t VOLUMEEDITTEXT_SIZE = 10;
+    static const uint16_t VOLUMEEDITTEXT_SIZE = 12;
     touchgfx::Unicode::UnicodeChar VolumeEditTextBuffer[VOLUMEEDITTEXT_SIZE];
 
 private:

@@ -4,6 +4,7 @@
 #include <gui_generated/pumpsetupscreen_screen/PumpSetupScreenViewBase.hpp>
 #include <gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp>
 #include <gui/common/CustomKeyboard.hpp>
+#include "shared_types.h"
 
 class PumpSetupScreenView : public PumpSetupScreenViewBase
 {
@@ -37,7 +38,6 @@ private:
     // --- MEMBER VARIABLE ARRAYS FOR UI WIDGETS ---
     // By storing pointers to our widgets in arrays, we can easily manage them in loops.
 
-    static const int NUM_PUMPS = 8;
 
     // Array to hold the 8 toggle buttons for enabling/disabling pumps
     touchgfx::ToggleButton* pumpToggleButtons[NUM_PUMPS];

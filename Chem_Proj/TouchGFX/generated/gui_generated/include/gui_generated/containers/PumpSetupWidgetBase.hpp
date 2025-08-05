@@ -10,7 +10,6 @@
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/containers/ScrollableContainer.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
@@ -43,14 +42,13 @@ protected:
     touchgfx::Button LEditButton;
     touchgfx::TextAreaWithOneWildcard LTextEdit;
     touchgfx::TextArea LText;
-    touchgfx::ScrollableContainer scrollableContainer1;
     touchgfx::Box PumpSelectBox;
     touchgfx::ToggleButton SelectPumpButton;
     touchgfx::Line BottonDivideLine;
     touchgfx::PainterRGB565 BottonDivideLinePainter;
     touchgfx::Line TopDivideLine;
     touchgfx::PainterRGB565 TopDivideLinePainter;
-    touchgfx::TextAreaWithOneWildcard textArea2;
+    touchgfx::TextAreaWithOneWildcard PumpSelectText;
     PumpDropDownList PumpDropDown;
 
     /*
@@ -62,8 +60,8 @@ protected:
     touchgfx::Unicode::UnicodeChar MTextEditBuffer[MTEXTEDIT_SIZE];
     static const uint16_t LTEXTEDIT_SIZE = 10;
     touchgfx::Unicode::UnicodeChar LTextEditBuffer[LTEXTEDIT_SIZE];
-    static const uint16_t TEXTAREA2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar textArea2Buffer[TEXTAREA2_SIZE];
+    static const uint16_t PUMPSELECTTEXT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar PumpSelectTextBuffer[PUMPSELECTTEXT_SIZE];
 
 private:
 

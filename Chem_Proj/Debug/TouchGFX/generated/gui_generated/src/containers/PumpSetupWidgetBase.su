@@ -99,8 +99,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:46:7:touchgfx::ScrollableContainer::~ScrollableContainer()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:46:7:virtual touchgfx::ScrollableContainer::~ScrollableContainer()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:touchgfx::ToggleButton::ToggleButton()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:touchgfx::ToggleButton::~ToggleButton()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:virtual touchgfx::ToggleButton::~ToggleButton()	16	static
@@ -110,10 +108,10 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:50:7:virtual touchgfx::Line::~Line()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:touchgfx::PainterRGB565::~PainterRGB565()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:virtual touchgfx::PainterRGB565::~PainterRGB565()	16	static
-../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:9:1:PumpSetupWidgetBase::PumpSetupWidgetBase()	368	static
-../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:123:1:PumpSetupWidgetBase::~PumpSetupWidgetBase()	16	static
-../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:123:1:virtual PumpSetupWidgetBase::~PumpSetupWidgetBase()	16	static
-../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:128:6:virtual void PumpSetupWidgetBase::initialize()	16	static
+../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:9:1:PumpSetupWidgetBase::PumpSetupWidgetBase()	360	static
+../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:118:1:PumpSetupWidgetBase::~PumpSetupWidgetBase()	16	static
+../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:118:1:virtual PumpSetupWidgetBase::~PumpSetupWidgetBase()	16	static
+../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp:123:6:virtual void PumpSetupWidgetBase::initialize()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:95:10:void touchgfx::Line::setStart(T, T) [with T = int]	48	static

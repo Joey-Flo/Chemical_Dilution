@@ -27,6 +27,10 @@ public:
 
     virtual ~ChemicalsSetupPresenter() {}
 
+    void loadScreenData(int page_index);
+
+    void savePumpSetupData(int page_index, int setup_index, const PumpSetup_t& data);
+
 private:
     ChemicalsSetupPresenter();
 

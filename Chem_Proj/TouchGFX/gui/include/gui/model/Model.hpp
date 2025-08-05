@@ -2,8 +2,11 @@
 #define MODEL_HPP
 
 #include <cstdint>
+#include "shared_types.h"
+#include <vector>
 
 class ModelListener;
+
 
 class Model
 {
@@ -23,6 +26,23 @@ public:
     }
 
     void tick();
+
+    const ChemicalRecipe_t& getRecipeData(int recipe_index) const;
+    std::vector<int> getEnabledPumpIndices() const;
+
+    // Returns the global volume unit (0=mL, 1=Oz)
+    int8_t getVolumeUnit() const;
+
+
+    // --- SETTERS (for saving data - we will implement these later) ---
+
+    void updatePumpSetup(int recipe_index, int setup_index, const PumpSetup_t& data);
+    void addPumpToRecipe(int recipe_index);
+    void removePumpFromRecipe(int recipe_index);
+    void updateChemicalName(int recipe_index, const char* name);
+    void updateTotalVolume(int recipe_index, float volume);
+    void updateVolumeUnit(int8_t unit); // Corresponds to the global setting
+
 protected:
     ModelListener* modelListener;
 };

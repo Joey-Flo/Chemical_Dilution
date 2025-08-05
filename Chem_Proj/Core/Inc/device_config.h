@@ -9,29 +9,13 @@ extern "C" {
 
 #include <stdint.h>
 #include "stm32l4xx_hal.h"
+#include "shared_types.h"
 
 // --- Configuration Constants ---
 #define CONFIG_MAGIC_NUMBER 0xFEEDC0DE
 #define CONFIG_VERSION      2 // <-- Increment version again due to new layout
 
-#define MAX_PUMP_SETUPS_PER_CHEMICAL 3
-#define NUM_CHEMICAL_RECIPES 8
-#define NUM_PUMPS 8
 
-// --- Data Structure Blueprints ---
-
-typedef struct __attribute__((packed)) {
-    int8_t  pump_index;
-    float   dispense_small;
-    float   dispense_medium;
-    float   dispense_large;
-} PumpSetup_t;
-
-typedef struct __attribute__((packed)) {
-    char  name[20];
-    float total_dispense_volume;
-    PumpSetup_t pump_setups[MAX_PUMP_SETUPS_PER_CHEMICAL];
-} ChemicalRecipe_t;
 
 
 // --- The Main Device Configuration Structure ---

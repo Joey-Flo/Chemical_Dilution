@@ -81,11 +81,11 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     ChemNameText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GU10));
     Page1.add(ChemNameText);
 
-    ChemicalNumber.setXY(13, 28);
-    ChemicalNumber.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
-    ChemicalNumber.setLinespacing(0);
-    ChemicalNumber.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1PTH));
-    Page1.add(ChemicalNumber);
+    chemicalLabel1.setXY(13, 28);
+    chemicalLabel1.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    chemicalLabel1.setLinespacing(0);
+    chemicalLabel1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1PTH));
+    Page1.add(chemicalLabel1);
 
     NameEdit.setXY(207, 59);
     NameEdit.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));

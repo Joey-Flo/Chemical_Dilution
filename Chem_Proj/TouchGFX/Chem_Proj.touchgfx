@@ -1352,7 +1352,7 @@
                   },
                   {
                     "Type": "TextArea",
-                    "Name": "ChemicalNumber",
+                    "Name": "chemicalLabel1",
                     "X": 13,
                     "Y": 28,
                     "Width": 91,
@@ -1462,7 +1462,7 @@
                     "TextRotation": "0",
                     "Wildcard1": {
                       "UseBuffer": true,
-                      "BufferSize": 10
+                      "BufferSize": 20
                     }
                   },
                   {
@@ -1476,7 +1476,7 @@
                     "TextRotation": "0",
                     "Wildcard1": {
                       "UseBuffer": true,
-                      "BufferSize": 10
+                      "BufferSize": 12
                     }
                   }
                 ]
@@ -1716,19 +1716,6 @@
             "AutoSize": true
           },
           {
-            "Type": "ScrollableContainer",
-            "Name": "scrollableContainer1",
-            "X": 66,
-            "Y": 34,
-            "Width": 80,
-            "Height": 74,
-            "HorizontalScrollEnabled": true,
-            "VerticalScrollEnabled": true,
-            "ScrollbarsVisibleOnPressed": true,
-            "ScrollbarsAlpha": 255,
-            "Components": []
-          },
-          {
             "Type": "Box",
             "Name": "PumpSelectBox",
             "X": 68,
@@ -1787,7 +1774,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea2",
+            "Name": "PumpSelectText",
             "X": 68,
             "Y": 11,
             "Width": 80,
@@ -1802,8 +1789,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "PumpDropDown",
-            "X": 59,
-            "Y": 40,
+            "X": 61,
+            "Y": 36,
             "Width": 93,
             "Height": 212,
             "Visible": false,

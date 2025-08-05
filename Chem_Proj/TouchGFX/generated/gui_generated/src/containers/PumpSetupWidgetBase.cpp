@@ -76,11 +76,6 @@ PumpSetupWidgetBase::PumpSetupWidgetBase()
     LText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_W63N));
     add(LText);
 
-    scrollableContainer1.setPosition(66, 34, 80, 74);
-    scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    scrollableContainer1.setScrollbarsAlpha(255);
-    add(scrollableContainer1);
-
     PumpSelectBox.setPosition(68, 11, 80, 23);
     PumpSelectBox.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(PumpSelectBox);
@@ -107,15 +102,15 @@ PumpSetupWidgetBase::PumpSetupWidgetBase()
     TopDivideLine.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     add(TopDivideLine);
 
-    textArea2.setPosition(68, 11, 80, 23);
-    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea2.setLinespacing(0);
-    textArea2Buffer[0] = 0;
-    textArea2.setWildcard(textArea2Buffer);
-    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RBPU));
-    add(textArea2);
+    PumpSelectText.setPosition(68, 11, 80, 23);
+    PumpSelectText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    PumpSelectText.setLinespacing(0);
+    PumpSelectTextBuffer[0] = 0;
+    PumpSelectText.setWildcard(PumpSelectTextBuffer);
+    PumpSelectText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RBPU));
+    add(PumpSelectText);
 
-    PumpDropDown.setXY(59, 40);
+    PumpDropDown.setXY(61, 36);
     PumpDropDown.setVisible(false);
     add(PumpDropDown);
 }
