@@ -6,7 +6,8 @@
 #include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-PumpSetupWidgetBase::PumpSetupWidgetBase()
+PumpSetupWidgetBase::PumpSetupWidgetBase() :
+    buttonCallback(this, &PumpSetupWidgetBase::buttonCallbackHandler)
 {
     setWidth(240);
     setHeight(108);
@@ -16,6 +17,7 @@ PumpSetupWidgetBase::PumpSetupWidgetBase()
 
     SEditButton.setXY(39, 50);
     SEditButton.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    SEditButton.setAction(buttonCallback);
     add(SEditButton);
 
     STextEdit.setPosition(3, 76, 73, 18);
@@ -123,4 +125,15 @@ PumpSetupWidgetBase::~PumpSetupWidgetBase()
 void PumpSetupWidgetBase::initialize()
 {
     PumpDropDown.initialize();
+}
+
+void PumpSetupWidgetBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &SEditButton)
+    {
+        //SmallEdit
+        //When SEditButton clicked execute C++ code
+        //Execute C++ code
+//        s_edit_button_clicked();
+    }
 }

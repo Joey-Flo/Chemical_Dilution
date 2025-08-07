@@ -103,3 +103,20 @@ void ChemicalsSetupPresenter::newValueEntered(const char* text)
     // 4. Reload the screen to show the final, saved value (or the old value if input was invalid).
     loadScreenData(activePageIndex);
 }
+
+void ChemicalsSetupPresenter::editPumpVolume(int setupIndex, int fieldIndex)
+{
+    // The View or a child widget has told us the user wants to edit a field.
+
+    // 1. Store the context of which specific field is being edited.
+    //    We will need this later when the user presses "Enter".
+    activeSetupIndex = setupIndex;
+    activeFieldIndex = fieldIndex;
+
+    // We also need to set a general state flag so our 'newValueEntered'
+    // function knows what kind of data to expect.
+    currentlyEditing = FIELD_PUMP_VOLUME; // 'FIELD_PUMP_VOLUME' is from your enum
+
+    // 2. Command the View to perform the UI action (show the keyboard).
+    view.showKeyboard();
+}

@@ -88,7 +88,9 @@ TouchGFX/gui/src/containers/PumpSetupWidget.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp
+ ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp \
+ ../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp \
+ ../TouchGFX/gui/include/gui/model/ModelListener.hpp
 ../TouchGFX/gui/include/gui/containers/PumpSetupWidget.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpSetupWidgetBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -179,3 +181,5 @@ TouchGFX/gui/src/containers/PumpSetupWidget.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp:
+../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp:
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:

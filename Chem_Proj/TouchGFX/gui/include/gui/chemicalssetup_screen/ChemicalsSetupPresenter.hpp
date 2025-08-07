@@ -36,6 +36,8 @@ public:
     // We will still need a function to save the data later
     void newValueEntered(const char* text);
 
+    void editPumpVolume(int setupIndex, int fieldIndex);
+
 private:
     int currentlyEditingFieldID;
 
@@ -47,6 +49,15 @@ private:
     ChemicalsSetupPresenter();
 
     ChemicalsSetupView& view;
+
+    enum ActiveEditField {
+        FIELD_NONE = 0,
+        FIELD_CHEM_NAME,
+        FIELD_TOTAL_VOLUME,
+        FIELD_PUMP_VOLUME // A single ID for any S/M/L field
+    };
+    ActiveEditField currentlyEditing;
+
 };
 
 #endif // CHEMICALSSETUPPRESENTER_HPP

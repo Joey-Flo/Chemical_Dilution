@@ -1,8 +1,10 @@
 #include <gui/containers/PumpSetupWidget.hpp>
 #include <cstdio>   // For snprintf
 #include <algorithm> // For std::find
+#include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
 
 PumpSetupWidget::PumpSetupWidget() :
+	presenter(nullptr),
     volumeEditClickedCallback(nullptr),
     saveDataCallback(nullptr),
     selectPumpCallback(this, &PumpSetupWidget::selectPumpButtonClickHandler),
@@ -130,5 +132,41 @@ void PumpSetupWidget::editVolumeButtonHandler(const touchgfx::AbstractButton& sr
 
     if (field_index != -1 && volumeEditClickedCallback && volumeEditClickedCallback->isValid()) {
         volumeEditClickedCallback->execute(setupIndex, field_index);
+    }
+}
+
+void PumpSetupWidget::setPresenter(ChemicalsSetupPresenter* p)
+{
+    presenter = p;
+}
+
+// ... your existing setup() and other functions ...
+
+
+// --- NEW: Implementation of the Public API functions ---
+
+void PumpSetupWidget::s_edit_button_clicked()
+{
+    // Check if the presenter exists, then call its function
+    if (presenter)
+    {
+        // Pass our own index (setupIndex) and the field index for 'S' (0)
+        presenter->editPumpVolume(setupIndex, 0);
+    }
+}
+
+void PumpSetupWidget::m_edit_button_clicked()
+{
+    if (presenter)
+    {
+        presenter->editPumpVolume(setupIndex, 1); // 1 for Medium
+    }
+}
+
+void PumpSetupWidget::l_edit_button_clicked()
+{
+    if (presenter)
+    {
+        presenter->editPumpVolume(setupIndex, 2); // 2 for Large
     }
 }

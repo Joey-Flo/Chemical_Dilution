@@ -7,6 +7,9 @@
 #include "shared_types.h"
 #include <touchgfx/widgets/AbstractButton.hpp> // Needed for button callback signatures
 
+class ChemicalsSetupPresenter;
+
+
 class PumpSetupWidget : public PumpSetupWidgetBase
 {
 public:
@@ -18,7 +21,6 @@ public:
 
     void setup(int setup_index, const PumpSetup_t& data, int8_t unit);
     void setAvailablePumps(const std::vector<int>& enabled_pumps);
-
     // --- PUBLIC CALLBACKS ---
     // These are the "phone jacks" that the parent screen plugs into to listen to us.
 
@@ -28,23 +30,31 @@ public:
     // Signals that our internal data has changed and needs to be saved
     touchgfx::GenericCallback<int, const PumpSetup_t&>* saveDataCallback;
 
+    void setPresenter(ChemicalsSetupPresenter* p);
+    void s_edit_clicked(); // Simple function for the S button
+    void m_edit_clicked(); // Simple function for the M button
+    void l_edit_clicked(); // Simple function for the L button
+
+    void s_edit_button_clicked();
+    void m_edit_button_clicked();
+    void l_edit_button_clicked();
+
 protected:
     // --- INTERNAL EVENT HANDLERS ---
     // These functions are called by our own child widgets.
 
     // Called when the main "SelectPumpButton" toggle button is clicked
-    void selectPumpButtonClickHandler(const touchgfx::AbstractButton& src);
+    virtual void selectPumpButtonClickHandler(const touchgfx::AbstractButton& src);
 
     // Called when a pump is chosen from our internal dropdown list
-    void dropdownPumpSelectedHandler(int pump_index);
+    virtual void dropdownPumpSelectedHandler(int pump_index);
 
     // A single, consolidated handler for all three S/M/L edit buttons
-    void editVolumeButtonHandler(const touchgfx::AbstractButton& src);
+    virtual void editVolumeButtonHandler(const touchgfx::AbstractButton& src);
 
 private:
     // --- PRIVATE MEMBER VARIABLES ---
 
-    int setupIndex; // Remembers if we are setup #0, #1, or #2 in the list of three
     std::vector<int> availablePumps; // Stores the list of pumps for the dropdown
     PumpSetup_t currentData; // A local copy of our own data
 
@@ -52,6 +62,10 @@ private:
     touchgfx::Callback<PumpSetupWidget, const touchgfx::AbstractButton&> selectPumpCallback;
     touchgfx::Callback<PumpSetupWidget, int> dropdownCallback;
     touchgfx::Callback<PumpSetupWidget, const touchgfx::AbstractButton&> editVolumeCallback;
+
+    int setupIndex;
+    // --- Pointer to the "manager" of the screen ---
+    ChemicalsSetupPresenter* presenter;
 };
 
 #endif // PUMPSETUPWIDGET_HPP

@@ -1906,7 +1906,19 @@
             "CustomContainerDefinitionName": "PumpDropDownList"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "SmallEdit",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SEditButton"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "s_edit_button_clicked();"
+            }
+          }
+        ]
       },
       {
         "Name": "PumpDropDownList",

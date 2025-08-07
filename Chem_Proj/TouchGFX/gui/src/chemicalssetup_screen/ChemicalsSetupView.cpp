@@ -36,6 +36,16 @@ ChemicalsSetupView::ChemicalsSetupView() :
 
 void ChemicalsSetupView::setupScreen()
 {
+
+    ChemicalsSetupViewBase::setupScreen();
+
+    // --- THIS IS THE CRITICAL CONNECTION ---
+    // Give each child widget a pointer to the presenter.
+    for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+    {
+        pumpSetupWidgets[i]->setPresenter(presenter);
+    }
+
     ChemicalsSetupViewBase::setupScreen();
 
     // Store the current page index when the screen is entered.
