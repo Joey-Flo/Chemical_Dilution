@@ -1,3 +1,5 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	1
@@ -8,12 +10,17 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	1
 ../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp:28:13:ChemicalsSetupPresenter::~ChemicalsSetupPresenter()	1
 ../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp:28:13:virtual ChemicalsSetupPresenter::~ChemicalsSetupPresenter()	1
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:4:1:ChemicalsSetupPresenter::ChemicalsSetupPresenter(ChemicalsSetupView&)	1
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:10:6:virtual void ChemicalsSetupPresenter::activate()	1
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:15:6:virtual void ChemicalsSetupPresenter::deactivate()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:5:1:ChemicalsSetupPresenter::ChemicalsSetupPresenter(ChemicalsSetupView&)	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:11:6:virtual void ChemicalsSetupPresenter::activate()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:16:6:virtual void ChemicalsSetupPresenter::deactivate()	1
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:133:14:std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl()	1
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:20:6:void ChemicalsSetupPresenter::loadScreenData(int)	1
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:33:6:void ChemicalsSetupPresenter::savePumpSetupData(int, int, const PumpSetup_t&)	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:21:6:void ChemicalsSetupPresenter::loadScreenData(int)	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:34:6:void ChemicalsSetupPresenter::savePumpSetupData(int, int, const PumpSetup_t&)	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:40:6:void ChemicalsSetupPresenter::editField(int)	2
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:56:6:void ChemicalsSetupPresenter::newValueEntered(const char*)	8
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:733:7:std::vector<_Tp, _Alloc>::~vector() [with _Tp = int; _Alloc = std::allocator<int>]	1
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:367:7:std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = int; _Alloc = std::allocator<int>]	1
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:301:7:std::_Vector_base<_Tp, _Alloc>::_Tp_alloc_type& std::_Vector_base<_Tp, _Alloc>::_M_get_Tp_allocator() [with _Tp = int; _Alloc = std::allocator<int>]	1
@@ -22,3 +29,8 @@ C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\arm-none-eabi\include\c++\13.3.1\bits\stl_construct.h:182:5:void std::_Destroy(_ForwardIterator, _ForwardIterator) [with _ForwardIterator = int*]	1
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\arm-none-eabi\include\c++\13.3.1\bits\stl_construct.h:172:9:static void std::_Destroy_aux<true>::__destroy(_ForwardIterator, _ForwardIterator) [with _ForwardIterator = int*]	1
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\arm-none-eabi\include\c++\13.3.1\bits\new_allocator.h:156:7:void std::__new_allocator<_Tp>::deallocate(_Tp*, size_type) [with _Tp = int]	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:105:1:void __static_initialization_and_destruction_0()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:105:1:void __static_initialization_and_destruction_1()	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:105:1:cpp)	1
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.cpp:105:1:cpp)	1

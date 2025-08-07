@@ -5,9 +5,31 @@
 #include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
 #include "shared_types.h"
 #include <vector>
+#include <gui/common/CustomKeyboard.hpp>
 
 // We need to include this to use the Callback template
 #include <touchgfx/Callback.hpp>
+
+enum FieldID {
+    FIELD_NONE = 0,
+    FIELD_CHEM_NAME,      // ID = 1
+    FIELD_TOTAL_VOLUME,   // ID = 2
+
+    // We can create a predictable block of IDs for the pump setups.
+    // This formula leaves space for up to 10 fields per widget (S, M, L, etc.)
+    FIELD_PUMP_SETUP_START = 10,
+    FIELD_PUMP1_S = FIELD_PUMP_SETUP_START + (0 * 10) + 0, // ID = 10
+    FIELD_PUMP1_M = FIELD_PUMP_SETUP_START + (0 * 10) + 1, // ID = 11
+    FIELD_PUMP1_L = FIELD_PUMP_SETUP_START + (0 * 10) + 2, // ID = 12
+
+    FIELD_PUMP2_S = FIELD_PUMP_SETUP_START + (1 * 10) + 0, // ID = 20
+    FIELD_PUMP2_M = FIELD_PUMP_SETUP_START + (1 * 10) + 1, // ID = 21
+    FIELD_PUMP2_L = FIELD_PUMP_SETUP_START + (1 * 10) + 2, // ID = 22
+
+    FIELD_PUMP3_S = FIELD_PUMP_SETUP_START + (2 * 10) + 0, // ID = 30
+    FIELD_PUMP3_M = FIELD_PUMP_SETUP_START + (2 * 10) + 1, // ID = 31
+    FIELD_PUMP3_L = FIELD_PUMP_SETUP_START + (2 * 10) + 2  // ID = 32
+};
 
 
 class ChemicalsSetupView : public ChemicalsSetupViewBase
@@ -29,6 +51,13 @@ public:
     void volumeEditClicked();
     void unitToggleButtonClicked();
 
+    void editChemicalNameClicked();
+    void editTotalVolumeClicked();
+    void pumpSetupVolumeEditCallbackHandler(int setupIndex, int fieldIndex);
+    void showKeyboard();
+    void EnterPressed();
+    void ExitPressed();
+
 protected:
     // --- CALLBACK HANDLERS ---
     // These are the functions that get called by our child widgets (SwipeContainer, PumpSetupWidgets)
@@ -39,8 +68,11 @@ protected:
     // Called by a PumpSetupWidget when its data needs to be saved
     void pumpSetupSaveDataCallbackHandler(int setupIndex, const PumpSetup_t& data);
 
-    // Called by a PumpSetupWidget when one of its volume edit buttons is clicked
-    void pumpSetupVolumeEditCallbackHandler(int setupIndex, int fieldIndex);
+    int currentlyEditingField;
+
+    CustomKeyboard keyboard;
+
+
 
 private:
     // --- MEMBER VARIABLES ---

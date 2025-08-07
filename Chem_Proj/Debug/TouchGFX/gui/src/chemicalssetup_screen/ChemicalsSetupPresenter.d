@@ -95,7 +95,17 @@ TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp
+ ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ ../TouchGFX/gui/include/gui/common/CustomKeyboard.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp \
+ ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
+ ../TouchGFX/gui/include/gui/common/KeyboardLayout.hpp \
+ ../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp \
+ ../TouchGFX/generated/images/include/BitmapDatabase.hpp \
+ ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
+ ../TouchGFX/gui/include/gui/common/KeyboardKeyMapping.hpp
 ../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -193,3 +203,13 @@ TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupPresenter.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+../TouchGFX/gui/include/gui/common/CustomKeyboard.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:
+../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
+../TouchGFX/gui/include/gui/common/KeyboardLayout.hpp:
+../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp:
+../TouchGFX/generated/images/include/BitmapDatabase.hpp:
+../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
+../TouchGFX/gui/include/gui/common/KeyboardKeyMapping.hpp:

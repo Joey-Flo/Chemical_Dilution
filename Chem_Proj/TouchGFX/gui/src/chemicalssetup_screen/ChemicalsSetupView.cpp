@@ -2,6 +2,11 @@
 #include <cstdio> // For snprintf
 #include <cstring>
 
+
+// --- Use an enum to create a unique ID for every editable field ---
+
+
+
 // --- MODIFIED: The constructor now initializes the callback object ---
 ChemicalsSetupView::ChemicalsSetupView() :
     // Initialize our internal callback object, linking it to our new handler function.
@@ -22,6 +27,10 @@ ChemicalsSetupView::ChemicalsSetupView() :
         pumpSetupWidgets[i]->saveDataCallback = &pumpSetupSaveCallback;
         pumpSetupWidgets[i]->volumeEditClickedCallback = &pumpSetupVolumeEditCallback;
     }
+
+    keyboard.setPosition(0, 115, 240, 180);
+    add(keyboard);
+    keyboard.setVisible(false);
 }
 
 
@@ -110,13 +119,72 @@ void ChemicalsSetupView::pumpSetupSaveDataCallbackHandler(int setupIndex, const 
     presenter->savePumpSetupData(currentPageIndex, setupIndex, data);
 }
 
-// This handler is called by ANY of the three PumpSetupWidgets when an edit button is clicked.
 void ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler(int setupIndex, int fieldIndex)
 {
-    // TODO: Implement keyboard logic here.
-    // For now, it's an empty placeholder.
-    // Example: presenter->editPumpVolume(currentPageIndex, setupIndex, fieldIndex);
+    // Calculate the unique ID and pass it to the presenter.
+    int fieldID = FIELD_PUMP_SETUP_START + (setupIndex * 10) + fieldIndex;
+    presenter->editField(fieldID);
 }
+
+
+// The showKeyboard() function doesn't need to change at all.
+void ChemicalsSetupView::showKeyboard()
+{
+    // Make the keyboard and its extra buttons visible
+    keyboard.setVisible(true);
+    KeyboardExtras.setVisible(true);
+
+    // Invalidate them to force a redraw
+    keyboard.invalidate();
+    KeyboardExtras.invalidate();
+}
+
+void ChemicalsSetupView::EnterPressed()
+{
+    // 1. Hide the keyboard and its extra buttons.
+    keyboard.setVisible(false);
+    keyboard.invalidate();
+    KeyboardExtras.setVisible(false);
+    KeyboardExtras.invalidate();
+
+    // 2. Convert the keyboard's 16-bit Unicode buffer to a standard 8-bit C-string.
+    char utf8_buffer[20];
+    memset(utf8_buffer, 0, 20); // Clear the buffer to be safe
+    Unicode::toUTF8(keyboard.getBuffer(), (uint8_t*)utf8_buffer, 20);
+
+    // 3. The View's only job is to report the event to the Presenter.
+    //    It passes the unique ID of the field that was being edited and the new text.
+    presenter->newValueEntered(utf8_buffer);
+
+    // 4. Clean up the state.
+    keyboard.clearBuffer();
+    currentlyEditingField = FIELD_NONE; // Reset the "what am I editing?" state
+}
+
+
+// --- VIRTUAL HANDLER FOR "EXIT" BUTTON CALLBACK ---
+void ChemicalsSetupView::ExitPressed()
+{
+    // If the user presses exit, we just hide the keyboard and discard any input.
+
+    // 1. Hide the keyboard and its extra buttons.
+    keyboard.setVisible(false);
+    keyboard.invalidate();
+    KeyboardExtras.setVisible(false);
+    KeyboardExtras.invalidate();
+
+    // 2. Clean up the state.
+    keyboard.clearBuffer();
+    currentlyEditingField = FIELD_NONE; // Reset the "what am I editing?" state
+}
+
+//// This handler is called by ANY of the three PumpSetupWidgets when an edit button is clicked.
+//void ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler(int setupIndex, int fieldIndex)
+//{
+//    // TODO: Implement keyboard logic here.
+//    // For now, it's an empty placeholder.
+//    // Example: presenter->editPumpVolume(currentPageIndex, setupIndex, fieldIndex);
+//}
 
 
 // --- Placeholder implementations for your button clicks ---

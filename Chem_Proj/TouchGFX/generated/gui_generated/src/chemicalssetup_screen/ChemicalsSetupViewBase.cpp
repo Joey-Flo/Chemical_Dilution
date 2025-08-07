@@ -89,10 +89,12 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     NameEdit.setXY(207, 59);
     NameEdit.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    NameEdit.setAction(buttonCallback);
     Page1.add(NameEdit);
 
     VolumeEdit.setXY(207, 93);
     VolumeEdit.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    VolumeEdit.setAction(buttonCallback);
     Page1.add(VolumeEdit);
 
     toggleButton1.setXY(119, 26);
@@ -167,6 +169,30 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     swipeContainer1.setSelectedPage(0);
     add(swipeContainer1);
+
+    KeyboardExtras.setPosition(0, 0, 250, 320);
+    KeyboardExtras.setVisible(false);
+    box1_1.setPosition(0, 295, 240, 25);
+    box1_1.setColor(touchgfx::Color::getColorFromRGB(196, 196, 196));
+    KeyboardExtras.add(box1_1);
+
+    ExitButton.setXY(9, 296);
+    ExitButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    ExitButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_1H47));
+    ExitButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    ExitButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ExitButton.setAction(buttonCallback);
+    KeyboardExtras.add(ExitButton);
+
+    EnterButton.setXY(170, 296);
+    EnterButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    EnterButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_UC02));
+    EnterButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    EnterButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    EnterButton.setAction(buttonCallback);
+    KeyboardExtras.add(EnterButton);
+
+    add(KeyboardExtras);
 }
 
 ChemicalsSetupViewBase::~ChemicalsSetupViewBase()
@@ -189,5 +215,33 @@ void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //When BackButton clicked change screen to HomeScreen
         //Go to HomeScreen with no screen transition
         application().gotoHomeScreenScreenNoTransition();
+    }
+    if (&src == &EnterButton)
+    {
+        //Enter
+        //When EnterButton clicked call virtual function
+        //Call EnterPressed
+        EnterPressed();
+    }
+    if (&src == &ExitButton)
+    {
+        //Exit
+        //When ExitButton clicked call virtual function
+        //Call ExitPressed
+        ExitPressed();
+    }
+    if (&src == &VolumeEdit)
+    {
+        //TotalVolumeEdit
+        //When VolumeEdit clicked execute C++ code
+        //Execute C++ code
+        presenter->editField(2);
+    }
+    if (&src == &NameEdit)
+    {
+        //NameEdit
+        //When NameEdit clicked execute C++ code
+        //Execute C++ code
+        presenter->editField(1);
     }
 }

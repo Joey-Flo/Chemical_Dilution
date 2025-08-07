@@ -31,7 +31,19 @@ public:
 
     void savePumpSetupData(int page_index, int setup_index, const PumpSetup_t& data);
 
+    void editField(int fieldID);
+
+    // We will still need a function to save the data later
+    void newValueEntered(const char* text);
+
 private:
+    int currentlyEditingFieldID;
+
+    // We still need these to remember the context for S/M/L fields
+    int activePageIndex;
+    int activeSetupIndex;
+    int activeFieldIndex;
+
     ChemicalsSetupPresenter();
 
     ChemicalsSetupView& view;

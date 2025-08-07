@@ -1531,6 +1531,71 @@
                 "Components": []
               }
             ]
+          },
+          {
+            "Type": "Container",
+            "Name": "KeyboardExtras",
+            "Width": 250,
+            "Height": 320,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box1_1",
+                "Y": 295,
+                "Width": 240,
+                "Height": 25,
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ExitButton",
+                "X": 9,
+                "Y": 296,
+                "Width": 62,
+                "Height": 23,
+                "Pressed": "LongButtonPressed Resized.png",
+                "Released": "LongButtonUnpressed Resized.png",
+                "TextId": "__SingleUse_1H47",
+                "ReleasedColor": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "EnterButton",
+                "X": 170,
+                "Y": 296,
+                "Width": 62,
+                "Height": 23,
+                "Pressed": "LongButtonPressed Resized.png",
+                "Released": "LongButtonUnpressed Resized.png",
+                "TextId": "__SingleUse_UC02",
+                "ReleasedColor": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -1544,6 +1609,50 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "HomeScreen"
+            }
+          },
+          {
+            "InteractionName": "Enter",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "EnterButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "EnterPressed"
+            }
+          },
+          {
+            "InteractionName": "Exit",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ExitButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ExitPressed"
+            }
+          },
+          {
+            "InteractionName": "TotalVolumeEdit",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "VolumeEdit"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->editField(2);"
+            }
+          },
+          {
+            "InteractionName": "NameEdit",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "NameEdit"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->editField(1);"
             }
           }
         ]

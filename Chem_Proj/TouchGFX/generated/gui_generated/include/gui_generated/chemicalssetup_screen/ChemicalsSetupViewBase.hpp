@@ -18,6 +18,7 @@
 #include <gui/containers/PumpSetupWidget.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class ChemicalsSetupViewBase : public touchgfx::View<ChemicalsSetupPresenter>
 {
@@ -25,6 +26,18 @@ public:
     ChemicalsSetupViewBase();
     virtual ~ChemicalsSetupViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void EnterPressed()
+    {
+        // Override and implement this function in ChemicalsSetup
+    }
+    virtual void ExitPressed()
+    {
+        // Override and implement this function in ChemicalsSetup
+    }
 
 protected:
     FrontendApplication& application() {
@@ -66,6 +79,10 @@ protected:
     touchgfx::Container Page6;
     touchgfx::Container Page7;
     touchgfx::Container Page8;
+    touchgfx::Container KeyboardExtras;
+    touchgfx::Box box1_1;
+    touchgfx::ButtonWithLabel ExitButton;
+    touchgfx::ButtonWithLabel EnterButton;
 
     /*
      * Wildcard Buffers

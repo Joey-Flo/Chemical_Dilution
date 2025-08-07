@@ -16,6 +16,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_UC02" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Enter</Translation>
+      </Text>
+      <Text Id="__SingleUse_1H47" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Exit</Translation>
+      </Text>
       <Text Id="__SingleUse_FKHI" Alignment="Left" TypographyId="Display">
         <Translation Language="GB">Volume:</Translation>
       </Text>

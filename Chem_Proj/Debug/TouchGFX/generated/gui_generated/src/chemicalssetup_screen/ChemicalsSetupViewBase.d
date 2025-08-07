@@ -95,6 +95,7 @@ TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBas
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
@@ -195,6 +196,7 @@ TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBas
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:

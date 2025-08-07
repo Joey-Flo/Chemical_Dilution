@@ -1,6 +1,8 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
 #include "device_config.h"
+#include <cstring>
+
 extern DeviceConfiguration_t myDeviceConfig; // The model has access to the real data
 
 Model::Model() : modelListener(0)
@@ -104,6 +106,63 @@ void Model::updatePumpSetup(int recipe_index, int setup_index, const PumpSetup_t
     }
 }
 
+void Model::updateSinglePumpVolume(int recipeIndex, int setupIndex, int fieldIndex, float newVolume)
+{
+    // 1. --- Safety Checks ---
+    // It's crucial to ensure the indices provided are valid to prevent memory corruption.
+    if (recipeIndex < 0 || recipeIndex >= NUM_CHEMICAL_RECIPES ||
+        setupIndex < 0 || setupIndex >= MAX_PUMP_SETUPS_PER_CHEMICAL ||
+        fieldIndex < 0 || fieldIndex > 2) // fieldIndex can only be 0, 1, or 2
+    {
+        // If any index is out of bounds, do nothing to protect the system.
+        return;
+    }
+
+    // 2. --- Locate the Specific Data ---
+    // Get a direct pointer to the pump setup struct we need to modify.
+    // This makes the following code cleaner and easier to read.
+    PumpSetup_t* setup = &myDeviceConfig.recipes[recipeIndex].pump_setups[setupIndex];
+
+    // 3. --- Update the Correct Field ---
+    // Use a switch statement on the fieldIndex to modify the correct variable.
+    switch (fieldIndex)
+    {
+        case 0: // 0 corresponds to the "Small" field
+            setup->dispense_small = newVolume;
+            break;
+        case 1: // 1 corresponds to the "Medium" field
+            setup->dispense_medium = newVolume;
+            break;
+        case 2: // 2 corresponds to the "Large" field
+            setup->dispense_large = newVolume;
+            break;
+    }
+
+    // 4. --- Save to Flash ---
+    // After updating the value in RAM, save the entire configuration
+    // back to flash memory to make the change persistent.
+    #ifndef SIMULATOR
+        Config_Save(&myDeviceConfig);
+    #endif
+}
+
+void Model::updateChemicalName(int recipe_index, const char* name)
+{
+    if (recipe_index >= 0 && recipe_index < NUM_CHEMICAL_RECIPES) {
+        strncpy(myDeviceConfig.recipes[recipe_index].name, name, sizeof(myDeviceConfig.recipes[recipe_index].name) - 1);
+        myDeviceConfig.recipes[recipe_index].name[sizeof(myDeviceConfig.recipes[recipe_index].name) - 1] = '\0';
+        Config_Save(&myDeviceConfig);
+    }
+}
+
+void Model::updateTotalVolume(int recipe_index, float volume)
+{
+    if (recipe_index >= 0 && recipe_index < NUM_CHEMICAL_RECIPES) {
+        myDeviceConfig.recipes[recipe_index].total_dispense_volume = volume;
+        Config_Save(&myDeviceConfig);
+    }
+}
+
 void Model::addPumpToRecipe(int recipe_index)
 {
     // Future logic will go here
@@ -114,15 +173,7 @@ void Model::removePumpFromRecipe(int recipe_index)
     // Future logic will go here
 }
 
-void Model::updateChemicalName(int recipe_index, const char* name)
-{
-    // Future logic will go here
-}
 
-void Model::updateTotalVolume(int recipe_index, float volume)
-{
-    // Future logic will go here
-}
 
 void Model::updateVolumeUnit(int8_t unit)
 {
