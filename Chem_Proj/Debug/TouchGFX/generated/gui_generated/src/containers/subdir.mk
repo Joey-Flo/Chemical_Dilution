@@ -7,17 +7,20 @@
 CPP_SRCS += \
 ../TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.cpp \
 ../TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.cpp \
-../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp 
+../TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cpp \
+../TouchGFX/generated/gui_generated/src/containers/SmartScrollerBase.cpp 
 
 OBJS += \
 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o \
 ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o \
-./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o 
+./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o \
+./TouchGFX/generated/gui_generated/src/containers/SmartScrollerBase.o 
 
 CPP_DEPS += \
 ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.d \
 ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.d \
-./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.d 
+./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.d \
+./TouchGFX/generated/gui_generated/src/containers/SmartScrollerBase.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -27,7 +30,7 @@ TouchGFX/generated/gui_generated/src/containers/%.o TouchGFX/generated/gui_gener
 clean: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers
 
 clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers:
-	-$(RM) ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.d ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.su ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.d ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.su ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.d ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.su
+	-$(RM) ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.d ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.o ./TouchGFX/generated/gui_generated/src/containers/PumpDropDownListBase.su ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.d ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.o ./TouchGFX/generated/gui_generated/src/containers/PumpOptionBase.su ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.d ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.o ./TouchGFX/generated/gui_generated/src/containers/PumpSetupWidgetBase.su ./TouchGFX/generated/gui_generated/src/containers/SmartScrollerBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/SmartScrollerBase.d ./TouchGFX/generated/gui_generated/src/containers/SmartScrollerBase.o ./TouchGFX/generated/gui_generated/src/containers/SmartScrollerBase.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers
 

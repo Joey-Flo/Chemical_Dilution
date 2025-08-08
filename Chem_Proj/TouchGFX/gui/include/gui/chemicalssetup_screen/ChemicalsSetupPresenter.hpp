@@ -38,6 +38,11 @@ public:
 
     void editPumpVolume(int setupIndex, int fieldIndex);
 
+    void addPumpSetup(int page_index);
+    void removePumpSetup(int page_index);
+
+    void chemicalEnableToggled();
+
 private:
     int currentlyEditingFieldID;
 

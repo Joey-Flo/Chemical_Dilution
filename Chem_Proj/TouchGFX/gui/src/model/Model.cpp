@@ -165,12 +165,66 @@ void Model::updateTotalVolume(int recipe_index, float volume)
 
 void Model::addPumpToRecipe(int recipe_index)
 {
-    // Future logic will go here
+    // Safety check
+    if (recipe_index < 0 || recipe_index >= NUM_CHEMICAL_RECIPES) {
+        return;
+    }
+
+    // Find the first available "unused" slot in this recipe's pump setups
+    for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+    {
+        if (myDeviceConfig.recipes[recipe_index].pump_setups[i].pump_index == -1)
+        {
+            // Found an empty slot!
+            // Initialize it with safe default values.
+            myDeviceConfig.recipes[recipe_index].pump_setups[i].pump_index = 0; // Default to Pump 1
+            myDeviceConfig.recipes[recipe_index].pump_setups[i].dispense_small = 0.0f;
+            myDeviceConfig.recipes[recipe_index].pump_setups[i].dispense_medium = 0.0f;
+            myDeviceConfig.recipes[recipe_index].pump_setups[i].dispense_large = 0.0f;
+
+            // Save the new configuration to flash
+            Config_Save(&myDeviceConfig);
+
+            // We're done, so we exit the loop and the function
+            return;
+        }
+    }
+    // If we get here, it means all 3 slots were already full. Do nothing.
 }
+
 
 void Model::removePumpFromRecipe(int recipe_index)
 {
-    // Future logic will go here
+    // Safety check
+    if (recipe_index < 0 || recipe_index >= NUM_CHEMICAL_RECIPES) {
+        return;
+    }
+
+    // Find the LAST active pump setup to remove it. We search backwards.
+    for (int i = MAX_PUMP_SETUPS_PER_CHEMICAL - 1; i >= 0; --i)
+    {
+        if (myDeviceConfig.recipes[recipe_index].pump_setups[i].pump_index != -1)
+        {
+            // Found the last active slot!
+            // "Remove" it by setting its index back to -1.
+            myDeviceConfig.recipes[recipe_index].pump_setups[i].pump_index = -1;
+
+            // Save the new configuration to flash
+            Config_Save(&myDeviceConfig);
+
+            // We're done, so we exit the loop and the function
+            return;
+        }
+    }
+    // If we get here, it means there were no active setups to remove. Do nothing.
+}
+
+void Model::setChemicalEnableState(int recipe_index, bool is_enabled)
+{
+    if (recipe_index >= 0 && recipe_index < NUM_CHEMICAL_RECIPES) {
+        myDeviceConfig.recipes[recipe_index].is_enabled = is_enabled ? 1 : 0;
+        Config_Save(&myDeviceConfig);
+    }
 }
 
 

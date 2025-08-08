@@ -97,9 +97,10 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     VolumeEdit.setAction(buttonCallback);
     Page1.add(VolumeEdit);
 
-    toggleButton1.setXY(119, 26);
-    toggleButton1.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
-    Page1.add(toggleButton1);
+    Chemical1EnableButton.setXY(119, 26);
+    Chemical1EnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    Chemical1EnableButton.setAction(buttonCallback);
+    Page1.add(Chemical1EnableButton);
 
     AddPumpBox.setPosition(1, 126, 239, 36);
     AddPumpBox.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
@@ -109,10 +110,12 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     AddPump.setXY(137, 132);
     AddPump.setBitmaps(touchgfx::Bitmap(BITMAP_PLUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_PLUS_PRESSED_ID));
+    AddPump.setAction(buttonCallback);
     Page1.add(AddPump);
 
     RemovePump.setXY(166, 132);
     RemovePump.setBitmaps(touchgfx::Bitmap(BITMAP_MINUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_MINUS_PRESSED_ID));
+    RemovePump.setAction(buttonCallback);
     Page1.add(RemovePump);
 
     AddPumpText.setXY(46, 135);
@@ -211,7 +214,7 @@ void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
 {
     if (&src == &BackButton)
     {
-        //Interaction1
+        //Back
         //When BackButton clicked change screen to HomeScreen
         //Go to HomeScreen with no screen transition
         application().gotoHomeScreenScreenNoTransition();
@@ -243,5 +246,26 @@ void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //When NameEdit clicked execute C++ code
         //Execute C++ code
         presenter->editField(1);
+    }
+    if (&src == &AddPump)
+    {
+        //AddPump
+        //When AddPump clicked call virtual function
+        //Call addPumpClicked
+        addPumpClicked();
+    }
+    if (&src == &RemovePump)
+    {
+        //RemovePump
+        //When RemovePump clicked call virtual function
+        //Call removePumpClicked
+        removePumpClicked();
+    }
+    if (&src == &Chemical1EnableButton)
+    {
+        //Interaction1
+        //When Chemical1EnableButton clicked call virtual function
+        //Call chemicalEnableButtonClicked
+        chemicalEnableButtonClicked();
     }
 }

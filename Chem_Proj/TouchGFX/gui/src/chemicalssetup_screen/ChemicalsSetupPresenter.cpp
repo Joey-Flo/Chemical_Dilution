@@ -120,3 +120,49 @@ void ChemicalsSetupPresenter::editPumpVolume(int setupIndex, int fieldIndex)
     // 2. Command the View to perform the UI action (show the keyboard).
     view.showKeyboard();
 }
+
+void ChemicalsSetupPresenter::addPumpSetup(int page_index)
+{
+    // 1. Command the model to perform the action
+    model->addPumpToRecipe(page_index);
+
+    // 2. Command the View to reload all its data to show the change
+    loadScreenData(page_index);
+}
+
+void ChemicalsSetupPresenter::removePumpSetup(int page_index)
+{
+    // 1. Command the model to perform the action
+    model->removePumpFromRecipe(page_index);
+
+    // 2. Command the View to reload all its data to show the change
+    loadScreenData(page_index);
+}
+
+void ChemicalsSetupView::addPumpClicked()
+{
+    // The View's only job is to report the event to the Presenter,
+    // providing the necessary context (the current page).
+    presenter->addPumpSetup(currentPageIndex);
+}
+
+void ChemicalsSetupView::removePumpClicked()
+{
+    presenter->removePumpSetup(currentPageIndex);
+}
+
+void ChemicalsSetupPresenter::chemicalEnableToggled()
+{
+    // 1. Get the current state from the Model
+    const ChemicalRecipe_t& recipe = model->getRecipeData(activePageIndex);
+    bool current_state_is_on = (recipe.is_enabled == 1);
+
+    // 2. Flip the state
+    bool new_state_is_on = !current_state_is_on;
+
+    // 3. Command the Model to update the data and save
+    model->setChemicalEnableState(activePageIndex, new_state_is_on);
+
+    // 4. No need to reload the whole screen, the button handles its own visual state.
+    // If other elements needed to change (e.g., grey out), you would call loadScreenData() here.
+}

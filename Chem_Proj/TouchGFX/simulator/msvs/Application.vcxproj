@@ -37,6 +37,9 @@
     <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpOptionBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\PumpSetupWidget.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\PumpSetupWidgetBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\common\Catch_and_Release_ScrollableContainer.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\SmartScroller.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\SmartScrollerBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -205,6 +208,9 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpOptionBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\PumpSetupWidget.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\PumpSetupWidgetBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\common\Catch_and_Release_ScrollableContainer.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\SmartScroller.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SmartScrollerBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

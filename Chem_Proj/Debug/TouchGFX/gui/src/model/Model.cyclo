@@ -14,9 +14,10 @@ C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 ../TouchGFX/gui/src/model/Model.cpp:109:6:void Model::updateSinglePumpVolume(int, int, int, float)	11
 ../TouchGFX/gui/src/model/Model.cpp:149:6:void Model::updateChemicalName(int, const char*)	3
 ../TouchGFX/gui/src/model/Model.cpp:158:6:void Model::updateTotalVolume(int, float)	3
-../TouchGFX/gui/src/model/Model.cpp:166:6:void Model::addPumpToRecipe(int)	1
-../TouchGFX/gui/src/model/Model.cpp:171:6:void Model::removePumpFromRecipe(int)	1
-../TouchGFX/gui/src/model/Model.cpp:178:6:void Model::updateVolumeUnit(int8_t)	1
+../TouchGFX/gui/src/model/Model.cpp:166:6:void Model::addPumpToRecipe(int)	5
+../TouchGFX/gui/src/model/Model.cpp:196:6:void Model::removePumpFromRecipe(int)	5
+../TouchGFX/gui/src/model/Model.cpp:222:6:void Model::setChemicalEnableState(int, bool)	4
+../TouchGFX/gui/src/model/Model.cpp:232:6:void Model::updateVolumeUnit(int8_t)	1
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:137:2:std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_Vector_impl() [with _Tp = int; _Alloc = std::allocator<int>]	1
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:1281:7:void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = int; _Alloc = std::allocator<int>]	2
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:99:2:std::_Vector_base<_Tp, _Alloc>::_Vector_impl_data::_Vector_impl_data() [with _Tp = int; _Alloc = std::allocator<int>]	1

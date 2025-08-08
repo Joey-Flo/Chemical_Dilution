@@ -18,6 +18,11 @@ public:
     float getPumpDensity(int8_t index);
     void setPumpDensity(int8_t index, float new_density);
 
+    void addPumpToRecipe(int recipe_index);
+    void removePumpFromRecipe(int recipe_index);
+
+    void setChemicalEnableState(int recipe_index, bool is_enabled);
+
     Model();
 
     void bind(ModelListener* listener)
@@ -37,8 +42,6 @@ public:
     // --- SETTERS (for saving data - we will implement these later) ---
 
     void updatePumpSetup(int recipe_index, int setup_index, const PumpSetup_t& data);
-    void addPumpToRecipe(int recipe_index);
-    void removePumpFromRecipe(int recipe_index);
     void updateChemicalName(int recipe_index, const char* name);
     void updateTotalVolume(int recipe_index, float volume);
     void updateVolumeUnit(int8_t unit); // Corresponds to the global setting

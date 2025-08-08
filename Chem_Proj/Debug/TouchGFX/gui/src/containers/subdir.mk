@@ -7,17 +7,20 @@
 CPP_SRCS += \
 ../TouchGFX/gui/src/containers/PumpDropDownList.cpp \
 ../TouchGFX/gui/src/containers/PumpOption.cpp \
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp 
+../TouchGFX/gui/src/containers/PumpSetupWidget.cpp \
+../TouchGFX/gui/src/containers/SmartScroller.cpp 
 
 OBJS += \
 ./TouchGFX/gui/src/containers/PumpDropDownList.o \
 ./TouchGFX/gui/src/containers/PumpOption.o \
-./TouchGFX/gui/src/containers/PumpSetupWidget.o 
+./TouchGFX/gui/src/containers/PumpSetupWidget.o \
+./TouchGFX/gui/src/containers/SmartScroller.o 
 
 CPP_DEPS += \
 ./TouchGFX/gui/src/containers/PumpDropDownList.d \
 ./TouchGFX/gui/src/containers/PumpOption.d \
-./TouchGFX/gui/src/containers/PumpSetupWidget.d 
+./TouchGFX/gui/src/containers/PumpSetupWidget.d \
+./TouchGFX/gui/src/containers/SmartScroller.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -27,7 +30,7 @@ TouchGFX/gui/src/containers/%.o TouchGFX/gui/src/containers/%.su TouchGFX/gui/sr
 clean: clean-TouchGFX-2f-gui-2f-src-2f-containers
 
 clean-TouchGFX-2f-gui-2f-src-2f-containers:
-	-$(RM) ./TouchGFX/gui/src/containers/PumpDropDownList.cyclo ./TouchGFX/gui/src/containers/PumpDropDownList.d ./TouchGFX/gui/src/containers/PumpDropDownList.o ./TouchGFX/gui/src/containers/PumpDropDownList.su ./TouchGFX/gui/src/containers/PumpOption.cyclo ./TouchGFX/gui/src/containers/PumpOption.d ./TouchGFX/gui/src/containers/PumpOption.o ./TouchGFX/gui/src/containers/PumpOption.su ./TouchGFX/gui/src/containers/PumpSetupWidget.cyclo ./TouchGFX/gui/src/containers/PumpSetupWidget.d ./TouchGFX/gui/src/containers/PumpSetupWidget.o ./TouchGFX/gui/src/containers/PumpSetupWidget.su
+	-$(RM) ./TouchGFX/gui/src/containers/PumpDropDownList.cyclo ./TouchGFX/gui/src/containers/PumpDropDownList.d ./TouchGFX/gui/src/containers/PumpDropDownList.o ./TouchGFX/gui/src/containers/PumpDropDownList.su ./TouchGFX/gui/src/containers/PumpOption.cyclo ./TouchGFX/gui/src/containers/PumpOption.d ./TouchGFX/gui/src/containers/PumpOption.o ./TouchGFX/gui/src/containers/PumpOption.su ./TouchGFX/gui/src/containers/PumpSetupWidget.cyclo ./TouchGFX/gui/src/containers/PumpSetupWidget.d ./TouchGFX/gui/src/containers/PumpSetupWidget.o ./TouchGFX/gui/src/containers/PumpSetupWidget.su ./TouchGFX/gui/src/containers/SmartScroller.cyclo ./TouchGFX/gui/src/containers/SmartScroller.d ./TouchGFX/gui/src/containers/SmartScroller.o ./TouchGFX/gui/src/containers/SmartScroller.su
 
 .PHONY: clean-TouchGFX-2f-gui-2f-src-2f-containers
 

@@ -1388,7 +1388,7 @@
                   },
                   {
                     "Type": "ToggleButton",
-                    "Name": "toggleButton1",
+                    "Name": "Chemical1EnableButton",
                     "X": 119,
                     "Y": 26,
                     "Width": 45,
@@ -1600,7 +1600,7 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "Back",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "BackButton"
@@ -1653,6 +1653,39 @@
             "Action": {
               "Type": "ActionExecuteCode",
               "Code": "presenter->editField(1);"
+            }
+          },
+          {
+            "InteractionName": "AddPump",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "AddPump"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "addPumpClicked"
+            }
+          },
+          {
+            "InteractionName": "RemovePump",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "RemovePump"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "removePumpClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Chemical1EnableButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "chemicalEnableButtonClicked"
             }
           }
         ]
@@ -1906,19 +1939,7 @@
             "CustomContainerDefinitionName": "PumpDropDownList"
           }
         ],
-        "Interactions": [
-          {
-            "InteractionName": "SmallEdit",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "SEditButton"
-            },
-            "Action": {
-              "Type": "ActionExecuteCode",
-              "Code": "s_edit_button_clicked();"
-            }
-          }
-        ]
+        "Interactions": []
       },
       {
         "Name": "PumpDropDownList",
@@ -2093,6 +2114,13 @@
             }
           }
         ],
+        "Interactions": []
+      },
+      {
+        "Name": "SmartScroller",
+        "Width": 250,
+        "Height": 250,
+        "Components": [],
         "Interactions": []
       }
     ],

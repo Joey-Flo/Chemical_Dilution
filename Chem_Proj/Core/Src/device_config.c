@@ -42,6 +42,14 @@ void Config_SetDefaults(DeviceConfiguration_t* config)
         // --- THIS IS THE ROBUST METHOD ---
         // Access the struct members directly through the main 'config' pointer.
 
+    	if (i == 0){
+    		config->recipes[i].is_enabled = 1;
+    	}
+
+    	else{
+    		config->recipes[i].is_enabled = 0;
+    	}
+
         // a. Set the name
         strncpy(config->recipes[i].name, default_names[i], sizeof(config->recipes[i].name) - 1);
         config->recipes[i].name[sizeof(config->recipes[i].name) - 1] = '\0';
@@ -71,6 +79,7 @@ void Config_SetDefaults(DeviceConfiguration_t* config)
             }
         }
     }
+
 }
 // CRC calculation function (remains the same)
 

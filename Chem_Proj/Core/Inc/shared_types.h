@@ -26,6 +26,7 @@ typedef struct __attribute__((packed)) {
 typedef struct __attribute__((packed)) {
     char  name[20];
     float total_dispense_volume;
+    int8_t is_enabled;
     PumpSetup_t pump_setups[MAX_PUMP_SETUPS_PER_CHEMICAL];
 } ChemicalRecipe_t;
 

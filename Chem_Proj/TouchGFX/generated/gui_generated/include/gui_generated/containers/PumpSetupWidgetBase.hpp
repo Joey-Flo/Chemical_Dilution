@@ -22,10 +22,6 @@ public:
     virtual ~PumpSetupWidgetBase();
     virtual void initialize();
 
-    virtual void s_edit_button_clicked() { } // Empty default implementation
-    virtual void m_edit_button_clicked() { }
-    virtual void l_edit_button_clicked() { }
-
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -68,16 +64,6 @@ protected:
     touchgfx::Unicode::UnicodeChar PumpSelectTextBuffer[PUMPSELECTTEXT_SIZE];
 
 private:
-
-    /*
-     * Callback Declarations
-     */
-    touchgfx::Callback<PumpSetupWidgetBase, const touchgfx::AbstractButton&> buttonCallback;
-
-    /*
-     * Callback Handler Declarations
-     */
-    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

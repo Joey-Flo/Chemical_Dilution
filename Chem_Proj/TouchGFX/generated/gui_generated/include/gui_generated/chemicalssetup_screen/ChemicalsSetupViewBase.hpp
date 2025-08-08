@@ -38,6 +38,18 @@ public:
     {
         // Override and implement this function in ChemicalsSetup
     }
+    virtual void addPumpClicked()
+    {
+        // Override and implement this function in ChemicalsSetup
+    }
+    virtual void removePumpClicked()
+    {
+        // Override and implement this function in ChemicalsSetup
+    }
+    virtual void chemicalEnableButtonClicked()
+    {
+        // Override and implement this function in ChemicalsSetup
+    }
 
 protected:
     FrontendApplication& application() {
@@ -65,7 +77,7 @@ protected:
     touchgfx::TextArea chemicalLabel1;
     touchgfx::Button NameEdit;
     touchgfx::Button VolumeEdit;
-    touchgfx::ToggleButton toggleButton1;
+    touchgfx::ToggleButton Chemical1EnableButton;
     touchgfx::BoxWithBorder AddPumpBox;
     touchgfx::Button AddPump;
     touchgfx::Button RemovePump;

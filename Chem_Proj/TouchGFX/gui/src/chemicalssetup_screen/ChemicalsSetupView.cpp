@@ -66,6 +66,9 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
 {
     // This function populates the UI and is mostly unchanged.
 
+    Chemical1EnableButton.forceState(data.is_enabled == 1); // Use the correct button name
+    Chemical1EnableButton.invalidate();
+
     // Update Chemical Name
     memset(NameEditTextBuffer, 0, NAMEEDITTEXT_SIZE * sizeof(touchgfx::Unicode::UnicodeChar));
     Unicode::strncpy(NameEditTextBuffer, data.name, NAMEEDITTEXT_SIZE);
@@ -73,8 +76,6 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
 
     // Update Total Volume and Units
     const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
-    toggleButton1.forceState(unit == 1);
-    toggleButton1.invalidate();
 
     char volBuffer[20];
     snprintf(volBuffer, 20, "%.2f %s", data.total_dispense_volume, unit_suffix);
@@ -100,7 +101,7 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
 
     // Manage Add/Remove button visibility
     AddPump.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
-    RemovePump.setVisible(visiblePumpSetups > 0);
+    RemovePump.setVisible(visiblePumpSetups > 1);
     AddPump.invalidate();
     RemovePump.invalidate();
 }
@@ -188,6 +189,12 @@ void ChemicalsSetupView::ExitPressed()
     currentlyEditingField = FIELD_NONE; // Reset the "what am I editing?" state
 }
 
+void ChemicalsSetupView::chemicalEnableButtonClicked()
+{
+    // The View's only job is to report the event to the Presenter.
+    presenter->chemicalEnableToggled();
+}
+
 //// This handler is called by ANY of the three PumpSetupWidgets when an edit button is clicked.
 //void ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler(int setupIndex, int fieldIndex)
 //{
@@ -200,15 +207,6 @@ void ChemicalsSetupView::ExitPressed()
 // --- Placeholder implementations for your button clicks ---
 // You will wire these up in the TouchGFX Designer using "Execute C++ code".
 
-void ChemicalsSetupView::addPumpClicked()
-{
-    // presenter->addPumpSetup(currentPageIndex);
-}
-
-void ChemicalsSetupView::removePumpClicked()
-{
-    // presenter->removePumpSetup(currentPageIndex);
-}
 
 void ChemicalsSetupView::nameEditClicked()
 {

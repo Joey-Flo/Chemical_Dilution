@@ -57,6 +57,7 @@ public:
     void showKeyboard();
     void EnterPressed();
     void ExitPressed();
+    void chemicalEnableButtonClicked();
 
 protected:
     // --- CALLBACK HANDLERS ---
