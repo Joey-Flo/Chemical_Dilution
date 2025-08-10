@@ -1239,7 +1239,7 @@
             "IndicatorImageNormal": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_off_normal.png",
             "IndicatorImageHighlight": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_on_active.png",
             "EndSwipeElasticWidth": 50,
-            "SelectedPage": "Page1",
+            "SelectedPage": "Page2",
             "Preset": "alternate_theme\\presets\\swipecontainer\\medium_active.json",
             "Components": [
               {
@@ -1254,7 +1254,6 @@
                     "Y": 162,
                     "Width": 240,
                     "Height": 108,
-                    "HorizontalScrollEnabled": true,
                     "VerticalScrollEnabled": true,
                     "ScrollbarsVisibleOnPressed": true,
                     "ScrollbarsColor": {
@@ -1486,7 +1485,209 @@
                 "Name": "Page2",
                 "Width": 240,
                 "Height": 270,
-                "Components": []
+                "Components": [
+                  {
+                    "Type": "ScrollableContainer",
+                    "Name": "scrollableContainer2",
+                    "Y": 162,
+                    "Width": 240,
+                    "Height": 108,
+                    "VerticalScrollEnabled": true,
+                    "ScrollbarsVisibleOnPressed": true,
+                    "ScrollbarsColor": {
+                      "Red": 255
+                    },
+                    "ScrollbarsAlpha": 255,
+                    "Components": []
+                  },
+                  {
+                    "Type": "Box",
+                    "Name": "NameBox2",
+                    "X": 87,
+                    "Y": 59,
+                    "Width": 109,
+                    "Height": 23,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "Box",
+                    "Name": "VolumeBox2",
+                    "X": 87,
+                    "Y": 93,
+                    "Width": 109,
+                    "Height": 23,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "ChemVolumeText2",
+                    "X": 13,
+                    "Y": 96,
+                    "Width": 64,
+                    "Height": 18,
+                    "TextId": "__SingleUse_LJK2",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 221,
+                      "Green": 221,
+                      "Blue": 221
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "ChemNameText2",
+                    "X": 13,
+                    "Y": 62,
+                    "Width": 51,
+                    "Height": 18,
+                    "TextId": "__SingleUse_E1MD",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 221,
+                      "Green": 221,
+                      "Blue": 221
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "chemicalLabel2",
+                    "X": 13,
+                    "Y": 28,
+                    "Width": 91,
+                    "Height": 18,
+                    "TextId": "__SingleUse_RA5A",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 221,
+                      "Green": 221,
+                      "Blue": 221
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "Button",
+                    "Name": "NameEdit2",
+                    "X": 207,
+                    "Y": 59,
+                    "Width": 23,
+                    "Height": 23,
+                    "Pressed": "Edit Pressed.png",
+                    "Released": "Edit Unpressed.png"
+                  },
+                  {
+                    "Type": "Button",
+                    "Name": "VolumeEdit2",
+                    "X": 207,
+                    "Y": 93,
+                    "Width": 23,
+                    "Height": 23,
+                    "Pressed": "Edit Pressed.png",
+                    "Released": "Edit Unpressed.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "Chemical2EnableButton",
+                    "X": 119,
+                    "Y": 26,
+                    "Width": 45,
+                    "Height": 23,
+                    "Pressed": "Toggle On.png",
+                    "Released": "Toggle Off.png"
+                  },
+                  {
+                    "Type": "BoxWithBorder",
+                    "Name": "AddPumpBox2",
+                    "X": 1,
+                    "Y": 126,
+                    "Width": 239,
+                    "Height": 36,
+                    "Color": {
+                      "Red": 120,
+                      "Green": 120,
+                      "Blue": 120
+                    },
+                    "BorderColor": {
+                      "Red": 168,
+                      "Green": 168,
+                      "Blue": 168
+                    },
+                    "BorderSize": 5
+                  },
+                  {
+                    "Type": "Button",
+                    "Name": "AddPump2",
+                    "X": 137,
+                    "Y": 132,
+                    "Width": 23,
+                    "Height": 23,
+                    "Pressed": "Plus Pressed.png",
+                    "Released": "Plus Unpressed.png"
+                  },
+                  {
+                    "Type": "Button",
+                    "Name": "RemovePump2",
+                    "X": 166,
+                    "Y": 132,
+                    "Width": 23,
+                    "Height": 23,
+                    "Pressed": "Minus Pressed.png",
+                    "Released": "Minus Unpressed.png"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "AddPumpText2",
+                    "X": 46,
+                    "Y": 135,
+                    "Width": 83,
+                    "Height": 18,
+                    "TextId": "__SingleUse_00CT",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "NameEditText2",
+                    "X": 87,
+                    "Y": 62,
+                    "Width": 109,
+                    "Height": 23,
+                    "TextId": "__SingleUse_YUNX",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "UseBuffer": true,
+                      "BufferSize": 20
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "VolumeEditText2",
+                    "X": 87,
+                    "Y": 96,
+                    "Width": 109,
+                    "Height": 23,
+                    "TextId": "__SingleUse_RQKB",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "UseBuffer": true,
+                      "BufferSize": 12
+                    }
+                  }
+                ]
               },
               {
                 "Type": "Container",

@@ -211,6 +211,7 @@
     <ClInclude Include="..\..\gui\include\gui\common\Catch_and_Release_ScrollableContainer.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\SmartScroller.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SmartScrollerBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\common\FieldIDs.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

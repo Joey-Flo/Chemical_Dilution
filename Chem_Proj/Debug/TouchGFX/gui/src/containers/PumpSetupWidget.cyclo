@@ -10,6 +10,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:515:10:void touchgfx::Drawable::setVisible(bool)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:537:10:bool touchgfx::Drawable::isVisible() const	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	1
@@ -24,15 +25,13 @@ C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:315:7:std::_Vector_base<_Tp, _Alloc>::_Vector_base() [with _Tp = int; _Alloc = std::allocator<int>]	1
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:531:7:std::vector<_Tp, _Alloc>::vector() [with _Tp = int; _Alloc = std::allocator<int>]	1
 ../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:6:1:PumpSetupWidget::PumpSetupWidget()	1
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:27:6:void PumpSetupWidget::setup(int, const PumpSetup_t&, int8_t)	6
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:78:6:void PumpSetupWidget::setAvailablePumps(const std::vector<int>&)	1
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:84:6:virtual void PumpSetupWidget::selectPumpButtonClickHandler(const touchgfx::AbstractButton&)	3
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:102:6:virtual void PumpSetupWidget::dropdownPumpSelectedHandler(int)	4
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:126:6:virtual void PumpSetupWidget::editVolumeButtonHandler(const touchgfx::AbstractButton&)	8
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:138:6:void PumpSetupWidget::setPresenter(ChemicalsSetupPresenter*)	1
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:148:6:void PumpSetupWidget::s_edit_button_clicked()	2
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:158:6:void PumpSetupWidget::m_edit_button_clicked()	2
-../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:166:6:void PumpSetupWidget::l_edit_button_clicked()	2
+../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:30:6:void PumpSetupWidget::setup(int, const PumpSetup_t&, int8_t)	6
+../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:72:6:void PumpSetupWidget::setAvailablePumps(const std::vector<int>&)	1
+../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:79:6:virtual void PumpSetupWidget::selectPumpButtonClickHandler(const touchgfx::AbstractButton&)	8
+../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:107:6:virtual void PumpSetupWidget::dropdownPumpSelectedHandler(int)	4
+../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:127:6:void PumpSetupWidget::closeDropdown()	5
+../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:148:6:virtual void PumpSetupWidget::editVolumeButtonHandler(const touchgfx::AbstractButton&)	8
+../TouchGFX/gui/src/containers/PumpSetupWidget.cpp:168:6:void PumpSetupWidget::setPresenter(ChemicalsSetupPresenter*)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	1
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:733:7:std::vector<_Tp, _Alloc>::~vector() [with _Tp = int; _Alloc = std::allocator<int>]	1

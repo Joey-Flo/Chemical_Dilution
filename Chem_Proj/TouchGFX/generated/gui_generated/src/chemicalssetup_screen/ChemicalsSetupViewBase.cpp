@@ -46,6 +46,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     Page1.setWidth(240);
     Page1.setHeight(270);
     scrollableContainer1.setPosition(0, 162, 240, 108);
+    scrollableContainer1.enableHorizontalScroll(false);
     scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer1.setScrollbarsAlpha(255);
     pumpSetupWidget1.setXY(0, -2);
@@ -144,6 +145,86 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Page2.setWidth(240);
     Page2.setHeight(270);
+    scrollableContainer2.setPosition(0, 162, 240, 108);
+    scrollableContainer2.enableHorizontalScroll(false);
+    scrollableContainer2.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer2.setScrollbarsAlpha(255);
+    Page2.add(scrollableContainer2);
+
+    NameBox2.setPosition(87, 59, 109, 23);
+    NameBox2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Page2.add(NameBox2);
+
+    VolumeBox2.setPosition(87, 93, 109, 23);
+    VolumeBox2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Page2.add(VolumeBox2);
+
+    ChemVolumeText2.setXY(13, 96);
+    ChemVolumeText2.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    ChemVolumeText2.setLinespacing(0);
+    ChemVolumeText2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LJK2));
+    Page2.add(ChemVolumeText2);
+
+    ChemNameText2.setXY(13, 62);
+    ChemNameText2.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    ChemNameText2.setLinespacing(0);
+    ChemNameText2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_E1MD));
+    Page2.add(ChemNameText2);
+
+    chemicalLabel2.setXY(13, 28);
+    chemicalLabel2.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    chemicalLabel2.setLinespacing(0);
+    chemicalLabel2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RA5A));
+    Page2.add(chemicalLabel2);
+
+    NameEdit2.setXY(207, 59);
+    NameEdit2.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    Page2.add(NameEdit2);
+
+    VolumeEdit2.setXY(207, 93);
+    VolumeEdit2.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    Page2.add(VolumeEdit2);
+
+    Chemical2EnableButton.setXY(119, 26);
+    Chemical2EnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    Page2.add(Chemical2EnableButton);
+
+    AddPumpBox2.setPosition(1, 126, 239, 36);
+    AddPumpBox2.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
+    AddPumpBox2.setBorderColor(touchgfx::Color::getColorFromRGB(168, 168, 168));
+    AddPumpBox2.setBorderSize(5);
+    Page2.add(AddPumpBox2);
+
+    AddPump2.setXY(137, 132);
+    AddPump2.setBitmaps(touchgfx::Bitmap(BITMAP_PLUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_PLUS_PRESSED_ID));
+    Page2.add(AddPump2);
+
+    RemovePump2.setXY(166, 132);
+    RemovePump2.setBitmaps(touchgfx::Bitmap(BITMAP_MINUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_MINUS_PRESSED_ID));
+    Page2.add(RemovePump2);
+
+    AddPumpText2.setXY(46, 135);
+    AddPumpText2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    AddPumpText2.setLinespacing(0);
+    AddPumpText2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_00CT));
+    Page2.add(AddPumpText2);
+
+    NameEditText2.setPosition(87, 62, 109, 23);
+    NameEditText2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    NameEditText2.setLinespacing(0);
+    NameEditText2Buffer[0] = 0;
+    NameEditText2.setWildcard(NameEditText2Buffer);
+    NameEditText2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YUNX));
+    Page2.add(NameEditText2);
+
+    VolumeEditText2.setPosition(87, 96, 109, 23);
+    VolumeEditText2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    VolumeEditText2.setLinespacing(0);
+    VolumeEditText2Buffer[0] = 0;
+    VolumeEditText2.setWildcard(VolumeEditText2Buffer);
+    VolumeEditText2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RQKB));
+    Page2.add(VolumeEditText2);
+
     swipeContainer1.add(Page2);
 
     Page3.setWidth(240);
@@ -170,7 +251,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     Page8.setHeight(270);
     swipeContainer1.add(Page8);
 
-    swipeContainer1.setSelectedPage(0);
+    swipeContainer1.setSelectedPage(1);
     add(swipeContainer1);
 
     KeyboardExtras.setPosition(0, 0, 250, 320);

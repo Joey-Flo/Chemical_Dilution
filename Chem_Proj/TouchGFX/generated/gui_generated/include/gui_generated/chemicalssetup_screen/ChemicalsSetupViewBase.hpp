@@ -85,6 +85,21 @@ protected:
     touchgfx::TextAreaWithOneWildcard NameEditText;
     touchgfx::TextAreaWithOneWildcard VolumeEditText;
     touchgfx::Container Page2;
+    touchgfx::ScrollableContainer scrollableContainer2;
+    touchgfx::Box NameBox2;
+    touchgfx::Box VolumeBox2;
+    touchgfx::TextArea ChemVolumeText2;
+    touchgfx::TextArea ChemNameText2;
+    touchgfx::TextArea chemicalLabel2;
+    touchgfx::Button NameEdit2;
+    touchgfx::Button VolumeEdit2;
+    touchgfx::ToggleButton Chemical2EnableButton;
+    touchgfx::BoxWithBorder AddPumpBox2;
+    touchgfx::Button AddPump2;
+    touchgfx::Button RemovePump2;
+    touchgfx::TextArea AddPumpText2;
+    touchgfx::TextAreaWithOneWildcard NameEditText2;
+    touchgfx::TextAreaWithOneWildcard VolumeEditText2;
     touchgfx::Container Page3;
     touchgfx::Container Page4;
     touchgfx::Container Page5;
@@ -103,6 +118,10 @@ protected:
     touchgfx::Unicode::UnicodeChar NameEditTextBuffer[NAMEEDITTEXT_SIZE];
     static const uint16_t VOLUMEEDITTEXT_SIZE = 12;
     touchgfx::Unicode::UnicodeChar VolumeEditTextBuffer[VOLUMEEDITTEXT_SIZE];
+    static const uint16_t NAMEEDITTEXT2_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar NameEditText2Buffer[NAMEEDITTEXT2_SIZE];
+    static const uint16_t VOLUMEEDITTEXT2_SIZE = 12;
+    touchgfx::Unicode::UnicodeChar VolumeEditText2Buffer[VOLUMEEDITTEXT2_SIZE];
 
 private:
 

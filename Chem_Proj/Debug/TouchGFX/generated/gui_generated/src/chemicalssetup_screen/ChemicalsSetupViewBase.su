@@ -43,20 +43,25 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:virtual touchgfx::Widget::~Widget()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:62:10:void touchgfx::Box::setColor(touchgfx::colortype)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:34:5:touchgfx::Button::Button()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:41:7:constexpr touchgfx::TypedText& touchgfx::TypedText::operator=(const touchgfx::TypedText&)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:50:10:void touchgfx::ButtonWithLabel::setLabelText(touchgfx::TypedText)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:77:10:void touchgfx::ButtonWithLabel::setLabelColor(touchgfx::colortype)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:94:10:void touchgfx::ButtonWithLabel::setLabelColorPressed(touchgfx::colortype)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	56	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:virtual touchgfx::Box::~Box()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:34:5:touchgfx::BoxWithBorder::BoxWithBorder()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:61:10:void touchgfx::BoxWithBorder::setBorderColor(touchgfx::colortype)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:85:10:void touchgfx::BoxWithBorder::setBorderSize(uint16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:34:5:touchgfx::Button::Button()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:48:18:virtual void touchgfx::TextArea::setWidth(int16_t)	40	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:54:18:virtual void touchgfx::TextArea::setHeight(int16_t)	40	static
@@ -69,6 +74,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:429:9:touchgfx::TextArea::BoundingArea::BoundingArea()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:62:10:void touchgfx::ScrollableContainer::enableHorizontalScroll(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:touchgfx::TextArea::~TextArea()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:virtual touchgfx::TextArea::~TextArea()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:36:5:touchgfx::TextAreaWithWildcardBase::TextAreaWithWildcardBase()	16	static
@@ -87,11 +93,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<PumpSetupWidget, int>::~Callback()	16	static
 ../TouchGFX/gui/include/gui/containers/PumpSetupWidget.hpp:17:13:PumpSetupWidget::~PumpSetupWidget()	16	static
 ../TouchGFX/gui/include/gui/containers/PumpSetupWidget.hpp:17:13:virtual PumpSetupWidget::~PumpSetupWidget()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:41:7:constexpr touchgfx::TypedText& touchgfx::TypedText::operator=(const touchgfx::TypedText&)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:50:10:void touchgfx::ButtonWithLabel::setLabelText(touchgfx::TypedText)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:77:10:void touchgfx::ButtonWithLabel::setLabelColor(touchgfx::colortype)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:94:10:void touchgfx::ButtonWithLabel::setLabelColorPressed(touchgfx::colortype)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	56	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp:33:18:virtual void ChemicalsSetupViewBase::EnterPressed()	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp:37:18:virtual void ChemicalsSetupViewBase::ExitPressed()	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp:41:18:virtual void ChemicalsSetupViewBase::addPumpClicked()	16	static
@@ -100,10 +101,12 @@
 ../TouchGFX/generated/gui_generated/include/gui_generated/chemicalssetup_screen/ChemicalsSetupViewBase.hpp:55:26:FrontendApplication& ChemicalsSetupViewBase::application()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<ChemicalsSetupPresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<ChemicalsSetupPresenter>::~View()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:virtual touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:38:7:touchgfx::ButtonWithLabel::~ButtonWithLabel()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:38:7:virtual touchgfx::ButtonWithLabel::~ButtonWithLabel()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:virtual touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:46:7:touchgfx::ScrollableContainer::~ScrollableContainer()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:46:7:virtual touchgfx::ScrollableContainer::~ScrollableContainer()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:touchgfx::ToggleButton::ToggleButton()	16	static
@@ -111,15 +114,13 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:virtual touchgfx::ToggleButton::~ToggleButton()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:38:7:touchgfx::ButtonWithLabel::~ButtonWithLabel()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:38:7:virtual touchgfx::ButtonWithLabel::~ButtonWithLabel()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<ChemicalsSetupViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<ChemicalsSetupViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:10:1:ChemicalsSetupViewBase::ChemicalsSetupViewBase()	472	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:201:1:ChemicalsSetupViewBase::~ChemicalsSetupViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:201:1:virtual ChemicalsSetupViewBase::~ChemicalsSetupViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:206:6:virtual void ChemicalsSetupViewBase::setupScreen()	16	static
-../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:213:6:void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:10:1:ChemicalsSetupViewBase::ChemicalsSetupViewBase()	536	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:224:1:ChemicalsSetupViewBase::~ChemicalsSetupViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:224:1:virtual ChemicalsSetupViewBase::~ChemicalsSetupViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:229:6:virtual void ChemicalsSetupViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBase.cpp:236:6:void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	16	static
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:733:7:std::vector<_Tp, _Alloc>::~vector() [with _Tp = int; _Alloc = std::allocator<int>]	40	static

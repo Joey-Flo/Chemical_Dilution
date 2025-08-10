@@ -118,6 +118,7 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp \
+ ../TouchGFX/gui/include/gui/common/FieldIDs.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
  ../TouchGFX/target/generated/STM32DMA.hpp \
  ../TouchGFX/target/TouchGFXHAL.hpp \
@@ -272,6 +273,7 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp:
+../TouchGFX/gui/include/gui/common/FieldIDs.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:
 ../TouchGFX/target/generated/STM32DMA.hpp:
 ../TouchGFX/target/TouchGFXHAL.hpp:

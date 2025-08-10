@@ -1,27 +1,27 @@
 #include <gui/chemicalssetup_screen/ChemicalsSetupView.hpp>
-#include <cstdio> // For snprintf
+#include <cstdio>
 #include <cstring>
+#include <gui/common/FieldIDs.hpp>
 
-
-// --- Use an enum to create a unique ID for every editable field ---
-
-
-
-// --- MODIFIED: The constructor now initializes the callback object ---
 ChemicalsSetupView::ChemicalsSetupView() :
-    // Initialize our internal callback object, linking it to our new handler function.
     pumpSetupSaveCallback(this, &ChemicalsSetupView::pumpSetupSaveDataCallbackHandler),
-    // We can also prepare the volume edit callback for later.
-    pumpSetupVolumeEditCallback(this, &ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler)
+    pumpSetupVolumeEditCallback(this, &ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler),
+    dropdownStateCallback(this, &ChemicalsSetupView::dropdownStateCallbackHandler),
+    activeDropdownWidget(nullptr),
+    currentlyEditingField(FIELD_NONE) // Initialize this member
 {
     // Initialize the helper array with pointers to your widgets.
-    // VERIFY these names against your TouchGFX Designer project.
     pumpSetupWidgets[0] = &pumpSetupWidget1;
     pumpSetupWidgets[1] = &pumpSetupWidget2;
     pumpSetupWidgets[2] = &pumpSetupWidget3;
 
-    // --- NEW: Connect the callbacks to the child widgets ---
-    // This loop "plugs in" our handler to each widget's "saveDataCallback" jack.
+    // --- FIX: Use our new getter function to safely populate the array ---
+    for (int i = 0; i < NUM_CHEMICAL_RECIPES; ++i)
+    {
+        pageContainers[i] = getScrollableContainerForPage(i);
+    }
+
+    // The rest of your constructor code remains the same.
     for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
     {
         pumpSetupWidgets[i]->saveDataCallback = &pumpSetupSaveCallback;
@@ -33,57 +33,66 @@ ChemicalsSetupView::ChemicalsSetupView() :
     keyboard.setVisible(false);
 }
 
+// --- NEW: Implementation of the getter function ---
+touchgfx::ScrollableContainer* ChemicalsSetupView::getScrollableContainerForPage(int pageIndex)
+{
+    // This function has access to the protected members from the base class.
+    // It returns a pointer to the correct scrollable container based on the index.
+    // The names (scrollableContainer1, etc.) must match your Designer widget names.
+    switch (pageIndex)
+    {
+        case 0: return &scrollableContainer1;
+//        case 1: return &scrollableContainer2;
+//        case 2: return &scrollableContainer3;
+//        case 3: return &scrollableContainer4;
+//        case 4: return &scrollableContainer5;
+//        case 5: return &scrollableContainer6;
+//        case 6: return &scrollableContainer7;
+//        case 7: return &scrollableContainer8;
+        default: return nullptr; // Return null for safety
+    }
+}
+
+
+// NO OTHER CHANGES ARE NEEDED BELOW THIS LINE
+// The rest of your ChemicalsSetupView.cpp file remains the same.
+// Just ensure the constructor and the new getter function above are correct.
 
 void ChemicalsSetupView::setupScreen()
 {
-
     ChemicalsSetupViewBase::setupScreen();
 
-    // --- THIS IS THE CRITICAL CONNECTION ---
-    // Give each child widget a pointer to the presenter.
     for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
     {
-        pumpSetupWidgets[i]->setPresenter(presenter);
+        // pumpSetupWidgets[i]->setPresenter(presenter); // This line is likely not needed
+        pumpSetupWidgets[i]->dropdownStateChangedCallback = &dropdownStateCallback;
     }
 
-    ChemicalsSetupViewBase::setupScreen();
-
-    // Store the current page index when the screen is entered.
     currentPageIndex = swipeContainer1.getSelectedPage();
-
-    // Tell the Presenter to load all the data for this page.
     presenter->loadScreenData(currentPageIndex);
 }
-
 
 void ChemicalsSetupView::tearDownScreen()
 {
     ChemicalsSetupViewBase::tearDownScreen();
 }
 
-
 void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit)
 {
-    // This function populates the UI and is mostly unchanged.
-
-    Chemical1EnableButton.forceState(data.is_enabled == 1); // Use the correct button name
+    Chemical1EnableButton.forceState(data.is_enabled == 1);
     Chemical1EnableButton.invalidate();
 
-    // Update Chemical Name
     memset(NameEditTextBuffer, 0, NAMEEDITTEXT_SIZE * sizeof(touchgfx::Unicode::UnicodeChar));
     Unicode::strncpy(NameEditTextBuffer, data.name, NAMEEDITTEXT_SIZE);
     NameEditText.invalidate();
 
-    // Update Total Volume and Units
     const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
-
     char volBuffer[20];
     snprintf(volBuffer, 20, "%.2f %s", data.total_dispense_volume, unit_suffix);
     memset(VolumeEditTextBuffer, 0, VOLUMEEDITTEXT_SIZE * sizeof(touchgfx::Unicode::UnicodeChar));
     Unicode::strncpy(VolumeEditTextBuffer, volBuffer, VOLUMEEDITTEXT_SIZE);
     VolumeEditText.invalidate();
 
-    // Configure the PumpSetupWidgets
     int visiblePumpSetups = 0;
     for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
     {
@@ -99,126 +108,102 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
         pumpSetupWidgets[i]->invalidate();
     }
 
-    // Manage Add/Remove button visibility
     AddPump.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
     RemovePump.setVisible(visiblePumpSetups > 1);
     AddPump.invalidate();
     RemovePump.invalidate();
 }
 
-
-/*
- * ======================================================
- *               NEW HANDLER FUNCTIONS
- * ======================================================
- */
-
-// This handler is called by the swipe container whenever the user swipes to a new page.
 void ChemicalsSetupView::swipeContainer1PageChangedCallback(int newPageIndex)
 {
-    // Update our stored page index and tell the presenter to load the new page's data.
+    if (currentPageIndex >= 0 && currentPageIndex < NUM_CHEMICAL_RECIPES) {
+        ScrollableContainer* oldPage = pageContainers[currentPageIndex];
+        if (oldPage) oldPage->setTouchable(true);
+    }
+
+    for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+    {
+        pumpSetupWidgets[i]->closeDropdown();
+    }
+
     currentPageIndex = newPageIndex;
     presenter->loadScreenData(currentPageIndex);
 }
 
-
-// This handler is called by ANY of the three PumpSetupWidgets when their data has changed.
 void ChemicalsSetupView::pumpSetupSaveDataCallbackHandler(int setupIndex, const PumpSetup_t& data)
 {
-    // The View's job is to simply pass the message on to the Presenter.
-    // We already know the current page, so we pass that along too.
     presenter->savePumpSetupData(currentPageIndex, setupIndex, data);
 }
 
 void ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler(int setupIndex, int fieldIndex)
 {
-    // Calculate the unique ID and pass it to the presenter.
     int fieldID = FIELD_PUMP_SETUP_START + (setupIndex * 10) + fieldIndex;
     presenter->editField(fieldID);
 }
 
+void ChemicalsSetupView::dropdownStateCallbackHandler(bool isOpen)
+{
+    if (currentPageIndex >= 0 && currentPageIndex < NUM_CHEMICAL_RECIPES) {
+        ScrollableContainer* currentPage = pageContainers[currentPageIndex];
+        if (currentPage) {
+            currentPage->setTouchable(!isOpen);
+        }
+    }
+}
 
-// The showKeyboard() function doesn't need to change at all.
 void ChemicalsSetupView::showKeyboard()
 {
-    // Make the keyboard and its extra buttons visible
     keyboard.setVisible(true);
-    KeyboardExtras.setVisible(true);
-
-    // Invalidate them to force a redraw
+     KeyboardExtras;
+     KeyboardExtras.setVisible(true);
     keyboard.invalidate();
-    KeyboardExtras.invalidate();
+     KeyboardExtras.invalidate();
 }
 
 void ChemicalsSetupView::EnterPressed()
 {
-    // 1. Hide the keyboard and its extra buttons.
     keyboard.setVisible(false);
     keyboard.invalidate();
-    KeyboardExtras.setVisible(false);
-    KeyboardExtras.invalidate();
+     KeyboardExtras.setVisible(false);
+     KeyboardExtras.invalidate();
 
-    // 2. Convert the keyboard's 16-bit Unicode buffer to a standard 8-bit C-string.
     char utf8_buffer[20];
-    memset(utf8_buffer, 0, 20); // Clear the buffer to be safe
+    memset(utf8_buffer, 0, 20);
     Unicode::toUTF8(keyboard.getBuffer(), (uint8_t*)utf8_buffer, 20);
 
-    // 3. The View's only job is to report the event to the Presenter.
-    //    It passes the unique ID of the field that was being edited and the new text.
     presenter->newValueEntered(utf8_buffer);
 
-    // 4. Clean up the state.
     keyboard.clearBuffer();
-    currentlyEditingField = FIELD_NONE; // Reset the "what am I editing?" state
+    currentlyEditingField = FIELD_NONE;
 }
 
-
-// --- VIRTUAL HANDLER FOR "EXIT" BUTTON CALLBACK ---
 void ChemicalsSetupView::ExitPressed()
 {
-    // If the user presses exit, we just hide the keyboard and discard any input.
-
-    // 1. Hide the keyboard and its extra buttons.
     keyboard.setVisible(false);
     keyboard.invalidate();
-    KeyboardExtras.setVisible(false);
-    KeyboardExtras.invalidate();
-
-    // 2. Clean up the state.
+     KeyboardExtras.setVisible(false);
+     KeyboardExtras.invalidate();
     keyboard.clearBuffer();
-    currentlyEditingField = FIELD_NONE; // Reset the "what am I editing?" state
+    currentlyEditingField = FIELD_NONE;
 }
 
 void ChemicalsSetupView::chemicalEnableButtonClicked()
 {
-    // The View's only job is to report the event to the Presenter.
     presenter->chemicalEnableToggled();
 }
 
-//// This handler is called by ANY of the three PumpSetupWidgets when an edit button is clicked.
-//void ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler(int setupIndex, int fieldIndex)
+//void ChemicalsSetupView::addPumpClicked()
 //{
-//    // TODO: Implement keyboard logic here.
-//    // For now, it's an empty placeholder.
-//    // Example: presenter->editPumpVolume(currentPageIndex, setupIndex, fieldIndex);
+//    presenter->addPumpSetup(currentPageIndex);
+//}
+//
+//void ChemicalsSetupView::removePumpClicked()
+//{
+//    presenter->removePumpSetup(currentPageIndex);
 //}
 
-
-// --- Placeholder implementations for your button clicks ---
-// You will wire these up in the TouchGFX Designer using "Execute C++ code".
-
-
-void ChemicalsSetupView::nameEditClicked()
-{
-    // presenter->editChemicalName(currentPageIndex);
-}
-
-void ChemicalsSetupView::volumeEditClicked()
-{
-    // presenter->editTotalVolume(currentPageIndex);
-}
-
-void ChemicalsSetupView::unitToggleButtonClicked()
-{
-    // presenter->unitChanged(currentPageIndex);
-}
+void ChemicalsSetupView::nameEditClicked() { /* Not yet implemented */ }
+void ChemicalsSetupView::volumeEditClicked() { /* Not yet implemented */ }
+void ChemicalsSetupView::unitToggleButtonClicked() { /* Not yet implemented */ }
+void ChemicalsSetupView::editChemicalNameClicked() { /* Not yet implemented */ }
+void ChemicalsSetupView::editTotalVolumeClicked() { /* Not yet implemented */ }

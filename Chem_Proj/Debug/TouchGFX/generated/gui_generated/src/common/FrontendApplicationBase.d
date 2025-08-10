@@ -116,7 +116,8 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp
+ ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp \
+ ../TouchGFX/gui/include/gui/common/FieldIDs.hpp
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:
@@ -235,3 +236,4 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../TouchGFX/gui/include/gui/containers/PumpDropdownList.hpp:
+../TouchGFX/gui/include/gui/common/FieldIDs.hpp:

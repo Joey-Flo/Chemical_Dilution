@@ -18,6 +18,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:515:10:void touchgfx::Drawable::setVisible(bool)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:525:10:void touchgfx::Drawable::setTouchable(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:537:10:bool touchgfx::Drawable::isVisible() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:549:10:bool touchgfx::Drawable::isTouchable() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
@@ -66,54 +67,58 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<CustomKeyboard, short unsigned int>::~Callback()	16	static
 ../TouchGFX/gui/include/gui/common/CustomKeyboard.hpp:25:13:CustomKeyboard::~CustomKeyboard()	16	static
 ../TouchGFX/gui/include/gui/common/CustomKeyboard.hpp:25:13:virtual CustomKeyboard::~CustomKeyboard()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<ChemicalsSetupView, int>::~Callback()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<ChemicalsSetupView, int>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:touchgfx::Callback<ChemicalsSetupView, int, const PumpSetup_t&>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:virtual touchgfx::Callback<ChemicalsSetupView, int, const PumpSetup_t&>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:touchgfx::Callback<ChemicalsSetupView, int, int>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:virtual touchgfx::Callback<ChemicalsSetupView, int, int>::~Callback()	16	static
-../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:39:13:ChemicalsSetupView::~ChemicalsSetupView()	16	static
-../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:39:13:virtual ChemicalsSetupView::~ChemicalsSetupView()	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:11:1:ChemicalsSetupView::ChemicalsSetupView()	48	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:37:6:virtual void ChemicalsSetupView::setupScreen()	24	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:59:6:virtual void ChemicalsSetupView::tearDownScreen()	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:65:6:void ChemicalsSetupView::displayData(const ChemicalRecipe_t&, const std::vector<int>&, int8_t)	72	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:117:6:void ChemicalsSetupView::swipeContainer1PageChangedCallback(int)	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:126:6:void ChemicalsSetupView::pumpSetupSaveDataCallbackHandler(int, const PumpSetup_t&)	24	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:133:6:void ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler(int, int)	32	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:142:6:void ChemicalsSetupView::showKeyboard()	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:153:6:virtual void ChemicalsSetupView::EnterPressed()	40	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:177:6:virtual void ChemicalsSetupView::ExitPressed()	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:192:6:virtual void ChemicalsSetupView::chemicalEnableButtonClicked()	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:211:6:void ChemicalsSetupView::nameEditClicked()	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:216:6:void ChemicalsSetupView::volumeEditClicked()	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:221:6:void ChemicalsSetupView::unitToggleButtonClicked()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = int]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<ChemicalsSetupView, bool>::~Callback()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<ChemicalsSetupView, bool>::~Callback()	16	static
+../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:17:13:ChemicalsSetupView::~ChemicalsSetupView()	16	static
+../TouchGFX/gui/include/gui/chemicalssetup_screen/ChemicalsSetupView.hpp:17:13:virtual ChemicalsSetupView::~ChemicalsSetupView()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:6:1:ChemicalsSetupView::ChemicalsSetupView()	56	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:37:32:touchgfx::ScrollableContainer* ChemicalsSetupView::getScrollableContainerForPage(int)	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:61:6:virtual void ChemicalsSetupView::setupScreen()	24	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:75:6:virtual void ChemicalsSetupView::tearDownScreen()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:80:6:void ChemicalsSetupView::displayData(const ChemicalRecipe_t&, const std::vector<int>&, int8_t)	72	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:117:6:void ChemicalsSetupView::swipeContainer1PageChangedCallback(int)	24	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:133:6:void ChemicalsSetupView::pumpSetupSaveDataCallbackHandler(int, const PumpSetup_t&)	24	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:138:6:void ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler(int, int)	32	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:144:6:void ChemicalsSetupView::dropdownStateCallbackHandler(bool)	24	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:154:6:void ChemicalsSetupView::showKeyboard()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:163:6:virtual void ChemicalsSetupView::EnterPressed()	40	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:180:6:virtual void ChemicalsSetupView::ExitPressed()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:190:6:virtual void ChemicalsSetupView::chemicalEnableButtonClicked()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:205:6:void ChemicalsSetupView::nameEditClicked()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:206:6:void ChemicalsSetupView::volumeEditClicked()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:207:6:void ChemicalsSetupView::unitToggleButtonClicked()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:208:6:void ChemicalsSetupView::editChemicalNameClicked()	16	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:209:6:void ChemicalsSetupView::editTotalVolumeClicked()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = short unsigned int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = short unsigned int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:94:13:touchgfx::GenericCallback<T1, T2, void>::~GenericCallback() [with T1 = int; T2 = const PumpSetup_t&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:94:13:touchgfx::GenericCallback<T1, T2, void>::~GenericCallback() [with T1 = int; T2 = const PumpSetup_t&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:94:13:touchgfx::GenericCallback<T1, T2, void>::~GenericCallback() [with T1 = int; T2 = int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:94:13:touchgfx::GenericCallback<T1, T2, void>::~GenericCallback() [with T1 = int; T2 = int]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<int>::GenericCallback()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:360:5:touchgfx::Callback<dest_type, T1, void, void>::Callback() [with dest_type = ChemicalsSetupView; T1 = int]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = bool]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = bool]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:90:7:constexpr touchgfx::GenericCallback<int, const PumpSetup_t&>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:306:5:touchgfx::Callback<dest_type, T1, T2, void>::Callback(dest_type*, void (dest_type::*)(T1, T2)) [with dest_type = ChemicalsSetupView; T1 = int; T2 = const PumpSetup_t&]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:90:7:constexpr touchgfx::GenericCallback<int, int>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:306:5:touchgfx::Callback<dest_type, T1, T2, void>::Callback(dest_type*, void (dest_type::*)(T1, T2)) [with dest_type = ChemicalsSetupView; T1 = int; T2 = int]	24	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:224:1:void __static_initialization_and_destruction_0()	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<bool>::GenericCallback()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = ChemicalsSetupView; T1 = bool]	24	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:209:79:void __static_initialization_and_destruction_0()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:224:1:void __static_initialization_and_destruction_1()	8	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:209:79:void __static_initialization_and_destruction_1()	8	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = ChemicalsSetupView; T1 = bool]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = ChemicalsSetupView; T1 = bool]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:318:18:void touchgfx::Callback<dest_type, T1, T2, void>::execute(T1, T2) [with dest_type = ChemicalsSetupView; T1 = int; T2 = int]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:328:18:bool touchgfx::Callback<dest_type, T1, T2, void>::isValid() const [with dest_type = ChemicalsSetupView; T1 = int; T2 = int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:318:18:void touchgfx::Callback<dest_type, T1, T2, void>::execute(T1, T2) [with dest_type = ChemicalsSetupView; T1 = int; T2 = const PumpSetup_t&]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:328:18:bool touchgfx::Callback<dest_type, T1, T2, void>::isValid() const [with dest_type = ChemicalsSetupView; T1 = int; T2 = const PumpSetup_t&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = ChemicalsSetupView; T1 = int]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = ChemicalsSetupView; T1 = int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = CustomKeyboard; T1 = short unsigned int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = CustomKeyboard; T1 = short unsigned int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = CustomKeyboard]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = CustomKeyboard]	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:224:1:cpp)	8	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:224:1:cpp)	8	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:209:79:cpp)	8	static
+../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:209:79:cpp)	8	static

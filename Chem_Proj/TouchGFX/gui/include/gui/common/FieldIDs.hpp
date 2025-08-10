@@ -1,0 +1,24 @@
+// In TouchGFX/gui/include/gui/common/FieldIDs.hpp
+#ifndef FIELD_IDS_HPP
+#define FIELD_IDS_HPP
+
+enum FieldID {
+    FIELD_NONE = 0,
+    FIELD_CHEM_NAME,
+    FIELD_TOTAL_VOLUME,
+
+    FIELD_PUMP_SETUP_START = 10,
+    FIELD_PUMP1_S = FIELD_PUMP_SETUP_START + (0 * 10) + 0, // 10
+    FIELD_PUMP1_M = FIELD_PUMP_SETUP_START + (0 * 10) + 1, // 11
+    FIELD_PUMP1_L = FIELD_PUMP_SETUP_START + (0 * 10) + 2, // 12
+
+    FIELD_PUMP2_S = FIELD_PUMP_SETUP_START + (1 * 10) + 0, // 20
+    FIELD_PUMP2_M = FIELD_PUMP_SETUP_START + (1 * 10) + 1, // 21
+    FIELD_PUMP2_L = FIELD_PUMP_SETUP_START + (1 * 10) + 2, // 22
+
+    FIELD_PUMP3_S = FIELD_PUMP_SETUP_START + (2 * 10) + 0, // 30
+    FIELD_PUMP3_M = FIELD_PUMP_SETUP_START + (2 * 10) + 1, // 31
+    FIELD_PUMP3_L = FIELD_PUMP_SETUP_START + (2 * 10) + 2  // 32
+};
+
+#endif // FIELD_IDS_HPP

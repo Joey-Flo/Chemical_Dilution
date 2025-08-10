@@ -1,12 +1,14 @@
 #include <gui/containers/PumpSetupWidget.hpp>
-#include <cstdio>   // For snprintf
-#include <algorithm> // For std::find
+#include <cstdio>
+#include <algorithm>
 #include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
 
 PumpSetupWidget::PumpSetupWidget() :
-	presenter(nullptr),
+    presenter(nullptr),
     volumeEditClickedCallback(nullptr),
     saveDataCallback(nullptr),
+    // --- ADD THE NEW CALLBACK POINTER TO THE INITIALIZER LIST ---
+    dropdownStateChangedCallback(nullptr),
     selectPumpCallback(this, &PumpSetupWidget::selectPumpButtonClickHandler),
     dropdownCallback(this, &PumpSetupWidget::dropdownPumpSelectedHandler),
     editVolumeCallback(this, &PumpSetupWidget::editVolumeButtonHandler)
@@ -19,6 +21,7 @@ PumpSetupWidget::PumpSetupWidget() :
     LEditButton.setAction(editVolumeCallback);
 
     // Z-Order Fix to prevent the dropdown from blocking clicks
+    // This is good practice to ensure the dropdown draws on top of everything else in this widget.
     remove(PumpDropDown);
     add(PumpDropDown);
 }
@@ -29,7 +32,6 @@ void PumpSetupWidget::setup(int setup_index, const PumpSetup_t& data, int8_t uni
     setupIndex = setup_index;
     currentData = data; // Make a local copy
 
-    // --- REFINED LOGIC: Check if the saved pump is still valid ---
     bool is_current_pump_valid = false;
     if (currentData.pump_index != -1) {
         for (int available_pump : availablePumps) {
@@ -40,19 +42,13 @@ void PumpSetupWidget::setup(int setup_index, const PumpSetup_t& data, int8_t uni
         }
     }
 
-    // This block is now for UI display only. It does NOT trigger a save.
     if (is_current_pump_valid) {
-        // The saved pump is valid, so we display it.
         Unicode::snprintf(PumpSelectTextBuffer, PUMPSELECTTEXT_SIZE, "Pump %d", currentData.pump_index + 1);
     } else {
-        // The saved pump is not valid OR no pump was ever selected.
-        // Display a prompt for the user to make a choice.
         Unicode::strncpy(PumpSelectTextBuffer, "Select Pump", PUMPSELECTTEXT_SIZE);
     }
     PumpSelectText.invalidate();
 
-
-    // Update the three volume text fields with units
     const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
     char volume_buffer[20];
 
@@ -68,10 +64,8 @@ void PumpSetupWidget::setup(int setup_index, const PumpSetup_t& data, int8_t uni
     Unicode::strncpy(LTextEditBuffer, volume_buffer, LTEXTEDIT_SIZE);
     LTextEdit.invalidate();
 
-    // Ensure dropdown is hidden initially
-    PumpDropDown.setVisible(false);
-    SelectPumpButton.forceState(false);
-    SelectPumpButton.invalidate();
+    // Ensure dropdown is hidden initially when the widget is first set up
+    closeDropdown(); // Use our new function to ensure state is consistent
 }
 
 
@@ -81,48 +75,76 @@ void PumpSetupWidget::setAvailablePumps(const std::vector<int>& enabled_pumps)
 }
 
 
+// --- MODIFIED: This handler now signals the parent ---
 void PumpSetupWidget::selectPumpButtonClickHandler(const touchgfx::AbstractButton& src)
 {
+    // Determine the new desired state of the dropdown.
     bool showDropdown = SelectPumpButton.getState();
-    if (showDropdown) {
-        if (!availablePumps.empty()) {
-            PumpDropDown.buildList(availablePumps);
-            PumpDropDown.setVisible(true);
-        } else {
-            SelectPumpButton.forceState(false);
-        }
-    } else {
-        PumpDropDown.setVisible(false);
+
+    // If we want to show it, first check if there's anything TO show.
+    if (showDropdown && availablePumps.empty()) {
+        SelectPumpButton.forceState(false); // Can't open an empty list, so revert button state.
+        showDropdown = false; // Update our desired state.
     }
+
+    // Now, apply the final state.
+    if (showDropdown) {
+        PumpDropDown.buildList(availablePumps);
+    }
+    PumpDropDown.setVisible(showDropdown);
     PumpDropDown.invalidate();
+
+    // --- TRIGGER THE CALLBACK ---
+    // Inform the parent view about the change in the dropdown's visibility state.
+    if (dropdownStateChangedCallback && dropdownStateChangedCallback->isValid())
+    {
+        dropdownStateChangedCallback->execute(showDropdown); // true if showing, false if hiding
+    }
 }
 
 
-// --- THIS IS WHERE THE SAVE IS TRIGGERED ---
+// --- MODIFIED: This handler also signals the parent ---
 void PumpSetupWidget::dropdownPumpSelectedHandler(int pump_index)
 {
     // Hide the dropdown and untoggle the button
-    PumpDropDown.setVisible(false);
-    PumpDropDown.invalidate();
-    SelectPumpButton.forceState(false);
-    SelectPumpButton.invalidate();
+    closeDropdown(); // Use the new function to hide and signal in one step.
 
-    // --- Update our local data copy with the NEW selection ---
+    // Update our local data copy with the NEW selection
     currentData.pump_index = pump_index;
 
     // Update the button's text to show the new selection
     Unicode::snprintf(PumpSelectTextBuffer, PUMPSELECTTEXT_SIZE, "Pump %d", currentData.pump_index + 1);
     PumpSelectText.invalidate();
 
-    // --- NOW, signal to the main screen that our data has changed ---
-    // The main screen's Presenter/Model will handle the actual save to flash.
+    // Signal to the main screen that our data has changed
     if (saveDataCallback && saveDataCallback->isValid()) {
-        // We pass our index (0, 1, or 2) and our entire, updated local data.
         saveDataCallback->execute(setupIndex, currentData);
     }
 }
 
 
+// --- NEW: Implementation of the Public API function ---
+void PumpSetupWidget::closeDropdown()
+{
+    // Check if the dropdown is currently visible before doing anything
+    if (PumpDropDown.isVisible())
+    {
+        // Hide the UI elements
+        PumpDropDown.setVisible(false);
+        PumpDropDown.invalidate();
+        SelectPumpButton.forceState(false);
+        SelectPumpButton.invalidate();
+
+        // Important: Also notify the parent that the dropdown has closed.
+        if (dropdownStateChangedCallback && dropdownStateChangedCallback->isValid())
+        {
+            dropdownStateChangedCallback->execute(false);
+        }
+    }
+}
+
+
+// This handler remains unchanged
 void PumpSetupWidget::editVolumeButtonHandler(const touchgfx::AbstractButton& src)
 {
     int field_index = -1;
@@ -135,38 +157,15 @@ void PumpSetupWidget::editVolumeButtonHandler(const touchgfx::AbstractButton& sr
     }
 }
 
+// These functions can now be removed as their logic is consolidated in editVolumeButtonHandler
+/*
+void PumpSetupWidget::s_edit_button_clicked() { ... }
+void PumpSetupWidget::m_edit_button_clicked() { ... }
+void PumpSetupWidget::l_edit_button_clicked() { ... }
+*/
+
+// This can also likely be removed, as the editVolumeButtonHandler provides a more direct mechanism
 void PumpSetupWidget::setPresenter(ChemicalsSetupPresenter* p)
 {
     presenter = p;
-}
-
-// ... your existing setup() and other functions ...
-
-
-// --- NEW: Implementation of the Public API functions ---
-
-void PumpSetupWidget::s_edit_button_clicked()
-{
-    // Check if the presenter exists, then call its function
-    if (presenter)
-    {
-        // Pass our own index (setupIndex) and the field index for 'S' (0)
-        presenter->editPumpVolume(setupIndex, 0);
-    }
-}
-
-void PumpSetupWidget::m_edit_button_clicked()
-{
-    if (presenter)
-    {
-        presenter->editPumpVolume(setupIndex, 1); // 1 for Medium
-    }
-}
-
-void PumpSetupWidget::l_edit_button_clicked()
-{
-    if (presenter)
-    {
-        presenter->editPumpVolume(setupIndex, 2); // 2 for Large
-    }
 }

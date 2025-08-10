@@ -39,6 +39,9 @@ public:
     void m_edit_button_clicked();
     void l_edit_button_clicked();
 
+    touchgfx::GenericCallback<bool>* dropdownStateChangedCallback;
+    void closeDropdown();
+
 protected:
     // --- INTERNAL EVENT HANDLERS ---
     // These functions are called by our own child widgets.
