@@ -77,19 +77,21 @@ void ChemicalsSetupView::tearDownScreen()
     ChemicalsSetupViewBase::tearDownScreen();
 }
 
-void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit)
+void ChemicalsSetupView::displayData(const std::vector<int>& enabled_pumps, int8_t unit)
 {
     // This function is now just a dispatcher.
     // It loops through all 8 recipes and calls LoadPageData for each one.
     for (int i = 0; i < NUM_CHEMICAL_RECIPES; i++)
     {
         // Get the specific data for the recipe we are loading
-        const ChemicalRecipe_t& recipeDataForPage = presenter->getModel()->getRecipeData(i);
+        const ChemicalRecipe_t& recipeDataForPage = presenter->getRecipeDataForPage(i);
 
         // Call our helper function to update the UI for that page
         LoadPageData(i, recipeDataForPage, enabled_pumps, unit);
     }
 }
+
+
 
 void ChemicalsSetupView::swipeContainer1PageChangedCallback(int newPageIndex)
 {

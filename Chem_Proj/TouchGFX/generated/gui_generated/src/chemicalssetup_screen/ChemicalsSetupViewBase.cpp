@@ -251,7 +251,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     Page8.setHeight(270);
     swipeContainer1.add(Page8);
 
-    swipeContainer1.setSelectedPage(1);
+    swipeContainer1.setSelectedPage(0);
     add(swipeContainer1);
 
     KeyboardExtras.setPosition(0, 0, 250, 320);

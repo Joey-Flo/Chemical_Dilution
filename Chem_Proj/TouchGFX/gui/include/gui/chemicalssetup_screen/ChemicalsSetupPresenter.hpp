@@ -43,6 +43,8 @@ public:
 
     void chemicalEnableToggled();
 
+    const ChemicalRecipe_t& getRecipeDataForPage(int page_index) const;
+
 private:
     int currentlyEditingFieldID;
 

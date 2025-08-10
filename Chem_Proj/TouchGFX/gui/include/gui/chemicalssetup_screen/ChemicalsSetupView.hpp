@@ -18,7 +18,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
-    void displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit);
+    void displayData(const std::vector<int>& enabled_pumps, int8_t unit);
 
     void addPumpClicked();
     void removePumpClicked();

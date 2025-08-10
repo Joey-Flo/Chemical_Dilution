@@ -1,0 +1,3 @@
+../Core/Src/Flash.c:24:19:FlashErase	40	static
+../Core/Src/Flash.c:72:19:FlashWrite	32	static
+../Core/Src/Flash.c:91:10:FlashRead	16	static
