@@ -79,39 +79,16 @@ void ChemicalsSetupView::tearDownScreen()
 
 void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit)
 {
-    Chemical1EnableButton.forceState(data.is_enabled == 1);
-    Chemical1EnableButton.invalidate();
-
-    memset(NameEditTextBuffer, 0, NAMEEDITTEXT_SIZE * sizeof(touchgfx::Unicode::UnicodeChar));
-    Unicode::strncpy(NameEditTextBuffer, data.name, NAMEEDITTEXT_SIZE);
-    NameEditText.invalidate();
-
-    const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
-    char volBuffer[20];
-    snprintf(volBuffer, 20, "%.2f %s", data.total_dispense_volume, unit_suffix);
-    memset(VolumeEditTextBuffer, 0, VOLUMEEDITTEXT_SIZE * sizeof(touchgfx::Unicode::UnicodeChar));
-    Unicode::strncpy(VolumeEditTextBuffer, volBuffer, VOLUMEEDITTEXT_SIZE);
-    VolumeEditText.invalidate();
-
-    int visiblePumpSetups = 0;
-    for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+    // This function is now just a dispatcher.
+    // It loops through all 8 recipes and calls LoadPageData for each one.
+    for (int i = 0; i < NUM_CHEMICAL_RECIPES; i++)
     {
-        pumpSetupWidgets[i]->setAvailablePumps(enabled_pumps);
-        pumpSetupWidgets[i]->setup(i, data.pump_setups[i], unit);
+        // Get the specific data for the recipe we are loading
+        const ChemicalRecipe_t& recipeDataForPage = presenter->getModel()->getRecipeData(i);
 
-        if (data.pump_setups[i].pump_index != -1) {
-            pumpSetupWidgets[i]->setVisible(true);
-            visiblePumpSetups++;
-        } else {
-            pumpSetupWidgets[i]->setVisible(false);
-        }
-        pumpSetupWidgets[i]->invalidate();
+        // Call our helper function to update the UI for that page
+        LoadPageData(i, recipeDataForPage, enabled_pumps, unit);
     }
-
-    AddPump.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
-    RemovePump.setVisible(visiblePumpSetups > 1);
-    AddPump.invalidate();
-    RemovePump.invalidate();
 }
 
 void ChemicalsSetupView::swipeContainer1PageChangedCallback(int newPageIndex)
@@ -207,3 +184,122 @@ void ChemicalsSetupView::volumeEditClicked() { /* Not yet implemented */ }
 void ChemicalsSetupView::unitToggleButtonClicked() { /* Not yet implemented */ }
 void ChemicalsSetupView::editChemicalNameClicked() { /* Not yet implemented */ }
 void ChemicalsSetupView::editTotalVolumeClicked() { /* Not yet implemented */ }
+
+void ChemicalsSetupView::LoadPageData(uint8_t Page, const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit) {
+    // A temporary buffer for the volume string
+    char volBuffer[20];
+    const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
+    snprintf(volBuffer, 20, "%.2f %s", data.total_dispense_volume, unit_suffix);
+
+    // This switch updates the correct widgets based on the Page number
+    switch (Page)
+    {
+        case 0: // Page 1
+            Chemical1EnableButton.forceState(data.is_enabled == 1);
+            Unicode::strncpy(NameEditText1Buffer, data.name, NAMEEDITTEXT1_SIZE);
+            Unicode::strncpy(VolumeEditText1Buffer, volBuffer, VOLUMEEDITTEXT1_SIZE);
+            NameEditText1.invalidate();
+            VolumeEditText1.invalidate();
+            Chemical1EnableButton.invalidate();
+            break;
+
+        case 1: // Page 2
+            Chemical2EnableButton.forceState(data.is_enabled == 1);
+            Unicode::strncpy(NameEditText2Buffer, data.name, NAMEEDITTEXT2_SIZE);
+            Unicode::strncpy(VolumeEditText2Buffer, volBuffer, VOLUMEEDITTEXT2_SIZE);
+            NameEditText2.invalidate();
+            VolumeEditText2.invalidate();
+            Chemical2EnableButton.invalidate();
+            break;
+
+//        case 2: // Page 3
+//            Chemical3EnableButton.forceState(data.is_enabled == 1);
+//            Unicode::strncpy(NameEditText3Buffer, data.name, NAMEEDITTEXT3_SIZE);
+//            Unicode::strncpy(VolumeEditText3Buffer, volBuffer, VOLUMEEDITTEXT3_SIZE);
+//            NameEditText3.invalidate();
+//            VolumeEditText3.invalidate();
+//            Chemical3EnableButton.invalidate();
+//            break;
+//
+//        case 3: // Page 4
+//            Chemical4EnableButton.forceState(data.is_enabled == 1);
+//            Unicode::strncpy(NameEditText4Buffer, data.name, NAMEEDITTEXT4_SIZE);
+//            Unicode::strncpy(VolumeEditText4Buffer, volBuffer, VOLUMEEDITTEXT4_SIZE);
+//            NameEditText4.invalidate();
+//            VolumeEditText4.invalidate();
+//            Chemical4EnableButton.invalidate();
+//            break;
+//
+//        case 4: // Page 5
+//            Chemical5EnableButton.forceState(data.is_enabled == 1);
+//            Unicode::strncpy(NameEditText5Buffer, data.name, NAMEEDITTEXT5_SIZE);
+//            Unicode::strncpy(VolumeEditText5Buffer, volBuffer, VOLUMEEDITTEXT5_SIZE);
+//            NameEditText5.invalidate();
+//            VolumeEditText5.invalidate();
+//            Chemical5EnableButton.invalidate();
+//            break;
+//
+//        case 5: // Page 6
+//            Chemical6EnableButton.forceState(data.is_enabled == 1);
+//            Unicode::strncpy(NameEditText6Buffer, data.name, NAMEEDITTEXT6_SIZE);
+//            Unicode::strncpy(VolumeEditText6Buffer, volBuffer, VOLUMEEDITTEXT6_SIZE);
+//            NameEditText6.invalidate();
+//            VolumeEditText6.invalidate();
+//            Chemical6EnableButton.invalidate();
+//            break;
+//
+//        case 6: // Page 7
+//            Chemical7EnableButton.forceState(data.is_enabled == 1);
+//            Unicode::strncpy(NameEditText7Buffer, data.name, NAMEEDITTEXT7_SIZE);
+//            Unicode::strncpy(VolumeEditText7Buffer, volBuffer, VOLUMEEDITTEXT7_SIZE);
+//            NameEditText7.invalidate();
+//            VolumeEditText7.invalidate();
+//            Chemical7EnableButton.invalidate();
+//            break;
+//
+//        case 7: // Page 8
+//            Chemical8EnableButton.forceState(data.is_enabled == 1);
+//            Unicode::strncpy(NameEditText8Buffer, data.name, NAMEEDITTEXT8_SIZE);
+//            Unicode::strncpy(VolumeEditText8Buffer, volBuffer, VOLUMEEDITTEXT8_SIZE);
+//            NameEditText8.invalidate();
+//            VolumeEditText8.invalidate();
+//            Chemical8EnableButton.invalidate();
+//            break;
+    }
+
+    // --- Pump Widget and Add/Remove Button Logic ---
+    // This part is more complex because the widgets themselves might be unique to each page
+    // or they might be reused. For now, this logic will only affect the widgets on the
+    // currently visible page. We will address making this work for all pages in the next step.
+    if (Page == currentPageIndex) {
+        int visiblePumpSetups = 0;
+        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+        {
+            pumpSetupWidgets[i]->setAvailablePumps(enabled_pumps);
+            pumpSetupWidgets[i]->setup(i, data.pump_setups[i], unit);
+            pumpSetupWidgets[i]->setVisible(data.pump_setups[i].pump_index != -1);
+            if (pumpSetupWidgets[i]->isVisible()) {
+                visiblePumpSetups++;
+            }
+            pumpSetupWidgets[i]->invalidate();
+        }
+
+        // We also need to target the correct Add/Remove buttons
+        switch(Page)
+        {
+            case 0:
+                AddPump1.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
+                RemovePump1.setVisible(visiblePumpSetups > 1);
+                AddPump1.invalidate();
+                RemovePump1.invalidate();
+                break;
+            case 1:
+                AddPump2.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
+                RemovePump2.setVisible(visiblePumpSetups > 1);
+                AddPump2.invalidate();
+                RemovePump2.invalidate();
+                break;
+            // Add cases for pages 2-7 here
+        }
+    }
+}

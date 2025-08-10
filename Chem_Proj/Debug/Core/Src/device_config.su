@@ -1,4 +1,0 @@
-../Core/Src/device_config.c:17:6:Config_SetDefaults	72	static
-../Core/Src/device_config.c:86:17:CalculateCRC32	16	static
-../Core/Src/device_config.c:99:19:Config_Save	608	static
-../Core/Src/device_config.c:149:19:Config_Load	56	static

@@ -33,6 +33,7 @@ public:
     void EnterPressed();
     void ExitPressed();
     void chemicalEnableButtonClicked();
+    void LoadPageData(uint8_t Page, const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit);
 
 protected:
     void swipeContainer1PageChangedCallback(int newPageIndex);

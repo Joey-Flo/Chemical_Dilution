@@ -1293,7 +1293,7 @@
                   },
                   {
                     "Type": "Box",
-                    "Name": "NameBox",
+                    "Name": "NameBox1",
                     "X": 87,
                     "Y": 59,
                     "Width": 109,
@@ -1306,7 +1306,7 @@
                   },
                   {
                     "Type": "Box",
-                    "Name": "VolumeBox",
+                    "Name": "VolumeBox1",
                     "X": 87,
                     "Y": 93,
                     "Width": 109,
@@ -1319,7 +1319,7 @@
                   },
                   {
                     "Type": "TextArea",
-                    "Name": "ChemVolumeText",
+                    "Name": "ChemVolumeText1",
                     "X": 13,
                     "Y": 96,
                     "Width": 64,
@@ -1335,7 +1335,7 @@
                   },
                   {
                     "Type": "TextArea",
-                    "Name": "ChemNameText",
+                    "Name": "ChemNameText1",
                     "X": 13,
                     "Y": 62,
                     "Width": 51,
@@ -1367,7 +1367,7 @@
                   },
                   {
                     "Type": "Button",
-                    "Name": "NameEdit",
+                    "Name": "NameEdit1",
                     "X": 207,
                     "Y": 59,
                     "Width": 23,
@@ -1377,7 +1377,7 @@
                   },
                   {
                     "Type": "Button",
-                    "Name": "VolumeEdit",
+                    "Name": "VolumeEdit1",
                     "X": 207,
                     "Y": 93,
                     "Width": 23,
@@ -1397,7 +1397,7 @@
                   },
                   {
                     "Type": "BoxWithBorder",
-                    "Name": "AddPumpBox",
+                    "Name": "AddPumpBox1",
                     "X": 1,
                     "Y": 126,
                     "Width": 239,
@@ -1416,7 +1416,7 @@
                   },
                   {
                     "Type": "Button",
-                    "Name": "AddPump",
+                    "Name": "AddPump1",
                     "X": 137,
                     "Y": 132,
                     "Width": 23,
@@ -1426,7 +1426,7 @@
                   },
                   {
                     "Type": "Button",
-                    "Name": "RemovePump",
+                    "Name": "RemovePump1",
                     "X": 166,
                     "Y": 132,
                     "Width": 23,
@@ -1436,7 +1436,7 @@
                   },
                   {
                     "Type": "TextArea",
-                    "Name": "AddPumpText",
+                    "Name": "AddPumpText1",
                     "X": 46,
                     "Y": 135,
                     "Width": 83,
@@ -1452,7 +1452,7 @@
                   },
                   {
                     "Type": "TextArea",
-                    "Name": "NameEditText",
+                    "Name": "NameEditText1",
                     "X": 87,
                     "Y": 62,
                     "Width": 109,
@@ -1466,7 +1466,7 @@
                   },
                   {
                     "Type": "TextArea",
-                    "Name": "VolumeEditText",
+                    "Name": "VolumeEditText1",
                     "X": 87,
                     "Y": 96,
                     "Width": 109,
@@ -1838,7 +1838,7 @@
             "InteractionName": "TotalVolumeEdit",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "VolumeEdit"
+              "TriggerComponent": "VolumeEdit1"
             },
             "Action": {
               "Type": "ActionExecuteCode",
@@ -1849,7 +1849,7 @@
             "InteractionName": "NameEdit",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "NameEdit"
+              "TriggerComponent": "NameEdit1"
             },
             "Action": {
               "Type": "ActionExecuteCode",
@@ -1860,7 +1860,7 @@
             "InteractionName": "AddPump",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "AddPump"
+              "TriggerComponent": "AddPump1"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -1871,7 +1871,7 @@
             "InteractionName": "RemovePump",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "RemovePump"
+              "TriggerComponent": "RemovePump1"
             },
             "Action": {
               "Type": "ActionCustom",

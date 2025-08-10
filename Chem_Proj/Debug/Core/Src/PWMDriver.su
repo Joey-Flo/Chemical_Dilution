@@ -1,3 +1,0 @@
-../Core/Src/PWMDriver.c:25:10:get_tim_clock_freq	24	static
-../Core/Src/PWMDriver.c:54:6:DutyCycleAdjust	32	static
-../Core/Src/PWMDriver.c:86:6:FrequencyAdjust	56	static
