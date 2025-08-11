@@ -12,9 +12,9 @@ ChemicalsSetupView::ChemicalsSetupView() :
     currentlyEditingField(FIELD_NONE) // Initialize this member
 {
     // Initialize the helper array with pointers to your widgets.
-    pumpSetupWidgets[0] = &pumpSetupWidget1;
-    pumpSetupWidgets[1] = &pumpSetupWidget2;
-    pumpSetupWidgets[2] = &pumpSetupWidget3;
+    pumpSetupWidgets[0] = &pumpSetupWidget1_1;
+    pumpSetupWidgets[1] = &pumpSetupWidget1_2;
+    pumpSetupWidgets[2] = &pumpSetupWidget1_3;
 
     // --- FIX: Use our new getter function to safely populate the array ---
     for (int i = 0; i < NUM_CHEMICAL_RECIPES; ++i)
@@ -188,33 +188,32 @@ void ChemicalsSetupView::unitToggleButtonClicked() { /* Not yet implemented */ }
 void ChemicalsSetupView::editChemicalNameClicked() { /* Not yet implemented */ }
 void ChemicalsSetupView::editTotalVolumeClicked() { /* Not yet implemented */ }
 
+
+
+
+
 void ChemicalsSetupView::LoadPageData(uint8_t Page, const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit) {
     // A temporary buffer for the volume string
     char volBuffer[20];
     const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
     snprintf(volBuffer, 20, "%.2f %s", data.total_dispense_volume, unit_suffix);
 
-    // This switch updates the correct widgets based on the Page number
+    // This switch updates the correct static widgets based on the Page number
     switch (Page)
     {
-        case 0: // Page 1
+        case 0:
             Chemical1EnableButton.forceState(data.is_enabled == 1);
             Unicode::strncpy(NameEditText1Buffer, data.name, NAMEEDITTEXT1_SIZE);
             Unicode::strncpy(VolumeEditText1Buffer, volBuffer, VOLUMEEDITTEXT1_SIZE);
-            NameEditText1.invalidate();
-            VolumeEditText1.invalidate();
-            Chemical1EnableButton.invalidate();
+            NameEditText1.invalidate(); VolumeEditText1.invalidate(); Chemical1EnableButton.invalidate();
             break;
 
-        case 1: // Page 2
+        case 1:
             Chemical2EnableButton.forceState(data.is_enabled == 1);
             Unicode::strncpy(NameEditText2Buffer, data.name, NAMEEDITTEXT2_SIZE);
             Unicode::strncpy(VolumeEditText2Buffer, volBuffer, VOLUMEEDITTEXT2_SIZE);
-            NameEditText2.invalidate();
-            VolumeEditText2.invalidate();
-            Chemical2EnableButton.invalidate();
+            NameEditText2.invalidate(); VolumeEditText2.invalidate(); Chemical2EnableButton.invalidate();
             break;
-
         case 2: // Page 3
             Chemical3EnableButton.forceState(data.is_enabled == 1);
             Unicode::strncpy(NameEditText3Buffer, data.name, NAMEEDITTEXT3_SIZE);
@@ -270,42 +269,100 @@ void ChemicalsSetupView::LoadPageData(uint8_t Page, const ChemicalRecipe_t& data
             break;
     }
 
-    // --- Pump Widget and Add/Remove Button Logic ---
-    // This part is more complex because the widgets themselves might be unique to each page
-    // or they might be reused. For now, this logic will only affect the widgets on the
-    // currently visible page. We will address making this work for all pages in the next step.
-    if (Page == currentPageIndex) {
+    // --- NEW: This logic now configures the correct set of pump widgets for EACH page ---
+
+    // Create a temporary array of pointers to the widgets for the current page.
+    PumpSetupWidget* pagePumpWidgets[MAX_PUMP_SETUPS_PER_CHEMICAL];
+    Button* addPumpButton = nullptr;
+    Button* removePumpButton = nullptr;
+
+    switch(Page)
+    {
+        case 0:
+            pagePumpWidgets[0] = &pumpSetupWidget1_1;
+            pagePumpWidgets[1] = &pumpSetupWidget1_2;
+            pagePumpWidgets[2] = &pumpSetupWidget1_3;
+            addPumpButton = &AddPump1;
+            removePumpButton = &RemovePump1;
+            break;
+        case 1:
+            pagePumpWidgets[0] = &pumpSetupWidget2_1;
+            pagePumpWidgets[1] = &pumpSetupWidget2_2;
+            pagePumpWidgets[2] = &pumpSetupWidget2_3;
+            addPumpButton = &AddPump2;
+            removePumpButton = &RemovePump2;
+            break;
+
+        case 2:
+            pagePumpWidgets[0] = &pumpSetupWidget3_1;
+            pagePumpWidgets[1] = &pumpSetupWidget3_2;
+            pagePumpWidgets[2] = &pumpSetupWidget3_3;
+            addPumpButton = &AddPump3;
+            removePumpButton = &RemovePump3;
+            break;
+
+        case 3:
+            pagePumpWidgets[0] = &pumpSetupWidget4_1;
+            pagePumpWidgets[1] = &pumpSetupWidget4_2;
+            pagePumpWidgets[2] = &pumpSetupWidget4_3;
+            addPumpButton = &AddPump4;
+            removePumpButton = &RemovePump4;
+            break;
+        case 4:
+            pagePumpWidgets[0] = &pumpSetupWidget5_1;
+            pagePumpWidgets[1] = &pumpSetupWidget5_2;
+            pagePumpWidgets[2] = &pumpSetupWidget5_3;
+            addPumpButton = &AddPump5;
+            removePumpButton = &RemovePump5;
+            break;
+
+        case 5:
+            pagePumpWidgets[0] = &pumpSetupWidget6_1;
+            pagePumpWidgets[1] = &pumpSetupWidget6_2;
+            pagePumpWidgets[2] = &pumpSetupWidget6_3;
+            addPumpButton = &AddPump6;
+            removePumpButton = &RemovePump6;
+            break;
+
+        case 6:
+            pagePumpWidgets[0] = &pumpSetupWidget7_1;
+            pagePumpWidgets[1] = &pumpSetupWidget7_2;
+            pagePumpWidgets[2] = &pumpSetupWidget7_3;
+            addPumpButton = &AddPump7;
+            removePumpButton = &RemovePump7;
+            break;
+
+        case 7:
+            pagePumpWidgets[0] = &pumpSetupWidget8_1;
+            pagePumpWidgets[1] = &pumpSetupWidget8_2;
+            pagePumpWidgets[2] = &pumpSetupWidget8_3;
+            addPumpButton = &AddPump8;
+            removePumpButton = &RemovePump8;
+            break;
+    }
+
+    // Now, use this temporary array to configure the widgets.
+    if (addPumpButton) { // Check if the pointers were assigned
         int visiblePumpSetups = 0;
         for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
         {
-            pumpSetupWidgets[i]->setAvailablePumps(enabled_pumps);
-            pumpSetupWidgets[i]->setup(i, data.pump_setups[i], unit);
-            pumpSetupWidgets[i]->setVisible(data.pump_setups[i].pump_index != -1);
-            if (pumpSetupWidgets[i]->isVisible()) {
+            pagePumpWidgets[i]->setAvailablePumps(enabled_pumps);
+            pagePumpWidgets[i]->setup(i, data.pump_setups[i], unit);
+            pagePumpWidgets[i]->setVisible(data.pump_setups[i].pump_index != -1);
+            if (pagePumpWidgets[i]->isVisible()) {
                 visiblePumpSetups++;
             }
-            pumpSetupWidgets[i]->invalidate();
+            pagePumpWidgets[i]->invalidate();
         }
 
-        // We also need to target the correct Add/Remove buttons
-        switch(Page)
-        {
-            case 0:
-                AddPump1.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
-                RemovePump1.setVisible(visiblePumpSetups > 1);
-                AddPump1.invalidate();
-                RemovePump1.invalidate();
-                break;
-            case 1:
-                AddPump2.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
-                RemovePump2.setVisible(visiblePumpSetups > 1);
-                AddPump2.invalidate();
-                RemovePump2.invalidate();
-                break;
-            // Add cases for pages 2-7 here
-        }
+        addPumpButton->setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
+        removePumpButton->setVisible(visiblePumpSetups > 1);
+        addPumpButton->invalidate();
+        removePumpButton->invalidate();
     }
 }
+
+
 
 void ChemicalsSetupView::handleClickEvent(const touchgfx::ClickEvent& event)
 {
