@@ -160,17 +160,17 @@ void ChemicalsSetupView::removePumpClicked()
     presenter->removePumpSetup(currentPageIndex);
 }
 
-void ChemicalsSetupPresenter::chemicalEnableToggled()
+void ChemicalsSetupPresenter::chemicalEnableToggled(uint8_t PageIndex)
 {
     // 1. Get the current state from the Model
-    const ChemicalRecipe_t& recipe = model->getRecipeData(activePageIndex);
+    const ChemicalRecipe_t& recipe = model->getRecipeData(PageIndex - 1);
     bool current_state_is_on = (recipe.is_enabled == 1);
 
     // 2. Flip the state
     bool new_state_is_on = !current_state_is_on;
 
     // 3. Command the Model to update the data and save
-    model->setChemicalEnableState(activePageIndex, new_state_is_on);
+    model->setChemicalEnableState(PageIndex - 1, new_state_is_on);
 
     // 4. No need to reload the whole screen, the button handles its own visual state.
     // If other elements needed to change (e.g., grey out), you would call loadScreenData() here.

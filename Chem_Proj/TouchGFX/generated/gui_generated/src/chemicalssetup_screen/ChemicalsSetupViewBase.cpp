@@ -189,6 +189,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Chemical2EnableButton.setXY(119, 26);
     Chemical2EnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    Chemical2EnableButton.setAction(buttonCallback);
     Page2.add(Chemical2EnableButton);
 
     AddPumpBox2.setPosition(1, 126, 239, 36);
@@ -269,6 +270,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Chemical3EnableButton.setXY(119, 26);
     Chemical3EnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    Chemical3EnableButton.setAction(buttonCallback);
     Page3.add(Chemical3EnableButton);
 
     AddPumpBox3.setPosition(1, 126, 239, 36);
@@ -349,6 +351,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Chemical4EnableButton.setXY(119, 26);
     Chemical4EnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    Chemical4EnableButton.setAction(buttonCallback);
     Page4.add(Chemical4EnableButton);
 
     AddPumpBox4.setPosition(1, 126, 239, 36);
@@ -429,6 +432,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Chemical5EnableButton.setXY(119, 26);
     Chemical5EnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    Chemical5EnableButton.setAction(buttonCallback);
     Page5.add(Chemical5EnableButton);
 
     AddPumpBox5.setPosition(1, 126, 239, 36);
@@ -509,6 +513,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Chemical6EnableButton.setXY(119, 26);
     Chemical6EnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    Chemical6EnableButton.setAction(buttonCallback);
     Page6.add(Chemical6EnableButton);
 
     AddPumpBox6.setPosition(1, 126, 239, 36);
@@ -589,6 +594,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Chemical7EnableButton.setXY(119, 26);
     Chemical7EnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    Chemical7EnableButton.setAction(buttonCallback);
     Page7.add(Chemical7EnableButton);
 
     AddPumpBox7.setPosition(1, 126, 239, 36);
@@ -669,6 +675,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Chemical8EnableButton.setXY(119, 26);
     Chemical8EnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    Chemical8EnableButton.setAction(buttonCallback);
     Page8.add(Chemical8EnableButton);
 
     AddPumpBox8.setPosition(1, 126, 239, 36);
@@ -803,9 +810,9 @@ void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
     if (&src == &Chemical1EnableButton)
     {
         //ChemEnable1
-        //When Chemical1EnableButton clicked call virtual function
-        //Call chemicalEnableButtonClicked
-        chemicalEnableButtonClicked();
+        //When Chemical1EnableButton clicked execute C++ code
+        //Execute C++ code
+        presenter->chemicalEnableToggled(1);
     }
     if (&src == &NameEdit2)
     {
@@ -904,5 +911,54 @@ void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //When VolumeEdit8 clicked execute C++ code
         //Execute C++ code
         presenter->editField(2);
+    }
+    if (&src == &Chemical2EnableButton)
+    {
+        //ChemEnable2
+        //When Chemical2EnableButton clicked execute C++ code
+        //Execute C++ code
+        presenter->chemicalEnableToggled(2);
+    }
+    if (&src == &Chemical3EnableButton)
+    {
+        //ChemEnable3
+        //When Chemical3EnableButton clicked execute C++ code
+        //Execute C++ code
+        presenter->chemicalEnableToggled(3);
+    }
+    if (&src == &Chemical4EnableButton)
+    {
+        //ChemEnable4
+        //When Chemical4EnableButton clicked execute C++ code
+        //Execute C++ code
+        presenter->chemicalEnableToggled(4);
+    }
+    if (&src == &Chemical5EnableButton)
+    {
+        //ChemEnable5
+        //When Chemical5EnableButton clicked execute C++ code
+        //Execute C++ code
+        presenter->chemicalEnableToggled(5);
+    }
+    if (&src == &Chemical6EnableButton)
+    {
+        //ChemEnable6
+        //When Chemical6EnableButton clicked execute C++ code
+        //Execute C++ code
+        presenter->chemicalEnableToggled(6);
+    }
+    if (&src == &Chemical7EnableButton)
+    {
+        //ChemEnable7
+        //When Chemical7EnableButton clicked execute C++ code
+        //Execute C++ code
+        presenter->chemicalEnableToggled(7);
+    }
+    if (&src == &Chemical8EnableButton)
+    {
+        //ChemEnable8
+        //When Chemical8EnableButton clicked execute C++ code
+        //Execute C++ code
+        presenter->chemicalEnableToggled(8);
     }
 }

@@ -3013,8 +3013,8 @@
               "TriggerComponent": "Chemical1EnableButton"
             },
             "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "chemicalEnableButtonClicked"
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->chemicalEnableToggled(1);"
             }
           },
           {
@@ -3169,6 +3169,83 @@
             "Action": {
               "Type": "ActionExecuteCode",
               "Code": "presenter->editField(2);"
+            }
+          },
+          {
+            "InteractionName": "ChemEnable2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Chemical2EnableButton"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->chemicalEnableToggled(2);"
+            }
+          },
+          {
+            "InteractionName": "ChemEnable3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Chemical3EnableButton"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->chemicalEnableToggled(3);"
+            }
+          },
+          {
+            "InteractionName": "ChemEnable4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Chemical4EnableButton"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->chemicalEnableToggled(4);"
+            }
+          },
+          {
+            "InteractionName": "ChemEnable5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Chemical5EnableButton"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->chemicalEnableToggled(5);"
+            }
+          },
+          {
+            "InteractionName": "ChemEnable6",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Chemical6EnableButton"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->chemicalEnableToggled(6);"
+            }
+          },
+          {
+            "InteractionName": "ChemEnable7",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Chemical7EnableButton"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->chemicalEnableToggled(7);"
+            }
+          },
+          {
+            "InteractionName": "ChemEnable8",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Chemical8EnableButton"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->chemicalEnableToggled(8);"
             }
           }
         ]

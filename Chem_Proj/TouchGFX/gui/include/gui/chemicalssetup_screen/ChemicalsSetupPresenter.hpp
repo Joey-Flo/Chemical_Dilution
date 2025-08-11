@@ -41,7 +41,7 @@ public:
     void addPumpSetup(int page_index);
     void removePumpSetup(int page_index);
 
-    void chemicalEnableToggled();
+    void chemicalEnableToggled(uint8_t PageIndex);
 
     const ChemicalRecipe_t& getRecipeDataForPage(int page_index) const;
 

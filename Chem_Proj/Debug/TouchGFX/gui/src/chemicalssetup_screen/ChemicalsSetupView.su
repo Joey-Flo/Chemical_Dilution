@@ -88,7 +88,6 @@
 ../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:134:6:void ChemicalsSetupView::showKeyboard()	16	static
 ../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:143:6:virtual void ChemicalsSetupView::EnterPressed()	40	static
 ../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:160:6:virtual void ChemicalsSetupView::ExitPressed()	16	static
-../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:170:6:virtual void ChemicalsSetupView::chemicalEnableButtonClicked()	16	static
 ../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:185:6:void ChemicalsSetupView::nameEditClicked()	16	static
 ../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:186:6:void ChemicalsSetupView::volumeEditClicked()	16	static
 ../TouchGFX/gui/src/chemicalssetup_screen/ChemicalsSetupView.cpp:187:6:void ChemicalsSetupView::unitToggleButtonClicked()	16	static

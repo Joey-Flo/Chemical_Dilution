@@ -46,10 +46,6 @@ public:
     {
         // Override and implement this function in ChemicalsSetup
     }
-    virtual void chemicalEnableButtonClicked()
-    {
-        // Override and implement this function in ChemicalsSetup
-    }
 
 protected:
     FrontendApplication& application() {

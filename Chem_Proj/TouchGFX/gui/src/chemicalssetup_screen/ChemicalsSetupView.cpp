@@ -167,10 +167,10 @@ void ChemicalsSetupView::ExitPressed()
     currentlyEditingField = FIELD_NONE;
 }
 
-void ChemicalsSetupView::chemicalEnableButtonClicked()
-{
-    presenter->chemicalEnableToggled();
-}
+//void ChemicalsSetupView::chemicalEnableButtonClicked()
+//{
+//    presenter->chemicalEnableToggled();
+//}
 
 //void ChemicalsSetupView::addPumpClicked()
 //{
