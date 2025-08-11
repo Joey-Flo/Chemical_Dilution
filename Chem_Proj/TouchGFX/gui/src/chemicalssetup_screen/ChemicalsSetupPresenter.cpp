@@ -58,6 +58,10 @@ void ChemicalsSetupPresenter::editField(int fieldID)
     view.showKeyboard();
 }
 
+void ChemicalsSetupPresenter::ActiveFieldIndexUpdate(uint8_t index){
+	activePageIndex = index;
+}
+
 void ChemicalsSetupPresenter::newValueEntered(const char* text)
 {
     // --- THIS IS THE CORRECTED IMPLEMENTATION ---

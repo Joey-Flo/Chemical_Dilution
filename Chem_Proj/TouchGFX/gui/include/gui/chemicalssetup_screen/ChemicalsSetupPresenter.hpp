@@ -45,6 +45,8 @@ public:
 
     const ChemicalRecipe_t& getRecipeDataForPage(int page_index) const;
 
+    void ActiveFieldIndexUpdate(uint8_t index);
+
 private:
     int currentlyEditingFieldID;
 

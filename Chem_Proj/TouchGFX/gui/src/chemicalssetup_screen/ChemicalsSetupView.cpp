@@ -4,6 +4,7 @@
 #include <gui/common/FieldIDs.hpp>
 
 ChemicalsSetupView::ChemicalsSetupView() :
+	dragStartX(0), isDragging(false),
     pumpSetupSaveCallback(this, &ChemicalsSetupView::pumpSetupSaveDataCallbackHandler),
     pumpSetupVolumeEditCallback(this, &ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler),
     dropdownStateCallback(this, &ChemicalsSetupView::dropdownStateCallbackHandler),
@@ -214,59 +215,59 @@ void ChemicalsSetupView::LoadPageData(uint8_t Page, const ChemicalRecipe_t& data
             Chemical2EnableButton.invalidate();
             break;
 
-//        case 2: // Page 3
-//            Chemical3EnableButton.forceState(data.is_enabled == 1);
-//            Unicode::strncpy(NameEditText3Buffer, data.name, NAMEEDITTEXT3_SIZE);
-//            Unicode::strncpy(VolumeEditText3Buffer, volBuffer, VOLUMEEDITTEXT3_SIZE);
-//            NameEditText3.invalidate();
-//            VolumeEditText3.invalidate();
-//            Chemical3EnableButton.invalidate();
-//            break;
-//
-//        case 3: // Page 4
-//            Chemical4EnableButton.forceState(data.is_enabled == 1);
-//            Unicode::strncpy(NameEditText4Buffer, data.name, NAMEEDITTEXT4_SIZE);
-//            Unicode::strncpy(VolumeEditText4Buffer, volBuffer, VOLUMEEDITTEXT4_SIZE);
-//            NameEditText4.invalidate();
-//            VolumeEditText4.invalidate();
-//            Chemical4EnableButton.invalidate();
-//            break;
-//
-//        case 4: // Page 5
-//            Chemical5EnableButton.forceState(data.is_enabled == 1);
-//            Unicode::strncpy(NameEditText5Buffer, data.name, NAMEEDITTEXT5_SIZE);
-//            Unicode::strncpy(VolumeEditText5Buffer, volBuffer, VOLUMEEDITTEXT5_SIZE);
-//            NameEditText5.invalidate();
-//            VolumeEditText5.invalidate();
-//            Chemical5EnableButton.invalidate();
-//            break;
-//
-//        case 5: // Page 6
-//            Chemical6EnableButton.forceState(data.is_enabled == 1);
-//            Unicode::strncpy(NameEditText6Buffer, data.name, NAMEEDITTEXT6_SIZE);
-//            Unicode::strncpy(VolumeEditText6Buffer, volBuffer, VOLUMEEDITTEXT6_SIZE);
-//            NameEditText6.invalidate();
-//            VolumeEditText6.invalidate();
-//            Chemical6EnableButton.invalidate();
-//            break;
-//
-//        case 6: // Page 7
-//            Chemical7EnableButton.forceState(data.is_enabled == 1);
-//            Unicode::strncpy(NameEditText7Buffer, data.name, NAMEEDITTEXT7_SIZE);
-//            Unicode::strncpy(VolumeEditText7Buffer, volBuffer, VOLUMEEDITTEXT7_SIZE);
-//            NameEditText7.invalidate();
-//            VolumeEditText7.invalidate();
-//            Chemical7EnableButton.invalidate();
-//            break;
-//
-//        case 7: // Page 8
-//            Chemical8EnableButton.forceState(data.is_enabled == 1);
-//            Unicode::strncpy(NameEditText8Buffer, data.name, NAMEEDITTEXT8_SIZE);
-//            Unicode::strncpy(VolumeEditText8Buffer, volBuffer, VOLUMEEDITTEXT8_SIZE);
-//            NameEditText8.invalidate();
-//            VolumeEditText8.invalidate();
-//            Chemical8EnableButton.invalidate();
-//            break;
+        case 2: // Page 3
+            Chemical3EnableButton.forceState(data.is_enabled == 1);
+            Unicode::strncpy(NameEditText3Buffer, data.name, NAMEEDITTEXT3_SIZE);
+            Unicode::strncpy(VolumeEditText3Buffer, volBuffer, VOLUMEEDITTEXT3_SIZE);
+            NameEditText3.invalidate();
+            VolumeEditText3.invalidate();
+            Chemical3EnableButton.invalidate();
+            break;
+
+        case 3: // Page 4
+            Chemical4EnableButton.forceState(data.is_enabled == 1);
+            Unicode::strncpy(NameEditText4Buffer, data.name, NAMEEDITTEXT4_SIZE);
+            Unicode::strncpy(VolumeEditText4Buffer, volBuffer, VOLUMEEDITTEXT4_SIZE);
+            NameEditText4.invalidate();
+            VolumeEditText4.invalidate();
+            Chemical4EnableButton.invalidate();
+            break;
+
+        case 4: // Page 5
+            Chemical5EnableButton.forceState(data.is_enabled == 1);
+            Unicode::strncpy(NameEditText5Buffer, data.name, NAMEEDITTEXT5_SIZE);
+            Unicode::strncpy(VolumeEditText5Buffer, volBuffer, VOLUMEEDITTEXT5_SIZE);
+            NameEditText5.invalidate();
+            VolumeEditText5.invalidate();
+            Chemical5EnableButton.invalidate();
+            break;
+
+        case 5: // Page 6
+            Chemical6EnableButton.forceState(data.is_enabled == 1);
+            Unicode::strncpy(NameEditText6Buffer, data.name, NAMEEDITTEXT6_SIZE);
+            Unicode::strncpy(VolumeEditText6Buffer, volBuffer, VOLUMEEDITTEXT6_SIZE);
+            NameEditText6.invalidate();
+            VolumeEditText6.invalidate();
+            Chemical6EnableButton.invalidate();
+            break;
+
+        case 6: // Page 7
+            Chemical7EnableButton.forceState(data.is_enabled == 1);
+            Unicode::strncpy(NameEditText7Buffer, data.name, NAMEEDITTEXT7_SIZE);
+            Unicode::strncpy(VolumeEditText7Buffer, volBuffer, VOLUMEEDITTEXT7_SIZE);
+            NameEditText7.invalidate();
+            VolumeEditText7.invalidate();
+            Chemical7EnableButton.invalidate();
+            break;
+
+        case 7: // Page 8
+            Chemical8EnableButton.forceState(data.is_enabled == 1);
+            Unicode::strncpy(NameEditText8Buffer, data.name, NAMEEDITTEXT8_SIZE);
+            Unicode::strncpy(VolumeEditText8Buffer, volBuffer, VOLUMEEDITTEXT8_SIZE);
+            NameEditText8.invalidate();
+            VolumeEditText8.invalidate();
+            Chemical8EnableButton.invalidate();
+            break;
     }
 
     // --- Pump Widget and Add/Remove Button Logic ---
@@ -304,4 +305,31 @@ void ChemicalsSetupView::LoadPageData(uint8_t Page, const ChemicalRecipe_t& data
             // Add cases for pages 2-7 here
         }
     }
+}
+
+void ChemicalsSetupView::handleClickEvent(const touchgfx::ClickEvent& event)
+{
+    // For a SwipeContainer, we only need to detect the END of the interaction.
+    if (event.getType() == touchgfx::ClickEvent::RELEASED)
+    {
+        // The user lifted their finger. The swipe container will have finished
+        // its animation and selected a new page.
+        int newPageIndex = swipeContainer1.getSelectedPage();
+
+        if (newPageIndex != currentPageIndex)
+        {
+            currentPageIndex = newPageIndex;
+            presenter->ActiveFieldIndexUpdate(currentPageIndex);
+        }
+    }
+
+    // Always pass the event to the base class so it can handle button clicks etc.
+    ChemicalsSetupViewBase::handleClickEvent(event);
+}
+
+// We don't need custom drag logic if the SwipeContainer handles it for us.
+// Just pass it to the base class.
+void ChemicalsSetupView::handleDragEvent(const touchgfx::DragEvent& event)
+{
+    ChemicalsSetupViewBase::handleDragEvent(event);
 }

@@ -10,6 +10,8 @@
 #include <touchgfx/containers/ScrollableContainer.hpp>
 #include <gui/common/FieldIDs.hpp>
 
+namespace touchgfx { class ClickEvent; class DragEvent; }
+
 class ChemicalsSetupView : public ChemicalsSetupViewBase
 {
 public:
@@ -35,10 +37,12 @@ public:
     void chemicalEnableButtonClicked();
     void LoadPageData(uint8_t Page, const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit);
 
+    virtual void handleDragEvent(const touchgfx::DragEvent& event);
+    virtual void handleClickEvent(const touchgfx::ClickEvent& event);
+
 protected:
     void swipeContainer1PageChangedCallback(int newPageIndex);
     void pumpSetupSaveDataCallbackHandler(int setupIndex, const PumpSetup_t& data);
-
     // --- NEW CALLBACK HANDLER ---
     void dropdownStateCallbackHandler(bool isOpen);
 
@@ -56,6 +60,9 @@ private:
 
     touchgfx::ScrollableContainer* pageContainers[NUM_CHEMICAL_RECIPES];
     PumpSetupWidget* activeDropdownWidget;
+
+    int16_t dragStartX;
+    bool isDragging;
 };
 
 #endif // CHEMICALSSETUPVIEW_HPP

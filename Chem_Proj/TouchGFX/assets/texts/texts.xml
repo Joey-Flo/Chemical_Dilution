@@ -16,6 +16,114 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_DJUN" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Add Pump:</Translation>
+      </Text>
+      <Text Id="__SingleUse_BD2N" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Volume:</Translation>
+      </Text>
+      <Text Id="__SingleUse_WTWC" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Name:</Translation>
+      </Text>
+      <Text Id="__SingleUse_A9KP" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Chemical 8:</Translation>
+      </Text>
+      <Text Id="__SingleUse_SCPF" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Add Pump:</Translation>
+      </Text>
+      <Text Id="__SingleUse_PRGU" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YZ1B" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZSEU" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Volume:</Translation>
+      </Text>
+      <Text Id="__SingleUse_95HR" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Name:</Translation>
+      </Text>
+      <Text Id="__SingleUse_4E1F" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Chemical 7:</Translation>
+      </Text>
+      <Text Id="__SingleUse_P1BS" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_5YZZ" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4T4G" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Volume:</Translation>
+      </Text>
+      <Text Id="__SingleUse_PTLR" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Name:</Translation>
+      </Text>
+      <Text Id="__SingleUse_WJ8M" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Chemical 6:</Translation>
+      </Text>
+      <Text Id="__SingleUse_LO87" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Add Pump:</Translation>
+      </Text>
+      <Text Id="__SingleUse_LSZN" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JQ9L" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_H4Y2" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Volume:</Translation>
+      </Text>
+      <Text Id="__SingleUse_U1WO" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Name:</Translation>
+      </Text>
+      <Text Id="__SingleUse_T2TM" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Chemical 5:</Translation>
+      </Text>
+      <Text Id="__SingleUse_5G9G" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Add Pump:</Translation>
+      </Text>
+      <Text Id="__SingleUse_LG3L" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_6I08" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_OQWW" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Volume:</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q5KC" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Name:</Translation>
+      </Text>
+      <Text Id="__SingleUse_34HT" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Chemical 4:</Translation>
+      </Text>
+      <Text Id="__SingleUse_VG0Q" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Add Pump:</Translation>
+      </Text>
+      <Text Id="__SingleUse_ASBN" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_0U6Q" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value2&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_S2Y8" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Volume:</Translation>
+      </Text>
+      <Text Id="__SingleUse_PY8J" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Name:</Translation>
+      </Text>
+      <Text Id="__SingleUse_FD0L" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Chemical 3:</Translation>
+      </Text>
+      <Text Id="__SingleUse_FBMU" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Add Pump:</Translation>
+      </Text>
+      <Text Id="__SingleUse_KK8U" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value1&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_0KZB" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">&lt;value2&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_S7S4" Alignment="Center" TypographyId="Display">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
