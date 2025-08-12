@@ -1487,6 +1487,22 @@
                           "UseBuffer": true,
                           "BufferSize": 12
                         }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "LoadingText_Left",
+                        "X": 67,
+                        "Y": 202,
+                        "Width": 107,
+                        "Height": 24,
+                        "TextId": "__SingleUse_38JY",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "AutoSize": true
                       }
                     ]
                   },
@@ -1495,6 +1511,7 @@
                     "Name": "WidgetBuffer_Center",
                     "Width": 240,
                     "Height": 270,
+                    "Visible": false,
                     "Components": [
                       {
                         "Type": "ScrollableContainer",
@@ -1970,6 +1987,22 @@
                           "UseBuffer": true,
                           "BufferSize": 12
                         }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "LoadingText_Right",
+                        "X": 67,
+                        "Y": 202,
+                        "Width": 107,
+                        "Height": 24,
+                        "TextId": "__SingleUse_WXA3",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "AutoSize": true
                       }
                     ]
                   }

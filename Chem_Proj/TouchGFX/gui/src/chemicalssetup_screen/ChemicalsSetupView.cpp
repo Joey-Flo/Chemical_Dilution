@@ -6,6 +6,7 @@
 #include <touchgfx/events/ClickEvent.hpp>
 
 ChemicalsSetupView::ChemicalsSetupView() :
+	dragStartX(0),
     pumpSetupSaveCallback(this, &ChemicalsSetupView::pumpSetupSaveDataCallbackHandler),
     pumpSetupVolumeEditCallback(this, &ChemicalsSetupView::pumpSetupVolumeEditCallbackHandler),
     dropdownStateCallback(this, &ChemicalsSetupView::dropdownStateCallbackHandler),
@@ -76,7 +77,143 @@ void ChemicalsSetupView::setupScreen()
 
 void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit)
 {
+
+    WidgetBuffer_Center.setVisible(true);
+    WidgetBuffer_Left.setVisible(currentPageIndex > 0);
+    WidgetBuffer_Right.setVisible(currentPageIndex < NUM_CHEMICAL_RECIPES - 1);
+
+
+    if (currentPageIndex > 0) {
+
+        // *** CHANGE #1: Get the data for the PREVIOUS page ***
+        int visiblePumpSetups = 0;
+        const ChemicalRecipe_t& leftData = presenter->getRecipeDataForPage(currentPageIndex - 1);
+        const std::vector<int> leftEnabledPumps = presenter->getEnabledPumpIndices(); // This is shared, but good practice to re-get
+        int8_t leftUnit = presenter->getVolumeUnit(); // Also shared
+
+    	Container* leftParentPage = getPageContainerForIndex(currentPageIndex - 1);
+        ScrollableContainer* leftScrollParent = getScrollableContainerForPage(currentPageIndex - 1);
+        if (!leftParentPage || !leftScrollParent) return;
+
+        // 2. A helper lambda to safely move a widget
+        auto moveWidget = [&](Drawable& widget, Container& leftParent) {
+            if (widget.getParent()) {
+                static_cast<Container*>(widget.getParent())->remove(widget);
+            }
+            leftParent.add(widget);
+        };
+
+        // 3. Move all reusable widgets to the new page
+        moveWidget(chemicalLabel_Left, *leftParentPage);
+        moveWidget(ChemicalEnableButton_Left, *leftParentPage);
+        moveWidget(ChemNameText_Left, *leftParentPage);
+        moveWidget(ChemVolumeText_Left, *leftParentPage);
+        moveWidget(NameBox_Left, *leftParentPage);
+        moveWidget(NameEditText_Left, *leftParentPage);
+        moveWidget(NameEdit_Left, *leftParentPage);
+        moveWidget(VolumeBox_Left, *leftParentPage);
+        moveWidget(VolumeEditText_Left, *leftParentPage);
+        moveWidget(VolumeEdit_Left, *leftParentPage);
+        moveWidget(AddPumpBox_Left, *leftParentPage);
+        moveWidget(AddPumpText_Left, *leftParentPage);
+        moveWidget(AddPump_Left, *leftParentPage);
+        moveWidget(RemovePump_Left, *leftParentPage);
+        moveWidget(LoadingText_Left, *leftParentPage);
+
+        if (currentPageIndex > 0) {
+
+            LoadingText_Left.setVisible(false);
+            leftParentPage->invalidate();
+        }
+
+        // NOTE: Moving the same pumpSetupWidgets to multiple containers is logically incorrect
+        // and will cause problems. This should be addressed later.
+        // For now, per your request, the syntax is preserved.
+        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+        {
+            moveWidget(*pumpSetupWidgets[i], *leftScrollParent);
+        }
+
+        // *** CHANGE #2: Populate the widgets with the correct leftData ***
+        Unicode::snprintf(chemicalLabel_LeftBuffer, CHEMICALLABEL_LEFT_SIZE, "Chemical %d:", (currentPageIndex - 1) + 1);
+        ChemicalEnableButton_Left.forceState(leftData.is_enabled == 1);
+        Unicode::strncpy(NameEditText_LeftBuffer, leftData.name, NAMEEDITTEXT_LEFT_SIZE);
+
+        char volAnsiBuffer[20];
+        const char* unit_suffix = (leftUnit == 1) ? "Oz" : "mL";
+        snprintf(volAnsiBuffer, 20, "%.2f %s", leftData.total_dispense_volume, unit_suffix);
+        Unicode::strncpy(VolumeEditText_LeftBuffer, volAnsiBuffer, VOLUMEEDITTEXT_LEFT_SIZE);
+
+        // 5. Configure pump widgets and Add/Remove button visibility using leftData
+        // 6. Force a redraw of the entire page to prevent a blank screen
+
+        scrollableContainer1_Left.setVisible(visiblePumpSetups > 0);
+        LoadingText_Left.setVisible(visiblePumpSetups == 0);
+        leftParentPage->invalidate();
+    }
+
+    // --- LOGIC FOR THE RIGHT PAGE ---
+    if (currentPageIndex < NUM_CHEMICAL_RECIPES - 1) {
+
+        // *** Get the data for the NEXT page ***
+        int visiblePumpSetups = 0;
+        const ChemicalRecipe_t& rightData = presenter->getRecipeDataForPage(currentPageIndex + 1);
+        const std::vector<int> rightEnabledPumps = presenter->getEnabledPumpIndices();
+        int8_t rightUnit = presenter->getVolumeUnit();
+
+    	Container* rightParentPage = getPageContainerForIndex(currentPageIndex + 1);
+        ScrollableContainer* rightScrollParent = getScrollableContainerForPage(currentPageIndex + 1);
+        if (!rightParentPage || !rightScrollParent) return;
+
+        // 2. A helper lambda to safely move a widget
+        auto moveWidget = [&](Drawable& widget, Container& rightParent) {
+            if (widget.getParent()) {
+                static_cast<Container*>(widget.getParent())->remove(widget);
+            }
+            rightParent.add(widget);
+        };
+
+        // 3. Move all reusable widgets to the new page
+        moveWidget(chemicalLabel_Right, *rightParentPage);
+        moveWidget(ChemicalEnableButton_Right, *rightParentPage);
+        moveWidget(ChemNameText_Right, *rightParentPage);
+        moveWidget(ChemVolumeText_Right, *rightParentPage);
+        moveWidget(NameBox_Right, *rightParentPage);
+        moveWidget(NameEditText_Right, *rightParentPage);
+        moveWidget(NameEdit_Right, *rightParentPage);
+        moveWidget(VolumeBox_Right, *rightParentPage);
+        moveWidget(VolumeEditText_Right, *rightParentPage);
+        moveWidget(VolumeEdit_Right, *rightParentPage);
+        moveWidget(AddPumpBox_Right, *rightParentPage);
+        moveWidget(AddPumpText_Right, *rightParentPage);
+        moveWidget(AddPump_Right, *rightParentPage);
+        moveWidget(RemovePump_Right, *rightParentPage);
+        moveWidget(LoadingText_Right, *rightParentPage);
+
+
+
+        // NOTE: Moving the same pumpSetupWidgets to multiple containers is logically incorrect.
+        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+        {
+            moveWidget(*pumpSetupWidgets[i], *rightScrollParent);
+        }
+
+        // 4. Populate the widgets with the correct rightData
+        Unicode::snprintf(chemicalLabel_RightBuffer, CHEMICALLABEL_RIGHT_SIZE, "Chemical %d:", (currentPageIndex + 1) + 1);
+        ChemicalEnableButton_Right.forceState(rightData.is_enabled == 1);
+        Unicode::strncpy(NameEditText_RightBuffer, rightData.name, NAMEEDITTEXT_RIGHT_SIZE);
+
+        char volAnsiBuffer[20];
+        const char* unit_suffix = (rightUnit == 1) ? "Oz" : "mL";
+        snprintf(volAnsiBuffer, 20, "%.2f %s", rightData.total_dispense_volume, unit_suffix);
+        Unicode::strncpy(VolumeEditText_RightBuffer, volAnsiBuffer, VOLUMEEDITTEXT_RIGHT_SIZE);
+        scrollableContainer1_Right.setVisible(visiblePumpSetups > 0);
+        LoadingText_Right.setVisible(visiblePumpSetups == 0);
+
+        // 6. Force a redraw of the entire page to prevent a blank screen
+    }
     // 1. Get the parent containers for the current page
+    WidgetBuffer_Center.setVisible(true);
     Container* newParentPage = getPageContainerForIndex(currentPageIndex);
     ScrollableContainer* newScrollParent = getScrollableContainerForPage(currentPageIndex);
     if (!newParentPage || !newScrollParent) return;
@@ -129,169 +266,77 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
         pumpSetupWidgets[i]->setVisible(data.pump_setups[i].pump_index != -1);
         if(pumpSetupWidgets[i]->isVisible()) visiblePumpSetups++;
     }
-
+    scrollableContainer1_Center.setVisible(visiblePumpSetups > 0);
     AddPump_Center.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
     RemovePump_Center.setVisible(visiblePumpSetups > 1);
     // 6. Force a redraw of the entire page to prevent a blank screen
+
+    if (currentPageIndex > 6){
+    	LoadingText_Right.setVisible(false);
+    }
+
+    if (currentPageIndex < 1){
+    	LoadingText_Left.setVisible(false);
+    }
     newParentPage->invalidate();
 
     // --- LOGIC FOR THE LEFT PAGE ---
-    if (currentPageIndex > 0) {
 
-        // *** CHANGE #1: Get the data for the PREVIOUS page ***
-        const ChemicalRecipe_t& leftData = presenter->getRecipeDataForPage(currentPageIndex - 1);
-        const std::vector<int> leftEnabledPumps = presenter->getEnabledPumpIndices(); // This is shared, but good practice to re-get
-        int8_t leftUnit = presenter->getVolumeUnit(); // Also shared
-
-    	Container* leftParentPage = getPageContainerForIndex(currentPageIndex - 1);
-        ScrollableContainer* leftScrollParent = getScrollableContainerForPage(currentPageIndex - 1);
-        if (!leftParentPage || !leftScrollParent) return;
-
-        // 2. A helper lambda to safely move a widget
-        auto moveWidget = [&](Drawable& widget, Container& leftParent) {
-            if (widget.getParent()) {
-                static_cast<Container*>(widget.getParent())->remove(widget);
-            }
-            leftParent.add(widget);
-        };
-
-        // 3. Move all reusable widgets to the new page
-        moveWidget(chemicalLabel_Left, *leftParentPage);
-        moveWidget(ChemicalEnableButton_Left, *leftParentPage);
-        moveWidget(ChemNameText_Left, *leftParentPage);
-        moveWidget(ChemVolumeText_Left, *leftParentPage);
-        moveWidget(NameBox_Left, *leftParentPage);
-        moveWidget(NameEditText_Left, *leftParentPage);
-        moveWidget(NameEdit_Left, *leftParentPage);
-        moveWidget(VolumeBox_Left, *leftParentPage);
-        moveWidget(VolumeEditText_Left, *leftParentPage);
-        moveWidget(VolumeEdit_Left, *leftParentPage);
-        moveWidget(AddPumpBox_Left, *leftParentPage);
-        moveWidget(AddPumpText_Left, *leftParentPage);
-        moveWidget(AddPump_Left, *leftParentPage);
-        moveWidget(RemovePump_Left, *leftParentPage);
-
-        // NOTE: Moving the same pumpSetupWidgets to multiple containers is logically incorrect
-        // and will cause problems. This should be addressed later.
-        // For now, per your request, the syntax is preserved.
-        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
-        {
-            moveWidget(*pumpSetupWidgets[i], *leftScrollParent);
-        }
-
-        // *** CHANGE #2: Populate the widgets with the correct leftData ***
-        Unicode::snprintf(chemicalLabel_LeftBuffer, CHEMICALLABEL_LEFT_SIZE, "Chemical %d:", (currentPageIndex - 1) + 1);
-        ChemicalEnableButton_Left.forceState(leftData.is_enabled == 1);
-        Unicode::strncpy(NameEditText_LeftBuffer, leftData.name, NAMEEDITTEXT_LEFT_SIZE);
-
-        char volAnsiBuffer[20];
-        const char* unit_suffix = (leftUnit == 1) ? "Oz" : "mL";
-        snprintf(volAnsiBuffer, 20, "%.2f %s", leftData.total_dispense_volume, unit_suffix);
-        Unicode::strncpy(VolumeEditText_LeftBuffer, volAnsiBuffer, VOLUMEEDITTEXT_LEFT_SIZE);
-
-        // 5. Configure pump widgets and Add/Remove button visibility using leftData
-        int visiblePumpSetups = 0;
-        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
-        {
-            pumpSetupWidgets[i]->setAvailablePumps(leftEnabledPumps);
-            pumpSetupWidgets[i]->setup(i, leftData.pump_setups[i], leftUnit);
-            pumpSetupWidgets[i]->setVisible(leftData.pump_setups[i].pump_index != -1);
-            if(pumpSetupWidgets[i]->isVisible()) visiblePumpSetups++;
-        }
-
-        AddPump_Left.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
-        RemovePump_Left.setVisible(visiblePumpSetups > 1);
-        // 6. Force a redraw of the entire page to prevent a blank screen
-        leftParentPage->invalidate();
-    }
-
-    // --- LOGIC FOR THE RIGHT PAGE ---
-    if (currentPageIndex < NUM_CHEMICAL_RECIPES - 1) {
-
-        // *** Get the data for the NEXT page ***
-        const ChemicalRecipe_t& rightData = presenter->getRecipeDataForPage(currentPageIndex + 1);
-        const std::vector<int> rightEnabledPumps = presenter->getEnabledPumpIndices();
-        int8_t rightUnit = presenter->getVolumeUnit();
-
-    	Container* rightParentPage = getPageContainerForIndex(currentPageIndex + 1);
-        ScrollableContainer* rightScrollParent = getScrollableContainerForPage(currentPageIndex + 1);
-        if (!rightParentPage || !rightScrollParent) return;
-
-        // 2. A helper lambda to safely move a widget
-        auto moveWidget = [&](Drawable& widget, Container& rightParent) {
-            if (widget.getParent()) {
-                static_cast<Container*>(widget.getParent())->remove(widget);
-            }
-            rightParent.add(widget);
-        };
-
-        // 3. Move all reusable widgets to the new page
-        moveWidget(chemicalLabel_Right, *rightParentPage);
-        moveWidget(ChemicalEnableButton_Right, *rightParentPage);
-        moveWidget(ChemNameText_Right, *rightParentPage);
-        moveWidget(ChemVolumeText_Right, *rightParentPage);
-        moveWidget(NameBox_Right, *rightParentPage);
-        moveWidget(NameEditText_Right, *rightParentPage);
-        moveWidget(NameEdit_Right, *rightParentPage);
-        moveWidget(VolumeBox_Right, *rightParentPage);
-        moveWidget(VolumeEditText_Right, *rightParentPage);
-        moveWidget(VolumeEdit_Right, *rightParentPage);
-        moveWidget(AddPumpBox_Right, *rightParentPage);
-        moveWidget(AddPumpText_Right, *rightParentPage);
-        moveWidget(AddPump_Right, *rightParentPage);
-        moveWidget(RemovePump_Right, *rightParentPage);
-
-        // NOTE: Moving the same pumpSetupWidgets to multiple containers is logically incorrect.
-        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
-        {
-            moveWidget(*pumpSetupWidgets[i], *rightScrollParent);
-        }
-
-        // 4. Populate the widgets with the correct rightData
-        Unicode::snprintf(chemicalLabel_RightBuffer, CHEMICALLABEL_RIGHT_SIZE, "Chemical %d:", (currentPageIndex + 1) + 1);
-        ChemicalEnableButton_Right.forceState(rightData.is_enabled == 1);
-        Unicode::strncpy(NameEditText_RightBuffer, rightData.name, NAMEEDITTEXT_RIGHT_SIZE);
-
-        char volAnsiBuffer[20];
-        const char* unit_suffix = (rightUnit == 1) ? "Oz" : "mL";
-        snprintf(volAnsiBuffer, 20, "%.2f %s", rightData.total_dispense_volume, unit_suffix);
-        Unicode::strncpy(VolumeEditText_RightBuffer, volAnsiBuffer, VOLUMEEDITTEXT_RIGHT_SIZE);
-
-        // 5. Configure pump widgets and Add/Remove button visibility using rightData
-        int visiblePumpSetups = 0;
-        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
-        {
-            pumpSetupWidgets[i]->setAvailablePumps(rightEnabledPumps);
-            pumpSetupWidgets[i]->setup(i, rightData.pump_setups[i], rightUnit);
-            pumpSetupWidgets[i]->setVisible(rightData.pump_setups[i].pump_index != -1);
-            if(pumpSetupWidgets[i]->isVisible()) visiblePumpSetups++;
-        }
-
-        AddPump_Right.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
-        RemovePump_Right.setVisible(visiblePumpSetups > 1);
-        // 6. Force a redraw of the entire page to prevent a blank screen
-        rightParentPage->invalidate();
-    }
 }
 
-void ChemicalsSetupView::handleClickEvent(const touchgfx::ClickEvent& event)
+void ChemicalsSetupView::handleTickEvent()
 {
-    // Let the base class handle button clicks first
-    ChemicalsSetupViewBase::handleClickEvent(event);
-
-    // After a swipe gesture, the user's finger is released, triggering this event.
-    if (event.getType() == touchgfx::ClickEvent::RELEASED)
+    int newPageIndex = swipeContainer1.getSelectedPage();
+    if (newPageIndex != currentPageIndex)
     {
+        // The page has changed. Update our state and trigger a data reload.
         int newPageIndex = swipeContainer1.getSelectedPage();
-        if (newPageIndex != currentPageIndex)
-        {
-            // The page has changed. Update our state and trigger a data reload.
-            currentPageIndex = newPageIndex;
-            presenter->loadScreenData(currentPageIndex);
-        }
+        currentPageIndex = newPageIndex;
+        presenter->loadScreenData(currentPageIndex);
     }
 }
 
+//void ChemicalsSetupView::handleDragEvent(const touchgfx::DragEvent& event)
+//{
+//    // Let the SwipeContainer do its own dragging logic first
+//    swipeContainer1.handleDragEvent(event);
+//
+//    // Now add our custom logic on top
+//    int16_t deltaX = event.getDeltaX();
+//
+//    if (dragStartX == 0)
+//    {
+//        // This is the first drag event in a sequence. Remember the start position.
+//        dragStartX = event.getOldX();
+//    }
+//
+//    // Check if a swipe gesture has just been completed
+//    if (dragStartX != 0)
+//    {
+//        // A swipe to the left is a negative delta
+//        if (deltaX < 0 && swipeContainer1.getSelectedPage() > currentPageIndex)
+//        {
+//            // The swipe container has just snapped to the NEXT page
+//            currentPageIndex = swipeContainer1.getSelectedPage();
+//            presenter->ActiveFieldIndexUpdate(currentPageIndex);
+//            int newPageIndex = swipeContainer1.getSelectedPage();
+//            currentPageIndex = newPageIndex;
+//            presenter->loadScreenData(currentPageIndex - 1);
+//            dragStartX = 0; // Reset for the next gesture
+//        }
+//        // A swipe to the right is a positive delta
+//        else if (deltaX > 0 && swipeContainer1.getSelectedPage() < currentPageIndex)
+//        {
+//            // The swipe container has just snapped to the PREVIOUS page
+//            currentPageIndex = swipeContainer1.getSelectedPage();
+//            presenter->ActiveFieldIndexUpdate(currentPageIndex);
+//            int newPageIndex = swipeContainer1.getSelectedPage();
+//            currentPageIndex = newPageIndex;
+//            presenter->loadScreenData(currentPageIndex + 1);
+//            dragStartX = 0; // Reset for the next gesture
+//        }
+//    }
+//}
 // --- Interaction Handlers ---
 void ChemicalsSetupView::requestDataLoad() { presenter->loadScreenData(currentPageIndex); }
 void ChemicalsSetupView::showKeyboard() { keyboard.setVisible(true); KeyboardExtras.setVisible(true); keyboard.invalidate(); KeyboardExtras.invalidate(); }

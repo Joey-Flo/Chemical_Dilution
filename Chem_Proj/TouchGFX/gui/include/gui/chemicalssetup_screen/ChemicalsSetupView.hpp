@@ -54,7 +54,8 @@ public:
     /**
      * @brief Overridden event handler to detect the end of a swipe gesture.
      */
-    virtual void handleClickEvent(const touchgfx::ClickEvent& event);
+    virtual void handleTickEvent();
+//    void handleDragEvent(const touchgfx::DragEvent& event);
 
 protected:
     // --- Callback handlers for child widgets ---
@@ -80,6 +81,7 @@ private:
 
     // State variables and widget pointers
     int currentPageIndex;
+    int16_t dragStartX;
     PumpSetupWidget* pumpSetupWidgets[MAX_PUMP_SETUPS_PER_CHEMICAL];
     CustomKeyboard keyboard;
 };

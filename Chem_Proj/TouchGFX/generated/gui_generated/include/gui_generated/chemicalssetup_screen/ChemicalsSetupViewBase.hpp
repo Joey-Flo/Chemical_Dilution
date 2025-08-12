@@ -81,6 +81,7 @@ protected:
     touchgfx::TextArea AddPumpText_Left;
     touchgfx::TextAreaWithOneWildcard NameEditText_Left;
     touchgfx::TextAreaWithOneWildcard VolumeEditText_Left;
+    touchgfx::TextArea LoadingText_Left;
     touchgfx::Container WidgetBuffer_Center;
     touchgfx::ScrollableContainer scrollableContainer1_Center;
     PumpSetupWidget pumpSetupWidget_Center_1;
@@ -119,6 +120,7 @@ protected:
     touchgfx::TextArea AddPumpText_Right;
     touchgfx::TextAreaWithOneWildcard NameEditText_Right;
     touchgfx::TextAreaWithOneWildcard VolumeEditText_Right;
+    touchgfx::TextArea LoadingText_Right;
     touchgfx::Container Page2;
     touchgfx::ScrollableContainer scrollableContainer2;
     touchgfx::Container Page3;

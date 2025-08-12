@@ -16,6 +16,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_WXA3" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">LOADING</Translation>
+      </Text>
+      <Text Id="__SingleUse_38JY" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">LOADING</Translation>
+      </Text>
       <Text Id="__SingleUse_KTZW" Alignment="Left" TypographyId="Display">
         <Translation Language="GB">Volume:</Translation>
       </Text>

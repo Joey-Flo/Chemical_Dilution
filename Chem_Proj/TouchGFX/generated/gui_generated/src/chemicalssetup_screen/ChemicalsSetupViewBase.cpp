@@ -139,9 +139,16 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     VolumeEditText_Left.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4K22));
     WidgetBuffer_Left.add(VolumeEditText_Left);
 
+    LoadingText_Left.setXY(67, 202);
+    LoadingText_Left.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    LoadingText_Left.setLinespacing(0);
+    LoadingText_Left.setTypedText(touchgfx::TypedText(T___SINGLEUSE_38JY));
+    WidgetBuffer_Left.add(LoadingText_Left);
+
     Page1.add(WidgetBuffer_Left);
 
     WidgetBuffer_Center.setPosition(0, 0, 240, 270);
+    WidgetBuffer_Center.setVisible(false);
     scrollableContainer1_Center.setPosition(0, 162, 240, 108);
     scrollableContainer1_Center.enableHorizontalScroll(false);
     scrollableContainer1_Center.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
@@ -335,6 +342,12 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     VolumeEditText_Right.setWildcard(VolumeEditText_RightBuffer);
     VolumeEditText_Right.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HCMZ));
     WidgetBuffer_Right.add(VolumeEditText_Right);
+
+    LoadingText_Right.setXY(67, 202);
+    LoadingText_Right.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    LoadingText_Right.setLinespacing(0);
+    LoadingText_Right.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WXA3));
+    WidgetBuffer_Right.add(LoadingText_Right);
 
     Page1.add(WidgetBuffer_Right);
 
