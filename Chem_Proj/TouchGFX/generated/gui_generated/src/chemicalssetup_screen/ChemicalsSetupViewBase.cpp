@@ -82,12 +82,11 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     ChemNameText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GU10));
     Page1.add(ChemNameText);
 
-    chemicalLabel.setXY(13, 28);
+    chemicalLabel.setPosition(13, 26, 153, 23);
     chemicalLabel.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
     chemicalLabel.setLinespacing(0);
     chemicalLabelBuffer[0] = 0;
     chemicalLabel.setWildcard(chemicalLabelBuffer);
-    chemicalLabel.resizeToCurrentText();
     chemicalLabel.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1PTH));
     Page1.add(chemicalLabel);
 

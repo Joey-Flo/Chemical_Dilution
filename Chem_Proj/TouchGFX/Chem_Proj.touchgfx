@@ -1353,9 +1353,9 @@
                     "Type": "TextArea",
                     "Name": "chemicalLabel",
                     "X": 13,
-                    "Y": 28,
-                    "Width": 156,
-                    "Height": 18,
+                    "Y": 26,
+                    "Width": 153,
+                    "Height": 23,
                     "TextId": "__SingleUse_1PTH",
                     "TextRotation": "0",
                     "Color": {
@@ -1363,7 +1363,6 @@
                       "Green": 221,
                       "Blue": 221
                     },
-                    "AutoSize": true,
                     "Wildcard1": {
                       "UseBuffer": true,
                       "BufferSize": 20

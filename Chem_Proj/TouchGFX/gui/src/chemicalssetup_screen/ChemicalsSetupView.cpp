@@ -90,14 +90,15 @@ void ChemicalsSetupView::tearDownScreen()
     ChemicalsSetupViewBase::tearDownScreen();
 }
 
+// In ChemicalsSetupView.cpp
+
 void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit)
 {
-    // --- 1. GET THE NEW PARENT CONTAINERS FOR THE CURRENT PAGE ---
+    // --- 1. MOVE ALL WIDGETS TO THE CORRECT PAGE ---
+    // (This is your working widget-moving logic from the baseline)
     Container* newParentPage = getPageContainerForIndex(currentPageIndex);
-    ScrollableContainer* newScrollParent = getScrollableContainerForPage(currentPageIndex);
-    if (!newParentPage || !newScrollParent) return;
+    if (!newParentPage) return; // Safety check
 
-    // --- 2. MOVE ALL THE REUSABLE WIDGETS TO THE NEW PAGE ---
     auto moveWidget = [&](Drawable& widget, Container& newParent) {
         if (widget.getParent()) {
             static_cast<Container*>(widget.getParent())->remove(widget);
@@ -105,7 +106,6 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
         newParent.add(widget);
     };
 
-    // Move all the static widgets that live on the main page
     moveWidget(chemicalLabel, *newParentPage);
     moveWidget(ChemicalEnableButton, *newParentPage);
     moveWidget(NameBox, *newParentPage);
@@ -115,28 +115,26 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
     moveWidget(VolumeEditText, *newParentPage);
     moveWidget(VolumeEdit, *newParentPage);
     moveWidget(AddPumpBox, *newParentPage);
+    moveWidget(AddPumpText, *newParentPage); // Assuming you renamed this in the Designer
     moveWidget(AddPump, *newParentPage);
     moveWidget(RemovePump, *newParentPage);
+    moveWidget(scrollableContainer, *newParentPage); // Move the scrollable container too
 
-    // Move the reusable pump widgets into the page's scrollable container
     for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
     {
-        moveWidget(*pumpSetupWidgets[i], *newScrollParent);
+        moveWidget(*pumpSetupWidgets[i], scrollableContainer);
     }
 
-    // --- 3. POPULATE THE WIDGETS WITH THE NEW DATA ---
+    // --- 2. POPULATE THE WIDGETS WITH THE NEW DATA ---
+    // (This is your working data population logic from the baseline)
     Unicode::snprintf(chemicalLabelBuffer, CHEMICALLABEL_SIZE, "Chemical %d:", currentPageIndex + 1);
-
     ChemicalEnableButton.forceState(data.is_enabled == 1);
-
     Unicode::strncpy(NameEditTextBuffer, data.name, NAMEEDITTEXT_SIZE);
-
     char volAnsiBuffer[20];
     const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
     snprintf(volAnsiBuffer, 20, "%.2f %s", data.total_dispense_volume, unit_suffix);
     Unicode::strncpy(VolumeEditTextBuffer, volAnsiBuffer, VOLUMEEDITTEXT_SIZE);
 
-    // --- 4. CONFIGURE PUMP WIDGETS AND ADD/REMOVE BUTTON VISIBILITY ---
     int visiblePumpSetups = 0;
     for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
     {
@@ -149,8 +147,8 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
     AddPump.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
     RemovePump.setVisible(visiblePumpSetups > 1);
 
-    // --- 5. THE FIX FOR THE BLANK SCREEN ---
-    // Invalidate the entire page container to force a complete redraw.
+    // *** THIS IS THE CRITICAL FIX FOR THE BLANK SCREEN ***
+    // After moving and updating everything, tell the entire page container to redraw itself.
     newParentPage->invalidate();
 }
 
@@ -257,24 +255,27 @@ void ChemicalsSetupView::editTotalVolumeClicked() { /* Not yet implemented */ }
 
 void ChemicalsSetupView::handleClickEvent(const touchgfx::ClickEvent& event)
 {
-    // This event is fired when the user's finger is lifted from the screen.
+    // First, let the base class handle any button clicks.
+    ChemicalsSetupViewBase::handleClickEvent(event);
+
+    // Now, add our logic to detect a swipe completion.
     if (event.getType() == touchgfx::ClickEvent::RELEASED)
     {
         int newPageIndex = swipeContainer1.getSelectedPage();
         if (newPageIndex != currentPageIndex)
         {
-            // The swipe has completed and the page has changed.
+            // The page has changed.
+            // 1. Update our own state.
             currentPageIndex = newPageIndex;
 
-            // Inform the presenter of the new active page index.
+            // 2. Inform the presenter of the new active page index.
             presenter->ActiveFieldIndexUpdate(currentPageIndex);
 
-            // You can also update the dynamic pump widgets here if needed
-            // displayData(presenter->getModel()->getEnabledPumpIndices(), presenter->getModel()->getVolumeUnit());
+            // *** THIS IS THE CRITICAL, MISSING STEP ***
+            // 3. Command the Presenter to load and display the data for the new page.
+            presenter->loadScreenData(currentPageIndex);
         }
     }
-    // Always pass the event to the base class for button clicks.
-    ChemicalsSetupViewBase::handleClickEvent(event);
 }
 
 //// We don't need custom drag logic if the SwipeContainer handles it for us.
