@@ -29,6 +29,7 @@ public:
      * @param enabled_pumps A list of globally enabled pump indices.
      * @param unit The current volume unit (0=mL, 1=Oz).
      */
+    void displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit);
 
     /**
      * @brief Commands the View to show the on-screen keyboard.
@@ -49,7 +50,6 @@ public:
     void EnterPressed();
     void ExitPressed();
     void invalidateEnableButton();
-    void updateVisiblePages();
 
     /**
      * @brief Overridden event handler to detect the end of a swipe gesture.
@@ -63,16 +63,6 @@ protected:
     void dropdownStateCallbackHandler(bool isOpen);
 
 private:
-
-    void populateWidgetBuffer(int pageIndex,
-                              touchgfx::Container& bufferContainer,
-                              touchgfx::ToggleButton& enableButton,
-                              touchgfx::TextAreaWithOneWildcard& nameField,
-                              touchgfx::Unicode::UnicodeChar* nameBuffer, uint16_t nameBufferSize,
-                              touchgfx::TextAreaWithOneWildcard& volumeField,
-                              touchgfx::Unicode::UnicodeChar* volumeBuffer, uint16_t volumeBufferSize,
-                              touchgfx::Button& addButton, touchgfx::Button& removeButton,
-                              PumpSetupWidget** pumpWidgets);
     /**
      * @brief Helper function to get a pointer to the correct Page container.
      */

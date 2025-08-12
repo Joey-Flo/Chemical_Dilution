@@ -15,24 +15,11 @@ ChemicalsSetupPresenter::ChemicalsSetupPresenter(ChemicalsSetupView& v)
 void ChemicalsSetupPresenter::activate()
 {
     // When the screen first opens, tell the View to trigger a data load for its initial page.
-	view.updateVisiblePages();
+    view.requestDataLoad();
 }
 
 void ChemicalsSetupPresenter::deactivate()
 {
-}
-
-const ChemicalRecipe_t& ChemicalsSetupPresenter::getRecipeDataForPage(int page_index) const
-{
-    return model->getRecipeData(page_index);
-}
-const std::vector<int> ChemicalsSetupPresenter::getEnabledPumpIndices() const
-{
-    return model->getEnabledPumpIndices();
-}
-int8_t ChemicalsSetupPresenter::getVolumeUnit() const
-{
-    return model->getVolumeUnit();
 }
 
 void ChemicalsSetupPresenter::loadScreenData(int page_index)
@@ -46,7 +33,7 @@ void ChemicalsSetupPresenter::loadScreenData(int page_index)
     int8_t unit = model->getVolumeUnit();
 
     // Pass the data to the View for display.
-//    view.displayData(recipe, enabled_pumps, unit);
+    view.displayData(recipe, enabled_pumps, unit);
 }
 
 void ChemicalsSetupPresenter::savePumpSetupData(int page_index, int setup_index, const PumpSetup_t& data)

@@ -24,10 +24,6 @@ public:
      */
     virtual void deactivate();
 
-    const ChemicalRecipe_t& getRecipeDataForPage(int page_index) const;
-    const std::vector<int> getEnabledPumpIndices() const;
-    int8_t getVolumeUnit() const;
-
     virtual ~ChemicalsSetupPresenter() {}
 
     /**
