@@ -45,103 +45,298 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Page1.setWidth(240);
     Page1.setHeight(270);
-    scrollableContainer1.setPosition(0, 162, 240, 108);
-    scrollableContainer1.enableHorizontalScroll(false);
-    scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
-    scrollableContainer1.setScrollbarsAlpha(255);
-    pumpSetupWidget1.setXY(0, -2);
-    scrollableContainer1.add(pumpSetupWidget1);
+    WidgetBuffer_Left.setPosition(-240, -52, 240, 320);
+    scrollableContainer1_Left.setPosition(0, 214, 240, 108);
+    scrollableContainer1_Left.enableHorizontalScroll(false);
+    scrollableContainer1_Left.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer1_Left.setScrollbarsAlpha(255);
+    pumpSetupWidget_Left_1.setXY(0, -2);
+    scrollableContainer1_Left.add(pumpSetupWidget_Left_1);
 
-    pumpSetupWidget2.setXY(1, 106);
-    pumpSetupWidget2.setVisible(false);
-    scrollableContainer1.add(pumpSetupWidget2);
+    pumpSetupWidget_Left_2.setXY(1, 106);
+    pumpSetupWidget_Left_2.setVisible(false);
+    scrollableContainer1_Left.add(pumpSetupWidget_Left_2);
 
-    pumpSetupWidget3.setXY(1, 214);
-    pumpSetupWidget3.setVisible(false);
-    scrollableContainer1.add(pumpSetupWidget3);
+    pumpSetupWidget_Left_3.setXY(1, 214);
+    pumpSetupWidget_Left_3.setVisible(false);
+    scrollableContainer1_Left.add(pumpSetupWidget_Left_3);
 
-    Page1.add(scrollableContainer1);
+    WidgetBuffer_Left.add(scrollableContainer1_Left);
 
-    NameBox.setPosition(87, 59, 109, 23);
-    NameBox.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Page1.add(NameBox);
+    NameBox_Left.setPosition(87, 111, 109, 23);
+    NameBox_Left.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    WidgetBuffer_Left.add(NameBox_Left);
 
-    VolumeBox.setPosition(87, 93, 109, 23);
-    VolumeBox.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Page1.add(VolumeBox);
+    VolumeBox_Left.setPosition(87, 145, 109, 23);
+    VolumeBox_Left.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    WidgetBuffer_Left.add(VolumeBox_Left);
 
-    ChemVolumeText.setXY(13, 96);
-    ChemVolumeText.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
-    ChemVolumeText.setLinespacing(0);
-    ChemVolumeText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FKHI));
-    Page1.add(ChemVolumeText);
+    ChemVolumeText_Left.setXY(13, 148);
+    ChemVolumeText_Left.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    ChemVolumeText_Left.setLinespacing(0);
+    ChemVolumeText_Left.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XF7S));
+    WidgetBuffer_Left.add(ChemVolumeText_Left);
 
-    ChemNameText.setXY(13, 62);
-    ChemNameText.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
-    ChemNameText.setLinespacing(0);
-    ChemNameText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GU10));
-    Page1.add(ChemNameText);
+    ChemNameText_Left.setXY(13, 114);
+    ChemNameText_Left.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    ChemNameText_Left.setLinespacing(0);
+    ChemNameText_Left.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RMSP));
+    WidgetBuffer_Left.add(ChemNameText_Left);
 
-    chemicalLabel.setPosition(13, 26, 153, 23);
-    chemicalLabel.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
-    chemicalLabel.setLinespacing(0);
-    chemicalLabelBuffer[0] = 0;
-    chemicalLabel.setWildcard(chemicalLabelBuffer);
-    chemicalLabel.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1PTH));
-    Page1.add(chemicalLabel);
+    chemicalLabel_Left.setPosition(13, 78, 153, 23);
+    chemicalLabel_Left.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    chemicalLabel_Left.setLinespacing(0);
+    chemicalLabel_LeftBuffer[0] = 0;
+    chemicalLabel_Left.setWildcard(chemicalLabel_LeftBuffer);
+    chemicalLabel_Left.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8INO));
+    WidgetBuffer_Left.add(chemicalLabel_Left);
 
-    NameEdit.setXY(207, 59);
-    NameEdit.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    NameEdit.setAction(buttonCallback);
-    Page1.add(NameEdit);
+    NameEdit_Left.setXY(207, 111);
+    NameEdit_Left.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    WidgetBuffer_Left.add(NameEdit_Left);
 
-    VolumeEdit.setXY(207, 93);
-    VolumeEdit.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
-    VolumeEdit.setAction(buttonCallback);
-    Page1.add(VolumeEdit);
+    VolumeEdit_Left.setXY(207, 145);
+    VolumeEdit_Left.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    WidgetBuffer_Left.add(VolumeEdit_Left);
 
-    ChemicalEnableButton.setXY(119, 26);
-    ChemicalEnableButton.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
-    ChemicalEnableButton.setAction(buttonCallback);
-    Page1.add(ChemicalEnableButton);
+    ChemicalEnableButton_Left.setXY(119, 78);
+    ChemicalEnableButton_Left.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    WidgetBuffer_Left.add(ChemicalEnableButton_Left);
 
-    AddPumpBox.setPosition(1, 126, 239, 36);
-    AddPumpBox.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
-    AddPumpBox.setBorderColor(touchgfx::Color::getColorFromRGB(168, 168, 168));
-    AddPumpBox.setBorderSize(5);
-    Page1.add(AddPumpBox);
+    AddPumpBox_Left.setPosition(1, 178, 239, 36);
+    AddPumpBox_Left.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
+    AddPumpBox_Left.setBorderColor(touchgfx::Color::getColorFromRGB(168, 168, 168));
+    AddPumpBox_Left.setBorderSize(5);
+    WidgetBuffer_Left.add(AddPumpBox_Left);
 
-    AddPump.setXY(137, 132);
-    AddPump.setBitmaps(touchgfx::Bitmap(BITMAP_PLUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_PLUS_PRESSED_ID));
-    AddPump.setAction(buttonCallback);
-    Page1.add(AddPump);
+    AddPump_Left.setXY(137, 184);
+    AddPump_Left.setBitmaps(touchgfx::Bitmap(BITMAP_PLUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_PLUS_PRESSED_ID));
+    WidgetBuffer_Left.add(AddPump_Left);
 
-    RemovePump.setXY(166, 132);
-    RemovePump.setBitmaps(touchgfx::Bitmap(BITMAP_MINUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_MINUS_PRESSED_ID));
-    RemovePump.setAction(buttonCallback);
-    Page1.add(RemovePump);
+    RemovePump_Left.setXY(166, 184);
+    RemovePump_Left.setBitmaps(touchgfx::Bitmap(BITMAP_MINUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_MINUS_PRESSED_ID));
+    WidgetBuffer_Left.add(RemovePump_Left);
 
-    AddPumpText.setXY(46, 135);
-    AddPumpText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    AddPumpText.setLinespacing(0);
-    AddPumpText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PS88));
-    Page1.add(AddPumpText);
+    AddPumpText_Left.setXY(46, 187);
+    AddPumpText_Left.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    AddPumpText_Left.setLinespacing(0);
+    AddPumpText_Left.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SRWT));
+    WidgetBuffer_Left.add(AddPumpText_Left);
 
-    NameEditText.setPosition(87, 62, 109, 23);
-    NameEditText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    NameEditText.setLinespacing(0);
-    NameEditTextBuffer[0] = 0;
-    NameEditText.setWildcard(NameEditTextBuffer);
-    NameEditText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4GQ5));
-    Page1.add(NameEditText);
+    NameEditText_Left.setPosition(87, 114, 109, 23);
+    NameEditText_Left.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    NameEditText_Left.setLinespacing(0);
+    NameEditText_LeftBuffer[0] = 0;
+    NameEditText_Left.setWildcard(NameEditText_LeftBuffer);
+    NameEditText_Left.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1WGG));
+    WidgetBuffer_Left.add(NameEditText_Left);
 
-    VolumeEditText.setPosition(87, 96, 109, 23);
-    VolumeEditText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    VolumeEditText.setLinespacing(0);
-    VolumeEditTextBuffer[0] = 0;
-    VolumeEditText.setWildcard(VolumeEditTextBuffer);
-    VolumeEditText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_W5GW));
-    Page1.add(VolumeEditText);
+    VolumeEditText_Left.setPosition(87, 148, 109, 23);
+    VolumeEditText_Left.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    VolumeEditText_Left.setLinespacing(0);
+    VolumeEditText_LeftBuffer[0] = 0;
+    VolumeEditText_Left.setWildcard(VolumeEditText_LeftBuffer);
+    VolumeEditText_Left.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RZGR));
+    WidgetBuffer_Left.add(VolumeEditText_Left);
+
+    Page1.add(WidgetBuffer_Left);
+
+    WidgetBuffer_Center.setPosition(0, -52, 240, 320);
+    scrollableContainer1_Center.setPosition(0, 214, 240, 108);
+    scrollableContainer1_Center.enableHorizontalScroll(false);
+    scrollableContainer1_Center.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer1_Center.setScrollbarsAlpha(255);
+    pumpSetupWidget_Center_1.setXY(0, -2);
+    scrollableContainer1_Center.add(pumpSetupWidget_Center_1);
+
+    pumpSetupWidget_Center_2.setXY(1, 106);
+    pumpSetupWidget_Center_2.setVisible(false);
+    scrollableContainer1_Center.add(pumpSetupWidget_Center_2);
+
+    pumpSetupWidget_Center_3.setXY(1, 214);
+    pumpSetupWidget_Center_3.setVisible(false);
+    scrollableContainer1_Center.add(pumpSetupWidget_Center_3);
+
+    WidgetBuffer_Center.add(scrollableContainer1_Center);
+
+    NameBox_Center.setPosition(87, 111, 109, 23);
+    NameBox_Center.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    WidgetBuffer_Center.add(NameBox_Center);
+
+    VolumeBox_Center.setPosition(87, 145, 109, 23);
+    VolumeBox_Center.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    WidgetBuffer_Center.add(VolumeBox_Center);
+
+    ChemVolumeText_Center.setXY(13, 148);
+    ChemVolumeText_Center.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    ChemVolumeText_Center.setLinespacing(0);
+    ChemVolumeText_Center.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FKHI));
+    WidgetBuffer_Center.add(ChemVolumeText_Center);
+
+    ChemNameText_Center.setXY(13, 114);
+    ChemNameText_Center.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    ChemNameText_Center.setLinespacing(0);
+    ChemNameText_Center.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GU10));
+    WidgetBuffer_Center.add(ChemNameText_Center);
+
+    chemicalLabel_Center.setPosition(13, 78, 153, 23);
+    chemicalLabel_Center.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    chemicalLabel_Center.setLinespacing(0);
+    chemicalLabel_CenterBuffer[0] = 0;
+    chemicalLabel_Center.setWildcard(chemicalLabel_CenterBuffer);
+    chemicalLabel_Center.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1PTH));
+    WidgetBuffer_Center.add(chemicalLabel_Center);
+
+    NameEdit_Center.setXY(207, 111);
+    NameEdit_Center.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    NameEdit_Center.setAction(buttonCallback);
+    WidgetBuffer_Center.add(NameEdit_Center);
+
+    VolumeEdit_Center.setXY(207, 145);
+    VolumeEdit_Center.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    VolumeEdit_Center.setAction(buttonCallback);
+    WidgetBuffer_Center.add(VolumeEdit_Center);
+
+    ChemicalEnableButton_Center.setXY(119, 78);
+    ChemicalEnableButton_Center.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    ChemicalEnableButton_Center.setAction(buttonCallback);
+    WidgetBuffer_Center.add(ChemicalEnableButton_Center);
+
+    AddPumpBox_Center.setPosition(1, 178, 239, 36);
+    AddPumpBox_Center.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
+    AddPumpBox_Center.setBorderColor(touchgfx::Color::getColorFromRGB(168, 168, 168));
+    AddPumpBox_Center.setBorderSize(5);
+    WidgetBuffer_Center.add(AddPumpBox_Center);
+
+    AddPump_Center.setXY(137, 184);
+    AddPump_Center.setBitmaps(touchgfx::Bitmap(BITMAP_PLUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_PLUS_PRESSED_ID));
+    AddPump_Center.setAction(buttonCallback);
+    WidgetBuffer_Center.add(AddPump_Center);
+
+    RemovePump_Center.setXY(166, 184);
+    RemovePump_Center.setBitmaps(touchgfx::Bitmap(BITMAP_MINUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_MINUS_PRESSED_ID));
+    RemovePump_Center.setAction(buttonCallback);
+    WidgetBuffer_Center.add(RemovePump_Center);
+
+    AddPumpText_Center.setXY(46, 187);
+    AddPumpText_Center.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    AddPumpText_Center.setLinespacing(0);
+    AddPumpText_Center.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PS88));
+    WidgetBuffer_Center.add(AddPumpText_Center);
+
+    NameEditText_Center.setPosition(87, 114, 109, 23);
+    NameEditText_Center.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    NameEditText_Center.setLinespacing(0);
+    NameEditText_CenterBuffer[0] = 0;
+    NameEditText_Center.setWildcard(NameEditText_CenterBuffer);
+    NameEditText_Center.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4GQ5));
+    WidgetBuffer_Center.add(NameEditText_Center);
+
+    VolumeEditText_Center.setPosition(87, 148, 109, 23);
+    VolumeEditText_Center.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    VolumeEditText_Center.setLinespacing(0);
+    VolumeEditText_CenterBuffer[0] = 0;
+    VolumeEditText_Center.setWildcard(VolumeEditText_CenterBuffer);
+    VolumeEditText_Center.setTypedText(touchgfx::TypedText(T___SINGLEUSE_W5GW));
+    WidgetBuffer_Center.add(VolumeEditText_Center);
+
+    Page1.add(WidgetBuffer_Center);
+
+    WidgetBuffer_Right.setPosition(240, -52, 240, 320);
+    scrollableContainer1_Right.setPosition(0, 214, 240, 108);
+    scrollableContainer1_Right.enableHorizontalScroll(false);
+    scrollableContainer1_Right.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer1_Right.setScrollbarsAlpha(255);
+    pumpSetupWidget_Right_1.setXY(0, -2);
+    scrollableContainer1_Right.add(pumpSetupWidget_Right_1);
+
+    pumpSetupWidget_Right_2.setXY(1, 106);
+    pumpSetupWidget_Right_2.setVisible(false);
+    scrollableContainer1_Right.add(pumpSetupWidget_Right_2);
+
+    pumpSetupWidget_Right_3.setXY(1, 214);
+    pumpSetupWidget_Right_3.setVisible(false);
+    scrollableContainer1_Right.add(pumpSetupWidget_Right_3);
+
+    WidgetBuffer_Right.add(scrollableContainer1_Right);
+
+    NameBox_Right.setPosition(87, 111, 109, 23);
+    NameBox_Right.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    WidgetBuffer_Right.add(NameBox_Right);
+
+    VolumeBox_Right.setPosition(87, 145, 109, 23);
+    VolumeBox_Right.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    WidgetBuffer_Right.add(VolumeBox_Right);
+
+    ChemVolumeText_Right.setXY(13, 148);
+    ChemVolumeText_Right.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    ChemVolumeText_Right.setLinespacing(0);
+    ChemVolumeText_Right.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MO3A));
+    WidgetBuffer_Right.add(ChemVolumeText_Right);
+
+    ChemNameText_Right.setXY(13, 114);
+    ChemNameText_Right.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    ChemNameText_Right.setLinespacing(0);
+    ChemNameText_Right.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LCC8));
+    WidgetBuffer_Right.add(ChemNameText_Right);
+
+    chemicalLabel_Right.setPosition(13, 78, 153, 23);
+    chemicalLabel_Right.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
+    chemicalLabel_Right.setLinespacing(0);
+    chemicalLabel_RightBuffer[0] = 0;
+    chemicalLabel_Right.setWildcard(chemicalLabel_RightBuffer);
+    chemicalLabel_Right.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WRL3));
+    WidgetBuffer_Right.add(chemicalLabel_Right);
+
+    NameEdit_Right.setXY(207, 111);
+    NameEdit_Right.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    WidgetBuffer_Right.add(NameEdit_Right);
+
+    VolumeEdit_Right.setXY(207, 145);
+    VolumeEdit_Right.setBitmaps(touchgfx::Bitmap(BITMAP_EDIT_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_EDIT_PRESSED_ID));
+    WidgetBuffer_Right.add(VolumeEdit_Right);
+
+    ChemicalEnableButton_Right.setXY(119, 78);
+    ChemicalEnableButton_Right.setBitmaps(touchgfx::Bitmap(BITMAP_TOGGLE_OFF_ID), touchgfx::Bitmap(BITMAP_TOGGLE_ON_ID));
+    WidgetBuffer_Right.add(ChemicalEnableButton_Right);
+
+    AddPumpBox_Right.setPosition(1, 178, 239, 36);
+    AddPumpBox_Right.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
+    AddPumpBox_Right.setBorderColor(touchgfx::Color::getColorFromRGB(168, 168, 168));
+    AddPumpBox_Right.setBorderSize(5);
+    WidgetBuffer_Right.add(AddPumpBox_Right);
+
+    AddPump_Right.setXY(137, 184);
+    AddPump_Right.setBitmaps(touchgfx::Bitmap(BITMAP_PLUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_PLUS_PRESSED_ID));
+    WidgetBuffer_Right.add(AddPump_Right);
+
+    RemovePump_Right.setXY(166, 184);
+    RemovePump_Right.setBitmaps(touchgfx::Bitmap(BITMAP_MINUS_UNPRESSED_ID), touchgfx::Bitmap(BITMAP_MINUS_PRESSED_ID));
+    WidgetBuffer_Right.add(RemovePump_Right);
+
+    AddPumpText_Right.setXY(46, 187);
+    AddPumpText_Right.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    AddPumpText_Right.setLinespacing(0);
+    AddPumpText_Right.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0CAH));
+    WidgetBuffer_Right.add(AddPumpText_Right);
+
+    NameEditText_Right.setPosition(87, 114, 109, 23);
+    NameEditText_Right.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    NameEditText_Right.setLinespacing(0);
+    NameEditText_RightBuffer[0] = 0;
+    NameEditText_Right.setWildcard(NameEditText_RightBuffer);
+    NameEditText_Right.setTypedText(touchgfx::TypedText(T___SINGLEUSE_I3SI));
+    WidgetBuffer_Right.add(NameEditText_Right);
+
+    VolumeEditText_Right.setPosition(87, 148, 109, 23);
+    VolumeEditText_Right.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    VolumeEditText_Right.setLinespacing(0);
+    VolumeEditText_RightBuffer[0] = 0;
+    VolumeEditText_Right.setWildcard(VolumeEditText_RightBuffer);
+    VolumeEditText_Right.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8SW7));
+    WidgetBuffer_Right.add(VolumeEditText_Right);
+
+    Page1.add(WidgetBuffer_Right);
 
     swipeContainer1.add(Page1);
 
@@ -250,9 +445,15 @@ ChemicalsSetupViewBase::~ChemicalsSetupViewBase()
 
 void ChemicalsSetupViewBase::setupScreen()
 {
-    pumpSetupWidget1.initialize();
-    pumpSetupWidget2.initialize();
-    pumpSetupWidget3.initialize();
+    pumpSetupWidget_Left_1.initialize();
+    pumpSetupWidget_Left_2.initialize();
+    pumpSetupWidget_Left_3.initialize();
+    pumpSetupWidget_Center_1.initialize();
+    pumpSetupWidget_Center_2.initialize();
+    pumpSetupWidget_Center_3.initialize();
+    pumpSetupWidget_Right_1.initialize();
+    pumpSetupWidget_Right_2.initialize();
+    pumpSetupWidget_Right_3.initialize();
 }
 
 void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
@@ -278,38 +479,38 @@ void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //Call ExitPressed
         ExitPressed();
     }
-    if (&src == &VolumeEdit)
+    if (&src == &VolumeEdit_Center)
     {
         //TotalVolumeEdit1
-        //When VolumeEdit clicked execute C++ code
+        //When VolumeEdit_Center clicked execute C++ code
         //Execute C++ code
         presenter->editField(2);
     }
-    if (&src == &NameEdit)
+    if (&src == &NameEdit_Center)
     {
         //NameEdit1
-        //When NameEdit clicked execute C++ code
+        //When NameEdit_Center clicked execute C++ code
         //Execute C++ code
         presenter->editField(1);
     }
-    if (&src == &AddPump)
+    if (&src == &AddPump_Center)
     {
         //AddPump1
-        //When AddPump clicked call virtual function
+        //When AddPump_Center clicked call virtual function
         //Call addPumpClicked
         addPumpClicked();
     }
-    if (&src == &RemovePump)
+    if (&src == &RemovePump_Center)
     {
         //RemovePump1
-        //When RemovePump clicked call virtual function
+        //When RemovePump_Center clicked call virtual function
         //Call removePumpClicked
         removePumpClicked();
     }
-    if (&src == &ChemicalEnableButton)
+    if (&src == &ChemicalEnableButton_Center)
     {
         //ChemEnable1
-        //When ChemicalEnableButton clicked execute C++ code
+        //When ChemicalEnableButton_Center clicked execute C++ code
         //Execute C++ code
         presenter->chemicalEnableToggled();
     }

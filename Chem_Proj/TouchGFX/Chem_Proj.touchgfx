@@ -1249,237 +1249,732 @@
                 "Height": 270,
                 "Components": [
                   {
-                    "Type": "ScrollableContainer",
-                    "Name": "scrollableContainer1",
-                    "Y": 162,
+                    "Type": "Container",
+                    "Name": "WidgetBuffer_Left",
+                    "X": -240,
+                    "Y": -52,
                     "Width": 240,
-                    "Height": 108,
-                    "VerticalScrollEnabled": true,
-                    "ScrollbarsVisibleOnPressed": true,
-                    "ScrollbarsColor": {
-                      "Red": 255
-                    },
-                    "ScrollbarsAlpha": 255,
+                    "Height": 320,
                     "Components": [
                       {
-                        "Type": "CustomContainerInstance",
-                        "Name": "pumpSetupWidget1",
-                        "Y": -2,
-                        "Width": 240,
-                        "Height": 108,
-                        "CustomContainerDefinitionName": "PumpSetupWidget"
-                      },
-                      {
-                        "Type": "CustomContainerInstance",
-                        "Name": "pumpSetupWidget2",
-                        "X": 1,
-                        "Y": 106,
-                        "Width": 240,
-                        "Height": 108,
-                        "Visible": false,
-                        "CustomContainerDefinitionName": "PumpSetupWidget"
-                      },
-                      {
-                        "Type": "CustomContainerInstance",
-                        "Name": "pumpSetupWidget3",
-                        "X": 1,
+                        "Type": "ScrollableContainer",
+                        "Name": "scrollableContainer1_Left",
                         "Y": 214,
                         "Width": 240,
                         "Height": 108,
-                        "Visible": false,
-                        "CustomContainerDefinitionName": "PumpSetupWidget"
+                        "VerticalScrollEnabled": true,
+                        "ScrollbarsVisibleOnPressed": true,
+                        "ScrollbarsColor": {
+                          "Red": 255
+                        },
+                        "ScrollbarsAlpha": 255,
+                        "Components": [
+                          {
+                            "Type": "CustomContainerInstance",
+                            "Name": "pumpSetupWidget_Left_1",
+                            "Y": -2,
+                            "Width": 240,
+                            "Height": 108,
+                            "CustomContainerDefinitionName": "PumpSetupWidget"
+                          },
+                          {
+                            "Type": "CustomContainerInstance",
+                            "Name": "pumpSetupWidget_Left_2",
+                            "X": 1,
+                            "Y": 106,
+                            "Width": 240,
+                            "Height": 108,
+                            "Visible": false,
+                            "CustomContainerDefinitionName": "PumpSetupWidget"
+                          },
+                          {
+                            "Type": "CustomContainerInstance",
+                            "Name": "pumpSetupWidget_Left_3",
+                            "X": 1,
+                            "Y": 214,
+                            "Width": 240,
+                            "Height": 108,
+                            "Visible": false,
+                            "CustomContainerDefinitionName": "PumpSetupWidget"
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Box",
+                        "Name": "NameBox_Left",
+                        "X": 87,
+                        "Y": 111,
+                        "Width": 109,
+                        "Height": 23,
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        }
+                      },
+                      {
+                        "Type": "Box",
+                        "Name": "VolumeBox_Left",
+                        "X": 87,
+                        "Y": 145,
+                        "Width": 109,
+                        "Height": 23,
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "ChemVolumeText_Left",
+                        "X": 13,
+                        "Y": 148,
+                        "Width": 64,
+                        "Height": 18,
+                        "TextId": "__SingleUse_XF7S",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "ChemNameText_Left",
+                        "X": 13,
+                        "Y": 114,
+                        "Width": 51,
+                        "Height": 18,
+                        "TextId": "__SingleUse_RMSP",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "chemicalLabel_Left",
+                        "X": 13,
+                        "Y": 78,
+                        "Width": 153,
+                        "Height": 23,
+                        "TextId": "__SingleUse_8INO",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 20
+                        }
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "NameEdit_Left",
+                        "X": 207,
+                        "Y": 111,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Edit Pressed.png",
+                        "Released": "Edit Unpressed.png"
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "VolumeEdit_Left",
+                        "X": 207,
+                        "Y": 145,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Edit Pressed.png",
+                        "Released": "Edit Unpressed.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "ChemicalEnableButton_Left",
+                        "X": 119,
+                        "Y": 78,
+                        "Width": 45,
+                        "Height": 23,
+                        "Pressed": "Toggle On.png",
+                        "Released": "Toggle Off.png"
+                      },
+                      {
+                        "Type": "BoxWithBorder",
+                        "Name": "AddPumpBox_Left",
+                        "X": 1,
+                        "Y": 178,
+                        "Width": 239,
+                        "Height": 36,
+                        "Color": {
+                          "Red": 120,
+                          "Green": 120,
+                          "Blue": 120
+                        },
+                        "BorderColor": {
+                          "Red": 168,
+                          "Green": 168,
+                          "Blue": 168
+                        },
+                        "BorderSize": 5
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "AddPump_Left",
+                        "X": 137,
+                        "Y": 184,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Plus Pressed.png",
+                        "Released": "Plus Unpressed.png"
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "RemovePump_Left",
+                        "X": 166,
+                        "Y": 184,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Minus Pressed.png",
+                        "Released": "Minus Unpressed.png"
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "AddPumpText_Left",
+                        "X": 46,
+                        "Y": 187,
+                        "Width": 83,
+                        "Height": 18,
+                        "TextId": "__SingleUse_SRWT",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "NameEditText_Left",
+                        "X": 87,
+                        "Y": 114,
+                        "Width": 109,
+                        "Height": 23,
+                        "TextId": "__SingleUse_1WGG",
+                        "TextRotation": "0",
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 20
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "VolumeEditText_Left",
+                        "X": 87,
+                        "Y": 148,
+                        "Width": 109,
+                        "Height": 23,
+                        "TextId": "__SingleUse_RZGR",
+                        "TextRotation": "0",
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 12
+                        }
                       }
                     ]
                   },
                   {
-                    "Type": "Box",
-                    "Name": "NameBox",
-                    "X": 87,
-                    "Y": 59,
-                    "Width": 109,
-                    "Height": 23,
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    }
+                    "Type": "Container",
+                    "Name": "WidgetBuffer_Center",
+                    "Y": -52,
+                    "Width": 240,
+                    "Height": 320,
+                    "Components": [
+                      {
+                        "Type": "ScrollableContainer",
+                        "Name": "scrollableContainer1_Center",
+                        "Y": 214,
+                        "Width": 240,
+                        "Height": 108,
+                        "VerticalScrollEnabled": true,
+                        "ScrollbarsVisibleOnPressed": true,
+                        "ScrollbarsColor": {
+                          "Red": 255
+                        },
+                        "ScrollbarsAlpha": 255,
+                        "Components": [
+                          {
+                            "Type": "CustomContainerInstance",
+                            "Name": "pumpSetupWidget_Center_1",
+                            "Y": -2,
+                            "Width": 240,
+                            "Height": 108,
+                            "CustomContainerDefinitionName": "PumpSetupWidget"
+                          },
+                          {
+                            "Type": "CustomContainerInstance",
+                            "Name": "pumpSetupWidget_Center_2",
+                            "X": 1,
+                            "Y": 106,
+                            "Width": 240,
+                            "Height": 108,
+                            "Visible": false,
+                            "CustomContainerDefinitionName": "PumpSetupWidget"
+                          },
+                          {
+                            "Type": "CustomContainerInstance",
+                            "Name": "pumpSetupWidget_Center_3",
+                            "X": 1,
+                            "Y": 214,
+                            "Width": 240,
+                            "Height": 108,
+                            "Visible": false,
+                            "CustomContainerDefinitionName": "PumpSetupWidget"
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Box",
+                        "Name": "NameBox_Center",
+                        "X": 87,
+                        "Y": 111,
+                        "Width": 109,
+                        "Height": 23,
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        }
+                      },
+                      {
+                        "Type": "Box",
+                        "Name": "VolumeBox_Center",
+                        "X": 87,
+                        "Y": 145,
+                        "Width": 109,
+                        "Height": 23,
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "ChemVolumeText_Center",
+                        "X": 13,
+                        "Y": 148,
+                        "Width": 64,
+                        "Height": 18,
+                        "TextId": "__SingleUse_FKHI",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "ChemNameText_Center",
+                        "X": 13,
+                        "Y": 114,
+                        "Width": 51,
+                        "Height": 18,
+                        "TextId": "__SingleUse_GU10",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "chemicalLabel_Center",
+                        "X": 13,
+                        "Y": 78,
+                        "Width": 153,
+                        "Height": 23,
+                        "TextId": "__SingleUse_1PTH",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 20
+                        }
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "NameEdit_Center",
+                        "X": 207,
+                        "Y": 111,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Edit Pressed.png",
+                        "Released": "Edit Unpressed.png"
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "VolumeEdit_Center",
+                        "X": 207,
+                        "Y": 145,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Edit Pressed.png",
+                        "Released": "Edit Unpressed.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "ChemicalEnableButton_Center",
+                        "X": 119,
+                        "Y": 78,
+                        "Width": 45,
+                        "Height": 23,
+                        "Pressed": "Toggle On.png",
+                        "Released": "Toggle Off.png"
+                      },
+                      {
+                        "Type": "BoxWithBorder",
+                        "Name": "AddPumpBox_Center",
+                        "X": 1,
+                        "Y": 178,
+                        "Width": 239,
+                        "Height": 36,
+                        "Color": {
+                          "Red": 120,
+                          "Green": 120,
+                          "Blue": 120
+                        },
+                        "BorderColor": {
+                          "Red": 168,
+                          "Green": 168,
+                          "Blue": 168
+                        },
+                        "BorderSize": 5
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "AddPump_Center",
+                        "X": 137,
+                        "Y": 184,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Plus Pressed.png",
+                        "Released": "Plus Unpressed.png"
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "RemovePump_Center",
+                        "X": 166,
+                        "Y": 184,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Minus Pressed.png",
+                        "Released": "Minus Unpressed.png"
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "AddPumpText_Center",
+                        "X": 46,
+                        "Y": 187,
+                        "Width": 83,
+                        "Height": 18,
+                        "TextId": "__SingleUse_PS88",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "NameEditText_Center",
+                        "X": 87,
+                        "Y": 114,
+                        "Width": 109,
+                        "Height": 23,
+                        "TextId": "__SingleUse_4GQ5",
+                        "TextRotation": "0",
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 20
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "VolumeEditText_Center",
+                        "X": 87,
+                        "Y": 148,
+                        "Width": 109,
+                        "Height": 23,
+                        "TextId": "__SingleUse_W5GW",
+                        "TextRotation": "0",
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 12
+                        }
+                      }
+                    ]
                   },
                   {
-                    "Type": "Box",
-                    "Name": "VolumeBox",
-                    "X": 87,
-                    "Y": 93,
-                    "Width": 109,
-                    "Height": 23,
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "ChemVolumeText",
-                    "X": 13,
-                    "Y": 96,
-                    "Width": 64,
-                    "Height": 18,
-                    "TextId": "__SingleUse_FKHI",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 221,
-                      "Green": 221,
-                      "Blue": 221
-                    },
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "ChemNameText",
-                    "X": 13,
-                    "Y": 62,
-                    "Width": 51,
-                    "Height": 18,
-                    "TextId": "__SingleUse_GU10",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 221,
-                      "Green": 221,
-                      "Blue": 221
-                    },
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "chemicalLabel",
-                    "X": 13,
-                    "Y": 26,
-                    "Width": 153,
-                    "Height": 23,
-                    "TextId": "__SingleUse_1PTH",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 221,
-                      "Green": 221,
-                      "Blue": 221
-                    },
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 20
-                    }
-                  },
-                  {
-                    "Type": "Button",
-                    "Name": "NameEdit",
-                    "X": 207,
-                    "Y": 59,
-                    "Width": 23,
-                    "Height": 23,
-                    "Pressed": "Edit Pressed.png",
-                    "Released": "Edit Unpressed.png"
-                  },
-                  {
-                    "Type": "Button",
-                    "Name": "VolumeEdit",
-                    "X": 207,
-                    "Y": 93,
-                    "Width": 23,
-                    "Height": 23,
-                    "Pressed": "Edit Pressed.png",
-                    "Released": "Edit Unpressed.png"
-                  },
-                  {
-                    "Type": "ToggleButton",
-                    "Name": "ChemicalEnableButton",
-                    "X": 119,
-                    "Y": 26,
-                    "Width": 45,
-                    "Height": 23,
-                    "Pressed": "Toggle On.png",
-                    "Released": "Toggle Off.png"
-                  },
-                  {
-                    "Type": "BoxWithBorder",
-                    "Name": "AddPumpBox",
-                    "X": 1,
-                    "Y": 126,
-                    "Width": 239,
-                    "Height": 36,
-                    "Color": {
-                      "Red": 120,
-                      "Green": 120,
-                      "Blue": 120
-                    },
-                    "BorderColor": {
-                      "Red": 168,
-                      "Green": 168,
-                      "Blue": 168
-                    },
-                    "BorderSize": 5
-                  },
-                  {
-                    "Type": "Button",
-                    "Name": "AddPump",
-                    "X": 137,
-                    "Y": 132,
-                    "Width": 23,
-                    "Height": 23,
-                    "Pressed": "Plus Pressed.png",
-                    "Released": "Plus Unpressed.png"
-                  },
-                  {
-                    "Type": "Button",
-                    "Name": "RemovePump",
-                    "X": 166,
-                    "Y": 132,
-                    "Width": 23,
-                    "Height": 23,
-                    "Pressed": "Minus Pressed.png",
-                    "Released": "Minus Unpressed.png"
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "AddPumpText",
-                    "X": 46,
-                    "Y": 135,
-                    "Width": 83,
-                    "Height": 18,
-                    "TextId": "__SingleUse_PS88",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "NameEditText",
-                    "X": 87,
-                    "Y": 62,
-                    "Width": 109,
-                    "Height": 23,
-                    "TextId": "__SingleUse_4GQ5",
-                    "TextRotation": "0",
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 20
-                    }
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "VolumeEditText",
-                    "X": 87,
-                    "Y": 96,
-                    "Width": 109,
-                    "Height": 23,
-                    "TextId": "__SingleUse_W5GW",
-                    "TextRotation": "0",
-                    "Wildcard1": {
-                      "UseBuffer": true,
-                      "BufferSize": 12
-                    }
+                    "Type": "Container",
+                    "Name": "WidgetBuffer_Right",
+                    "X": 240,
+                    "Y": -52,
+                    "Width": 240,
+                    "Height": 320,
+                    "Components": [
+                      {
+                        "Type": "ScrollableContainer",
+                        "Name": "scrollableContainer1_Right",
+                        "Y": 214,
+                        "Width": 240,
+                        "Height": 108,
+                        "VerticalScrollEnabled": true,
+                        "ScrollbarsVisibleOnPressed": true,
+                        "ScrollbarsColor": {
+                          "Red": 255
+                        },
+                        "ScrollbarsAlpha": 255,
+                        "Components": [
+                          {
+                            "Type": "CustomContainerInstance",
+                            "Name": "pumpSetupWidget_Right_1",
+                            "Y": -2,
+                            "Width": 240,
+                            "Height": 108,
+                            "CustomContainerDefinitionName": "PumpSetupWidget"
+                          },
+                          {
+                            "Type": "CustomContainerInstance",
+                            "Name": "pumpSetupWidget_Right_2",
+                            "X": 1,
+                            "Y": 106,
+                            "Width": 240,
+                            "Height": 108,
+                            "Visible": false,
+                            "CustomContainerDefinitionName": "PumpSetupWidget"
+                          },
+                          {
+                            "Type": "CustomContainerInstance",
+                            "Name": "pumpSetupWidget_Right_3",
+                            "X": 1,
+                            "Y": 214,
+                            "Width": 240,
+                            "Height": 108,
+                            "Visible": false,
+                            "CustomContainerDefinitionName": "PumpSetupWidget"
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Box",
+                        "Name": "NameBox_Right",
+                        "X": 87,
+                        "Y": 111,
+                        "Width": 109,
+                        "Height": 23,
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        }
+                      },
+                      {
+                        "Type": "Box",
+                        "Name": "VolumeBox_Right",
+                        "X": 87,
+                        "Y": 145,
+                        "Width": 109,
+                        "Height": 23,
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "ChemVolumeText_Right",
+                        "X": 13,
+                        "Y": 148,
+                        "Width": 64,
+                        "Height": 18,
+                        "TextId": "__SingleUse_MO3A",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "ChemNameText_Right",
+                        "X": 13,
+                        "Y": 114,
+                        "Width": 51,
+                        "Height": 18,
+                        "TextId": "__SingleUse_LCC8",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "chemicalLabel_Right",
+                        "X": 13,
+                        "Y": 78,
+                        "Width": 153,
+                        "Height": 23,
+                        "TextId": "__SingleUse_WRL3",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 221,
+                          "Green": 221,
+                          "Blue": 221
+                        },
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 20
+                        }
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "NameEdit_Right",
+                        "X": 207,
+                        "Y": 111,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Edit Pressed.png",
+                        "Released": "Edit Unpressed.png"
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "VolumeEdit_Right",
+                        "X": 207,
+                        "Y": 145,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Edit Pressed.png",
+                        "Released": "Edit Unpressed.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "ChemicalEnableButton_Right",
+                        "X": 119,
+                        "Y": 78,
+                        "Width": 45,
+                        "Height": 23,
+                        "Pressed": "Toggle On.png",
+                        "Released": "Toggle Off.png"
+                      },
+                      {
+                        "Type": "BoxWithBorder",
+                        "Name": "AddPumpBox_Right",
+                        "X": 1,
+                        "Y": 178,
+                        "Width": 239,
+                        "Height": 36,
+                        "Color": {
+                          "Red": 120,
+                          "Green": 120,
+                          "Blue": 120
+                        },
+                        "BorderColor": {
+                          "Red": 168,
+                          "Green": 168,
+                          "Blue": 168
+                        },
+                        "BorderSize": 5
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "AddPump_Right",
+                        "X": 137,
+                        "Y": 184,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Plus Pressed.png",
+                        "Released": "Plus Unpressed.png"
+                      },
+                      {
+                        "Type": "Button",
+                        "Name": "RemovePump_Right",
+                        "X": 166,
+                        "Y": 184,
+                        "Width": 23,
+                        "Height": 23,
+                        "Pressed": "Minus Pressed.png",
+                        "Released": "Minus Unpressed.png"
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "AddPumpText_Right",
+                        "X": 46,
+                        "Y": 187,
+                        "Width": 83,
+                        "Height": 18,
+                        "TextId": "__SingleUse_0CAH",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "NameEditText_Right",
+                        "X": 87,
+                        "Y": 114,
+                        "Width": 109,
+                        "Height": 23,
+                        "TextId": "__SingleUse_I3SI",
+                        "TextRotation": "0",
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 20
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "VolumeEditText_Right",
+                        "X": 87,
+                        "Y": 148,
+                        "Width": 109,
+                        "Height": 23,
+                        "TextId": "__SingleUse_8SW7",
+                        "TextRotation": "0",
+                        "Wildcard1": {
+                          "UseBuffer": true,
+                          "BufferSize": 12
+                        }
+                      }
+                    ]
                   }
                 ]
               },
@@ -1744,7 +2239,7 @@
             "InteractionName": "TotalVolumeEdit1",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "VolumeEdit"
+              "TriggerComponent": "VolumeEdit_Center"
             },
             "Action": {
               "Type": "ActionExecuteCode",
@@ -1755,7 +2250,7 @@
             "InteractionName": "NameEdit1",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "NameEdit"
+              "TriggerComponent": "NameEdit_Center"
             },
             "Action": {
               "Type": "ActionExecuteCode",
@@ -1766,7 +2261,7 @@
             "InteractionName": "AddPump1",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "AddPump"
+              "TriggerComponent": "AddPump_Center"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -1777,7 +2272,7 @@
             "InteractionName": "RemovePump1",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "RemovePump"
+              "TriggerComponent": "RemovePump_Center"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -1788,7 +2283,7 @@
             "InteractionName": "ChemEnable1",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "ChemicalEnableButton"
+              "TriggerComponent": "ChemicalEnableButton_Center"
             },
             "Action": {
               "Type": "ActionExecuteCode",
