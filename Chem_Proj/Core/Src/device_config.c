@@ -16,70 +16,53 @@ static uint32_t CalculateCRC32(const uint8_t* data, size_t length);
 
 void Config_SetDefaults(DeviceConfiguration_t* config)
 {
-    // 1. Initialize the entire struct to zero. This is a good starting point.
     memset(config, 0, sizeof(DeviceConfiguration_t));
 
-    // 2. Set the header.
     config->magic_number = CONFIG_MAGIC_NUMBER;
     config->config_version = CONFIG_VERSION;
 
-    // 3. Set System-wide Physical Pump Configuration.
     for (int i = 0; i < NUM_PUMPS; i++) {
         config->PumpEnable[i] = (i == 0) ? 1 : 0;
         config->PumpDensity[i] = 1.0f;
     }
 
-    // 4. Set the global default for volume units.
-    config->VolumeUnit = 1; // 0 for mL
+    config->VolumeUnit = 1;
 
-    // 5. Set Chemical Recipe Defaults.
     const char* default_names[] = {
         "Chemical 1", "Chemical 2", "Chemical 3", "Chemical 4",
         "Chemical 5", "Chemical 6", "Chemical 7", "Chemical 8"
     };
 
+    // --- THIS IS THE FIX ---
+    // This loop now correctly initializes ALL recipes.
     for (int i = 0; i < NUM_CHEMICAL_RECIPES; i++) {
-        // --- THIS IS THE ROBUST METHOD ---
-        // Access the struct members directly through the main 'config' pointer.
 
-    	if (i == 0){
-    		config->recipes[i].is_enabled = 1;
-    	}
+        config->recipes[i].is_enabled = (i == 0) ? 1 : 0; // Only first is enabled by default
 
-    	else{
-    		config->recipes[i].is_enabled = 0;
-    	}
-
-        // a. Set the name
         strncpy(config->recipes[i].name, default_names[i], sizeof(config->recipes[i].name) - 1);
         config->recipes[i].name[sizeof(config->recipes[i].name) - 1] = '\0';
 
-        // b. Set the total volume
         config->recipes[i].total_dispense_volume = 32.0f;
 
-        // c. Initialize the pump setups for this recipe
+        // Initialize the pump setups for this recipe
         for (int j = 0; j < MAX_PUMP_SETUPS_PER_CHEMICAL; j++) {
 
-            // Set the pump index
-            if (i == 0 && j == 0) {
-                config->recipes[i].pump_setups[j].pump_index = 0;
-            } else {
-                config->recipes[i].pump_setups[j].pump_index = -1;
-            }
-
-            // Explicitly set the float values
-            if (i == 0 && j == 0) {
+            // --- THE CRITICAL CHANGE ---
+            // The first pump setup (j=0) for EVERY recipe is now enabled by default.
+            if (j == 0) {
+                config->recipes[i].pump_setups[j].pump_index = 0; // Default to Pump 0
                 config->recipes[i].pump_setups[j].dispense_small = 3.0f;
                 config->recipes[i].pump_setups[j].dispense_medium = 5.0f;
                 config->recipes[i].pump_setups[j].dispense_large = 7.0f;
             } else {
+                // All other pump slots are disabled.
+                config->recipes[i].pump_setups[j].pump_index = -1;
                 config->recipes[i].pump_setups[j].dispense_small = 0.0f;
                 config->recipes[i].pump_setups[j].dispense_medium = 0.0f;
                 config->recipes[i].pump_setups[j].dispense_large = 0.0f;
             }
         }
     }
-
 }
 // CRC calculation function (remains the same)
 

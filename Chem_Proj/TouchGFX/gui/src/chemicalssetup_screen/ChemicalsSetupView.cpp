@@ -34,6 +34,18 @@ ChemicalsSetupView::ChemicalsSetupView() :
     keyboard.setVisible(false);
 }
 
+touchgfx::Container* ChemicalsSetupView::getPageContainerForIndex(int index)
+{
+    switch(index)
+    {
+        case 0: return &Page1; case 1: return &Page2;
+        case 2: return &Page3; case 3: return &Page4;
+        case 4: return &Page5; case 5: return &Page6;
+        case 6: return &Page7; case 7: return &Page8;
+        default: return nullptr;
+    }
+}
+
 // --- NEW: Implementation of the getter function ---
 touchgfx::ScrollableContainer* ChemicalsSetupView::getScrollableContainerForPage(int pageIndex)
 {
@@ -42,7 +54,7 @@ touchgfx::ScrollableContainer* ChemicalsSetupView::getScrollableContainerForPage
     // The names (scrollableContainer1, etc.) must match your Designer widget names.
     switch (pageIndex)
     {
-        case 0: return &scrollableContainer1;
+        case 0: return &scrollableContainer;
 //        case 1: return &scrollableContainer2;
 //        case 2: return &scrollableContainer3;
 //        case 3: return &scrollableContainer4;
@@ -78,18 +90,68 @@ void ChemicalsSetupView::tearDownScreen()
     ChemicalsSetupViewBase::tearDownScreen();
 }
 
-void ChemicalsSetupView::displayData(const std::vector<int>& enabled_pumps, int8_t unit)
+void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit)
 {
-    // This function is now just a dispatcher.
-    // It loops through all 8 recipes and calls LoadPageData for each one.
-    for (int i = 0; i < NUM_CHEMICAL_RECIPES; i++)
-    {
-        // Get the specific data for the recipe we are loading
-        const ChemicalRecipe_t& recipeDataForPage = presenter->getRecipeDataForPage(i);
+    // --- 1. GET THE NEW PARENT CONTAINERS FOR THE CURRENT PAGE ---
+    Container* newParentPage = getPageContainerForIndex(currentPageIndex);
+    ScrollableContainer* newScrollParent = getScrollableContainerForPage(currentPageIndex);
+    if (!newParentPage || !newScrollParent) return;
 
-        // Call our helper function to update the UI for that page
-        LoadPageData(i, recipeDataForPage, enabled_pumps, unit);
+    // --- 2. MOVE ALL THE REUSABLE WIDGETS TO THE NEW PAGE ---
+    auto moveWidget = [&](Drawable& widget, Container& newParent) {
+        if (widget.getParent()) {
+            static_cast<Container*>(widget.getParent())->remove(widget);
+        }
+        newParent.add(widget);
+    };
+
+    // Move all the static widgets that live on the main page
+    moveWidget(chemicalLabel, *newParentPage);
+    moveWidget(ChemicalEnableButton, *newParentPage);
+    moveWidget(NameBox, *newParentPage);
+    moveWidget(NameEditText, *newParentPage);
+    moveWidget(NameEdit, *newParentPage);
+    moveWidget(VolumeBox, *newParentPage);
+    moveWidget(VolumeEditText, *newParentPage);
+    moveWidget(VolumeEdit, *newParentPage);
+    moveWidget(AddPumpBox, *newParentPage);
+    moveWidget(AddPump, *newParentPage);
+    moveWidget(RemovePump, *newParentPage);
+
+    // Move the reusable pump widgets into the page's scrollable container
+    for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+    {
+        moveWidget(*pumpSetupWidgets[i], *newScrollParent);
     }
+
+    // --- 3. POPULATE THE WIDGETS WITH THE NEW DATA ---
+    Unicode::snprintf(chemicalLabelBuffer, CHEMICALLABEL_SIZE, "Chemical %d:", currentPageIndex + 1);
+
+    ChemicalEnableButton.forceState(data.is_enabled == 1);
+
+    Unicode::strncpy(NameEditTextBuffer, data.name, NAMEEDITTEXT_SIZE);
+
+    char volAnsiBuffer[20];
+    const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
+    snprintf(volAnsiBuffer, 20, "%.2f %s", data.total_dispense_volume, unit_suffix);
+    Unicode::strncpy(VolumeEditTextBuffer, volAnsiBuffer, VOLUMEEDITTEXT_SIZE);
+
+    // --- 4. CONFIGURE PUMP WIDGETS AND ADD/REMOVE BUTTON VISIBILITY ---
+    int visiblePumpSetups = 0;
+    for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+    {
+        pumpSetupWidgets[i]->setAvailablePumps(enabled_pumps);
+        pumpSetupWidgets[i]->setup(i, data.pump_setups[i], unit);
+        pumpSetupWidgets[i]->setVisible(data.pump_setups[i].pump_index != -1);
+        if(pumpSetupWidgets[i]->isVisible()) visiblePumpSetups++;
+    }
+
+    AddPump.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
+    RemovePump.setVisible(visiblePumpSetups > 1);
+
+    // --- 5. THE FIX FOR THE BLANK SCREEN ---
+    // Invalidate the entire page container to force a complete redraw.
+    newParentPage->invalidate();
 }
 
 
@@ -192,201 +254,74 @@ void ChemicalsSetupView::editTotalVolumeClicked() { /* Not yet implemented */ }
 
 
 
-void ChemicalsSetupView::LoadPageData(uint8_t Page, const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit) {
-    // A temporary buffer for the volume string
-    char volBuffer[20];
-    const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
-    snprintf(volBuffer, 20, "%.2f %s", data.total_dispense_volume, unit_suffix);
-
-    // This switch updates the correct static widgets based on the Page number
-    switch (Page)
-    {
-        case 0:
-            Chemical1EnableButton.forceState(data.is_enabled == 1);
-            Unicode::strncpy(NameEditText1Buffer, data.name, NAMEEDITTEXT1_SIZE);
-            Unicode::strncpy(VolumeEditText1Buffer, volBuffer, VOLUMEEDITTEXT1_SIZE);
-            NameEditText1.invalidate(); VolumeEditText1.invalidate(); Chemical1EnableButton.invalidate();
-            break;
-
-        case 1:
-            Chemical2EnableButton.forceState(data.is_enabled == 1);
-            Unicode::strncpy(NameEditText2Buffer, data.name, NAMEEDITTEXT2_SIZE);
-            Unicode::strncpy(VolumeEditText2Buffer, volBuffer, VOLUMEEDITTEXT2_SIZE);
-            NameEditText2.invalidate(); VolumeEditText2.invalidate(); Chemical2EnableButton.invalidate();
-            break;
-        case 2: // Page 3
-            Chemical3EnableButton.forceState(data.is_enabled == 1);
-            Unicode::strncpy(NameEditText3Buffer, data.name, NAMEEDITTEXT3_SIZE);
-            Unicode::strncpy(VolumeEditText3Buffer, volBuffer, VOLUMEEDITTEXT3_SIZE);
-            NameEditText3.invalidate();
-            VolumeEditText3.invalidate();
-            Chemical3EnableButton.invalidate();
-            break;
-
-        case 3: // Page 4
-            Chemical4EnableButton.forceState(data.is_enabled == 1);
-            Unicode::strncpy(NameEditText4Buffer, data.name, NAMEEDITTEXT4_SIZE);
-            Unicode::strncpy(VolumeEditText4Buffer, volBuffer, VOLUMEEDITTEXT4_SIZE);
-            NameEditText4.invalidate();
-            VolumeEditText4.invalidate();
-            Chemical4EnableButton.invalidate();
-            break;
-
-        case 4: // Page 5
-            Chemical5EnableButton.forceState(data.is_enabled == 1);
-            Unicode::strncpy(NameEditText5Buffer, data.name, NAMEEDITTEXT5_SIZE);
-            Unicode::strncpy(VolumeEditText5Buffer, volBuffer, VOLUMEEDITTEXT5_SIZE);
-            NameEditText5.invalidate();
-            VolumeEditText5.invalidate();
-            Chemical5EnableButton.invalidate();
-            break;
-
-        case 5: // Page 6
-            Chemical6EnableButton.forceState(data.is_enabled == 1);
-            Unicode::strncpy(NameEditText6Buffer, data.name, NAMEEDITTEXT6_SIZE);
-            Unicode::strncpy(VolumeEditText6Buffer, volBuffer, VOLUMEEDITTEXT6_SIZE);
-            NameEditText6.invalidate();
-            VolumeEditText6.invalidate();
-            Chemical6EnableButton.invalidate();
-            break;
-
-        case 6: // Page 7
-            Chemical7EnableButton.forceState(data.is_enabled == 1);
-            Unicode::strncpy(NameEditText7Buffer, data.name, NAMEEDITTEXT7_SIZE);
-            Unicode::strncpy(VolumeEditText7Buffer, volBuffer, VOLUMEEDITTEXT7_SIZE);
-            NameEditText7.invalidate();
-            VolumeEditText7.invalidate();
-            Chemical7EnableButton.invalidate();
-            break;
-
-        case 7: // Page 8
-            Chemical8EnableButton.forceState(data.is_enabled == 1);
-            Unicode::strncpy(NameEditText8Buffer, data.name, NAMEEDITTEXT8_SIZE);
-            Unicode::strncpy(VolumeEditText8Buffer, volBuffer, VOLUMEEDITTEXT8_SIZE);
-            NameEditText8.invalidate();
-            VolumeEditText8.invalidate();
-            Chemical8EnableButton.invalidate();
-            break;
-    }
-
-    // --- NEW: This logic now configures the correct set of pump widgets for EACH page ---
-
-    // Create a temporary array of pointers to the widgets for the current page.
-    PumpSetupWidget* pagePumpWidgets[MAX_PUMP_SETUPS_PER_CHEMICAL];
-    Button* addPumpButton = nullptr;
-    Button* removePumpButton = nullptr;
-
-    switch(Page)
-    {
-        case 0:
-            pagePumpWidgets[0] = &pumpSetupWidget1_1;
-            pagePumpWidgets[1] = &pumpSetupWidget1_2;
-            pagePumpWidgets[2] = &pumpSetupWidget1_3;
-            addPumpButton = &AddPump1;
-            removePumpButton = &RemovePump1;
-            break;
-        case 1:
-            pagePumpWidgets[0] = &pumpSetupWidget2_1;
-            pagePumpWidgets[1] = &pumpSetupWidget2_2;
-            pagePumpWidgets[2] = &pumpSetupWidget2_3;
-            addPumpButton = &AddPump2;
-            removePumpButton = &RemovePump2;
-            break;
-
-        case 2:
-            pagePumpWidgets[0] = &pumpSetupWidget3_1;
-            pagePumpWidgets[1] = &pumpSetupWidget3_2;
-            pagePumpWidgets[2] = &pumpSetupWidget3_3;
-            addPumpButton = &AddPump3;
-            removePumpButton = &RemovePump3;
-            break;
-
-        case 3:
-            pagePumpWidgets[0] = &pumpSetupWidget4_1;
-            pagePumpWidgets[1] = &pumpSetupWidget4_2;
-            pagePumpWidgets[2] = &pumpSetupWidget4_3;
-            addPumpButton = &AddPump4;
-            removePumpButton = &RemovePump4;
-            break;
-        case 4:
-            pagePumpWidgets[0] = &pumpSetupWidget5_1;
-            pagePumpWidgets[1] = &pumpSetupWidget5_2;
-            pagePumpWidgets[2] = &pumpSetupWidget5_3;
-            addPumpButton = &AddPump5;
-            removePumpButton = &RemovePump5;
-            break;
-
-        case 5:
-            pagePumpWidgets[0] = &pumpSetupWidget6_1;
-            pagePumpWidgets[1] = &pumpSetupWidget6_2;
-            pagePumpWidgets[2] = &pumpSetupWidget6_3;
-            addPumpButton = &AddPump6;
-            removePumpButton = &RemovePump6;
-            break;
-
-        case 6:
-            pagePumpWidgets[0] = &pumpSetupWidget7_1;
-            pagePumpWidgets[1] = &pumpSetupWidget7_2;
-            pagePumpWidgets[2] = &pumpSetupWidget7_3;
-            addPumpButton = &AddPump7;
-            removePumpButton = &RemovePump7;
-            break;
-
-        case 7:
-            pagePumpWidgets[0] = &pumpSetupWidget8_1;
-            pagePumpWidgets[1] = &pumpSetupWidget8_2;
-            pagePumpWidgets[2] = &pumpSetupWidget8_3;
-            addPumpButton = &AddPump8;
-            removePumpButton = &RemovePump8;
-            break;
-    }
-
-    // Now, use this temporary array to configure the widgets.
-    if (addPumpButton) { // Check if the pointers were assigned
-        int visiblePumpSetups = 0;
-        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
-        {
-            pagePumpWidgets[i]->setAvailablePumps(enabled_pumps);
-            pagePumpWidgets[i]->setup(i, data.pump_setups[i], unit);
-            pagePumpWidgets[i]->setVisible(data.pump_setups[i].pump_index != -1);
-            if (pagePumpWidgets[i]->isVisible()) {
-                visiblePumpSetups++;
-            }
-            pagePumpWidgets[i]->invalidate();
-        }
-
-        addPumpButton->setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
-        removePumpButton->setVisible(visiblePumpSetups > 1);
-        addPumpButton->invalidate();
-        removePumpButton->invalidate();
-    }
-}
-
-
 
 void ChemicalsSetupView::handleClickEvent(const touchgfx::ClickEvent& event)
 {
-    // For a SwipeContainer, we only need to detect the END of the interaction.
+    // This event is fired when the user's finger is lifted from the screen.
     if (event.getType() == touchgfx::ClickEvent::RELEASED)
     {
-        // The user lifted their finger. The swipe container will have finished
-        // its animation and selected a new page.
         int newPageIndex = swipeContainer1.getSelectedPage();
-
         if (newPageIndex != currentPageIndex)
         {
+            // The swipe has completed and the page has changed.
             currentPageIndex = newPageIndex;
+
+            // Inform the presenter of the new active page index.
             presenter->ActiveFieldIndexUpdate(currentPageIndex);
+
+            // You can also update the dynamic pump widgets here if needed
+            // displayData(presenter->getModel()->getEnabledPumpIndices(), presenter->getModel()->getVolumeUnit());
         }
     }
-
-    // Always pass the event to the base class so it can handle button clicks etc.
+    // Always pass the event to the base class for button clicks.
     ChemicalsSetupViewBase::handleClickEvent(event);
 }
 
-// We don't need custom drag logic if the SwipeContainer handles it for us.
-// Just pass it to the base class.
-void ChemicalsSetupView::handleDragEvent(const touchgfx::DragEvent& event)
-{
-    ChemicalsSetupViewBase::handleDragEvent(event);
-}
+//// We don't need custom drag logic if the SwipeContainer handles it for us.
+//// Just pass it to the base class.
+//void ChemicalsSetupView::handleDragEvent(const touchgfx::DragEvent& event)
+//{
+//    // Always pass the event to the base class first.
+//    ChemicalsSetupViewBase::handleDragEvent(event);
+//
+//    if (event.getType() == touchgfx::DragEvent::DRAG_START)
+//    {
+//        // Remember where the drag started if it's within the swipe container
+//        if (swipeContainer1.getRect().intersect(event.getOldX(), event.getOldY()))
+//        {
+//            dragStartX = event.getOldX();
+//        }
+//    }
+//    else if (event.getType() == touchgfx::DragEvent::DRAG_END && dragStartX != 0)
+//    {
+//        int16_t dragEnd = event.getNewX();
+//        int16_t deltaX = dragEnd - dragStartX;
+//        const int16_t swipeThreshold = 50;
+//
+//        int newPage = currentPageIndex;
+//
+//        if (deltaX < -swipeThreshold)
+//        {
+//            // Swipe Left
+//            newPage = currentPageIndex + 1;
+//            if (newPage >= NUM_CHEMICAL_RECIPES) newPage = NUM_CHEMICAL_RECIPES - 1;
+//        }
+//        else if (deltaX > swipeThreshold)
+//        {
+//            // Swipe Right
+//            newPage = currentPageIndex - 1;
+//            if (newPage < 0) newPage = 0;
+//        }
+//
+//        if (newPage != currentPageIndex)
+//        {
+//            // If a valid swipe occurred, animate the container and load the new data
+//            swipeContainer1.setSelectedPage(newPage);
+//            currentPageIndex = newPage;
+//            presenter->loadScreenData(currentPageIndex);
+//        }
+//
+//        // Reset for the next drag
+//        dragStartX = 0;
+//    }
+//}

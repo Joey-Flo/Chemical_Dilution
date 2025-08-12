@@ -20,7 +20,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
-    void displayData(const std::vector<int>& enabled_pumps, int8_t unit);
+    void displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit);
 
     void addPumpClicked();
     void removePumpClicked();
@@ -37,7 +37,7 @@ public:
     void chemicalEnableButtonClicked();
     void LoadPageData(uint8_t Page, const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit);
 
-    virtual void handleDragEvent(const touchgfx::DragEvent& event);
+//    virtual void handleDragEvent(const touchgfx::DragEvent& event);
     virtual void handleClickEvent(const touchgfx::ClickEvent& event);
 
 protected:
@@ -55,6 +55,7 @@ private:
     touchgfx::Callback<ChemicalsSetupView, int, int> pumpSetupVolumeEditCallback;
     touchgfx::Callback<ChemicalsSetupView, bool> dropdownStateCallback;
     touchgfx::ScrollableContainer* getScrollableContainerForPage(int pageIndex);
+    touchgfx::Container* getPageContainerForIndex(int index);
     int currentPageIndex;
     PumpSetupWidget* pumpSetupWidgets[MAX_PUMP_SETUPS_PER_CHEMICAL];
 
