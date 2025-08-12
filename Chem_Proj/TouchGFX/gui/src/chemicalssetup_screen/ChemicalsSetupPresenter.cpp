@@ -115,3 +115,21 @@ void ChemicalsSetupPresenter::chemicalEnableToggled()
     model->setChemicalEnableState(activePageIndex, new_state_is_on);
     view.invalidateEnableButton();
 }
+
+const ChemicalRecipe_t& ChemicalsSetupPresenter::getRecipeDataForPage(int page_index) const
+{
+    // The presenter gets the data from its model and passes it back to the view.
+    return model->getRecipeData(page_index);
+}
+
+const std::vector<int> ChemicalsSetupPresenter::getEnabledPumpIndices() const
+{
+    // The presenter gets the data from its model and passes it back to the view.
+    return model->getEnabledPumpIndices();
+}
+
+int8_t ChemicalsSetupPresenter::getVolumeUnit() const
+{
+    // The presenter gets the data from its model and passes it back to the view.
+    return model->getVolumeUnit();
+}

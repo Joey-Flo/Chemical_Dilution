@@ -118,7 +118,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard chemicalLabel_Right;
     touchgfx::TextArea AddPumpText_Right;
     touchgfx::TextAreaWithOneWildcard NameEditText_Right;
-    touchgfx::TextAreaWithOneWildcard VolumeEditText_Center_1;
+    touchgfx::TextAreaWithOneWildcard VolumeEditText_Right;
     touchgfx::Container Page2;
     touchgfx::ScrollableContainer scrollableContainer2;
     touchgfx::Container Page3;
@@ -157,8 +157,8 @@ protected:
     touchgfx::Unicode::UnicodeChar chemicalLabel_RightBuffer[CHEMICALLABEL_RIGHT_SIZE];
     static const uint16_t NAMEEDITTEXT_RIGHT_SIZE = 20;
     touchgfx::Unicode::UnicodeChar NameEditText_RightBuffer[NAMEEDITTEXT_RIGHT_SIZE];
-    static const uint16_t VOLUMEEDITTEXT_CENTER_1_SIZE = 12;
-    touchgfx::Unicode::UnicodeChar VolumeEditText_Center_1Buffer[VOLUMEEDITTEXT_CENTER_1_SIZE];
+    static const uint16_t VOLUMEEDITTEXT_RIGHT_SIZE = 12;
+    touchgfx::Unicode::UnicodeChar VolumeEditText_RightBuffer[VOLUMEEDITTEXT_RIGHT_SIZE];
 
 private:
 

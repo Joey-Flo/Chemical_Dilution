@@ -75,6 +75,9 @@ public:
      * @param index The new 0-based page index.
      */
     void ActiveFieldIndexUpdate(uint8_t index);
+    const ChemicalRecipe_t& getRecipeDataForPage(int page_index) const;
+    const std::vector<int> getEnabledPumpIndices() const;
+    int8_t getVolumeUnit() const;
 
 private:
     ChemicalsSetupPresenter();
