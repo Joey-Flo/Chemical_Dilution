@@ -3,6 +3,7 @@
 
 #include <gui/model/ModelListener.hpp>
 #include <mvp/Presenter.hpp>
+#include "shared_types.h" // For PumpSetup_t
 
 using namespace touchgfx;
 
@@ -14,59 +15,77 @@ public:
     ChemicalsSetupPresenter(ChemicalsSetupView& v);
 
     /**
-     * The activate function is called automatically when this screen is "switched in"
-     * (ie. made active). Initialization logic can be placed here.
+     * @brief Called when this screen is activated.
      */
     virtual void activate();
 
     /**
-     * The deactivate function is called automatically when this screen is "switched out"
-     * (ie. made inactive). Teardown functionality can be placed here.
+     * @brief Called when this screen is deactivated.
      */
     virtual void deactivate();
 
     virtual ~ChemicalsSetupPresenter() {}
 
+    /**
+     * @brief Commands the View to load and display the data for a specific recipe page.
+     *        Also updates the Presenter's internal state to remember the active page.
+     * @param page_index The 0-based index of the recipe to load.
+     */
     void loadScreenData(int page_index);
 
+    /**
+     * @brief Saves the updated data for a single PumpSetupWidget.
+     * @param page_index The index of the recipe being edited.
+     * @param setup_index The index of the pump setup within the recipe (0-2).
+     * @param data The new PumpSetup_t data to save.
+     */
     void savePumpSetupData(int page_index, int setup_index, const PumpSetup_t& data);
 
+    /**
+     * @brief Initiates an edit operation for a specific field.
+     * @param fieldID The unique ID of the field to be edited.
+     */
     void editField(int fieldID);
 
-    // We will still need a function to save the data later
+    /**
+     * @brief Processes the new text value entered by the user via the keyboard.
+     * @param text The new value as a C-string.
+     */
     void newValueEntered(const char* text);
 
-    void editPumpVolume(int setupIndex, int fieldIndex);
-
+    /**
+     * @brief Adds a new pump to the specified recipe.
+     * @param page_index The index of the recipe to modify.
+     */
     void addPumpSetup(int page_index);
+
+    /**
+     * @brief Removes the last pump from the specified recipe.
+     * @param page_index The index of the recipe to modify.
+     */
     void removePumpSetup(int page_index);
 
-    void chemicalEnableToggled(uint8_t PageIndex);
+    /**
+     * @brief Toggles the enabled/disabled state of the current recipe.
+     */
+    void chemicalEnableToggled();
 
-    const ChemicalRecipe_t& getRecipeDataForPage(int page_index) const;
-
+    /**
+     * @brief A function for the View to explicitly update the Presenter's active page index.
+     * @param index The new 0-based page index.
+     */
     void ActiveFieldIndexUpdate(uint8_t index);
 
 private:
-    int currentlyEditingFieldID;
-
-    // We still need these to remember the context for S/M/L fields
-    int activePageIndex;
-    int activeSetupIndex;
-    int activeFieldIndex;
-
     ChemicalsSetupPresenter();
 
     ChemicalsSetupView& view;
 
-    enum ActiveEditField {
-        FIELD_NONE = 0,
-        FIELD_CHEM_NAME,
-        FIELD_TOTAL_VOLUME,
-        FIELD_PUMP_VOLUME // A single ID for any S/M/L field
-    };
-    ActiveEditField currentlyEditing;
-
+    // State variables for managing UI context
+    int currentlyEditingFieldID;
+    int activePageIndex;
+    int activeSetupIndex;
+    int activeFieldIndex;
 };
 
 #endif // CHEMICALSSETUPPRESENTER_HPP

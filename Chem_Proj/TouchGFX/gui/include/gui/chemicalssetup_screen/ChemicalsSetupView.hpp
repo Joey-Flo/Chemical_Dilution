@@ -7,63 +7,81 @@
 #include <vector>
 #include <gui/common/CustomKeyboard.hpp>
 #include <touchgfx/Callback.hpp>
-#include <touchgfx/containers/ScrollableContainer.hpp>
 #include <gui/common/FieldIDs.hpp>
 
-namespace touchgfx { class ClickEvent; class DragEvent; }
+// Forward declare event types
+namespace touchgfx { class ClickEvent; }
 
 class ChemicalsSetupView : public ChemicalsSetupViewBase
 {
 public:
     ChemicalsSetupView();
     virtual ~ChemicalsSetupView() {}
-    virtual void setupScreen();
-    virtual void tearDownScreen();
 
+    /**
+     * @brief Called once when the screen is entered.
+     */
+    virtual void setupScreen();
+
+    /**
+     * @brief Called by the Presenter to update the screen's visual content.
+     * @param data The recipe data for the currently active page.
+     * @param enabled_pumps A list of globally enabled pump indices.
+     * @param unit The current volume unit (0=mL, 1=Oz).
+     */
     void displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit);
 
+    /**
+     * @brief Commands the View to show the on-screen keyboard.
+     */
+    void showKeyboard();
+
+    /**
+     * @brief Called by the Presenter during activation to trigger the initial data load.
+     */
+    void requestDataLoad();
+
+    // --- Virtual handlers called by Designer Interactions ---
     void addPumpClicked();
     void removePumpClicked();
     void nameEditClicked();
     void volumeEditClicked();
-    void unitToggleButtonClicked();
-
-    void editChemicalNameClicked();
-    void editTotalVolumeClicked();
-    void pumpSetupVolumeEditCallbackHandler(int setupIndex, int fieldIndex);
-    void showKeyboard();
+    void chemicalEnableButtonClicked();
     void EnterPressed();
     void ExitPressed();
-    void chemicalEnableButtonClicked();
-    void LoadPageData(uint8_t Page, const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit);
+    void invalidateEnableButton();
 
-//    virtual void handleDragEvent(const touchgfx::DragEvent& event);
+    /**
+     * @brief Overridden event handler to detect the end of a swipe gesture.
+     */
     virtual void handleClickEvent(const touchgfx::ClickEvent& event);
 
 protected:
-    void swipeContainer1PageChangedCallback(int newPageIndex);
+    // --- Callback handlers for child widgets ---
     void pumpSetupSaveDataCallbackHandler(int setupIndex, const PumpSetup_t& data);
-    // --- NEW CALLBACK HANDLER ---
+    void pumpSetupVolumeEditCallbackHandler(int setupIndex, int fieldIndex);
     void dropdownStateCallbackHandler(bool isOpen);
 
-    int currentlyEditingField;
-    CustomKeyboard keyboard;
-
 private:
-    // --- CORRECTED ORDER TO MATCH INITIALIZER LIST AND PREVENT WARNINGS ---
+    /**
+     * @brief Helper function to get a pointer to the correct Page container.
+     */
+    touchgfx::Container* getPageContainerForIndex(int index);
+
+    /**
+     * @brief Helper function to get a pointer to the correct Scrollable Container.
+     */
+    touchgfx::ScrollableContainer* getScrollableContainerForPage(int pageIndex);
+
+    // Callback objects for connecting to child widgets
     touchgfx::Callback<ChemicalsSetupView, int, const PumpSetup_t&> pumpSetupSaveCallback;
     touchgfx::Callback<ChemicalsSetupView, int, int> pumpSetupVolumeEditCallback;
     touchgfx::Callback<ChemicalsSetupView, bool> dropdownStateCallback;
-    touchgfx::ScrollableContainer* getScrollableContainerForPage(int pageIndex);
-    touchgfx::Container* getPageContainerForIndex(int index);
+
+    // State variables and widget pointers
     int currentPageIndex;
     PumpSetupWidget* pumpSetupWidgets[MAX_PUMP_SETUPS_PER_CHEMICAL];
-
-    touchgfx::ScrollableContainer* pageContainers[NUM_CHEMICAL_RECIPES];
-    PumpSetupWidget* activeDropdownWidget;
-
-    int16_t dragStartX;
-    bool isDragging;
+    CustomKeyboard keyboard;
 };
 
 #endif // CHEMICALSSETUPVIEW_HPP

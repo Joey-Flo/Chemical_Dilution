@@ -45,22 +45,22 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Page1.setWidth(240);
     Page1.setHeight(270);
-    scrollableContainer.setPosition(0, 162, 240, 108);
-    scrollableContainer.enableHorizontalScroll(false);
-    scrollableContainer.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
-    scrollableContainer.setScrollbarsAlpha(255);
-    pumpSetupWidget1_1.setXY(0, -2);
-    scrollableContainer.add(pumpSetupWidget1_1);
+    scrollableContainer1.setPosition(0, 162, 240, 108);
+    scrollableContainer1.enableHorizontalScroll(false);
+    scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer1.setScrollbarsAlpha(255);
+    pumpSetupWidget1.setXY(0, -2);
+    scrollableContainer1.add(pumpSetupWidget1);
 
-    pumpSetupWidget1_2.setXY(1, 106);
-    pumpSetupWidget1_2.setVisible(false);
-    scrollableContainer.add(pumpSetupWidget1_2);
+    pumpSetupWidget2.setXY(1, 106);
+    pumpSetupWidget2.setVisible(false);
+    scrollableContainer1.add(pumpSetupWidget2);
 
-    pumpSetupWidget1_3.setXY(1, 214);
-    pumpSetupWidget1_3.setVisible(false);
-    scrollableContainer.add(pumpSetupWidget1_3);
+    pumpSetupWidget3.setXY(1, 214);
+    pumpSetupWidget3.setVisible(false);
+    scrollableContainer1.add(pumpSetupWidget3);
 
-    Page1.add(scrollableContainer);
+    Page1.add(scrollableContainer1);
 
     NameBox.setPosition(87, 59, 109, 23);
     NameBox.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -147,30 +147,72 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     Page2.setWidth(240);
     Page2.setHeight(270);
+    scrollableContainer2.setPosition(0, 162, 240, 108);
+    scrollableContainer2.enableHorizontalScroll(false);
+    scrollableContainer2.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer2.setScrollbarsAlpha(255);
+    Page2.add(scrollableContainer2);
+
     swipeContainer1.add(Page2);
 
     Page3.setWidth(240);
     Page3.setHeight(270);
+    scrollableContainer3.setPosition(0, 162, 240, 108);
+    scrollableContainer3.enableHorizontalScroll(false);
+    scrollableContainer3.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer3.setScrollbarsAlpha(255);
+    Page3.add(scrollableContainer3);
+
     swipeContainer1.add(Page3);
 
     Page4.setWidth(240);
     Page4.setHeight(270);
+    scrollableContainer4.setPosition(0, 162, 240, 108);
+    scrollableContainer4.enableHorizontalScroll(false);
+    scrollableContainer4.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer4.setScrollbarsAlpha(255);
+    Page4.add(scrollableContainer4);
+
     swipeContainer1.add(Page4);
 
     Page5.setWidth(240);
     Page5.setHeight(270);
+    scrollableContainer5.setPosition(0, 162, 240, 108);
+    scrollableContainer5.enableHorizontalScroll(false);
+    scrollableContainer5.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer5.setScrollbarsAlpha(255);
+    Page5.add(scrollableContainer5);
+
     swipeContainer1.add(Page5);
 
     Page6.setWidth(240);
     Page6.setHeight(270);
+    scrollableContainer6.setPosition(0, 162, 240, 108);
+    scrollableContainer6.enableHorizontalScroll(false);
+    scrollableContainer6.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer6.setScrollbarsAlpha(255);
+    Page6.add(scrollableContainer6);
+
     swipeContainer1.add(Page6);
 
     Page7.setWidth(240);
     Page7.setHeight(270);
+    scrollableContainer7.setPosition(0, 162, 240, 108);
+    scrollableContainer7.enableHorizontalScroll(false);
+    scrollableContainer7.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer7.setScrollbarsAlpha(255);
+    Page7.add(scrollableContainer7);
+
     swipeContainer1.add(Page7);
 
     Page8.setWidth(240);
     Page8.setHeight(270);
+    scrollableContainer8.setPosition(0, 162, 240, 108);
+    scrollableContainer8.enableHorizontalScroll(false);
+    scrollableContainer8.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    scrollableContainer8.setScrollbarsAlpha(255);
+    Page8.add(scrollableContainer8);
+
     swipeContainer1.add(Page8);
 
     swipeContainer1.setSelectedPage(0);
@@ -208,9 +250,9 @@ ChemicalsSetupViewBase::~ChemicalsSetupViewBase()
 
 void ChemicalsSetupViewBase::setupScreen()
 {
-    pumpSetupWidget1_1.initialize();
-    pumpSetupWidget1_2.initialize();
-    pumpSetupWidget1_3.initialize();
+    pumpSetupWidget1.initialize();
+    pumpSetupWidget2.initialize();
+    pumpSetupWidget3.initialize();
 }
 
 void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
@@ -269,6 +311,6 @@ void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //ChemEnable1
         //When ChemicalEnableButton clicked execute C++ code
         //Execute C++ code
-        presenter->chemicalEnableToggled(1);
+        presenter->chemicalEnableToggled();
     }
 }

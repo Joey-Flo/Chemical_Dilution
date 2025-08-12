@@ -1250,7 +1250,7 @@
                 "Components": [
                   {
                     "Type": "ScrollableContainer",
-                    "Name": "scrollableContainer",
+                    "Name": "scrollableContainer1",
                     "Y": 162,
                     "Width": 240,
                     "Height": 108,
@@ -1263,7 +1263,7 @@
                     "Components": [
                       {
                         "Type": "CustomContainerInstance",
-                        "Name": "pumpSetupWidget1_1",
+                        "Name": "pumpSetupWidget1",
                         "Y": -2,
                         "Width": 240,
                         "Height": 108,
@@ -1271,7 +1271,7 @@
                       },
                       {
                         "Type": "CustomContainerInstance",
-                        "Name": "pumpSetupWidget1_2",
+                        "Name": "pumpSetupWidget2",
                         "X": 1,
                         "Y": 106,
                         "Width": 240,
@@ -1281,7 +1281,7 @@
                       },
                       {
                         "Type": "CustomContainerInstance",
-                        "Name": "pumpSetupWidget1_3",
+                        "Name": "pumpSetupWidget3",
                         "X": 1,
                         "Y": 214,
                         "Width": 240,
@@ -1488,49 +1488,154 @@
                 "Name": "Page2",
                 "Width": 240,
                 "Height": 270,
-                "Components": []
+                "Components": [
+                  {
+                    "Type": "ScrollableContainer",
+                    "Name": "scrollableContainer2",
+                    "Y": 162,
+                    "Width": 240,
+                    "Height": 108,
+                    "VerticalScrollEnabled": true,
+                    "ScrollbarsVisibleOnPressed": true,
+                    "ScrollbarsColor": {
+                      "Red": 255
+                    },
+                    "ScrollbarsAlpha": 255,
+                    "Components": []
+                  }
+                ]
               },
               {
                 "Type": "Container",
                 "Name": "Page3",
                 "Width": 240,
                 "Height": 270,
-                "Components": []
+                "Components": [
+                  {
+                    "Type": "ScrollableContainer",
+                    "Name": "scrollableContainer3",
+                    "Y": 162,
+                    "Width": 240,
+                    "Height": 108,
+                    "VerticalScrollEnabled": true,
+                    "ScrollbarsVisibleOnPressed": true,
+                    "ScrollbarsColor": {
+                      "Red": 255
+                    },
+                    "ScrollbarsAlpha": 255,
+                    "Components": []
+                  }
+                ]
               },
               {
                 "Type": "Container",
                 "Name": "Page4",
                 "Width": 240,
                 "Height": 270,
-                "Components": []
+                "Components": [
+                  {
+                    "Type": "ScrollableContainer",
+                    "Name": "scrollableContainer4",
+                    "Y": 162,
+                    "Width": 240,
+                    "Height": 108,
+                    "VerticalScrollEnabled": true,
+                    "ScrollbarsVisibleOnPressed": true,
+                    "ScrollbarsColor": {
+                      "Red": 255
+                    },
+                    "ScrollbarsAlpha": 255,
+                    "Components": []
+                  }
+                ]
               },
               {
                 "Type": "Container",
                 "Name": "Page5",
                 "Width": 240,
                 "Height": 270,
-                "Components": []
+                "Components": [
+                  {
+                    "Type": "ScrollableContainer",
+                    "Name": "scrollableContainer5",
+                    "Y": 162,
+                    "Width": 240,
+                    "Height": 108,
+                    "VerticalScrollEnabled": true,
+                    "ScrollbarsVisibleOnPressed": true,
+                    "ScrollbarsColor": {
+                      "Red": 255
+                    },
+                    "ScrollbarsAlpha": 255,
+                    "Components": []
+                  }
+                ]
               },
               {
                 "Type": "Container",
                 "Name": "Page6",
                 "Width": 240,
                 "Height": 270,
-                "Components": []
+                "Components": [
+                  {
+                    "Type": "ScrollableContainer",
+                    "Name": "scrollableContainer6",
+                    "Y": 162,
+                    "Width": 240,
+                    "Height": 108,
+                    "VerticalScrollEnabled": true,
+                    "ScrollbarsVisibleOnPressed": true,
+                    "ScrollbarsColor": {
+                      "Red": 255
+                    },
+                    "ScrollbarsAlpha": 255,
+                    "Components": []
+                  }
+                ]
               },
               {
                 "Type": "Container",
                 "Name": "Page7",
                 "Width": 240,
                 "Height": 270,
-                "Components": []
+                "Components": [
+                  {
+                    "Type": "ScrollableContainer",
+                    "Name": "scrollableContainer7",
+                    "Y": 162,
+                    "Width": 240,
+                    "Height": 108,
+                    "VerticalScrollEnabled": true,
+                    "ScrollbarsVisibleOnPressed": true,
+                    "ScrollbarsColor": {
+                      "Red": 255
+                    },
+                    "ScrollbarsAlpha": 255,
+                    "Components": []
+                  }
+                ]
               },
               {
                 "Type": "Container",
                 "Name": "Page8",
                 "Width": 240,
                 "Height": 270,
-                "Components": []
+                "Components": [
+                  {
+                    "Type": "ScrollableContainer",
+                    "Name": "scrollableContainer8",
+                    "Y": 162,
+                    "Width": 240,
+                    "Height": 108,
+                    "VerticalScrollEnabled": true,
+                    "ScrollbarsVisibleOnPressed": true,
+                    "ScrollbarsColor": {
+                      "Red": 255
+                    },
+                    "ScrollbarsAlpha": 255,
+                    "Components": []
+                  }
+                ]
               }
             ]
           },
@@ -1687,7 +1792,7 @@
             },
             "Action": {
               "Type": "ActionExecuteCode",
-              "Code": "presenter->chemicalEnableToggled(1);"
+              "Code": "presenter->chemicalEnableToggled();"
             }
           }
         ]
