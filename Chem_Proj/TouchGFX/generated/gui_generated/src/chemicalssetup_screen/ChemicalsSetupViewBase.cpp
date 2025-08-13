@@ -46,23 +46,6 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     Page1.setWidth(240);
     Page1.setHeight(270);
     WidgetBuffer_Left.setPosition(-240, 0, 240, 270);
-    scrollableContainer1_Left.setPosition(0, 162, 240, 108);
-    scrollableContainer1_Left.enableHorizontalScroll(false);
-    scrollableContainer1_Left.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
-    scrollableContainer1_Left.setScrollbarsAlpha(255);
-    pumpSetupWidget_Left_1.setXY(0, -2);
-    scrollableContainer1_Left.add(pumpSetupWidget_Left_1);
-
-    pumpSetupWidget_Left_2.setXY(1, 106);
-    pumpSetupWidget_Left_2.setVisible(false);
-    scrollableContainer1_Left.add(pumpSetupWidget_Left_2);
-
-    pumpSetupWidget_Left_3.setXY(1, 214);
-    pumpSetupWidget_Left_3.setVisible(false);
-    scrollableContainer1_Left.add(pumpSetupWidget_Left_3);
-
-    WidgetBuffer_Left.add(scrollableContainer1_Left);
-
     NameBox_Left.setPosition(87, 59, 109, 23);
     NameBox_Left.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     WidgetBuffer_Left.add(NameBox_Left);
@@ -148,11 +131,11 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     Page1.add(WidgetBuffer_Left);
 
     WidgetBuffer_Center.setPosition(0, 0, 240, 270);
-    WidgetBuffer_Center.setVisible(false);
     scrollableContainer1_Center.setPosition(0, 162, 240, 108);
     scrollableContainer1_Center.enableHorizontalScroll(false);
     scrollableContainer1_Center.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer1_Center.setScrollbarsAlpha(255);
+    scrollableContainer1_Center.setScrollbarsPermanentlyVisible();
     pumpSetupWidget_Center_1.setXY(0, -2);
     scrollableContainer1_Center.add(pumpSetupWidget_Center_1);
 
@@ -250,23 +233,6 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     Page1.add(WidgetBuffer_Center);
 
     WidgetBuffer_Right.setPosition(240, 0, 240, 270);
-    scrollableContainer1_Right.setPosition(0, 162, 240, 108);
-    scrollableContainer1_Right.enableHorizontalScroll(false);
-    scrollableContainer1_Right.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
-    scrollableContainer1_Right.setScrollbarsAlpha(255);
-    pumpSetupWidget_Right_1.setXY(0, -2);
-    scrollableContainer1_Right.add(pumpSetupWidget_Right_1);
-
-    pumpSetupWidget_Right_2.setXY(1, 106);
-    pumpSetupWidget_Right_2.setVisible(false);
-    scrollableContainer1_Right.add(pumpSetupWidget_Right_2);
-
-    pumpSetupWidget_Right_3.setXY(1, 214);
-    pumpSetupWidget_Right_3.setVisible(false);
-    scrollableContainer1_Right.add(pumpSetupWidget_Right_3);
-
-    WidgetBuffer_Right.add(scrollableContainer1_Right);
-
     NameBox_Right.setPosition(87, 59, 109, 23);
     NameBox_Right.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     WidgetBuffer_Right.add(NameBox_Right);
@@ -359,6 +325,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     scrollableContainer2.enableHorizontalScroll(false);
     scrollableContainer2.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer2.setScrollbarsAlpha(255);
+    scrollableContainer2.setScrollbarsPermanentlyVisible();
     Page2.add(scrollableContainer2);
 
     swipeContainer1.add(Page2);
@@ -369,6 +336,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     scrollableContainer3.enableHorizontalScroll(false);
     scrollableContainer3.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer3.setScrollbarsAlpha(255);
+    scrollableContainer3.setScrollbarsPermanentlyVisible();
     Page3.add(scrollableContainer3);
 
     swipeContainer1.add(Page3);
@@ -379,6 +347,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     scrollableContainer4.enableHorizontalScroll(false);
     scrollableContainer4.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer4.setScrollbarsAlpha(255);
+    scrollableContainer4.setScrollbarsPermanentlyVisible();
     Page4.add(scrollableContainer4);
 
     swipeContainer1.add(Page4);
@@ -389,6 +358,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     scrollableContainer5.enableHorizontalScroll(false);
     scrollableContainer5.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer5.setScrollbarsAlpha(255);
+    scrollableContainer5.setScrollbarsPermanentlyVisible();
     Page5.add(scrollableContainer5);
 
     swipeContainer1.add(Page5);
@@ -399,6 +369,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     scrollableContainer6.enableHorizontalScroll(false);
     scrollableContainer6.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer6.setScrollbarsAlpha(255);
+    scrollableContainer6.setScrollbarsPermanentlyVisible();
     Page6.add(scrollableContainer6);
 
     swipeContainer1.add(Page6);
@@ -409,6 +380,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     scrollableContainer7.enableHorizontalScroll(false);
     scrollableContainer7.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer7.setScrollbarsAlpha(255);
+    scrollableContainer7.setScrollbarsPermanentlyVisible();
     Page7.add(scrollableContainer7);
 
     swipeContainer1.add(Page7);
@@ -419,6 +391,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
     scrollableContainer8.enableHorizontalScroll(false);
     scrollableContainer8.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer8.setScrollbarsAlpha(255);
+    scrollableContainer8.setScrollbarsPermanentlyVisible();
     Page8.add(scrollableContainer8);
 
     swipeContainer1.add(Page8);
@@ -458,15 +431,9 @@ ChemicalsSetupViewBase::~ChemicalsSetupViewBase()
 
 void ChemicalsSetupViewBase::setupScreen()
 {
-    pumpSetupWidget_Left_1.initialize();
-    pumpSetupWidget_Left_2.initialize();
-    pumpSetupWidget_Left_3.initialize();
     pumpSetupWidget_Center_1.initialize();
     pumpSetupWidget_Center_2.initialize();
     pumpSetupWidget_Center_3.initialize();
-    pumpSetupWidget_Right_1.initialize();
-    pumpSetupWidget_Right_2.initialize();
-    pumpSetupWidget_Right_3.initialize();
 }
 
 void ChemicalsSetupViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)

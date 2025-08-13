@@ -1256,49 +1256,6 @@
                     "Height": 270,
                     "Components": [
                       {
-                        "Type": "ScrollableContainer",
-                        "Name": "scrollableContainer1_Left",
-                        "Y": 162,
-                        "Width": 240,
-                        "Height": 108,
-                        "VerticalScrollEnabled": true,
-                        "ScrollbarsVisibleOnPressed": true,
-                        "ScrollbarsColor": {
-                          "Red": 255
-                        },
-                        "ScrollbarsAlpha": 255,
-                        "Components": [
-                          {
-                            "Type": "CustomContainerInstance",
-                            "Name": "pumpSetupWidget_Left_1",
-                            "Y": -2,
-                            "Width": 240,
-                            "Height": 108,
-                            "CustomContainerDefinitionName": "PumpSetupWidget"
-                          },
-                          {
-                            "Type": "CustomContainerInstance",
-                            "Name": "pumpSetupWidget_Left_2",
-                            "X": 1,
-                            "Y": 106,
-                            "Width": 240,
-                            "Height": 108,
-                            "Visible": false,
-                            "CustomContainerDefinitionName": "PumpSetupWidget"
-                          },
-                          {
-                            "Type": "CustomContainerInstance",
-                            "Name": "pumpSetupWidget_Left_3",
-                            "X": 1,
-                            "Y": 214,
-                            "Width": 240,
-                            "Height": 108,
-                            "Visible": false,
-                            "CustomContainerDefinitionName": "PumpSetupWidget"
-                          }
-                        ]
-                      },
-                      {
                         "Type": "Box",
                         "Name": "NameBox_Left",
                         "X": 87,
@@ -1511,7 +1468,6 @@
                     "Name": "WidgetBuffer_Center",
                     "Width": 240,
                     "Height": 270,
-                    "Visible": false,
                     "Components": [
                       {
                         "Type": "ScrollableContainer",
@@ -1520,6 +1476,7 @@
                         "Width": 240,
                         "Height": 108,
                         "VerticalScrollEnabled": true,
+                        "ScrollbarsVisible": true,
                         "ScrollbarsVisibleOnPressed": true,
                         "ScrollbarsColor": {
                           "Red": 255
@@ -1756,49 +1713,6 @@
                     "Height": 270,
                     "Components": [
                       {
-                        "Type": "ScrollableContainer",
-                        "Name": "scrollableContainer1_Right",
-                        "Y": 162,
-                        "Width": 240,
-                        "Height": 108,
-                        "VerticalScrollEnabled": true,
-                        "ScrollbarsVisibleOnPressed": true,
-                        "ScrollbarsColor": {
-                          "Red": 255
-                        },
-                        "ScrollbarsAlpha": 255,
-                        "Components": [
-                          {
-                            "Type": "CustomContainerInstance",
-                            "Name": "pumpSetupWidget_Right_1",
-                            "Y": -2,
-                            "Width": 240,
-                            "Height": 108,
-                            "CustomContainerDefinitionName": "PumpSetupWidget"
-                          },
-                          {
-                            "Type": "CustomContainerInstance",
-                            "Name": "pumpSetupWidget_Right_2",
-                            "X": 1,
-                            "Y": 106,
-                            "Width": 240,
-                            "Height": 108,
-                            "Visible": false,
-                            "CustomContainerDefinitionName": "PumpSetupWidget"
-                          },
-                          {
-                            "Type": "CustomContainerInstance",
-                            "Name": "pumpSetupWidget_Right_3",
-                            "X": 1,
-                            "Y": 214,
-                            "Width": 240,
-                            "Height": 108,
-                            "Visible": false,
-                            "CustomContainerDefinitionName": "PumpSetupWidget"
-                          }
-                        ]
-                      },
-                      {
                         "Type": "Box",
                         "Name": "NameBox_Right",
                         "X": 87,
@@ -2021,6 +1935,7 @@
                     "Width": 240,
                     "Height": 108,
                     "VerticalScrollEnabled": true,
+                    "ScrollbarsVisible": true,
                     "ScrollbarsVisibleOnPressed": true,
                     "ScrollbarsColor": {
                       "Red": 255
@@ -2043,6 +1958,7 @@
                     "Width": 240,
                     "Height": 108,
                     "VerticalScrollEnabled": true,
+                    "ScrollbarsVisible": true,
                     "ScrollbarsVisibleOnPressed": true,
                     "ScrollbarsColor": {
                       "Red": 255
@@ -2065,6 +1981,7 @@
                     "Width": 240,
                     "Height": 108,
                     "VerticalScrollEnabled": true,
+                    "ScrollbarsVisible": true,
                     "ScrollbarsVisibleOnPressed": true,
                     "ScrollbarsColor": {
                       "Red": 255
@@ -2087,6 +2004,7 @@
                     "Width": 240,
                     "Height": 108,
                     "VerticalScrollEnabled": true,
+                    "ScrollbarsVisible": true,
                     "ScrollbarsVisibleOnPressed": true,
                     "ScrollbarsColor": {
                       "Red": 255
@@ -2109,6 +2027,7 @@
                     "Width": 240,
                     "Height": 108,
                     "VerticalScrollEnabled": true,
+                    "ScrollbarsVisible": true,
                     "ScrollbarsVisibleOnPressed": true,
                     "ScrollbarsColor": {
                       "Red": 255
@@ -2131,6 +2050,7 @@
                     "Width": 240,
                     "Height": 108,
                     "VerticalScrollEnabled": true,
+                    "ScrollbarsVisible": true,
                     "ScrollbarsVisibleOnPressed": true,
                     "ScrollbarsColor": {
                       "Red": 255
@@ -2153,6 +2073,7 @@
                     "Width": 240,
                     "Height": 108,
                     "VerticalScrollEnabled": true,
+                    "ScrollbarsVisible": true,
                     "ScrollbarsVisibleOnPressed": true,
                     "ScrollbarsColor": {
                       "Red": 255
@@ -2584,9 +2505,12 @@
             "Name": "scrollableContainer",
             "Width": 93,
             "Height": 75,
-            "HorizontalScrollEnabled": true,
             "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
             "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsColor": {
+              "Red": 255
+            },
             "ScrollbarsAlpha": 255,
             "Components": [
               {

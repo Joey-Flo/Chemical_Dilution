@@ -147,7 +147,6 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
         // 5. Configure pump widgets and Add/Remove button visibility using leftData
         // 6. Force a redraw of the entire page to prevent a blank screen
 
-        scrollableContainer1_Left.setVisible(visiblePumpSetups > 0);
         LoadingText_Left.setVisible(visiblePumpSetups == 0);
         leftParentPage->invalidate();
     }
@@ -207,7 +206,6 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
         const char* unit_suffix = (rightUnit == 1) ? "Oz" : "mL";
         snprintf(volAnsiBuffer, 20, "%.2f %s", rightData.total_dispense_volume, unit_suffix);
         Unicode::strncpy(VolumeEditText_RightBuffer, volAnsiBuffer, VOLUMEEDITTEXT_RIGHT_SIZE);
-        scrollableContainer1_Right.setVisible(visiblePumpSetups > 0);
         LoadingText_Right.setVisible(visiblePumpSetups == 0);
 
         // 6. Force a redraw of the entire page to prevent a blank screen
@@ -278,6 +276,7 @@ void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::ve
     if (currentPageIndex < 1){
     	LoadingText_Left.setVisible(false);
     }
+
     newParentPage->invalidate();
 
     // --- LOGIC FOR THE LEFT PAGE ---

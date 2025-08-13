@@ -9,8 +9,10 @@ PumpDropDownListBase::PumpDropDownListBase()
     setWidth(93);
     setHeight(212);
     scrollableContainer.setPosition(0, 0, 93, 75);
-    scrollableContainer.setScrollbarsColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    scrollableContainer.enableHorizontalScroll(false);
+    scrollableContainer.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer.setScrollbarsAlpha(255);
+    scrollableContainer.setScrollbarsPermanentlyVisible();
     pumpOption0.setXY(7, 0);
     scrollableContainer.add(pumpOption0);
 

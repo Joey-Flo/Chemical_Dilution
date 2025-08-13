@@ -14,10 +14,10 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/containers/ScrollableContainer.hpp>
-#include <gui/containers/PumpSetupWidget.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/ScrollableContainer.hpp>
+#include <gui/containers/PumpSetupWidget.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class ChemicalsSetupViewBase : public touchgfx::View<ChemicalsSetupPresenter>
@@ -63,10 +63,6 @@ protected:
     touchgfx::SwipeContainer swipeContainer1;
     touchgfx::Container Page1;
     touchgfx::Container WidgetBuffer_Left;
-    touchgfx::ScrollableContainer scrollableContainer1_Left;
-    PumpSetupWidget pumpSetupWidget_Left_1;
-    PumpSetupWidget pumpSetupWidget_Left_2;
-    PumpSetupWidget pumpSetupWidget_Left_3;
     touchgfx::Box NameBox_Left;
     touchgfx::Box VolumeBox_Left;
     touchgfx::Button NameEdit_Left;
@@ -102,10 +98,6 @@ protected:
     touchgfx::TextAreaWithOneWildcard NameEditText_Center;
     touchgfx::TextAreaWithOneWildcard VolumeEditText_Center;
     touchgfx::Container WidgetBuffer_Right;
-    touchgfx::ScrollableContainer scrollableContainer1_Right;
-    PumpSetupWidget pumpSetupWidget_Right_1;
-    PumpSetupWidget pumpSetupWidget_Right_2;
-    PumpSetupWidget pumpSetupWidget_Right_3;
     touchgfx::Box NameBox_Right;
     touchgfx::Box VolumeBox_Right;
     touchgfx::Button NameEdit_Right;

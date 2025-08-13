@@ -56,11 +56,11 @@ TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBas
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
  ../TouchGFX/gui/include/gui/containers/PumpSetupWidget.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpSetupWidgetBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
@@ -157,11 +157,11 @@ TouchGFX/generated/gui_generated/src/chemicalssetup_screen/ChemicalsSetupViewBas
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
 ../TouchGFX/gui/include/gui/containers/PumpSetupWidget.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/PumpSetupWidgetBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
