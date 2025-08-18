@@ -7,7 +7,8 @@
 #include <texts/TextKeysAndLanguages.hpp>
 
 SettingsViewBase::SettingsViewBase() :
-    buttonCallback(this, &SettingsViewBase::buttonCallbackHandler)
+    buttonCallback(this, &SettingsViewBase::buttonCallbackHandler),
+    sliderValueChangedCallback(this, &SettingsViewBase::sliderValueChangedCallbackHandler)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -34,10 +35,10 @@ SettingsViewBase::SettingsViewBase() :
     Title.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0C9X));
     add(Title);
 
-    scrollableContainer1.setPosition(0, 50, 240, 278);
+    scrollableContainer1.setPosition(0, 73, 240, 255);
     scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     scrollableContainer1.setScrollbarsAlpha(255);
-    ResetDefaults.setXY(0, 90);
+    ResetDefaults.setXY(0, 67);
     ResetDefaults.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     ResetDefaults.setLabelText(touchgfx::TypedText(T___SINGLEUSE_1VZI));
     ResetDefaults.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -45,7 +46,7 @@ SettingsViewBase::SettingsViewBase() :
     ResetDefaults.setAction(buttonCallback);
     scrollableContainer1.add(ResetDefaults);
 
-    VolumeUnit.setXY(0, 161);
+    VolumeUnit.setXY(0, 138);
     VolumeUnit.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     VolumeUnit.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2KIU));
     VolumeUnit.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -53,28 +54,28 @@ SettingsViewBase::SettingsViewBase() :
     VolumeUnit.setAction(buttonCallback);
     scrollableContainer1.add(VolumeUnit);
 
-    ScaleCalibration.setXY(0, 232);
+    ScaleCalibration.setXY(0, 209);
     ScaleCalibration.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     ScaleCalibration.setLabelText(touchgfx::TypedText(T___SINGLEUSE_OBSU));
     ScaleCalibration.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     ScaleCalibration.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     scrollableContainer1.add(ScaleCalibration);
 
-    PrimePumps.setXY(0, 303);
+    PrimePumps.setXY(0, 280);
     PrimePumps.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     PrimePumps.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2389));
     PrimePumps.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     PrimePumps.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     scrollableContainer1.add(PrimePumps);
 
-    CleanSystem.setXY(0, 374);
+    CleanSystem.setXY(0, 351);
     CleanSystem.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     CleanSystem.setLabelText(touchgfx::TypedText(T___SINGLEUSE_NOU7));
     CleanSystem.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     CleanSystem.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     scrollableContainer1.add(CleanSystem);
 
-    VolumeUnitText.setPosition(26, 182, 187, 36);
+    VolumeUnitText.setPosition(26, 159, 187, 36);
     VolumeUnitText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     VolumeUnitText.setLinespacing(0);
     VolumeUnitTextBuffer[0] = 0;
@@ -82,18 +83,27 @@ SettingsViewBase::SettingsViewBase() :
     VolumeUnitText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UEWT));
     scrollableContainer1.add(VolumeUnitText);
 
-    slider1.setXY(0, 37);
-    slider1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_TRACK_MEDIUM_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_FILLER_MEDIUM_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SLIDER_HORIZONTAL_THICK_ROUNDED_DARK_ID));
-    slider1.setupHorizontalSlider(16, 11, 0, 0, 300);
-    slider1.setValueRange(0, 100);
-    slider1.setValue(0);
-    scrollableContainer1.add(slider1);
+    BrightnessSlider.setXY(12, 22);
+    BrightnessSlider.setBitmaps(touchgfx::Bitmap(BITMAP_SLIDER_TOUCHED_ID), touchgfx::Bitmap(BITMAP_SLIDER_UNTOUCHED_ID), touchgfx::Bitmap(BITMAP_SLIDERBUTTON_ID));
+    BrightnessSlider.setupHorizontalSlider(17, 11, 7, 12, 174);
+    BrightnessSlider.setValueRange(5, 100);
+    BrightnessSlider.setValue(100);
+    BrightnessSlider.setNewValueCallback(sliderValueChangedCallback);
+    scrollableContainer1.add(BrightnessSlider);
 
-    BrightnessText.setXY(56, 0);
+    BrightnessText.setXY(55, 0);
     BrightnessText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     BrightnessText.setLinespacing(0);
     BrightnessText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AO4B));
     scrollableContainer1.add(BrightnessText);
+
+    Sun.setXY(189, 4);
+    Sun.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_IMAGE_WB_SUNNY_20_20_FFFFFF_SVG_ID));
+    scrollableContainer1.add(Sun);
+
+    Moon.setXY(27, 2);
+    Moon.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_SOCIAL_NIGHTS_STAY_20_20_FFFFFF_SVG_ID));
+    scrollableContainer1.add(Moon);
 
     add(scrollableContainer1);
 }
@@ -119,7 +129,7 @@ void SettingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
     }
     if (&src == &ResetDefaults)
     {
-        //Interaction1
+        //ResetDefaults
         //When ResetDefaults clicked call virtual function
         //Call Reset_Defaults
         Reset_Defaults();
@@ -130,5 +140,16 @@ void SettingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //When VolumeUnit clicked call virtual function
         //Call unitButtonClicked
         unitButtonClicked();
+    }
+}
+
+void SettingsViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value)
+{
+    if (&src == &BrightnessSlider)
+    {
+        //Brightness
+        //When BrightnessSlider value changed call virtual function
+        //Call brightnessSliderChanged
+        brightnessSliderChanged(value);
     }
 }

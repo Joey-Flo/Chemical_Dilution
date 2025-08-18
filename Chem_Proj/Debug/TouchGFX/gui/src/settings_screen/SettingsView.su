@@ -10,3 +10,5 @@
 ../TouchGFX/gui/src/settings_screen/SettingsView.cpp:20:6:virtual void SettingsView::Reset_Defaults()	16	static
 ../TouchGFX/gui/src/settings_screen/SettingsView.cpp:26:6:void SettingsView::setUnitText(int8_t)	16	static
 ../TouchGFX/gui/src/settings_screen/SettingsView.cpp:44:6:virtual void SettingsView::unitButtonClicked()	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:50:6:void SettingsView::setSliderValue(int)	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:56:6:virtual void SettingsView::brightnessSliderChanged(int)	16	static

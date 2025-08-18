@@ -29,6 +29,9 @@ public:
     void updateUnitText();
     void unitButtonClicked();
 
+    void setInitialBrightness();
+    void saveNewBrightnessValue(int value);
+
 private:
     SettingsPresenter();
 

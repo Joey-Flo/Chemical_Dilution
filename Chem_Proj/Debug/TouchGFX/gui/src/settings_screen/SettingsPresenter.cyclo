@@ -8,8 +8,10 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	1
 ../TouchGFX/gui/include/gui/settings_screen/SettingsPresenter.hpp:28:13:SettingsPresenter::~SettingsPresenter()	1
 ../TouchGFX/gui/include/gui/settings_screen/SettingsPresenter.hpp:28:13:virtual SettingsPresenter::~SettingsPresenter()	1
-../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:4:1:SettingsPresenter::SettingsPresenter(SettingsView&)	1
-../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:11:6:virtual void SettingsPresenter::deactivate()	1
-../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:16:6:virtual void SettingsPresenter::activate()	1
-../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:22:6:void SettingsPresenter::updateUnitText()	1
-../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:31:6:void SettingsPresenter::unitButtonClicked()	1
+../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:7:1:SettingsPresenter::SettingsPresenter(SettingsView&)	1
+../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:14:6:virtual void SettingsPresenter::deactivate()	1
+../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:19:6:virtual void SettingsPresenter::activate()	1
+../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:26:6:void SettingsPresenter::updateUnitText()	1
+../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:35:6:void SettingsPresenter::unitButtonClicked()	1
+../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:44:6:void SettingsPresenter::setInitialBrightness()	1
+../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:51:6:void SettingsPresenter::saveNewBrightnessValue(int)	1

@@ -46,3 +46,16 @@ void SettingsView::unitButtonClicked()
     // The View's only job is to report the click to the Presenter.
     presenter->unitButtonClicked();
 }
+
+void SettingsView::setSliderValue(int value)
+{
+    // Update the slider's visual state without triggering the callback again.
+    BrightnessSlider.setValue(value);
+}
+
+void SettingsView::brightnessSliderChanged(int value)
+{
+    // The user moved the slider. The View's only job is to
+    // report this new value to the Presenter.
+	presenter->saveNewBrightnessValue(value);
+}

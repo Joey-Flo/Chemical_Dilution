@@ -35,6 +35,10 @@ public:
     {
         // Override and implement this function in Settings
     }
+    virtual void brightnessSliderChanged(int value)
+    {
+        // Override and implement this function in Settings
+    }
 
 protected:
     FrontendApplication& application() {
@@ -56,8 +60,10 @@ protected:
     touchgfx::ButtonWithLabel PrimePumps;
     touchgfx::ButtonWithLabel CleanSystem;
     touchgfx::TextAreaWithOneWildcard VolumeUnitText;
-    touchgfx::Slider slider1;
+    touchgfx::Slider BrightnessSlider;
     touchgfx::TextArea BrightnessText;
+    touchgfx::Image Sun;
+    touchgfx::Image Moon;
 
     /*
      * Wildcard Buffers
@@ -71,11 +77,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<SettingsViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<SettingsViewBase, const touchgfx::Slider&, int> sliderValueChangedCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value);
 
 };
 

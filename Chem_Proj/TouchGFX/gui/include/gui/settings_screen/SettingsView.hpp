@@ -14,6 +14,8 @@ public:
     void Reset_Defaults();
     void setUnitText(int8_t unit);
     void unitButtonClicked();
+    void setSliderValue(int value);
+    void brightnessSliderChanged(int value);
 protected:
 };
 

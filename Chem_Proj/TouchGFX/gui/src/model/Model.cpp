@@ -246,3 +246,16 @@ void Model::toggleVolumeUnit()
     // Save the entire updated configuration back to flash memory.
     Config_Save(&myDeviceConfig);
 }
+
+void Model::updateBrightness(uint8_t brightness)
+{
+    // 1. Validate the incoming value to be safe.
+    if (brightness < 20) brightness = 20;
+    if (brightness > 100) brightness = 100;
+
+    // 2. Update the value in the master configuration struct in RAM.
+    myDeviceConfig.brightness_level = brightness;
+
+    // 3. Save the entire configuration to flash memory.
+    Config_Save(&myDeviceConfig);
+}

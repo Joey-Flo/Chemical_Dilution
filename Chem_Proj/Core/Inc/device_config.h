@@ -31,6 +31,7 @@ typedef struct __attribute__((packed))
 
     // --- YOUR ADDITION IS NOW A GLOBAL SETTING (1 byte) ---
     int8_t VolumeUnit; // 0 for milliliters (mL), 1 for ounces (Oz)
+    uint8_t brightness_level; // Stores brightness from 5-100
 
     // --- Chemical Recipe Definitions (504 bytes) ---
     ChemicalRecipe_t recipes[NUM_CHEMICAL_RECIPES];

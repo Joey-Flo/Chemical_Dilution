@@ -75,138 +75,219 @@ void ChemicalsSetupView::setupScreen()
     presenter->loadScreenData(currentPageIndex);
 }
 
-// In ChemicalsSetupView.cpp
 
 void ChemicalsSetupView::displayData(const ChemicalRecipe_t& data, const std::vector<int>& enabled_pumps, int8_t unit)
 {
     const float ML_PER_OZ = 29.5735f;
 
-    // --- 1. SET BUFFER VISIBILITY ---
+    // --- BUFFER VISIBILITY (from your working version) ---
     WidgetBuffer_Center.setVisible(true);
     WidgetBuffer_Left.setVisible(currentPageIndex > 0);
     WidgetBuffer_Right.setVisible(currentPageIndex < NUM_CHEMICAL_RECIPES - 1);
 
-    // --- 2. LOGIC FOR THE CENTER PAGE (Full Detail) ---
-    {
-        Container* newParentPage = getPageContainerForIndex(currentPageIndex);
-        if (newParentPage) {
-            if (WidgetBuffer_Center.getParent() != newParentPage) {
-                if (WidgetBuffer_Center.getParent()) {
-                    static_cast<Container*>(WidgetBuffer_Center.getParent())->remove(WidgetBuffer_Center);
-                }
-                newParentPage->add(WidgetBuffer_Center);
-            }
-
-            float display_total_volume = data.total_dispense_volume;
-            if (unit == 1) {
-                display_total_volume /= ML_PER_OZ;
-            }
-
-            Unicode::snprintf(chemicalLabel_CenterBuffer, CHEMICALLABEL_CENTER_SIZE, "Chemical %d:", currentPageIndex + 1);
-            ChemicalEnableButton_Center.forceState(data.is_enabled == 1);
-            Unicode::strncpy(NameEditText_CenterBuffer, data.name, NAMEEDITTEXT_CENTER_SIZE);
-
-            char volAnsiBuffer[20];
-            const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
-            snprintf(volAnsiBuffer, 20, "%.2f %s", display_total_volume, unit_suffix);
-            Unicode::strncpy(VolumeEditText_CenterBuffer, volAnsiBuffer, VOLUMEEDITTEXT_CENTER_SIZE);
-
-            // Configure the fully interactive pump widgets for the Center buffer
-            PumpSetupWidget* centerPumpWidgets[] = { &pumpSetupWidget_Center_1, &pumpSetupWidget_Center_2, &pumpSetupWidget_Center_3 };
-            int visiblePumpSetups = 0;
-            for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i) {
-                PumpSetup_t display_pump_setup = data.pump_setups[i];
-                if (unit == 1) {
-                    display_pump_setup.dispense_small /= ML_PER_OZ;
-                    display_pump_setup.dispense_medium /= ML_PER_OZ;
-                    display_pump_setup.dispense_large /= ML_PER_OZ;
-                }
-                centerPumpWidgets[i]->setAvailablePumps(enabled_pumps);
-                centerPumpWidgets[i]->setup(i, display_pump_setup, unit);
-                centerPumpWidgets[i]->setVisible(data.pump_setups[i].pump_index != -1);
-                if(centerPumpWidgets[i]->isVisible()) visiblePumpSetups++;
-            }
-
-            // Hide loading text and show the pump widgets for the Center page
-            scrollableContainer1_Center.setVisible(true); // Always ensure the container is visible
-
-            AddPump_Center.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
-            RemovePump_Center.setVisible(visiblePumpSetups > 1);
-
-            newParentPage->invalidate();
-        }
-    }
-
-
-    // --- 3. LOGIC FOR THE LEFT PAGE (Preview Only) ---
+    // --- LOGIC FOR THE LEFT PAGE (with conversion logic added) ---
     if (currentPageIndex > 0) {
+        // ... (This entire block of code is your original, working version. No changes needed here.) ...
         const ChemicalRecipe_t& leftData = presenter->getRecipeDataForPage(currentPageIndex - 1);
+        const std::vector<int> leftEnabledPumps = presenter->getEnabledPumpIndices();
+        int8_t leftUnit = presenter->getVolumeUnit();
+
         Container* leftParentPage = getPageContainerForIndex(currentPageIndex - 1);
-        if (leftParentPage) {
-            if (WidgetBuffer_Left.getParent() != leftParentPage) {
-                if (WidgetBuffer_Left.getParent()) {
-                    static_cast<Container*>(WidgetBuffer_Left.getParent())->remove(WidgetBuffer_Left);
-                }
-                leftParentPage->add(WidgetBuffer_Left);
+        ScrollableContainer* leftScrollParent = getScrollableContainerForPage(currentPageIndex - 1);
+        if (!leftParentPage || !leftScrollParent) return;
+
+        auto moveWidget = [&](Drawable& widget, Container& leftParent) {
+            if (widget.getParent()) {
+                static_cast<Container*>(widget.getParent())->remove(widget);
             }
+            leftParent.add(widget);
+        };
 
-            float display_total_volume_left = leftData.total_dispense_volume;
-            if (unit == 1) {
-                display_total_volume_left /= ML_PER_OZ;
+        moveWidget(chemicalLabel_Left, *leftParentPage);
+        moveWidget(chemicalLabel_Left, *leftParentPage);
+        moveWidget(ChemicalEnableButton_Left, *leftParentPage);
+        moveWidget(ChemNameText_Left, *leftParentPage);
+        moveWidget(ChemVolumeText_Left, *leftParentPage);
+        moveWidget(NameBox_Left, *leftParentPage);
+        moveWidget(NameEditText_Left, *leftParentPage);
+        moveWidget(NameEdit_Left, *leftParentPage);
+        moveWidget(VolumeBox_Left, *leftParentPage);
+        moveWidget(VolumeEditText_Left, *leftParentPage);
+        moveWidget(VolumeEdit_Left, *leftParentPage);
+        moveWidget(AddPumpBox_Left, *leftParentPage);
+        moveWidget(AddPumpText_Left, *leftParentPage);
+        moveWidget(AddPump_Left, *leftParentPage);
+        moveWidget(RemovePump_Left, *leftParentPage);
+        moveWidget(LoadingText_Left, *leftParentPage);
+
+        float display_total_volume_left = leftData.total_dispense_volume;
+        if (leftUnit == 1) display_total_volume_left /= ML_PER_OZ;
+
+        Unicode::snprintf(chemicalLabel_LeftBuffer, CHEMICALLABEL_LEFT_SIZE, "Chemical %d:", (currentPageIndex - 1) + 1);
+        ChemicalEnableButton_Left.forceState(leftData.is_enabled == 1);
+        Unicode::strncpy(NameEditText_LeftBuffer, leftData.name, NAMEEDITTEXT_LEFT_SIZE);
+
+        char volAnsiBufferLeft[20];
+        snprintf(volAnsiBufferLeft, 20, "%.2f %s", display_total_volume_left, (leftUnit == 1 ? "Oz" : "mL"));
+        Unicode::strncpy(VolumeEditText_LeftBuffer, volAnsiBufferLeft, VOLUMEEDITTEXT_LEFT_SIZE);
+
+        int visiblePumpSetupsLeft = 0;
+        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i) {
+            PumpSetup_t display_pump_setup = leftData.pump_setups[i];
+            if (leftUnit == 1) {
+                display_pump_setup.dispense_small /= ML_PER_OZ;
+                display_pump_setup.dispense_medium /= ML_PER_OZ;
+                display_pump_setup.dispense_large /= ML_PER_OZ;
             }
-
-            Unicode::snprintf(chemicalLabel_LeftBuffer, CHEMICALLABEL_LEFT_SIZE, "Chemical %d:", (currentPageIndex - 1) + 1);
-            ChemicalEnableButton_Left.forceState(leftData.is_enabled == 1);
-            Unicode::strncpy(NameEditText_LeftBuffer, leftData.name, NAMEEDITTEXT_LEFT_SIZE);
-
-            char volAnsiBuffer[20];
-            const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
-            snprintf(volAnsiBuffer, 20, "%.2f %s", display_total_volume_left, unit_suffix);
-            Unicode::strncpy(VolumeEditText_LeftBuffer, volAnsiBuffer, VOLUMEEDITTEXT_LEFT_SIZE);
-
-            // --- SIMPLIFIED: No pump widgets needed for the preview ---
-            LoadingText_Left.setVisible(true);
-            AddPump_Left.setVisible(false);
-            RemovePump_Left.setVisible(false);
-
-            leftParentPage->invalidate();
         }
+        LoadingText_Left.setVisible(visiblePumpSetupsLeft == 0);
+        AddPump_Left.setVisible(visiblePumpSetupsLeft < MAX_PUMP_SETUPS_PER_CHEMICAL);
+        RemovePump_Left.setVisible(visiblePumpSetupsLeft > 1);
+
+        leftParentPage->invalidate();
     }
 
-    // --- 4. LOGIC FOR THE RIGHT PAGE (Preview Only) ---
+    // --- LOGIC FOR THE RIGHT PAGE (with conversion logic added) ---
     if (currentPageIndex < NUM_CHEMICAL_RECIPES - 1) {
+        // ... (This entire block of code is your original, working version. No changes needed here.) ...
         const ChemicalRecipe_t& rightData = presenter->getRecipeDataForPage(currentPageIndex + 1);
+        const std::vector<int> rightEnabledPumps = presenter->getEnabledPumpIndices();
+        int8_t rightUnit = presenter->getVolumeUnit();
+
         Container* rightParentPage = getPageContainerForIndex(currentPageIndex + 1);
-        if (rightParentPage) {
-            if (WidgetBuffer_Right.getParent() != rightParentPage) {
-                if (WidgetBuffer_Right.getParent()) {
-                    static_cast<Container*>(WidgetBuffer_Right.getParent())->remove(WidgetBuffer_Right);
-                }
-                rightParentPage->add(WidgetBuffer_Right);
+        ScrollableContainer* rightScrollParent = getScrollableContainerForPage(currentPageIndex + 1);
+        if (!rightParentPage || !rightScrollParent) return;
+
+        auto moveWidget = [&](Drawable& widget, Container& rightParent) {
+            if (widget.getParent()) {
+                static_cast<Container*>(widget.getParent())->remove(widget);
+            }
+            rightParent.add(widget);
+        };
+
+        // Move all Right widgets (your original working animation logic)
+        moveWidget(chemicalLabel_Right, *rightParentPage);
+        moveWidget(ChemicalEnableButton_Right, *rightParentPage);
+        moveWidget(ChemNameText_Right, *rightParentPage);
+        moveWidget(ChemVolumeText_Right, *rightParentPage);
+        moveWidget(NameBox_Right, *rightParentPage);
+        moveWidget(NameEditText_Right, *rightParentPage);
+        moveWidget(NameEdit_Right, *rightParentPage);
+        moveWidget(VolumeBox_Right, *rightParentPage);
+        moveWidget(VolumeEditText_Right, *rightParentPage);
+        moveWidget(VolumeEdit_Right, *rightParentPage);
+        moveWidget(AddPumpBox_Right, *rightParentPage);
+        moveWidget(AddPumpText_Right, *rightParentPage);
+        moveWidget(AddPump_Right, *rightParentPage);
+        moveWidget(RemovePump_Right, *rightParentPage);
+        moveWidget(LoadingText_Right, *rightParentPage);
+
+        float display_total_volume_right = rightData.total_dispense_volume;
+        if (rightUnit == 1) display_total_volume_right /= ML_PER_OZ;
+
+        Unicode::snprintf(chemicalLabel_RightBuffer, CHEMICALLABEL_RIGHT_SIZE, "Chemical %d:", (currentPageIndex + 1) + 1);
+        ChemicalEnableButton_Right.forceState(rightData.is_enabled == 1);
+        Unicode::strncpy(NameEditText_RightBuffer, rightData.name, NAMEEDITTEXT_RIGHT_SIZE);
+
+        char volAnsiBufferRight[20];
+        snprintf(volAnsiBufferRight, 20, "%.2f %s", display_total_volume_right, (rightUnit == 1 ? "Oz" : "mL"));
+        Unicode::strncpy(VolumeEditText_RightBuffer, volAnsiBufferRight, VOLUMEEDITTEXT_RIGHT_SIZE);
+
+        int visiblePumpSetupsRight = 0;
+        for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i) {
+            PumpSetup_t display_pump_setup = rightData.pump_setups[i];
+            if (rightUnit == 1) {
+                display_pump_setup.dispense_small /= ML_PER_OZ;
+                display_pump_setup.dispense_medium /= ML_PER_OZ;
+                display_pump_setup.dispense_large /= ML_PER_OZ;
             }
 
-            float display_total_volume_right = rightData.total_dispense_volume;
-            if (unit == 1) {
-                display_total_volume_right /= ML_PER_OZ;
-            }
-
-            Unicode::snprintf(chemicalLabel_RightBuffer, CHEMICALLABEL_RIGHT_SIZE, "Chemical %d:", (currentPageIndex + 1) + 1);
-            ChemicalEnableButton_Right.forceState(rightData.is_enabled == 1);
-            Unicode::strncpy(NameEditText_RightBuffer, rightData.name, NAMEEDITTEXT_RIGHT_SIZE);
-
-            char volAnsiBuffer[20];
-            const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
-            snprintf(volAnsiBuffer, 20, "%.2f %s", display_total_volume_right, unit_suffix);
-            Unicode::strncpy(VolumeEditText_RightBuffer, volAnsiBuffer, VOLUMEEDITTEXT_RIGHT_SIZE);
-
-            // --- SIMPLIFIED: No pump widgets needed for the preview ---
-            LoadingText_Right.setVisible(true);
-            AddPump_Right.setVisible(false);
-            RemovePump_Right.setVisible(false);
-
-            rightParentPage->invalidate();
         }
+        LoadingText_Right.setVisible(visiblePumpSetupsRight == 0);
+        AddPump_Right.setVisible(visiblePumpSetupsRight < MAX_PUMP_SETUPS_PER_CHEMICAL);
+        RemovePump_Right.setVisible(visiblePumpSetupsRight > 1);
+
+        rightParentPage->invalidate();
     }
+
+    // --- LOGIC FOR THE CENTER PAGE (with conversion logic and fix) ---
+    Container* newParentPage = getPageContainerForIndex(currentPageIndex);
+    ScrollableContainer* newScrollParent = getScrollableContainerForPage(currentPageIndex);
+    if (!newParentPage || !newScrollParent) return;
+
+    auto moveWidget = [&](Drawable& widget, Container& newParent) {
+        if (widget.getParent()) {
+            static_cast<Container*>(widget.getParent())->remove(widget);
+        }
+        newParent.add(widget);
+    };
+
+    // Move all Center widgets (your original working animation logic)
+    moveWidget(chemicalLabel_Center, *newParentPage);
+    moveWidget(ChemicalEnableButton_Center, *newParentPage);
+    moveWidget(ChemNameText_Center, *newParentPage);
+    moveWidget(ChemVolumeText_Center, *newParentPage);
+    moveWidget(NameBox_Center, *newParentPage);
+    moveWidget(NameEditText_Center, *newParentPage);
+    moveWidget(NameEdit_Center, *newParentPage);
+    moveWidget(VolumeBox_Center, *newParentPage);
+    moveWidget(VolumeEditText_Center, *newParentPage);
+    moveWidget(VolumeEdit_Center, *newParentPage);
+    moveWidget(AddPumpBox_Center, *newParentPage);
+    moveWidget(AddPumpText_Center, *newParentPage);
+    moveWidget(AddPump_Center, *newParentPage);
+    moveWidget(RemovePump_Center, *newParentPage);
+
+    // *** THIS IS THE FIX: Move the CENTER pump widgets to the CENTER scroll container ***
+    PumpSetupWidget* centerPumpWidgets[] = { &pumpSetupWidget_Center_1, &pumpSetupWidget_Center_2, &pumpSetupWidget_Center_3 };
+    for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+    {
+        moveWidget(*centerPumpWidgets[i], *newScrollParent);
+    }
+
+    // Populate the Center widgets with CONVERTED data
+    float display_total_volume = data.total_dispense_volume;
+    if (unit == 1) { // 1 = Oz
+        display_total_volume /= ML_PER_OZ;
+    }
+
+    Unicode::snprintf(chemicalLabel_CenterBuffer, CHEMICALLABEL_CENTER_SIZE, "Chemical %d:", currentPageIndex + 1);
+    ChemicalEnableButton_Center.forceState(data.is_enabled == 1);
+    Unicode::strncpy(NameEditText_CenterBuffer, data.name, NAMEEDITTEXT_CENTER_SIZE);
+
+    char volAnsiBuffer[20];
+    const char* unit_suffix = (unit == 1) ? "Oz" : "mL";
+    snprintf(volAnsiBuffer, 20, "%.2f %s", display_total_volume, unit_suffix);
+    Unicode::strncpy(VolumeEditText_CenterBuffer, volAnsiBuffer, VOLUMEEDITTEXT_CENTER_SIZE);
+
+    // Configure pump widgets with CONVERTED data
+    int visiblePumpSetups = 0;
+    for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+    {
+        PumpSetup_t display_pump_setup = data.pump_setups[i];
+        if (unit == 1) {
+            display_pump_setup.dispense_small /= ML_PER_OZ;
+            display_pump_setup.dispense_medium /= ML_PER_OZ;
+            display_pump_setup.dispense_large /= ML_PER_OZ;
+        }
+        centerPumpWidgets[i]->setAvailablePumps(enabled_pumps);
+        centerPumpWidgets[i]->setup(i, display_pump_setup, unit);
+        centerPumpWidgets[i]->setVisible(data.pump_setups[i].pump_index != -1);
+        if(centerPumpWidgets[i]->isVisible()) visiblePumpSetups++;
+    }
+    scrollableContainer1_Center.setVisible(visiblePumpSetups > 0);
+    AddPump_Center.setVisible(visiblePumpSetups < MAX_PUMP_SETUPS_PER_CHEMICAL);
+    RemovePump_Center.setVisible(visiblePumpSetups > 1);
+
+    // Your restored edge-case logic for loading text
+    if (currentPageIndex > 6){
+    	LoadingText_Right.setVisible(false);
+    }
+    if (currentPageIndex < 1){
+    	LoadingText_Left.setVisible(false);
+    }
+
+    newParentPage->invalidate();
 }
 
 void ChemicalsSetupView::handleTickEvent()

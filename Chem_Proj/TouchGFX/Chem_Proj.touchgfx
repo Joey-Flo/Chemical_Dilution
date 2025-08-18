@@ -2310,9 +2310,9 @@
           {
             "Type": "ScrollableContainer",
             "Name": "scrollableContainer1",
-            "Y": 50,
+            "Y": 73,
             "Width": 240,
-            "Height": 278,
+            "Height": 255,
             "HorizontalScrollEnabled": true,
             "VerticalScrollEnabled": true,
             "ScrollbarsVisibleOnPressed": true,
@@ -2321,7 +2321,7 @@
               {
                 "Type": "ButtonWithLabel",
                 "Name": "ResetDefaults",
-                "Y": 90,
+                "Y": 67,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2342,7 +2342,7 @@
               {
                 "Type": "ButtonWithLabel",
                 "Name": "VolumeUnit",
-                "Y": 161,
+                "Y": 138,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2363,7 +2363,7 @@
               {
                 "Type": "ButtonWithLabel",
                 "Name": "ScaleCalibration",
-                "Y": 232,
+                "Y": 209,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2384,7 +2384,7 @@
               {
                 "Type": "ButtonWithLabel",
                 "Name": "PrimePumps",
-                "Y": 303,
+                "Y": 280,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2405,7 +2405,7 @@
               {
                 "Type": "ButtonWithLabel",
                 "Name": "CleanSystem",
-                "Y": 374,
+                "Y": 351,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2427,7 +2427,7 @@
                 "Type": "TextArea",
                 "Name": "VolumeUnitText",
                 "X": 26,
-                "Y": 182,
+                "Y": 159,
                 "Width": 187,
                 "Height": 36,
                 "TextId": "__SingleUse_UEWT",
@@ -2444,24 +2444,28 @@
               },
               {
                 "Type": "Slider",
-                "Name": "slider1",
-                "Y": 37,
-                "Width": 332,
-                "Height": 32,
+                "Name": "BrightnessSlider",
+                "X": 12,
+                "Y": 22,
+                "Width": 201,
+                "Height": 34,
                 "IsHorizontalSlider": true,
-                "BackgroundUnselected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_track_medium.png",
-                "BackgroundSelected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_filler_medium.png",
-                "Indicator": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_rounded_dark.png",
-                "BackgroundX": 16,
+                "BackgroundUnselected": "Slider Touched.png",
+                "BackgroundSelected": "Slider Untouched.png",
+                "Indicator": "SliderButton.png",
+                "BackgroundX": 17,
                 "BackgroundY": 11,
-                "IndicatorMax": 300,
+                "IndicatorPos": 7,
+                "IndicatorMax": 174,
+                "IndicatorMin": 12,
                 "ValueMax": 100,
-                "Preset": "alternate_theme\\presets\\slider\\horizontal\\thick\\medium_rounded_dark.json"
+                "ValueMin": 5,
+                "InitValue": 100
               },
               {
                 "Type": "TextArea",
                 "Name": "BrightnessText",
-                "X": 56,
+                "X": 55,
                 "Width": 128,
                 "Height": 24,
                 "TextId": "__SingleUse_AO4B",
@@ -2472,6 +2476,24 @@
                   "Blue": 255
                 },
                 "AutoSize": true
+              },
+              {
+                "Type": "Image",
+                "Name": "Sun",
+                "X": 189,
+                "Y": 4,
+                "Width": 20,
+                "Height": 20,
+                "RelativeFilename": "__generated\\icon_theme_images_image_wb_sunny_20_20_FFFFFF.svg.png"
+              },
+              {
+                "Type": "Image",
+                "Name": "Moon",
+                "X": 27,
+                "Y": 2,
+                "Width": 20,
+                "Height": 20,
+                "RelativeFilename": "__generated\\icon_theme_images_social_nights_stay_20_20_FFFFFF.svg.png"
               }
             ]
           }
@@ -2490,7 +2512,7 @@
             }
           },
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "ResetDefaults",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "ResetDefaults"
@@ -2509,6 +2531,17 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "unitButtonClicked"
+            }
+          },
+          {
+            "InteractionName": "Brightness",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "BrightnessSlider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "brightnessSliderChanged"
             }
           }
         ]
