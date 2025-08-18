@@ -195,7 +195,7 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "PumpSetup",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "PumpSetupButton"
@@ -207,7 +207,7 @@
             }
           },
           {
-            "InteractionName": "Interaction2",
+            "InteractionName": "ChemicalSetup",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "ChemicalButton"
@@ -216,6 +216,18 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "ChemicalsSetup"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SettingsButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Settings"
             }
           }
         ]
@@ -2239,6 +2251,264 @@
             "Action": {
               "Type": "ActionExecuteCode",
               "Code": "presenter->chemicalEnableToggled();"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Settings",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "Background.png"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "Width": 240,
+            "Height": 50,
+            "Color": {
+              "Red": 120,
+              "Green": 120,
+              "Blue": 120
+            },
+            "BorderColor": {
+              "Red": 163,
+              "Green": 160,
+              "Blue": 160
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "Button",
+            "Name": "BackButton",
+            "X": -4,
+            "Width": 30,
+            "Height": 50,
+            "Pressed": "Back Pressed Resized.png",
+            "Released": "Back Unpressed Resized.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Title",
+            "X": 64,
+            "Y": 13,
+            "Width": 104,
+            "Height": 48,
+            "TextId": "__SingleUse_0C9X",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableContainer1",
+            "Y": 50,
+            "Width": 240,
+            "Height": 278,
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsAlpha": 255,
+            "Components": [
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ResetDefaults",
+                "Y": 90,
+                "Width": 240,
+                "Height": 66,
+                "Pressed": "Button1 large clicked.png",
+                "Released": "Button1 large.png",
+                "TextId": "__SingleUse_1VZI",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "VolumeUnit",
+                "Y": 161,
+                "Width": 240,
+                "Height": 66,
+                "Pressed": "Button1 large clicked.png",
+                "Released": "Button1 large.png",
+                "TextId": "__SingleUse_2KIU",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ScaleCalibration",
+                "Y": 232,
+                "Width": 240,
+                "Height": 66,
+                "Pressed": "Button1 large clicked.png",
+                "Released": "Button1 large.png",
+                "TextId": "__SingleUse_OBSU",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "PrimePumps",
+                "Y": 303,
+                "Width": 240,
+                "Height": 66,
+                "Pressed": "Button1 large clicked.png",
+                "Released": "Button1 large.png",
+                "TextId": "__SingleUse_2389",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "CleanSystem",
+                "Y": 374,
+                "Width": 240,
+                "Height": 66,
+                "Pressed": "Button1 large clicked.png",
+                "Released": "Button1 large.png",
+                "TextId": "__SingleUse_NOU7",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "VolumeUnitText",
+                "X": 26,
+                "Y": 182,
+                "Width": 187,
+                "Height": 36,
+                "TextId": "__SingleUse_UEWT",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
+              },
+              {
+                "Type": "Slider",
+                "Name": "slider1",
+                "Y": 37,
+                "Width": 332,
+                "Height": 32,
+                "IsHorizontalSlider": true,
+                "BackgroundUnselected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_track_medium.png",
+                "BackgroundSelected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_filler_medium.png",
+                "Indicator": "__generated\\alternate_theme_images_widgets_slider_horizontal_thick_rounded_dark.png",
+                "BackgroundX": 16,
+                "BackgroundY": 11,
+                "IndicatorMax": 300,
+                "ValueMax": 100,
+                "Preset": "alternate_theme\\presets\\slider\\horizontal\\thick\\medium_rounded_dark.json"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "BrightnessText",
+                "X": 56,
+                "Width": 128,
+                "Height": 24,
+                "TextId": "__SingleUse_AO4B",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Back",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BackButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "HomeScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ResetDefaults"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Reset_Defaults"
+            }
+          },
+          {
+            "InteractionName": "VolumeUnit",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "VolumeUnit"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "unitButtonClicked"
             }
           }
         ]

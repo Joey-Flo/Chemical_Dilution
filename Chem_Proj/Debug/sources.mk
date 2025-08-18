@@ -63,6 +63,7 @@ TouchGFX/generated/gui_generated/src/common \
 TouchGFX/generated/gui_generated/src/containers \
 TouchGFX/generated/gui_generated/src/homescreen_screen \
 TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen \
+TouchGFX/generated/gui_generated/src/settings_screen \
 TouchGFX/generated/images/src \
 TouchGFX/generated/images/src/__generated \
 TouchGFX/generated/texts/src \
@@ -72,6 +73,7 @@ TouchGFX/gui/src/containers \
 TouchGFX/gui/src/homescreen_screen \
 TouchGFX/gui/src/model \
 TouchGFX/gui/src/pumpsetupscreen_screen \
+TouchGFX/gui/src/settings_screen \
 TouchGFX/target \
 TouchGFX/target/generated \
 

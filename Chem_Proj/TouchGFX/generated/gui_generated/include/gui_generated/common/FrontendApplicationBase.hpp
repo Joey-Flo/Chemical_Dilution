@@ -29,6 +29,9 @@ public:
     // ChemicalsSetup
     void gotoChemicalsSetupScreenNoTransition();
 
+    // Settings
+    void gotoSettingsScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -42,6 +45,9 @@ protected:
 
     // ChemicalsSetup
     void gotoChemicalsSetupScreenNoTransitionImpl();
+
+    // Settings
+    void gotoSettingsScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

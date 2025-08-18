@@ -18,6 +18,8 @@
 #include <gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp>
 #include <gui/chemicalssetup_screen/ChemicalsSetupView.hpp>
 #include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
+#include <gui/settings_screen/SettingsView.hpp>
+#include <gui/settings_screen/SettingsPresenter.hpp>
 
 
 /**
@@ -43,7 +45,8 @@ public:
     typedef touchgfx::meta::TypeList< HomeScreenView,
             touchgfx::meta::TypeList< PumpSetupScreenView,
             touchgfx::meta::TypeList< ChemicalsSetupView,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< SettingsView,
+            touchgfx::meta::Nil > > >
             > GeneratedViewTypes;
 
     /**
@@ -58,7 +61,8 @@ public:
     typedef touchgfx::meta::TypeList< HomeScreenPresenter,
             touchgfx::meta::TypeList< PumpSetupScreenPresenter,
             touchgfx::meta::TypeList< ChemicalsSetupPresenter,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< SettingsPresenter,
+            touchgfx::meta::Nil > > >
             > GeneratedPresenterTypes;
 
     /**

@@ -46,6 +46,7 @@ public:
     void updateTotalVolume(int recipe_index, float volume);
     void updateVolumeUnit(int8_t unit); // Corresponds to the global setting
     void updateSinglePumpVolume(int recipeIndex, int setupIndex, int fieldIndex, float newVolume);
+    void toggleVolumeUnit();
 
 
 protected:

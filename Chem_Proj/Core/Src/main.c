@@ -98,15 +98,9 @@ int main(void)
   while (1)
   {
 
-	int value =  hx711_value_ave(&my_scale, 20) - my_scale.offset;
-	float current_weight_grams = (float)value / WeightCalibration;
-//  MX_TouchGFX_Process();
+	  MX_TouchGFX_Process();
 //	  MultiplexerTest();
 //	  PlayHappyBirthday(&htim4, TIM_CHANNEL_1);
-	int value2 = hx711_value_ave(&my_scale, 20) - my_scale.offset;
-	float current_weight_grams2 = (float)value2 / WeightCalibration;
- int value3 = hx711_value_ave(&my_scale, 20) - my_scale.offset;
- float current_weight_grams3 = (float)value3 / WeightCalibration;
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

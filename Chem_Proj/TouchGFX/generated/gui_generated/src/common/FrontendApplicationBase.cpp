@@ -15,6 +15,8 @@
 #include <gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp>
 #include <gui/chemicalssetup_screen/ChemicalsSetupView.hpp>
 #include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
+#include <gui/settings_screen/SettingsView.hpp>
+#include <gui/settings_screen/SettingsPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -72,4 +74,17 @@ void FrontendApplicationBase::gotoChemicalsSetupScreenNoTransition()
 void FrontendApplicationBase::gotoChemicalsSetupScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<ChemicalsSetupView, ChemicalsSetupPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Settings
+
+void FrontendApplicationBase::gotoSettingsScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoSettingsScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSettingsScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<SettingsView, SettingsPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

@@ -42,7 +42,7 @@ void Config_SetDefaults(DeviceConfiguration_t* config)
         strncpy(config->recipes[i].name, default_names[i], sizeof(config->recipes[i].name) - 1);
         config->recipes[i].name[sizeof(config->recipes[i].name) - 1] = '\0';
 
-        config->recipes[i].total_dispense_volume = 32.0f;
+        config->recipes[i].total_dispense_volume = 946.353f;
 
         // Initialize the pump setups for this recipe
         for (int j = 0; j < MAX_PUMP_SETUPS_PER_CHEMICAL; j++) {
@@ -51,9 +51,9 @@ void Config_SetDefaults(DeviceConfiguration_t* config)
             // The first pump setup (j=0) for EVERY recipe is now enabled by default.
             if (j == 0) {
                 config->recipes[i].pump_setups[j].pump_index = 0; // Default to Pump 0
-                config->recipes[i].pump_setups[j].dispense_small = 3.0f;
-                config->recipes[i].pump_setups[j].dispense_medium = 5.0f;
-                config->recipes[i].pump_setups[j].dispense_large = 7.0f;
+                config->recipes[i].pump_setups[j].dispense_small = 88.72f;
+                config->recipes[i].pump_setups[j].dispense_medium = 147.868f;
+                config->recipes[i].pump_setups[j].dispense_large = 207.015f;
             } else {
                 // All other pump slots are disabled.
                 config->recipes[i].pump_setups[j].pump_index = -1;

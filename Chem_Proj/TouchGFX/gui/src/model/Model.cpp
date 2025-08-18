@@ -233,3 +233,16 @@ void Model::updateVolumeUnit(int8_t unit)
 {
     // Future logic will go here
 }
+
+void Model::toggleVolumeUnit()
+{
+    // Get the current unit value (0 or 1)
+    int8_t currentUnit = myDeviceConfig.VolumeUnit;
+
+    // Flip the value: if it's 0 it becomes 1, if it's 1 it becomes 0.
+    // A simple way to do this is with the NOT operator on a boolean conversion.
+    myDeviceConfig.VolumeUnit = !currentUnit;
+
+    // Save the entire updated configuration back to flash memory.
+    Config_Save(&myDeviceConfig);
+}
