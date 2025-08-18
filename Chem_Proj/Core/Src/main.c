@@ -20,6 +20,8 @@
 #include "main.h"
 #include "app_touchgfx.h"
 
+#define WeightCalibration 402.49
+
 
 CRC_HandleTypeDef hcrc;
 SPI_HandleTypeDef hspi1;
@@ -50,7 +52,11 @@ int main(void)
   Displ_Init(Displ_Orientat_0);       // Initialize display controller. Adjust orientation (0, 90, 180, 270) as needed for your UI design.
   Displ_BackLight('I');               // Initialize backlight. 'I' for Init, sets to BKLIT_INIT_LEVEL
   Displ_BackLight('F');
+  hx711_init(&my_scale, HX711_SCK_GPIO_Port, HX711_SCK_Pin, HX711_DOUT_GPIO_Port, HX711_DOUT_Pin);
+  hx711_power_up(&my_scale);
+  HAL_Delay(500); // Wait 500 milliseconds
 
+  hx711_tare(&my_scale, 10);
 
 //
   HAL_TIM_Base_Start_IT(&TGFX_T);
@@ -88,14 +94,19 @@ int main(void)
 //    Config_SetDefaults(&myDeviceConfig);
 //    Config_Save(&myDeviceConfig);
 
+
   while (1)
   {
 
-
-  MX_TouchGFX_Process();
+	int value =  hx711_value_ave(&my_scale, 20) - my_scale.offset;
+	float current_weight_grams = (float)value / WeightCalibration;
+//  MX_TouchGFX_Process();
 //	  MultiplexerTest();
 //	  PlayHappyBirthday(&htim4, TIM_CHANNEL_1);
-
+	int value2 = hx711_value_ave(&my_scale, 20) - my_scale.offset;
+	float current_weight_grams2 = (float)value2 / WeightCalibration;
+ int value3 = hx711_value_ave(&my_scale, 20) - my_scale.offset;
+ float current_weight_grams3 = (float)value3 / WeightCalibration;
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
