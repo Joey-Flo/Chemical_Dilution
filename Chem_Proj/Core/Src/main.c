@@ -49,9 +49,6 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM4_Init();
   MX_TIM5_Init();
-  Displ_Init(Displ_Orientat_0);       // Initialize display controller. Adjust orientation (0, 90, 180, 270) as needed for your UI design.
-  Displ_BackLight('I');               // Initialize backlight. 'I' for Init, sets to BKLIT_INIT_LEVEL
-  Displ_BackLight('F');
   hx711_init(&my_scale, HX711_SCK_GPIO_Port, HX711_SCK_Pin, HX711_DOUT_GPIO_Port, HX711_DOUT_Pin);
   hx711_power_up(&my_scale);
   HAL_Delay(500); // Wait 500 milliseconds
@@ -91,8 +88,9 @@ int main(void)
             // printf("Failed to save default config!\r\n");
         }
     }
-//    Config_SetDefaults(&myDeviceConfig);
-//    Config_Save(&myDeviceConfig);
+    Displ_Init(Displ_Orientat_0);       // Initialize display controller. Adjust orientation (0, 90, 180, 270) as needed for your UI design.
+    Displ_BackLight('I'); // Initialize backlight timer
+    BKLIT_TIMER->BKLIT_CCR = (uint32_t)myDeviceConfig.brightness_level;
 
 
   while (1)

@@ -41,7 +41,7 @@ typedef struct __attribute__((packed))
     // NEW PADDING: Ensures the data block for CRC is a multiple of 4.
     // Total data size before this is 8+40+1+504 = 553 bytes.
     // 553 + 3 = 556, which is divisible by 4.
-    uint8_t _internal_crc_padding[3];
+    uint8_t _internal_crc_padding[2];
 
     // The CRC32 checksum of all data *before* this field (556 bytes).
     uint32_t crc32_checksum;
