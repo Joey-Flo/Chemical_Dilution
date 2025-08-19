@@ -30,6 +30,8 @@ void Config_SetDefaults(DeviceConfiguration_t* config)
 
     config->brightness_level = 100;
 
+    config->scale_calibration_factor = 402.49f;
+
     const char* default_names[] = {
         "Chemical 1", "Chemical 2", "Chemical 3", "Chemical 4",
         "Chemical 5", "Chemical 6", "Chemical 7", "Chemical 8"

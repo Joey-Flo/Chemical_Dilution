@@ -32,6 +32,9 @@ public:
     // Settings
     void gotoSettingsScreenNoTransition();
 
+    // ScaleCalibration
+    void gotoScaleCalibrationScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -48,6 +51,9 @@ protected:
 
     // Settings
     void gotoSettingsScreenNoTransitionImpl();
+
+    // ScaleCalibration
+    void gotoScaleCalibrationScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

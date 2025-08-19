@@ -124,6 +124,9 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../TouchGFX/generated/gui_generated/include/gui_generated/settings_screen/SettingsViewBase.hpp \
  ../TouchGFX/gui/include/gui/settings_screen/SettingsPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
+ ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/scalecalibration_screen/ScaleCalibrationViewBase.hpp \
+ ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp \
@@ -283,6 +286,9 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../TouchGFX/generated/gui_generated/include/gui_generated/settings_screen/SettingsViewBase.hpp:
 ../TouchGFX/gui/include/gui/settings_screen/SettingsPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
+../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/scalecalibration_screen/ScaleCalibrationViewBase.hpp:
+../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp:

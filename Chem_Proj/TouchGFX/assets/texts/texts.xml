@@ -16,6 +16,33 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_68T7" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Enter</Translation>
+      </Text>
+      <Text Id="__SingleUse_N5I3" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Exit</Translation>
+      </Text>
+      <Text Id="__SingleUse_7UW0" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Enter Correct Mass:</Translation>
+      </Text>
+      <Text Id="__SingleUse_KGQ7" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Tare Scale</Translation>
+      </Text>
+      <Text Id="__SingleUse_5XOS" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt; g</Translation>
+      </Text>
+      <Text Id="__SingleUse_MCRT" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Scale/Calibration&#10;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YVZO" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Exit</Translation>
+      </Text>
+      <Text Id="__SingleUse_UIRN" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Yes</Translation>
+      </Text>
+      <Text Id="__SingleUse_0BRX" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Are you sure you &#10;want to Reset Defaults?</Translation>
+      </Text>
       <Text Id="__SingleUse_AO4B" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Brightness:</Translation>
       </Text>
@@ -29,7 +56,7 @@
         <Translation Language="GB">Unit: &lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_OBSU" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Scale Calibration</Translation>
+        <Translation Language="GB">Scale/Calibration</Translation>
       </Text>
       <Text Id="__SingleUse_2KIU" Alignment="Center" TypographyId="Default">
         <Translation Language="GB"></Translation>
@@ -2237,7 +2264,7 @@
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdanab.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="z" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters=".-" WildcardCharacterRanges="a-z,A-Z,0-9" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Display" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
     <Typography Id="Mode" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />

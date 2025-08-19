@@ -20,6 +20,8 @@
 #include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
 #include <gui/settings_screen/SettingsView.hpp>
 #include <gui/settings_screen/SettingsPresenter.hpp>
+#include <gui/scalecalibration_screen/ScaleCalibrationView.hpp>
+#include <gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp>
 
 
 /**
@@ -46,7 +48,8 @@ public:
             touchgfx::meta::TypeList< PumpSetupScreenView,
             touchgfx::meta::TypeList< ChemicalsSetupView,
             touchgfx::meta::TypeList< SettingsView,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::TypeList< ScaleCalibrationView,
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -62,7 +65,8 @@ public:
             touchgfx::meta::TypeList< PumpSetupScreenPresenter,
             touchgfx::meta::TypeList< ChemicalsSetupPresenter,
             touchgfx::meta::TypeList< SettingsPresenter,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::TypeList< ScaleCalibrationPresenter,
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**

@@ -259,3 +259,17 @@ void Model::updateBrightness(uint8_t brightness)
     // 3. Save the entire configuration to flash memory.
     Config_Save(&myDeviceConfig);
 }
+
+void Model::updateScaleCalibrationFactor(float newFactor)
+{
+    // Add a safety check to prevent saving zero or negative factors
+    if (newFactor > 0.0f) {
+        myDeviceConfig.scale_calibration_factor = newFactor;
+        Config_Save(&myDeviceConfig);
+    }
+}
+
+float Model::getScaleCalibrationFactor() const
+{
+    return myDeviceConfig.scale_calibration_factor;
+}

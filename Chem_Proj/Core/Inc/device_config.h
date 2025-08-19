@@ -32,6 +32,7 @@ typedef struct __attribute__((packed))
     // --- YOUR ADDITION IS NOW A GLOBAL SETTING (1 byte) ---
     int8_t VolumeUnit; // 0 for milliliters (mL), 1 for ounces (Oz)
     uint8_t brightness_level; // Stores brightness from 5-100
+    float scale_calibration_factor;
 
     // --- Chemical Recipe Definitions (504 bytes) ---
     ChemicalRecipe_t recipes[NUM_CHEMICAL_RECIPES];
@@ -41,7 +42,7 @@ typedef struct __attribute__((packed))
     // NEW PADDING: Ensures the data block for CRC is a multiple of 4.
     // Total data size before this is 8+40+1+504 = 553 bytes.
     // 553 + 3 = 556, which is divisible by 4.
-    uint8_t _internal_crc_padding[2];
+    uint8_t _internal_crc_padding[3];
 
     // The CRC32 checksum of all data *before* this field (556 bytes).
     uint32_t crc32_checksum;

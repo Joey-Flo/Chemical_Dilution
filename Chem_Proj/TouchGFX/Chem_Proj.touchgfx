@@ -2294,8 +2294,8 @@
           {
             "Type": "TextArea",
             "Name": "Title",
-            "X": 64,
-            "Y": 13,
+            "X": 68,
+            "Y": 12,
             "Width": 104,
             "Height": 48,
             "TextId": "__SingleUse_0C9X",
@@ -2310,18 +2310,22 @@
           {
             "Type": "ScrollableContainer",
             "Name": "scrollableContainer1",
-            "Y": 73,
+            "Y": 52,
             "Width": 240,
-            "Height": 255,
+            "Height": 276,
             "HorizontalScrollEnabled": true,
             "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
             "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsColor": {
+              "Red": 255
+            },
             "ScrollbarsAlpha": 255,
             "Components": [
               {
                 "Type": "ButtonWithLabel",
                 "Name": "ResetDefaults",
-                "Y": 67,
+                "Y": 84,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2342,7 +2346,7 @@
               {
                 "Type": "ButtonWithLabel",
                 "Name": "VolumeUnit",
-                "Y": 138,
+                "Y": 155,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2363,7 +2367,7 @@
               {
                 "Type": "ButtonWithLabel",
                 "Name": "ScaleCalibration",
-                "Y": 209,
+                "Y": 226,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2384,7 +2388,7 @@
               {
                 "Type": "ButtonWithLabel",
                 "Name": "PrimePumps",
-                "Y": 280,
+                "Y": 297,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2405,7 +2409,7 @@
               {
                 "Type": "ButtonWithLabel",
                 "Name": "CleanSystem",
-                "Y": 351,
+                "Y": 368,
                 "Width": 240,
                 "Height": 66,
                 "Pressed": "Button1 large clicked.png",
@@ -2427,7 +2431,7 @@
                 "Type": "TextArea",
                 "Name": "VolumeUnitText",
                 "X": 26,
-                "Y": 159,
+                "Y": 176,
                 "Width": 187,
                 "Height": 36,
                 "TextId": "__SingleUse_UEWT",
@@ -2446,7 +2450,7 @@
                 "Type": "Slider",
                 "Name": "BrightnessSlider",
                 "X": 12,
-                "Y": 22,
+                "Y": 39,
                 "Width": 201,
                 "Height": 34,
                 "IsHorizontalSlider": true,
@@ -2466,6 +2470,7 @@
                 "Type": "TextArea",
                 "Name": "BrightnessText",
                 "X": 55,
+                "Y": 17,
                 "Width": 128,
                 "Height": 24,
                 "TextId": "__SingleUse_AO4B",
@@ -2481,7 +2486,7 @@
                 "Type": "Image",
                 "Name": "Sun",
                 "X": 189,
-                "Y": 4,
+                "Y": 21,
                 "Width": 20,
                 "Height": 20,
                 "RelativeFilename": "__generated\\icon_theme_images_image_wb_sunny_20_20_FFFFFF.svg.png"
@@ -2490,10 +2495,112 @@
                 "Type": "Image",
                 "Name": "Moon",
                 "X": 27,
-                "Y": 2,
+                "Y": 19,
                 "Width": 20,
                 "Height": 20,
                 "RelativeFilename": "__generated\\icon_theme_images_social_nights_stay_20_20_FFFFFF.svg.png"
+              },
+              {
+                "Type": "Box",
+                "Name": "box1",
+                "X": 94,
+                "Width": 50,
+                "Height": 17,
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Alpha": 0
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "DefaultsContainer",
+            "X": -8,
+            "Y": 125,
+            "Width": 258,
+            "Height": 121,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "BoxWithBorder",
+                "Name": "boxWithBorder2",
+                "X": 8,
+                "Y": 22,
+                "Width": 240,
+                "Height": 77,
+                "Color": {
+                  "Red": 97,
+                  "Green": 95,
+                  "Blue": 95
+                },
+                "BorderColor": {
+                  "Red": 140,
+                  "Green": 140,
+                  "Blue": 140
+                },
+                "BorderSize": 5
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea",
+                "X": 31,
+                "Y": 28,
+                "Width": 194,
+                "Height": 49,
+                "TextId": "__SingleUse_0BRX",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ExitButton",
+                "X": 16,
+                "Y": 69,
+                "Width": 62,
+                "Height": 23,
+                "Pressed": "LongButtonPressed Resized.png",
+                "Released": "LongButtonUnpressed Resized.png",
+                "TextId": "__SingleUse_YVZO",
+                "ReleasedColor": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ConfirmButton",
+                "X": 177,
+                "Y": 69,
+                "Width": 62,
+                "Height": 23,
+                "Pressed": "LongButtonPressed Resized.png",
+                "Released": "LongButtonUnpressed Resized.png",
+                "TextId": "__SingleUse_UIRN",
+                "ReleasedColor": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
               }
             ]
           }
@@ -2519,7 +2626,7 @@
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "Reset_Defaults"
+              "FunctionName": "DefaultsSummon"
             }
           },
           {
@@ -2542,6 +2649,301 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "brightnessSliderChanged"
+            }
+          },
+          {
+            "InteractionName": "ConfirmDefaults",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ConfirmButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Reset_Defaults"
+            }
+          },
+          {
+            "InteractionName": "ExitDefaults",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ExitButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "DefaultsExit"
+            }
+          },
+          {
+            "InteractionName": "ScaleCalibration",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ScaleCalibration"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "ScaleCalibration"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "ScaleCalibration",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "Background.png"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "Width": 240,
+            "Height": 50,
+            "Color": {
+              "Red": 120,
+              "Green": 120,
+              "Blue": 120
+            },
+            "BorderColor": {
+              "Red": 163,
+              "Green": 160,
+              "Blue": 160
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "Button",
+            "Name": "BackButton",
+            "X": -4,
+            "Width": 30,
+            "Height": 50,
+            "Pressed": "Back Pressed Resized.png",
+            "Released": "Back Unpressed Resized.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Title",
+            "X": 30,
+            "Y": 13,
+            "Width": 203,
+            "Height": 25,
+            "TextId": "__SingleUse_MCRT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder2",
+            "X": 1,
+            "Y": 168,
+            "Width": 239,
+            "Height": 50,
+            "Color": {
+              "Red": 87,
+              "Green": 86,
+              "Blue": 86
+            },
+            "BorderColor": {
+              "Red": 51,
+              "Green": 50,
+              "Blue": 50
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "WeightText",
+            "X": 1,
+            "Y": 81,
+            "Width": 239,
+            "Height": 54,
+            "TextId": "__SingleUse_5XOS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "EditScale",
+            "X": 187,
+            "Y": 182,
+            "Width": 23,
+            "Height": 23,
+            "Pressed": "Edit Pressed.png",
+            "Released": "Edit Unpressed.png"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "TareButton",
+            "Y": 232,
+            "Width": 240,
+            "Height": 66,
+            "Pressed": "Button1 large clicked.png",
+            "Released": "Button1 large.png",
+            "TextId": "__SingleUse_KGQ7",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 30,
+            "Y": 184,
+            "Width": 149,
+            "Height": 18,
+            "TextId": "__SingleUse_7UW0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Container",
+            "Name": "KeyboardExtras",
+            "Width": 250,
+            "Height": 320,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box1_1",
+                "Y": 295,
+                "Width": 240,
+                "Height": 25,
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ExitButton",
+                "X": 9,
+                "Y": 296,
+                "Width": 62,
+                "Height": 23,
+                "Pressed": "LongButtonPressed Resized.png",
+                "Released": "LongButtonUnpressed Resized.png",
+                "TextId": "__SingleUse_N5I3",
+                "ReleasedColor": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "EnterButton",
+                "X": 170,
+                "Y": 296,
+                "Width": 62,
+                "Height": 23,
+                "Pressed": "LongButtonPressed Resized.png",
+                "Released": "LongButtonUnpressed Resized.png",
+                "TextId": "__SingleUse_68T7",
+                "ReleasedColor": {
+                  "Red": 10,
+                  "Green": 10,
+                  "Blue": 10
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Back",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BackButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Settings"
+            }
+          },
+          {
+            "InteractionName": "ScaleTaring",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "TareButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TareScale"
+            }
+          },
+          {
+            "InteractionName": "Calibration",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "EditScale"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ScaleCalibrate"
+            }
+          },
+          {
+            "InteractionName": "Enter",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "EnterButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "EnterPressed"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ExitButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ExitPressed"
             }
           }
         ]

@@ -232,6 +232,18 @@
     <Filter Include="Source Files\generated\gui_generated\settings_screen">
       <UniqueIdentifier>7794DF30-34EA-12A0-0497-1968BAB005AA</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\scalecalibration_screen">
+      <UniqueIdentifier>A1E23DB4-C394-A942-28BA-CA06E00FA4E4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\scalecalibration_screen">
+      <UniqueIdentifier>4A45D0E0-42D8-7F54-F616-D3C9C849AA33</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\scalecalibration_screen">
+      <UniqueIdentifier>BCE91AC5-5F98-6F6A-E808-AC2854D9139C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\scalecalibration_screen">
+      <UniqueIdentifier>20A97B00-1640-85B7-57F7-66A66659E3B4</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -329,6 +341,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\settings_screen\SettingsViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\settings_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\scalecalibration_screen\ScaleCalibrationPresenter.cpp">
+      <Filter>Source Files\gui\scalecalibration_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\scalecalibration_screen\ScaleCalibrationView.cpp">
+      <Filter>Source Files\gui\scalecalibration_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\scalecalibration_screen\ScaleCalibrationViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\scalecalibration_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -846,6 +867,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\settings_screen\SettingsViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\settings_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\scalecalibration_screen\ScaleCalibrationPresenter.hpp">
+      <Filter>Header Files\gui\scalecalibration_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\scalecalibration_screen\ScaleCalibrationView.hpp">
+      <Filter>Header Files\gui\scalecalibration_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\scalecalibration_screen\ScaleCalibrationViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\scalecalibration_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

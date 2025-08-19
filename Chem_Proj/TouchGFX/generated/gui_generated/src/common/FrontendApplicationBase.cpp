@@ -17,6 +17,8 @@
 #include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
 #include <gui/settings_screen/SettingsView.hpp>
 #include <gui/settings_screen/SettingsPresenter.hpp>
+#include <gui/scalecalibration_screen/ScaleCalibrationView.hpp>
+#include <gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -87,4 +89,17 @@ void FrontendApplicationBase::gotoSettingsScreenNoTransition()
 void FrontendApplicationBase::gotoSettingsScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<SettingsView, SettingsPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// ScaleCalibration
+
+void FrontendApplicationBase::gotoScaleCalibrationScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoScaleCalibrationScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoScaleCalibrationScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<ScaleCalibrationView, ScaleCalibrationPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

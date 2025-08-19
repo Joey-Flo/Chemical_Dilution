@@ -21,6 +21,8 @@ void SettingsView::Reset_Defaults()
 {
 	Config_SetDefaults(&myDeviceConfig);
 	Config_Save(&myDeviceConfig);
+	DefaultsContainer.setVisible(false);
+	DefaultsContainer.invalidate();
 }
 
 void SettingsView::setUnitText(int8_t unit)
@@ -58,4 +60,16 @@ void SettingsView::brightnessSliderChanged(int value)
     // The user moved the slider. The View's only job is to
     // report this new value to the Presenter.
 	presenter->saveNewBrightnessValue(value);
+}
+
+void SettingsView::DefaultsSummon()
+{
+	DefaultsContainer.setVisible(true);
+	DefaultsContainer.invalidate();
+}
+
+void SettingsView::DefaultsExit()
+{
+	DefaultsContainer.setVisible(false);
+	DefaultsContainer.invalidate();
 }

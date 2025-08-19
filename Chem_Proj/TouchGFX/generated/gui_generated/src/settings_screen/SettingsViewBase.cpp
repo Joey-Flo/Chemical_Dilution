@@ -29,16 +29,17 @@ SettingsViewBase::SettingsViewBase() :
     BackButton.setAction(buttonCallback);
     add(BackButton);
 
-    Title.setXY(64, 13);
+    Title.setXY(68, 12);
     Title.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Title.setLinespacing(0);
     Title.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0C9X));
     add(Title);
 
-    scrollableContainer1.setPosition(0, 73, 240, 255);
-    scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    scrollableContainer1.setPosition(0, 52, 240, 276);
+    scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     scrollableContainer1.setScrollbarsAlpha(255);
-    ResetDefaults.setXY(0, 67);
+    scrollableContainer1.setScrollbarsPermanentlyVisible();
+    ResetDefaults.setXY(0, 84);
     ResetDefaults.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     ResetDefaults.setLabelText(touchgfx::TypedText(T___SINGLEUSE_1VZI));
     ResetDefaults.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -46,7 +47,7 @@ SettingsViewBase::SettingsViewBase() :
     ResetDefaults.setAction(buttonCallback);
     scrollableContainer1.add(ResetDefaults);
 
-    VolumeUnit.setXY(0, 138);
+    VolumeUnit.setXY(0, 155);
     VolumeUnit.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     VolumeUnit.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2KIU));
     VolumeUnit.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -54,28 +55,29 @@ SettingsViewBase::SettingsViewBase() :
     VolumeUnit.setAction(buttonCallback);
     scrollableContainer1.add(VolumeUnit);
 
-    ScaleCalibration.setXY(0, 209);
+    ScaleCalibration.setXY(0, 226);
     ScaleCalibration.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     ScaleCalibration.setLabelText(touchgfx::TypedText(T___SINGLEUSE_OBSU));
     ScaleCalibration.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     ScaleCalibration.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ScaleCalibration.setAction(buttonCallback);
     scrollableContainer1.add(ScaleCalibration);
 
-    PrimePumps.setXY(0, 280);
+    PrimePumps.setXY(0, 297);
     PrimePumps.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     PrimePumps.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2389));
     PrimePumps.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     PrimePumps.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     scrollableContainer1.add(PrimePumps);
 
-    CleanSystem.setXY(0, 351);
+    CleanSystem.setXY(0, 368);
     CleanSystem.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
     CleanSystem.setLabelText(touchgfx::TypedText(T___SINGLEUSE_NOU7));
     CleanSystem.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     CleanSystem.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     scrollableContainer1.add(CleanSystem);
 
-    VolumeUnitText.setPosition(26, 159, 187, 36);
+    VolumeUnitText.setPosition(26, 176, 187, 36);
     VolumeUnitText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     VolumeUnitText.setLinespacing(0);
     VolumeUnitTextBuffer[0] = 0;
@@ -83,7 +85,7 @@ SettingsViewBase::SettingsViewBase() :
     VolumeUnitText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UEWT));
     scrollableContainer1.add(VolumeUnitText);
 
-    BrightnessSlider.setXY(12, 22);
+    BrightnessSlider.setXY(12, 39);
     BrightnessSlider.setBitmaps(touchgfx::Bitmap(BITMAP_SLIDER_TOUCHED_ID), touchgfx::Bitmap(BITMAP_SLIDER_UNTOUCHED_ID), touchgfx::Bitmap(BITMAP_SLIDERBUTTON_ID));
     BrightnessSlider.setupHorizontalSlider(17, 11, 7, 12, 174);
     BrightnessSlider.setValueRange(5, 100);
@@ -91,21 +93,58 @@ SettingsViewBase::SettingsViewBase() :
     BrightnessSlider.setNewValueCallback(sliderValueChangedCallback);
     scrollableContainer1.add(BrightnessSlider);
 
-    BrightnessText.setXY(55, 0);
+    BrightnessText.setXY(55, 17);
     BrightnessText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     BrightnessText.setLinespacing(0);
     BrightnessText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AO4B));
     scrollableContainer1.add(BrightnessText);
 
-    Sun.setXY(189, 4);
+    Sun.setXY(189, 21);
     Sun.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_IMAGE_WB_SUNNY_20_20_FFFFFF_SVG_ID));
     scrollableContainer1.add(Sun);
 
-    Moon.setXY(27, 2);
+    Moon.setXY(27, 19);
     Moon.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_SOCIAL_NIGHTS_STAY_20_20_FFFFFF_SVG_ID));
     scrollableContainer1.add(Moon);
 
+    box1.setPosition(94, 0, 50, 17);
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setAlpha(0);
+    scrollableContainer1.add(box1);
+
     add(scrollableContainer1);
+
+    DefaultsContainer.setPosition(-8, 125, 258, 121);
+    DefaultsContainer.setVisible(false);
+    boxWithBorder2.setPosition(8, 22, 240, 77);
+    boxWithBorder2.setColor(touchgfx::Color::getColorFromRGB(97, 95, 95));
+    boxWithBorder2.setBorderColor(touchgfx::Color::getColorFromRGB(140, 140, 140));
+    boxWithBorder2.setBorderSize(5);
+    DefaultsContainer.add(boxWithBorder2);
+
+    textArea.setPosition(31, 28, 194, 49);
+    textArea.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea.setLinespacing(0);
+    textArea.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0BRX));
+    DefaultsContainer.add(textArea);
+
+    ExitButton.setXY(16, 69);
+    ExitButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    ExitButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_YVZO));
+    ExitButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    ExitButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ExitButton.setAction(buttonCallback);
+    DefaultsContainer.add(ExitButton);
+
+    ConfirmButton.setXY(177, 69);
+    ConfirmButton.setBitmaps(touchgfx::Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
+    ConfirmButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_UIRN));
+    ConfirmButton.setLabelColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    ConfirmButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ConfirmButton.setAction(buttonCallback);
+    DefaultsContainer.add(ConfirmButton);
+
+    add(DefaultsContainer);
 }
 
 SettingsViewBase::~SettingsViewBase()
@@ -131,8 +170,8 @@ void SettingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
     {
         //ResetDefaults
         //When ResetDefaults clicked call virtual function
-        //Call Reset_Defaults
-        Reset_Defaults();
+        //Call DefaultsSummon
+        DefaultsSummon();
     }
     if (&src == &VolumeUnit)
     {
@@ -140,6 +179,27 @@ void SettingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //When VolumeUnit clicked call virtual function
         //Call unitButtonClicked
         unitButtonClicked();
+    }
+    if (&src == &ConfirmButton)
+    {
+        //ConfirmDefaults
+        //When ConfirmButton clicked call virtual function
+        //Call Reset_Defaults
+        Reset_Defaults();
+    }
+    if (&src == &ExitButton)
+    {
+        //ExitDefaults
+        //When ExitButton clicked call virtual function
+        //Call DefaultsExit
+        DefaultsExit();
+    }
+    if (&src == &ScaleCalibration)
+    {
+        //ScaleCalibration
+        //When ScaleCalibration clicked change screen to ScaleCalibration
+        //Go to ScaleCalibration with no screen transition
+        application().gotoScaleCalibrationScreenNoTransition();
     }
 }
 

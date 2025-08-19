@@ -1,4 +1,4 @@
 ../Core/Src/device_config.c:17:6:Config_SetDefaults	5
-../Core/Src/device_config.c:71:17:CalculateCRC32	1
-../Core/Src/device_config.c:84:19:Config_Save	5
-../Core/Src/device_config.c:134:19:Config_Load	6
+../Core/Src/device_config.c:73:17:CalculateCRC32	1
+../Core/Src/device_config.c:86:19:Config_Save	5
+../Core/Src/device_config.c:136:19:Config_Load	6

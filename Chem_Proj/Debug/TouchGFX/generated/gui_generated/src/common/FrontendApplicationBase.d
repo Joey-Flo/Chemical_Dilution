@@ -121,7 +121,10 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../TouchGFX/gui/include/gui/settings_screen/SettingsView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/settings_screen/SettingsViewBase.hpp \
  ../TouchGFX/gui/include/gui/settings_screen/SettingsPresenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
+ ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/scalecalibration_screen/ScaleCalibrationViewBase.hpp \
+ ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:
@@ -245,3 +248,6 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../TouchGFX/generated/gui_generated/include/gui_generated/settings_screen/SettingsViewBase.hpp:
 ../TouchGFX/gui/include/gui/settings_screen/SettingsPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
+../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/scalecalibration_screen/ScaleCalibrationViewBase.hpp:
+../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp:

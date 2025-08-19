@@ -48,6 +48,8 @@ public:
     void updateSinglePumpVolume(int recipeIndex, int setupIndex, int fieldIndex, float newVolume);
     void toggleVolumeUnit();
     void updateBrightness(uint8_t brightness);
+    void updateScaleCalibrationFactor(float newFactor);
+    float getScaleCalibrationFactor() const;
 
 
 protected:

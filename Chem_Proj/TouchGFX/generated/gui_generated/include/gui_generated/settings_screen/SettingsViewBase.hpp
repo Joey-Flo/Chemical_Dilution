@@ -16,6 +16,7 @@
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/Slider.hpp>
+#include <touchgfx/containers/Container.hpp>
 
 class SettingsViewBase : public touchgfx::View<SettingsPresenter>
 {
@@ -27,7 +28,7 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void Reset_Defaults()
+    virtual void DefaultsSummon()
     {
         // Override and implement this function in Settings
     }
@@ -36,6 +37,14 @@ public:
         // Override and implement this function in Settings
     }
     virtual void brightnessSliderChanged(int value)
+    {
+        // Override and implement this function in Settings
+    }
+    virtual void Reset_Defaults()
+    {
+        // Override and implement this function in Settings
+    }
+    virtual void DefaultsExit()
     {
         // Override and implement this function in Settings
     }
@@ -64,6 +73,12 @@ protected:
     touchgfx::TextArea BrightnessText;
     touchgfx::Image Sun;
     touchgfx::Image Moon;
+    touchgfx::Box box1;
+    touchgfx::Container DefaultsContainer;
+    touchgfx::BoxWithBorder boxWithBorder2;
+    touchgfx::TextArea textArea;
+    touchgfx::ButtonWithLabel ExitButton;
+    touchgfx::ButtonWithLabel ConfirmButton;
 
     /*
      * Wildcard Buffers
