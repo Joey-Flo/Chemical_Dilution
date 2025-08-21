@@ -1,5 +1,6 @@
 #include <gui/scalecalibration_screen/ScaleCalibrationView.hpp>
 #include <cstring>
+#include <cmath>
 
 ScaleCalibrationView::ScaleCalibrationView()
 {
@@ -21,12 +22,52 @@ void ScaleCalibrationView::tearDownScreen()
 void ScaleCalibrationView::handleTickEvent()
 {
     // This function is called 60 times per second.
-    // To avoid updating the screen too fast, we'll use a simple counter.
     static int tickCounter = 0;
-    if (++tickCounter % 6 == 0) // Update 10 times per second (60 / 6 = 10)
+
+    // --- NEW: A static counter for the auto-tare logic ---
+    // 'static' means this variable will keep its value between function calls.
+    static int nearZeroCount = 0;
+
+    // Update the display 10 times per second (60 / 6 = 10)
+    if (++tickCounter % 6 == 0)
     {
+        // 1. Get the live weight from the presenter
         float weight = presenter->getLiveWeight();
-        Unicode::snprintfFloat(WeightTextBuffer, WEIGHTTEXT_SIZE, "%.1f", weight);
+
+        // 2. Implement the Auto-Tare logic
+        if (weight >= -0.3f && weight <= 0.3f)
+        {
+            // The scale reading is very close to zero. Increment the counter.
+            nearZeroCount++;
+        }
+        else
+        {
+            // The scale is reading a real weight, so reset the counter.
+            nearZeroCount = 0;
+        }
+
+        // If the counter reaches our threshold (35 checks * 0.1s/check = 3.5 seconds),
+        // then tare the scale.
+        if (nearZeroCount >= 35)
+        {
+            presenter->tareScale(); // Tell the presenter to tare
+            nearZeroCount = 0;      // Reset the counter
+        }
+
+        // 3. Implement the Zero-Snapping logic for display
+        if (weight < 0.3f && weight > -0.3f)
+        {
+            weight = 0.0f;
+        }
+
+        // 4. Implement Rounding to the nearest half gram
+        //    - Multiply by 2 (e.g., 5.6g -> 11.2)
+        //    - Round to the nearest whole number (11.2 -> 11.0)
+        //    - Divide by 2 (11.0 -> 5.5)
+        float rounded_weight = roundf(weight * 2.0f) / 2.0f;
+
+        // 5. Update the text buffer with the final, clean value
+        Unicode::snprintfFloat(WeightTextBuffer, WEIGHTTEXT_SIZE, "%.1f", rounded_weight);
         WeightText.invalidate();
     }
 }

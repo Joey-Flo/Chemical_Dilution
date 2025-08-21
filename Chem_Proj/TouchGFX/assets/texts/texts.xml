@@ -16,6 +16,81 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_8KIK" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z0EH" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_ALGN" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_QQVH" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_92GE" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_9ORE" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZPMI" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_1GMR" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_FMNN" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_7KTE" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_MZN7" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_8QMH" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_NMZI" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_NBSO" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_236P" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_RDGK" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_V777" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Prime Pumps</Translation>
+      </Text>
+      <Text Id="__SingleUse_IEF0" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pump 8</Translation>
+      </Text>
+      <Text Id="__SingleUse_SYBN" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pump 7</Translation>
+      </Text>
+      <Text Id="__SingleUse_R94S" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pump 6</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q8XL" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pump 5</Translation>
+      </Text>
+      <Text Id="__SingleUse_W8LR" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pump 4</Translation>
+      </Text>
+      <Text Id="__SingleUse_U0R8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pump 3</Translation>
+      </Text>
+      <Text Id="__SingleUse_66E5" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pump 2</Translation>
+      </Text>
+      <Text Id="__SingleUse_6SHP" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Pump 1</Translation>
+      </Text>
       <Text Id="__SingleUse_68T7" Alignment="Center" TypographyId="Display">
         <Translation Language="GB">Enter</Translation>
       </Text>

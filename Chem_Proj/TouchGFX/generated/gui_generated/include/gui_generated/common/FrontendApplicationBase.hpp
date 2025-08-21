@@ -35,6 +35,9 @@ public:
     // ScaleCalibration
     void gotoScaleCalibrationScreenNoTransition();
 
+    // PrimePumps
+    void gotoPrimePumpsScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -54,6 +57,9 @@ protected:
 
     // ScaleCalibration
     void gotoScaleCalibrationScreenNoTransitionImpl();
+
+    // PrimePumps
+    void gotoPrimePumpsScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

@@ -46,6 +46,12 @@
     <ClCompile Include="..\..\gui\src\scalecalibration_screen\ScaleCalibrationPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\scalecalibration_screen\ScaleCalibrationView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\scalecalibration_screen\ScaleCalibrationViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\primepumps_screen\PrimePumpsPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\primepumps_screen\PrimePumpsView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\primepumps_screen\PrimePumpsViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\cleansystem_screen\CleanSystemPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\cleansystem_screen\CleanSystemView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\cleansystem_screen\CleanSystemViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -224,6 +230,12 @@
     <ClInclude Include="..\..\gui\include\gui\scalecalibration_screen\ScaleCalibrationPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\scalecalibration_screen\ScaleCalibrationView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\scalecalibration_screen\ScaleCalibrationViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\primepumps_screen\PrimePumpsPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\primepumps_screen\PrimePumpsView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\primepumps_screen\PrimePumpsViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\cleansystem_screen\CleanSystemPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\cleansystem_screen\CleanSystemView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\cleansystem_screen\CleanSystemViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

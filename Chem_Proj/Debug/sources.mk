@@ -59,9 +59,11 @@ TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/driver/touch \
 TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/hal/simulator/sdl2 \
 TouchGFX/generated/fonts/src \
 TouchGFX/generated/gui_generated/src/chemicalssetup_screen \
+TouchGFX/generated/gui_generated/src/cleansystem_screen \
 TouchGFX/generated/gui_generated/src/common \
 TouchGFX/generated/gui_generated/src/containers \
 TouchGFX/generated/gui_generated/src/homescreen_screen \
+TouchGFX/generated/gui_generated/src/primepumps_screen \
 TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen \
 TouchGFX/generated/gui_generated/src/scalecalibration_screen \
 TouchGFX/generated/gui_generated/src/settings_screen \
@@ -69,10 +71,12 @@ TouchGFX/generated/images/src \
 TouchGFX/generated/images/src/__generated \
 TouchGFX/generated/texts/src \
 TouchGFX/gui/src/chemicalssetup_screen \
+TouchGFX/gui/src/cleansystem_screen \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/containers \
 TouchGFX/gui/src/homescreen_screen \
 TouchGFX/gui/src/model \
+TouchGFX/gui/src/primepumps_screen \
 TouchGFX/gui/src/pumpsetupscreen_screen \
 TouchGFX/gui/src/scalecalibration_screen \
 TouchGFX/gui/src/settings_screen \

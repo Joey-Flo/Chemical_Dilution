@@ -1,0 +1,2 @@
+../Core/Src/PumpManager.c:16:6:Prime_Pump_Start	16	static
+../Core/Src/PumpManager.c:37:6:Prime_Pump_Stop	16	static

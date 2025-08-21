@@ -68,6 +68,7 @@ SettingsViewBase::SettingsViewBase() :
     PrimePumps.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2389));
     PrimePumps.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     PrimePumps.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    PrimePumps.setAction(buttonCallback);
     scrollableContainer1.add(PrimePumps);
 
     CleanSystem.setXY(0, 368);
@@ -200,6 +201,13 @@ void SettingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //When ScaleCalibration clicked change screen to ScaleCalibration
         //Go to ScaleCalibration with no screen transition
         application().gotoScaleCalibrationScreenNoTransition();
+    }
+    if (&src == &PrimePumps)
+    {
+        //PrimePumps
+        //When PrimePumps clicked change screen to PrimePumps
+        //Go to PrimePumps with no screen transition
+        application().gotoPrimePumpsScreenNoTransition();
     }
 }
 

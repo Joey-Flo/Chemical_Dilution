@@ -1,0 +1,17 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:192:10:bool touchgfx::Rect::intersect(const touchgfx::Rect&) const	5
+../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:73:13:int16_t touchgfx::ClickEvent::getX() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:83:13:int16_t touchgfx::ClickEvent::getY() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:123:20:touchgfx::ClickEvent::ClickEventType touchgfx::ClickEvent::getType() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:515:10:void touchgfx::Drawable::setVisible(bool)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:525:10:void touchgfx::Drawable::setTouchable(bool)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsView.hpp:14:13:PrimePumpsView::~PrimePumpsView()	1
+../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsView.hpp:14:13:virtual PrimePumpsView::~PrimePumpsView()	1
+../TouchGFX/gui/src/primepumps_screen/PrimePumpsView.cpp:7:1:PrimePumpsView::PrimePumpsView()	1
+../TouchGFX/gui/src/primepumps_screen/PrimePumpsView.cpp:30:6:virtual void PrimePumpsView::setupScreen()	2
+../TouchGFX/gui/src/primepumps_screen/PrimePumpsView.cpp:54:6:virtual void PrimePumpsView::tearDownScreen()	1
+../TouchGFX/gui/src/primepumps_screen/PrimePumpsView.cpp:65:6:virtual void PrimePumpsView::handleClickEvent(const touchgfx::ClickEvent&)	7

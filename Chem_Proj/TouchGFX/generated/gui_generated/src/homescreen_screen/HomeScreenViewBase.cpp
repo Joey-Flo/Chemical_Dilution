@@ -14,8 +14,12 @@ HomeScreenViewBase::HomeScreenViewBase() :
     add(__background);
 
     Background.setXY(0, 0);
-    Background.setBitmap(touchgfx::Bitmap(BITMAP_APEX_AUTO_BACKGROUND_ID));
+    Background.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
     add(Background);
+
+    Logo.setXY(32, 70);
+    Logo.setBitmap(touchgfx::Bitmap(BITMAP_APEX_2_TRANSPARENT_ID));
+    add(Logo);
 
     scrollableContainer1.setPosition(0, 8, 240, 312);
     scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(232, 9, 9));

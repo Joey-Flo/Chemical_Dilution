@@ -22,6 +22,10 @@
 #include <gui/settings_screen/SettingsPresenter.hpp>
 #include <gui/scalecalibration_screen/ScaleCalibrationView.hpp>
 #include <gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp>
+#include <gui/primepumps_screen/PrimePumpsView.hpp>
+#include <gui/primepumps_screen/PrimePumpsPresenter.hpp>
+#include <gui/cleansystem_screen/CleanSystemView.hpp>
+#include <gui/cleansystem_screen/CleanSystemPresenter.hpp>
 
 
 /**
@@ -49,7 +53,9 @@ public:
             touchgfx::meta::TypeList< ChemicalsSetupView,
             touchgfx::meta::TypeList< SettingsView,
             touchgfx::meta::TypeList< ScaleCalibrationView,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< PrimePumpsView,
+            touchgfx::meta::TypeList< CleanSystemView,
+            touchgfx::meta::Nil > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -66,7 +72,9 @@ public:
             touchgfx::meta::TypeList< ChemicalsSetupPresenter,
             touchgfx::meta::TypeList< SettingsPresenter,
             touchgfx::meta::TypeList< ScaleCalibrationPresenter,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< PrimePumpsPresenter,
+            touchgfx::meta::TypeList< CleanSystemPresenter,
+            touchgfx::meta::Nil > > > > > >
             > GeneratedPresenterTypes;
 
     /**

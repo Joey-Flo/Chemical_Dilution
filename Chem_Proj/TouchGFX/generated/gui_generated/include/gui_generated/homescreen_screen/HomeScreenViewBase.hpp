@@ -30,6 +30,7 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image Background;
+    touchgfx::Image Logo;
     touchgfx::ScrollableContainer scrollableContainer1;
     touchgfx::ButtonWithLabel SettingsButton;
     touchgfx::ButtonWithLabel ChemicalButton;

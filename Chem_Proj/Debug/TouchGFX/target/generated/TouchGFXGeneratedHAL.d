@@ -127,6 +127,12 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/scalecalibration_screen/ScaleCalibrationViewBase.hpp \
  ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp \
+ ../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/primepumps_screen/PrimePumpsViewBase.hpp \
+ ../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsPresenter.hpp \
+ ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/cleansystem_screen/CleanSystemViewBase.hpp \
+ ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp \
@@ -289,6 +295,12 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/scalecalibration_screen/ScaleCalibrationViewBase.hpp:
 ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp:
+../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/primepumps_screen/PrimePumpsViewBase.hpp:
+../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsPresenter.hpp:
+../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/cleansystem_screen/CleanSystemViewBase.hpp:
+../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp:

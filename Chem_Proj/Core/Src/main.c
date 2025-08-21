@@ -51,8 +51,7 @@ int main(void)
   MX_TIM5_Init();
   hx711_init(&my_scale, HX711_SCK_GPIO_Port, HX711_SCK_Pin, HX711_DOUT_GPIO_Port, HX711_DOUT_Pin);
   hx711_power_up(&my_scale);
-  HAL_Delay(500); // Wait 500 milliseconds
-
+  HAL_Delay(100); // Wait 100 milliseconds
   hx711_tare(&my_scale, 10);
 
 //

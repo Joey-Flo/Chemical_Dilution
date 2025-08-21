@@ -244,6 +244,30 @@
     <Filter Include="Source Files\generated\gui_generated\scalecalibration_screen">
       <UniqueIdentifier>20A97B00-1640-85B7-57F7-66A66659E3B4</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\primepumps_screen">
+      <UniqueIdentifier>59E744E8-54A0-4089-A760-58D91C93A5D7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\primepumps_screen">
+      <UniqueIdentifier>D66A49C8-7A6D-A188-C3A0-B0B5D469EA48</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\primepumps_screen">
+      <UniqueIdentifier>3FDB6666-E9BF-D5FC-5474-3846D4535E29</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\primepumps_screen">
+      <UniqueIdentifier>A9A87FFD-69A1-FC6E-3DEF-5F23DECC0A96</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\cleansystem_screen">
+      <UniqueIdentifier>CC49D3CD-689D-27F4-CE4E-4B109F58AF6B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\cleansystem_screen">
+      <UniqueIdentifier>8B9E99E2-0B5B-33BF-5BE5-EAA4460263B9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\cleansystem_screen">
+      <UniqueIdentifier>9EEFA115-73FC-C0B6-026C-8D24EBE87D59</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\cleansystem_screen">
+      <UniqueIdentifier>3B73D36D-EEBD-E8C1-C367-97838A86DA09</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -350,6 +374,24 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\scalecalibration_screen\ScaleCalibrationViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\scalecalibration_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\primepumps_screen\PrimePumpsPresenter.cpp">
+      <Filter>Source Files\gui\primepumps_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\primepumps_screen\PrimePumpsView.cpp">
+      <Filter>Source Files\gui\primepumps_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\primepumps_screen\PrimePumpsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\primepumps_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\cleansystem_screen\CleanSystemPresenter.cpp">
+      <Filter>Source Files\gui\cleansystem_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\cleansystem_screen\CleanSystemView.cpp">
+      <Filter>Source Files\gui\cleansystem_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\cleansystem_screen\CleanSystemViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\cleansystem_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -876,6 +918,24 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\scalecalibration_screen\ScaleCalibrationViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\scalecalibration_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\primepumps_screen\PrimePumpsPresenter.hpp">
+      <Filter>Header Files\gui\primepumps_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\primepumps_screen\PrimePumpsView.hpp">
+      <Filter>Header Files\gui\primepumps_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\primepumps_screen\PrimePumpsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\primepumps_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\cleansystem_screen\CleanSystemPresenter.hpp">
+      <Filter>Header Files\gui\cleansystem_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\cleansystem_screen\CleanSystemView.hpp">
+      <Filter>Header Files\gui\cleansystem_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\cleansystem_screen\CleanSystemViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\cleansystem_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

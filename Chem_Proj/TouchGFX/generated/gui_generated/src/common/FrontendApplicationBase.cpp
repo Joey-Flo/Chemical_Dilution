@@ -19,6 +19,10 @@
 #include <gui/settings_screen/SettingsPresenter.hpp>
 #include <gui/scalecalibration_screen/ScaleCalibrationView.hpp>
 #include <gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp>
+#include <gui/primepumps_screen/PrimePumpsView.hpp>
+#include <gui/primepumps_screen/PrimePumpsPresenter.hpp>
+#include <gui/cleansystem_screen/CleanSystemView.hpp>
+#include <gui/cleansystem_screen/CleanSystemPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -102,4 +106,17 @@ void FrontendApplicationBase::gotoScaleCalibrationScreenNoTransition()
 void FrontendApplicationBase::gotoScaleCalibrationScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<ScaleCalibrationView, ScaleCalibrationPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// PrimePumps
+
+void FrontendApplicationBase::gotoPrimePumpsScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoPrimePumpsScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoPrimePumpsScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<PrimePumpsView, PrimePumpsPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

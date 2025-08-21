@@ -112,11 +112,11 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:touchgfx::Callback<SettingsViewBase, const touchgfx::Slider&, int>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:virtual touchgfx::Callback<SettingsViewBase, const touchgfx::Slider&, int>::~Callback()	1
 ../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:9:1:SettingsViewBase::SettingsViewBase()	1
-../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:150:1:SettingsViewBase::~SettingsViewBase()	1
-../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:150:1:virtual SettingsViewBase::~SettingsViewBase()	1
-../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:155:6:virtual void SettingsViewBase::setupScreen()	1
-../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:160:6:void SettingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	7
-../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:206:6:void SettingsViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider&, int)	2
+../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:151:1:SettingsViewBase::~SettingsViewBase()	1
+../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:151:1:virtual SettingsViewBase::~SettingsViewBase()	1
+../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:156:6:virtual void SettingsViewBase::setupScreen()	1
+../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:161:6:void SettingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8
+../TouchGFX/generated/gui_generated/src/settings_screen/SettingsViewBase.cpp:214:6:void SettingsViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider&, int)	2
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = SettingsPresenter]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButton&>::GenericCallback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = SettingsViewBase; T1 = const touchgfx::AbstractButton&]	1

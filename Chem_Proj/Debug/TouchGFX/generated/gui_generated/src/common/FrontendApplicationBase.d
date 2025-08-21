@@ -124,7 +124,13 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
  ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/scalecalibration_screen/ScaleCalibrationViewBase.hpp \
- ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp
+ ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp \
+ ../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/primepumps_screen/PrimePumpsViewBase.hpp \
+ ../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsPresenter.hpp \
+ ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/cleansystem_screen/CleanSystemViewBase.hpp \
+ ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:
@@ -251,3 +257,9 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/scalecalibration_screen/ScaleCalibrationViewBase.hpp:
 ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp:
+../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/primepumps_screen/PrimePumpsViewBase.hpp:
+../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsPresenter.hpp:
+../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/cleansystem_screen/CleanSystemViewBase.hpp:
+../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp:
