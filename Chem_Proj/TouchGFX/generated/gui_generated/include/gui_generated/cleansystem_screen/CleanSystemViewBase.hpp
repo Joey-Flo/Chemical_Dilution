@@ -8,6 +8,12 @@
 #include <mvp/View.hpp>
 #include <gui/cleansystem_screen/CleanSystemPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/containers/Container.hpp>
 
 class CleanSystemViewBase : public touchgfx::View<CleanSystemPresenter>
 {
@@ -25,8 +31,30 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::Image image1;
+    touchgfx::BoxWithBorder boxWithBorder2;
+    touchgfx::BoxWithBorder boxWithBorder1;
+    touchgfx::TextArea Title;
+    touchgfx::Button BackButton;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  FlushButton;
+    touchgfx::TextArea ContainerPromptText;
+    touchgfx::TextArea ReadyText;
+    touchgfx::TextArea ScreenDescriptionText;
+    touchgfx::Container DisabledOverlay;
+    touchgfx::BoxWithBorder boxWithBorder3;
+    touchgfx::TextArea textArea1;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<CleanSystemViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

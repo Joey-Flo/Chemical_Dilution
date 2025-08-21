@@ -120,3 +120,16 @@ void FrontendApplicationBase::gotoPrimePumpsScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<PrimePumpsView, PrimePumpsPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
+
+// CleanSystem
+
+void FrontendApplicationBase::gotoCleanSystemScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoCleanSystemScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoCleanSystemScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<CleanSystemView, CleanSystemPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}

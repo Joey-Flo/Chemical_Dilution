@@ -11,6 +11,10 @@ public:
     virtual ~CleanSystemView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void handleTickEvent();
+    virtual void handleClickEvent(const touchgfx::ClickEvent& event);
+    void setSystemReady(bool isReady);
+    bool systemIsReady;
 protected:
 };
 

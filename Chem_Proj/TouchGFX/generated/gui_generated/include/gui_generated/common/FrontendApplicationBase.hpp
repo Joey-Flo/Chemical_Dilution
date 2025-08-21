@@ -38,6 +38,9 @@ public:
     // PrimePumps
     void gotoPrimePumpsScreenNoTransition();
 
+    // CleanSystem
+    void gotoCleanSystemScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -60,6 +63,9 @@ protected:
 
     // PrimePumps
     void gotoPrimePumpsScreenNoTransitionImpl();
+
+    // CleanSystem
+    void gotoCleanSystemScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

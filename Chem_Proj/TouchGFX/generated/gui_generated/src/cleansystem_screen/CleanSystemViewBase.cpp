@@ -3,12 +3,85 @@
 /*********************************************************************************/
 #include <gui_generated/cleansystem_screen/CleanSystemViewBase.hpp>
 #include <touchgfx/Color.hpp>
+#include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
-CleanSystemViewBase::CleanSystemViewBase()
+CleanSystemViewBase::CleanSystemViewBase() :
+    buttonCallback(this, &CleanSystemViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
+
+    image1.setXY(0, 0);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
+    add(image1);
+
+    boxWithBorder2.setPosition(0, 49, 240, 47);
+    boxWithBorder2.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
+    boxWithBorder2.setBorderColor(touchgfx::Color::getColorFromRGB(163, 160, 160));
+    boxWithBorder2.setBorderSize(5);
+    add(boxWithBorder2);
+
+    boxWithBorder1.setPosition(0, 0, 240, 50);
+    boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
+    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(163, 160, 160));
+    boxWithBorder1.setBorderSize(5);
+    add(boxWithBorder1);
+
+    Title.setXY(53, 13);
+    Title.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Title.setLinespacing(0);
+    Title.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FCVF));
+    add(Title);
+
+    BackButton.setXY(-4, 0);
+    BackButton.setBitmaps(touchgfx::Bitmap(BITMAP_BACK_UNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_BACK_PRESSED_RESIZED_ID));
+    BackButton.setAction(buttonCallback);
+    add(BackButton);
+
+    FlushButton.setBoxWithBorderPosition(0, 0, 240, 62);
+    FlushButton.setBorderSize(8);
+    FlushButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(23, 27, 153), touchgfx::Color::getColorFromRGB(87, 84, 84), touchgfx::Color::getColorFromRGB(12, 12, 89), touchgfx::Color::getColorFromRGB(33, 31, 31));
+    FlushButton.setText(TypedText(T___SINGLEUSE_2C81));
+    FlushButton.setTextPosition(0, 5, 240, 62);
+    FlushButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    FlushButton.setPosition(0, 245, 240, 62);
+    add(FlushButton);
+
+    ContainerPromptText.setXY(32, 158);
+    ContainerPromptText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ContainerPromptText.setLinespacing(0);
+    ContainerPromptText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QQGQ));
+    add(ContainerPromptText);
+
+    ReadyText.setXY(65, 167);
+    ReadyText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ReadyText.setLinespacing(0);
+    ReadyText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_66JM));
+    ReadyText.setVisible(false);
+    add(ReadyText);
+
+    ScreenDescriptionText.setXY(26, 61);
+    ScreenDescriptionText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ScreenDescriptionText.setLinespacing(0);
+    ScreenDescriptionText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2AGK));
+    add(ScreenDescriptionText);
+
+    DisabledOverlay.setPosition(0, 0, 240, 320);
+    boxWithBorder3.setPosition(0, 245, 239, 62);
+    boxWithBorder3.setColor(touchgfx::Color::getColorFromRGB(87, 84, 84));
+    boxWithBorder3.setBorderColor(touchgfx::Color::getColorFromRGB(33, 31, 31));
+    boxWithBorder3.setBorderSize(8);
+    DisabledOverlay.add(boxWithBorder3);
+
+    textArea1.setXY(55, 252);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1NF1));
+    DisabledOverlay.add(textArea1);
+
+    add(DisabledOverlay);
 }
 
 CleanSystemViewBase::~CleanSystemViewBase()
@@ -19,4 +92,15 @@ CleanSystemViewBase::~CleanSystemViewBase()
 void CleanSystemViewBase::setupScreen()
 {
 
+}
+
+void CleanSystemViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &BackButton)
+    {
+        //Back
+        //When BackButton clicked change screen to Settings
+        //Go to Settings with no screen transition
+        application().gotoSettingsScreenNoTransition();
+    }
 }

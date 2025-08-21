@@ -8,6 +8,9 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	1
 ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp:28:13:CleanSystemPresenter::~CleanSystemPresenter()	1
 ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp:28:13:virtual CleanSystemPresenter::~CleanSystemPresenter()	1
-../TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.cpp:4:1:CleanSystemPresenter::CleanSystemPresenter(CleanSystemView&)	1
-../TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.cpp:10:6:virtual void CleanSystemPresenter::activate()	1
-../TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.cpp:15:6:virtual void CleanSystemPresenter::deactivate()	1
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.cpp:11:1:CleanSystemPresenter::CleanSystemPresenter(CleanSystemView&)	1
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.cpp:17:6:virtual void CleanSystemPresenter::activate()	1
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.cpp:22:6:virtual void CleanSystemPresenter::deactivate()	1
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.cpp:27:6:void CleanSystemPresenter::checkScaleStatus()	3
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.cpp:47:6:void CleanSystemPresenter::startFlush()	1
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.cpp:52:6:void CleanSystemPresenter::stopFlush()	1

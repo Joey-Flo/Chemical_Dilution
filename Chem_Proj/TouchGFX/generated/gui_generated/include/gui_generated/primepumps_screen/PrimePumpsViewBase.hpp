@@ -9,10 +9,10 @@
 #include <gui/primepumps_screen/PrimePumpsPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 
 class PrimePumpsViewBase : public touchgfx::View<PrimePumpsPresenter>
@@ -32,6 +32,9 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image image1;
+    touchgfx::BoxWithBorder boxWithBorder1;
+    touchgfx::TextArea textArea1;
+    touchgfx::Button BackButton;
     touchgfx::Container PumpNums;
     touchgfx::TextArea textArea2;
     touchgfx::TextArea textArea2_1;
@@ -41,9 +44,6 @@ protected:
     touchgfx::TextArea textArea2_5;
     touchgfx::TextArea textArea2_6;
     touchgfx::TextArea textArea2_7;
-    touchgfx::BoxWithBorder boxWithBorder1;
-    touchgfx::TextArea textArea1;
-    touchgfx::Button BackButton;
     touchgfx::Container EnableButtons;
     touchgfx::TextButtonStyle< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  >  RunButton_1;
     touchgfx::TextButtonStyle< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  >  RunButton_2;

@@ -1,0 +1,2 @@
+../Core/Src/ValveDriver.c:4:6:Valve_Open	1
+../Core/Src/ValveDriver.c:10:6:Valve_Close	1

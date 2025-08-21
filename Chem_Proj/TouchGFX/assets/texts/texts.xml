@@ -16,6 +16,24 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_1NF1" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">FLUSH</Translation>
+      </Text>
+      <Text Id="__SingleUse_2AGK" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Clean system by &#10;flushing the dispension unit with water</Translation>
+      </Text>
+      <Text Id="__SingleUse_66JM" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Ready to clean</Translation>
+      </Text>
+      <Text Id="__SingleUse_QQGQ" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Please place container&#10; on scale...</Translation>
+      </Text>
+      <Text Id="__SingleUse_2C81" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">FLUSH</Translation>
+      </Text>
+      <Text Id="__SingleUse_FCVF" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Clean System</Translation>
+      </Text>
       <Text Id="__SingleUse_8KIK" Alignment="Left" TypographyId="Display">
         <Translation Language="GB">OFF</Translation>
       </Text>

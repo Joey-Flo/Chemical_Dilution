@@ -1,0 +1,2 @@
+../Core/Src/ValveDriver.c:4:6:Valve_Open	8	static
+../Core/Src/ValveDriver.c:10:6:Valve_Close	8	static

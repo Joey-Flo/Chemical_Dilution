@@ -76,6 +76,7 @@ SettingsViewBase::SettingsViewBase() :
     CleanSystem.setLabelText(touchgfx::TypedText(T___SINGLEUSE_NOU7));
     CleanSystem.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     CleanSystem.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CleanSystem.setAction(buttonCallback);
     scrollableContainer1.add(CleanSystem);
 
     VolumeUnitText.setPosition(26, 176, 187, 36);
@@ -208,6 +209,13 @@ void SettingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //When PrimePumps clicked change screen to PrimePumps
         //Go to PrimePumps with no screen transition
         application().gotoPrimePumpsScreenNoTransition();
+    }
+    if (&src == &CleanSystem)
+    {
+        //CleanSystem
+        //When CleanSystem clicked change screen to CleanSystem
+        //Go to CleanSystem with no screen transition
+        application().gotoCleanSystemScreenNoTransition();
     }
 }
 

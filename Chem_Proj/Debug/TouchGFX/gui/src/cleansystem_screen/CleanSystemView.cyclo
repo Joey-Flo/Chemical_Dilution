@@ -1,9 +1,17 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:192:10:bool touchgfx::Rect::intersect(const touchgfx::Rect&) const	5
+../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:73:13:int16_t touchgfx::ClickEvent::getX() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:83:13:int16_t touchgfx::ClickEvent::getY() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:123:20:touchgfx::ClickEvent::ClickEventType touchgfx::ClickEvent::getType() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:515:10:void touchgfx::Drawable::setVisible(bool)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp:11:13:CleanSystemView::~CleanSystemView()	1
 ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp:11:13:virtual CleanSystemView::~CleanSystemView()	1
 ../TouchGFX/gui/src/cleansystem_screen/CleanSystemView.cpp:3:1:CleanSystemView::CleanSystemView()	1
 ../TouchGFX/gui/src/cleansystem_screen/CleanSystemView.cpp:8:6:virtual void CleanSystemView::setupScreen()	1
-../TouchGFX/gui/src/cleansystem_screen/CleanSystemView.cpp:13:6:virtual void CleanSystemView::tearDownScreen()	1
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemView.cpp:14:6:virtual void CleanSystemView::tearDownScreen()	1
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemView.cpp:20:6:virtual void CleanSystemView::handleTickEvent()	2
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemView.cpp:31:6:void CleanSystemView::setSystemReady(bool)	1
+../TouchGFX/gui/src/cleansystem_screen/CleanSystemView.cpp:47:6:virtual void CleanSystemView::handleClickEvent(const touchgfx::ClickEvent&)	5

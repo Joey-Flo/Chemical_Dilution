@@ -4,6 +4,7 @@
 "./Core/Src/MuxDriver.o"
 "./Core/Src/PWMDriver.o"
 "./Core/Src/PumpManager.o"
+"./Core/Src/ValveDriver.o"
 "./Core/Src/device_config.o"
 "./Core/Src/font12.o"
 "./Core/Src/font16.o"

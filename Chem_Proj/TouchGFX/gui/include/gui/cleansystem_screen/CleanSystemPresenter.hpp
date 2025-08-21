@@ -27,6 +27,12 @@ public:
 
     virtual ~CleanSystemPresenter() {}
 
+    void checkScaleStatus();
+
+    void startFlush();
+
+    void stopFlush();
+
 private:
     CleanSystemPresenter();
 

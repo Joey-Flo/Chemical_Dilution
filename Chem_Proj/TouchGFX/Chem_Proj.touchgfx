@@ -2705,6 +2705,18 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "PrimePumps"
             }
+          },
+          {
+            "InteractionName": "CleanSystem",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "CleanSystem"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "CleanSystem"
+            }
           }
         ]
       },
@@ -2980,6 +2992,48 @@
             "RelativeFilename": "Background.png"
           },
           {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "Width": 240,
+            "Height": 50,
+            "Color": {
+              "Red": 120,
+              "Green": 120,
+              "Blue": 120
+            },
+            "BorderColor": {
+              "Red": 163,
+              "Green": 160,
+              "Blue": 160
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 53,
+            "Y": 13,
+            "Width": 149,
+            "Height": 24,
+            "TextId": "__SingleUse_V777",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "BackButton",
+            "X": -4,
+            "Width": 30,
+            "Height": 50,
+            "Pressed": "Back Pressed Resized.png",
+            "Released": "Back Unpressed Resized.png"
+          },
+          {
             "Type": "Container",
             "Name": "PumpNums",
             "Width": 250,
@@ -3114,48 +3168,6 @@
                 "AutoSize": true
               }
             ]
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "boxWithBorder1",
-            "Width": 240,
-            "Height": 50,
-            "Color": {
-              "Red": 120,
-              "Green": 120,
-              "Blue": 120
-            },
-            "BorderColor": {
-              "Red": 163,
-              "Green": 160,
-              "Blue": 160
-            },
-            "BorderSize": 5
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textArea1",
-            "X": 53,
-            "Y": 13,
-            "Width": 149,
-            "Height": 24,
-            "TextId": "__SingleUse_V777",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "Button",
-            "Name": "BackButton",
-            "X": -4,
-            "Width": 30,
-            "Height": 50,
-            "Pressed": "Back Pressed Resized.png",
-            "Released": "Back Unpressed Resized.png"
           },
           {
             "Type": "Container",
@@ -3664,8 +3676,230 @@
       },
       {
         "Name": "CleanSystem",
-        "Components": [],
-        "Interactions": []
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "Background.png"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder2",
+            "Y": 49,
+            "Width": 240,
+            "Height": 47,
+            "Color": {
+              "Red": 120,
+              "Green": 120,
+              "Blue": 120
+            },
+            "BorderColor": {
+              "Red": 163,
+              "Green": 160,
+              "Blue": 160
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "Width": 240,
+            "Height": 50,
+            "Color": {
+              "Red": 120,
+              "Green": 120,
+              "Blue": 120
+            },
+            "BorderColor": {
+              "Red": 163,
+              "Green": 160,
+              "Blue": 160
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Title",
+            "X": 53,
+            "Y": 13,
+            "Width": 150,
+            "Height": 24,
+            "TextId": "__SingleUse_FCVF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "BackButton",
+            "X": -4,
+            "Width": 30,
+            "Height": 50,
+            "Pressed": "Back Pressed Resized.png",
+            "Released": "Back Unpressed Resized.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "FlushButton",
+            "Y": 245,
+            "Width": 240,
+            "Height": 62,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 5,
+                "TextId": "__SingleUse_2C81",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 240,
+                "Height": 62,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 8,
+                "ColorReleased": {
+                  "Red": 23,
+                  "Green": 27,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 87,
+                  "Green": 84,
+                  "Blue": 84
+                },
+                "ColorBorderReleased": {
+                  "Red": 12,
+                  "Green": 12,
+                  "Blue": 89
+                },
+                "ColorBorderPressed": {
+                  "Red": 33,
+                  "Green": 31,
+                  "Blue": 31
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "ContainerPromptText",
+            "X": 32,
+            "Y": 158,
+            "Width": 176,
+            "Height": 36,
+            "TextId": "__SingleUse_QQGQ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "ReadyText",
+            "X": 65,
+            "Y": 167,
+            "Width": 111,
+            "Height": 18,
+            "Visible": false,
+            "TextId": "__SingleUse_66JM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "ScreenDescriptionText",
+            "X": 26,
+            "Y": 61,
+            "Width": 195,
+            "Height": 24,
+            "TextId": "__SingleUse_2AGK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Container",
+            "Name": "DisabledOverlay",
+            "Width": 240,
+            "Height": 320,
+            "Components": [
+              {
+                "Type": "BoxWithBorder",
+                "Name": "boxWithBorder3",
+                "Y": 245,
+                "Width": 239,
+                "Height": 62,
+                "Color": {
+                  "Red": 87,
+                  "Green": 84,
+                  "Blue": 84
+                },
+                "BorderColor": {
+                  "Red": 33,
+                  "Green": 31,
+                  "Blue": 31
+                },
+                "BorderSize": 8
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1",
+                "X": 55,
+                "Y": 252,
+                "Width": 131,
+                "Height": 48,
+                "TextId": "__SingleUse_1NF1",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Back",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BackButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Settings"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [

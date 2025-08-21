@@ -17,6 +17,23 @@ PrimePumpsViewBase::PrimePumpsViewBase() :
     image1.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
     add(image1);
 
+    boxWithBorder1.setPosition(0, 0, 240, 50);
+    boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
+    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(163, 160, 160));
+    boxWithBorder1.setBorderSize(5);
+    add(boxWithBorder1);
+
+    textArea1.setXY(53, 13);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_V777));
+    add(textArea1);
+
+    BackButton.setXY(-4, 0);
+    BackButton.setBitmaps(touchgfx::Bitmap(BITMAP_BACK_UNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_BACK_PRESSED_RESIZED_ID));
+    BackButton.setAction(buttonCallback);
+    add(BackButton);
+
     PumpNums.setPosition(0, 0, 250, 320);
     textArea2.setXY(17, 56);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(221, 221, 221));
@@ -67,23 +84,6 @@ PrimePumpsViewBase::PrimePumpsViewBase() :
     PumpNums.add(textArea2_7);
 
     add(PumpNums);
-
-    boxWithBorder1.setPosition(0, 0, 240, 50);
-    boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(120, 120, 120));
-    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(163, 160, 160));
-    boxWithBorder1.setBorderSize(5);
-    add(boxWithBorder1);
-
-    textArea1.setXY(53, 13);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_V777));
-    add(textArea1);
-
-    BackButton.setXY(-4, 0);
-    BackButton.setBitmaps(touchgfx::Bitmap(BITMAP_BACK_UNPRESSED_RESIZED_ID), touchgfx::Bitmap(BITMAP_BACK_PRESSED_RESIZED_ID));
-    BackButton.setAction(buttonCallback);
-    add(BackButton);
 
     EnableButtons.setPosition(0, 50, 240, 270);
     RunButton_1.setBitmaps(Bitmap(BITMAP_LONGBUTTONUNPRESSED_RESIZED_ID), Bitmap(BITMAP_LONGBUTTONPRESSED_RESIZED_ID));
