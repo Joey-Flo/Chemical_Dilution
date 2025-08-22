@@ -268,6 +268,18 @@
     <Filter Include="Source Files\generated\gui_generated\cleansystem_screen">
       <UniqueIdentifier>3B73D36D-EEBD-E8C1-C367-97838A86DA09</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\dispense_screen">
+      <UniqueIdentifier>B92A802D-9C12-6DD9-AE27-FD49330C229D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\dispense_screen">
+      <UniqueIdentifier>C52BCB98-787F-C02A-AFD0-19D73ED17F7A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\dispense_screen">
+      <UniqueIdentifier>4E98C6AF-DEAB-F16F-AAAD-CDDD7947C594</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\dispense_screen">
+      <UniqueIdentifier>DB3651FC-E8DA-5557-5592-6FAFEAE8C09B</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -392,6 +404,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\cleansystem_screen\CleanSystemViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\cleansystem_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\dispense_screen\DispensePresenter.cpp">
+      <Filter>Source Files\gui\dispense_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\dispense_screen\DispenseView.cpp">
+      <Filter>Source Files\gui\dispense_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\dispense_screen\DispenseViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\dispense_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -936,6 +957,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\cleansystem_screen\CleanSystemViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\cleansystem_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\dispense_screen\DispensePresenter.hpp">
+      <Filter>Header Files\gui\dispense_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\dispense_screen\DispenseView.hpp">
+      <Filter>Header Files\gui\dispense_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\dispense_screen\DispenseViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\dispense_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

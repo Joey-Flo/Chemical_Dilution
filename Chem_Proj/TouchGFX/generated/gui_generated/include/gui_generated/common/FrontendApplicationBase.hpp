@@ -41,6 +41,9 @@ public:
     // CleanSystem
     void gotoCleanSystemScreenNoTransition();
 
+    // Dispense
+    void gotoDispenseScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -66,6 +69,9 @@ protected:
 
     // CleanSystem
     void gotoCleanSystemScreenNoTransitionImpl();
+
+    // Dispense
+    void gotoDispenseScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

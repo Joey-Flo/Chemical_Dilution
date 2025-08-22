@@ -16,6 +16,90 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_QK37" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Heavy</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y82G" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Medium</Translation>
+      </Text>
+      <Text Id="__SingleUse_VL2Z" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Light</Translation>
+      </Text>
+      <Text Id="__SingleUse_KDF7" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">DISABLED</Translation>
+      </Text>
+      <Text Id="__SingleUse_AG8S" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">ENABLED</Translation>
+      </Text>
+      <Text Id="__SingleUse_DY11" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Light</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q54L" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Medium</Translation>
+      </Text>
+      <Text Id="__SingleUse_BMET" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Heavy</Translation>
+      </Text>
+      <Text Id="__SingleUse_131S" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_I5ZU" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Heavy</Translation>
+      </Text>
+      <Text Id="__SingleUse_UNZ4" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Medium</Translation>
+      </Text>
+      <Text Id="__SingleUse_S4ZN" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Light</Translation>
+      </Text>
+      <Text Id="__SingleUse_VGFR" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">DISABLED</Translation>
+      </Text>
+      <Text Id="__SingleUse_IUD3" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">ENABLED</Translation>
+      </Text>
+      <Text Id="__SingleUse_28BJ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Light</Translation>
+      </Text>
+      <Text Id="__SingleUse_OGZ0" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Medium</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y6GM" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Heavy</Translation>
+      </Text>
+      <Text Id="__SingleUse_W1GM" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AEBY" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_C6P6" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Heavy</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q4BE" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Medium</Translation>
+      </Text>
+      <Text Id="__SingleUse_AHUF" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Light</Translation>
+      </Text>
+      <Text Id="__SingleUse_BBQC" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">ENABLED</Translation>
+      </Text>
+      <Text Id="__SingleUse_XIXY" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">DISABLED</Translation>
+      </Text>
+      <Text Id="__SingleUse_ETOT" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Heavy</Translation>
+      </Text>
+      <Text Id="__SingleUse_PWDP" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Medium</Translation>
+      </Text>
+      <Text Id="__SingleUse_ENVW" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Light</Translation>
+      </Text>
+      <Text Id="__SingleUse_H9OU" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Dispense</Translation>
+      </Text>
       <Text Id="__SingleUse_1NF1" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">FLUSH</Translation>
       </Text>
@@ -2356,7 +2440,7 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdanab.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="z" />
+    <Typography Id="Default" Font="verdanab.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="z" WildcardCharacterRanges="a-z,A-Z,0-9" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters=".-" WildcardCharacterRanges="a-z,A-Z,0-9" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Display" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />

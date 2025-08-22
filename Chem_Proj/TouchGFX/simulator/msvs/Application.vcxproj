@@ -52,6 +52,9 @@
     <ClCompile Include="..\..\gui\src\cleansystem_screen\CleanSystemPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\cleansystem_screen\CleanSystemView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\cleansystem_screen\CleanSystemViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\dispense_screen\DispensePresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\dispense_screen\DispenseView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\dispense_screen\DispenseViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -236,6 +239,9 @@
     <ClInclude Include="..\..\gui\include\gui\cleansystem_screen\CleanSystemPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\cleansystem_screen\CleanSystemView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\cleansystem_screen\CleanSystemViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\dispense_screen\DispensePresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\dispense_screen\DispenseView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\dispense_screen\DispenseViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

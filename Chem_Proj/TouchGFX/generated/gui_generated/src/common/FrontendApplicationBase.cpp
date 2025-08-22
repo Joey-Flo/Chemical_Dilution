@@ -23,6 +23,8 @@
 #include <gui/primepumps_screen/PrimePumpsPresenter.hpp>
 #include <gui/cleansystem_screen/CleanSystemView.hpp>
 #include <gui/cleansystem_screen/CleanSystemPresenter.hpp>
+#include <gui/dispense_screen/DispenseView.hpp>
+#include <gui/dispense_screen/DispensePresenter.hpp>
 
 using namespace touchgfx;
 
@@ -132,4 +134,17 @@ void FrontendApplicationBase::gotoCleanSystemScreenNoTransition()
 void FrontendApplicationBase::gotoCleanSystemScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<CleanSystemView, CleanSystemPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Dispense
+
+void FrontendApplicationBase::gotoDispenseScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDispenseScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDispenseScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<DispenseView, DispensePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

@@ -130,7 +130,10 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsPresenter.hpp \
  ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/cleansystem_screen/CleanSystemViewBase.hpp \
- ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp
+ ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp \
+ ../TouchGFX/gui/include/gui/dispense_screen/DispenseView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp \
+ ../TouchGFX/gui/include/gui/dispense_screen/DispensePresenter.hpp
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:
@@ -263,3 +266,6 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/cleansystem_screen/CleanSystemViewBase.hpp:
 ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp:
+../TouchGFX/gui/include/gui/dispense_screen/DispenseView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp:
+../TouchGFX/gui/include/gui/dispense_screen/DispensePresenter.hpp:

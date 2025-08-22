@@ -26,6 +26,8 @@
 #include <gui/primepumps_screen/PrimePumpsPresenter.hpp>
 #include <gui/cleansystem_screen/CleanSystemView.hpp>
 #include <gui/cleansystem_screen/CleanSystemPresenter.hpp>
+#include <gui/dispense_screen/DispenseView.hpp>
+#include <gui/dispense_screen/DispensePresenter.hpp>
 
 
 /**
@@ -55,7 +57,8 @@ public:
             touchgfx::meta::TypeList< ScaleCalibrationView,
             touchgfx::meta::TypeList< PrimePumpsView,
             touchgfx::meta::TypeList< CleanSystemView,
-            touchgfx::meta::Nil > > > > > >
+            touchgfx::meta::TypeList< DispenseView,
+            touchgfx::meta::Nil > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -74,7 +77,8 @@ public:
             touchgfx::meta::TypeList< ScaleCalibrationPresenter,
             touchgfx::meta::TypeList< PrimePumpsPresenter,
             touchgfx::meta::TypeList< CleanSystemPresenter,
-            touchgfx::meta::Nil > > > > > >
+            touchgfx::meta::TypeList< DispensePresenter,
+            touchgfx::meta::Nil > > > > > > >
             > GeneratedPresenterTypes;
 
     /**

@@ -54,6 +54,7 @@ HomeScreenViewBase::HomeScreenViewBase() :
     DispenseButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_13DI));
     DispenseButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     DispenseButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DispenseButton.setAction(buttonCallback);
     scrollableContainer1.add(DispenseButton);
 
     box1.setPosition(105, 0, 40, 15);
@@ -118,5 +119,12 @@ void HomeScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //When SettingsButton clicked change screen to Settings
         //Go to Settings with no screen transition
         application().gotoSettingsScreenNoTransition();
+    }
+    if (&src == &DispenseButton)
+    {
+        //Dispense
+        //When DispenseButton clicked change screen to Dispense
+        //Go to Dispense with no screen transition
+        application().gotoDispenseScreenNoTransition();
     }
 }

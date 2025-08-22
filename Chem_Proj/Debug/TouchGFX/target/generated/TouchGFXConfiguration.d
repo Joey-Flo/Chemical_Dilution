@@ -132,6 +132,9 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/cleansystem_screen/CleanSystemViewBase.hpp \
  ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp \
+ ../TouchGFX/gui/include/gui/dispense_screen/DispenseView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp \
+ ../TouchGFX/gui/include/gui/dispense_screen/DispensePresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
  ../TouchGFX/target/generated/STM32DMA.hpp \
  ../TouchGFX/target/TouchGFXHAL.hpp \
@@ -300,6 +303,9 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/cleansystem_screen/CleanSystemViewBase.hpp:
 ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemPresenter.hpp:
+../TouchGFX/gui/include/gui/dispense_screen/DispenseView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp:
+../TouchGFX/gui/include/gui/dispense_screen/DispensePresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:
 ../TouchGFX/target/generated/STM32DMA.hpp:
 ../TouchGFX/target/TouchGFXHAL.hpp:

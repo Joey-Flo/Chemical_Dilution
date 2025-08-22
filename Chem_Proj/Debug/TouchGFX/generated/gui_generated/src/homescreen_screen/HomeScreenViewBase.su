@@ -70,10 +70,10 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<HomeScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<HomeScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
 ../TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.cpp:9:1:HomeScreenViewBase::HomeScreenViewBase()	264	static
-../TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.cpp:89:1:HomeScreenViewBase::~HomeScreenViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.cpp:89:1:virtual HomeScreenViewBase::~HomeScreenViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.cpp:94:6:virtual void HomeScreenViewBase::setupScreen()	16	static
-../TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.cpp:99:6:void HomeScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.cpp:90:1:HomeScreenViewBase::~HomeScreenViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.cpp:90:1:virtual HomeScreenViewBase::~HomeScreenViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.cpp:95:6:virtual void HomeScreenViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/homescreen_screen/HomeScreenViewBase.cpp:100:6:void HomeScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = HomeScreenPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButton&>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = HomeScreenViewBase; T1 = const touchgfx::AbstractButton&]	24	static

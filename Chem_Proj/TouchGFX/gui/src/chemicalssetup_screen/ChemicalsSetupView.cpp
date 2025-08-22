@@ -296,6 +296,13 @@ void ChemicalsSetupView::handleTickEvent()
     if (newPageIndex != currentPageIndex)
     {
         // The page has changed. Update our state and trigger a data reload.
+        int16_t currentScrollY = scrollableContainer1_Center.getScrolledY();
+        if (currentScrollY != 0)
+        {
+            scrollableContainer1_Center.doScroll(0, -currentScrollY);
+            scrollableContainer1_Center.invalidate();
+        }
+
         int newPageIndex = swipeContainer1.getSelectedPage();
         currentPageIndex = newPageIndex;
         presenter->loadScreenData(currentPageIndex);

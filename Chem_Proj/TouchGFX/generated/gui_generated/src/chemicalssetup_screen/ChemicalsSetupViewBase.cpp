@@ -39,7 +39,7 @@ ChemicalsSetupViewBase::ChemicalsSetupViewBase() :
 
     swipeContainer1.setXY(0, 52);
     swipeContainer1.setPageIndicatorBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_OFF_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_ON_ACTIVE_ID));
-    swipeContainer1.setPageIndicatorXY(0, 0);
+    swipeContainer1.setPageIndicatorXY(38, 0);
     swipeContainer1.setSwipeCutoff(50);
     swipeContainer1.setEndSwipeElasticWidth(50);
 
