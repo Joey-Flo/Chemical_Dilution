@@ -39,7 +39,7 @@ Core/Src/DispenseManager.o: ../Core/Src/DispenseManager.c \
  ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
  ../Core/Inc/Sounds.h ../Core/Inc/DispenseManager_shared_types.h \
  ../Core/Inc/device_config.h ../Core/Inc/hx711.h ../Core/Inc/MuxDriver.h \
- ../Core/Inc/PWMDriver.h ../Core/Inc/ValveDriver.h
+ ../Core/Inc/PWMDriver.h ../Core/Inc/ValveDriver.h ../Core/Inc/Sounds.h
 ../Core/Inc/DispenseManager.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
@@ -94,3 +94,4 @@ Core/Src/DispenseManager.o: ../Core/Src/DispenseManager.c \
 ../Core/Inc/MuxDriver.h:
 ../Core/Inc/PWMDriver.h:
 ../Core/Inc/ValveDriver.h:
+../Core/Inc/Sounds.h:

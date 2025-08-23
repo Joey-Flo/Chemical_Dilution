@@ -7,6 +7,7 @@
 #include "PWMDriver.h"
 #include "ValveDriver.h"
 #include <stdbool.h>
+#include "Sounds.h"
 
 // --- MACROS for fine-tuning ---
 #define CONTAINER_MIN_WEIGHT_GRAMS    25.0f
@@ -25,7 +26,8 @@ static DispenseJob_t currentJob;
 static float current_weight_grams = 0.0f;
 static uint8_t stable_reading_count = 0;
 static float weight_at_job_end = 0.0f;
-
+bool DispenseCompleteSound = true;
+bool DispenseStartSound = true;
 
 // --- Helper Functions ---
 
@@ -80,6 +82,8 @@ void DispenseManager_Init(void)
     currentJob.state = DISPENSE_STATE_IDLE;
     stable_reading_count = 0;
     weight_at_job_end = 0.0f;
+    DispenseCompleteSound = true;
+    DispenseStartSound = true;
     Pump_Off();
     Valve_Close();
 }
@@ -241,6 +245,10 @@ void DispenseManager_Process(void)
             current_weight_grams = 0.0f; // Reset our software value
             currentJob.current_pump_setup_index = -1;
             currentJob.state = DISPENSE_STATE_START_PUMP;
+            if (DispenseStartSound == true){
+            	DispenseStartSound = false;
+            	PlaySound(2);
+            }
             break;
 
         // ... (START_PUMP state is unchanged) ...
@@ -325,6 +333,10 @@ void DispenseManager_Process(void)
 
             // --- NEW STATE: Wait for the container to be removed ---
         case DISPENSE_STATE_WAITING_FOR_REMOVAL:
+            if (DispenseCompleteSound == true){
+            	DispenseCompleteSound = false;
+            	PlaySound(5);
+            }
              Update_Scale_Reading();
 
              // The container is considered "removed" if the current weight

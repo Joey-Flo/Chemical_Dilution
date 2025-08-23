@@ -26,6 +26,7 @@ public:
     virtual void deactivate();
 
     virtual ~HomeScreenPresenter() {}
+    void checkAndCorrectTare();
 
 private:
     HomeScreenPresenter();

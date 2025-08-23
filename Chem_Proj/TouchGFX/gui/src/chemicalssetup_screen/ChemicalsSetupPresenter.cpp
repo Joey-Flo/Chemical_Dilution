@@ -63,22 +63,24 @@ void ChemicalsSetupPresenter::ActiveFieldIndexUpdate(uint8_t index)
 
 void ChemicalsSetupPresenter::newValueEntered(const char* text)
 {
+    // Define the conversion factor at the top for easy reference.
+    const float ML_PER_OZ = 29.5735f;
+
     // --- 1. PREPARE FOR VALIDATION ---
     char* end_ptr;
     float new_float_value = strtof(text, &end_ptr);
     bool is_valid_float = (*end_ptr == '\0' && end_ptr != text);
 
-    // Get the current recipe data, as we'll need it for several checks
+    // Get the current recipe data and the active unit from the model.
     const ChemicalRecipe_t& currentRecipe = model->getRecipeData(activePageIndex);
     int8_t currentUnit = model->getVolumeUnit();
 
 
-    // --- 2. APPLY VALIDATION LOGIC BASED ON THE FIELD BEING EDITED ---
+    // --- 2. APPLY VALIDATION AND CONVERSION LOGIC ---
     switch (currentlyEditingFieldID)
     {
         case FIELD_CHEM_NAME:
         {
-            // This logic is unchanged
             char truncated_name[20];
             strncpy(truncated_name, text, 19);
             truncated_name[19] = '\0';
@@ -88,65 +90,68 @@ void ChemicalsSetupPresenter::newValueEntered(const char* text)
 
         case FIELD_TOTAL_VOLUME:
         {
-            // --- THIS IS THE NEW RECALCULATION LOGIC ---
             if (is_valid_float) {
-                // First, get the original total volume. Avoid dividing by zero.
-                float old_total_volume = currentRecipe.total_dispense_volume;
-                if (old_total_volume <= 0.0f) old_total_volume = 1.0f; // Prevent divide-by-zero
+                float new_total_volume_input = new_float_value;
 
-                // Validate and cap the NEW total volume
-                float new_total_volume = new_float_value;
-                if (currentUnit == 1) { // Oz
-                    if (new_total_volume > 32.0f) new_total_volume = 32.0f;
-                } else { // mL
-                    if (new_total_volume > 946.4f) new_total_volume = 946.4f;
+                // --- NEW LOGIC: CONVERT IF NECESSARY ---
+                // If the user is in Oz mode, convert their input to mL before proceeding.
+                if (currentUnit == 1) { // 1 = Oz
+                    new_total_volume_input *= ML_PER_OZ;
                 }
-                if (new_total_volume < 0.0f) new_total_volume = 0.0f;
 
-                // Calculate the scaling factor
-                float scaling_factor = new_total_volume / old_total_volume;
+                // Now, all subsequent logic uses the value in mL.
+                float old_total_volume_mL = currentRecipe.total_dispense_volume;
+                if (old_total_volume_mL <= 0.0f) old_total_volume_mL = 1.0f;
 
-                // Now, loop through all pump setups for this recipe
-                for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
-                {
-                    // Get a modifiable copy of the pump setup
+                // Validate and cap the NEW total volume (in mL).
+                float new_total_volume_mL = new_total_volume_input;
+                if (new_total_volume_mL > 946.4f) new_total_volume_mL = 946.4f; // Max is ~32 Oz
+                if (new_total_volume_mL < 0.0f) new_total_volume_mL = 0.0f;
+
+                float scaling_factor = new_total_volume_mL / old_total_volume_mL;
+
+                for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i) {
                     PumpSetup_t pump_setup = currentRecipe.pump_setups[i];
-
-                    // Scale each value (S, M, L) by the calculated factor
                     pump_setup.dispense_small *= scaling_factor;
                     pump_setup.dispense_medium *= scaling_factor;
                     pump_setup.dispense_large *= scaling_factor;
-
-                    // Save the newly scaled pump setup back to the model
                     model->updatePumpSetup(activePageIndex, i, pump_setup);
                 }
-
-                // Finally, save the new total volume itself
-                model->updateTotalVolume(activePageIndex, new_total_volume);
+                model->updateTotalVolume(activePageIndex, new_total_volume_mL);
             }
             break;
         }
 
-        // The pump volume validation logic is unchanged
         case FIELD_PUMP1_S: case FIELD_PUMP1_M: case FIELD_PUMP1_L:
         case FIELD_PUMP2_S: case FIELD_PUMP2_M: case FIELD_PUMP2_L:
         case FIELD_PUMP3_S: case FIELD_PUMP3_M: case FIELD_PUMP3_L:
         {
-            // ... (Your existing, correct logic for capping pump volumes) ...
             if (is_valid_float) {
-                float total_volume_limit = currentRecipe.total_dispense_volume;
-                float sum_of_other_pumps = 0.0f;
+                float new_pump_volume_input = new_float_value;
+
+                // --- NEW LOGIC: CONVERT IF NECESSARY ---
+                // If the user is in Oz mode, convert their input to mL.
+                if (currentUnit == 1) { // 1 = Oz
+                    new_pump_volume_input *= ML_PER_OZ;
+                }
+
+                // All subsequent validation is now performed on the mL value.
+                float total_volume_limit_mL = currentRecipe.total_dispense_volume;
+                float sum_of_other_pumps_mL = 0.0f;
                 for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i) {
                     if (i == activeSetupIndex || currentRecipe.pump_setups[i].pump_index == -1) continue;
-                    if (activeFieldIndex == 0) sum_of_other_pumps += currentRecipe.pump_setups[i].dispense_small;
-                    else if (activeFieldIndex == 1) sum_of_other_pumps += currentRecipe.pump_setups[i].dispense_medium;
-                    else sum_of_other_pumps += currentRecipe.pump_setups[i].dispense_large;
+                    if (activeFieldIndex == 0) sum_of_other_pumps_mL += currentRecipe.pump_setups[i].dispense_small;
+                    else if (activeFieldIndex == 1) sum_of_other_pumps_mL += currentRecipe.pump_setups[i].dispense_medium;
+                    else sum_of_other_pumps_mL += currentRecipe.pump_setups[i].dispense_large;
                 }
-                float max_allowed_value = total_volume_limit - sum_of_other_pumps;
-                if (max_allowed_value < 0.0f) max_allowed_value = 0.0f;
-                if (new_float_value > max_allowed_value) new_float_value = max_allowed_value;
-                if (new_float_value < 0.0f) new_float_value = 0.0f;
-                model->updateSinglePumpVolume(activePageIndex, activeSetupIndex, activeFieldIndex, new_float_value);
+
+                float max_allowed_value_mL = total_volume_limit_mL - sum_of_other_pumps_mL;
+                if (max_allowed_value_mL < 0.0f) max_allowed_value_mL = 0.0f;
+                if (new_pump_volume_input > max_allowed_value_mL) new_pump_volume_input = max_allowed_value_mL;
+                if (new_pump_volume_input < 0.0f) new_pump_volume_input = 0.0f;
+
+                // Pass the final, validated mL value to the model.
+                model->updateSinglePumpVolume(activePageIndex, activeSetupIndex, activeFieldIndex, new_pump_volume_input);
             }
             break;
         }
