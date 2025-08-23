@@ -14,14 +14,17 @@
 #define PUMP_PWM_FAST                 1000   // 100% duty cycle
 #define PUMP_PWM_SLOW                 200    // 20% duty cycle
 #define DRIP_SETTLE_DELAY_MS          500    // Wait 0.5s for drips after stopping a pump
+#define STABLE_READING_COUNT_TARGET   12
 
 // --- Global variables for this module ---
 extern DeviceConfiguration_t myDeviceConfig;
 extern hx711_t my_scale;
-extern TIM_HandleTypeDef htim4; // Assumes pump PWM is on TIM4
+extern TIM_HandleTypeDef htim5; // Assumes pump PWM is on TIM5
 
 static DispenseJob_t currentJob;
 static float current_weight_grams = 0.0f;
+static uint8_t stable_reading_count = 0;
+static float weight_at_job_end = 0.0f;
 
 
 // --- Helper Functions ---
@@ -75,6 +78,8 @@ static bool Update_Scale_Reading(void)
 void DispenseManager_Init(void)
 {
     currentJob.state = DISPENSE_STATE_IDLE;
+    stable_reading_count = 0;
+    weight_at_job_end = 0.0f;
     Pump_Off();
     Valve_Close();
 }
@@ -137,7 +142,10 @@ void DispenseManager_CancelJob(void)
 {
     Pump_Off();
     Valve_Close();
-    currentJob.state = DISPENSE_STATE_CANCELLED;
+    // --- MODIFIED: Store the current weight before changing state ---
+    Update_Scale_Reading(); // Get one last reading
+    weight_at_job_end = current_weight_grams;
+    currentJob.state = DISPENSE_STATE_WAITING_FOR_REMOVAL;
 }
 
 const DispenseJob_t* DispenseManager_GetJobStatus(void)
@@ -148,6 +156,53 @@ const DispenseJob_t* DispenseManager_GetJobStatus(void)
 float DispenseManager_GetCurrentWeight(void)
 {
     return current_weight_grams;
+}
+
+int DispenseManager_StartJob_SkipContainerCheck(int8_t recipe_index, int8_t size)
+{
+    if (currentJob.state != DISPENSE_STATE_IDLE) {
+        return -1; // A job is already in progress
+    }
+
+    currentJob.recipe_index = recipe_index;
+    currentJob.dispense_size = size;
+
+    // --- This is the MODIFIED entry point ---
+    // Instead of waiting for the container, we jump DIRECTLY to taring.
+    currentJob.state = DISPENSE_STATE_TARING;
+    stable_reading_count = 0; // Ensure this is reset
+
+    // The rest of the function is identical to the original StartJob
+    // to ensure the target weight is still calculated correctly.
+    ChemicalRecipe_t* recipe = &myDeviceConfig.recipes[recipe_index];
+    float total_volume_mL = recipe->total_dispense_volume;
+    float chemical_only_weight_grams = 0.0f;
+    float chemical_only_volume_mL = 0.0f;
+
+    for (int i = 0; i < MAX_PUMP_SETUPS_PER_CHEMICAL; ++i)
+    {
+        PumpSetup_t* pump_setup = &recipe->pump_setups[i];
+        if (pump_setup->pump_index != -1)
+        {
+            int8_t pump_index = pump_setup->pump_index;
+            float pump_density = myDeviceConfig.PumpDensity[pump_index];
+            float target_volume = 0.0f;
+
+            if (size == 0) target_volume = pump_setup->dispense_small;
+            else if (size == 1) target_volume = pump_setup->dispense_medium;
+            else target_volume = pump_setup->dispense_large;
+
+            chemical_only_volume_mL += target_volume;
+            chemical_only_weight_grams += (target_volume * pump_density);
+        }
+    }
+
+    float water_volume_mL = total_volume_mL - chemical_only_volume_mL;
+    if (water_volume_mL < 0) water_volume_mL = 0;
+    float water_weight_grams = water_volume_mL * 1.0f;
+    currentJob.total_target_weight_grams = chemical_only_weight_grams + water_weight_grams;
+
+    return 0;
 }
 
 // --- The Main State Machine ---
@@ -161,12 +216,24 @@ void DispenseManager_Process(void)
     {
         // ... (IDLE, DONE, CANCELLED states are unchanged) ...
 
-        case DISPENSE_STATE_WAITING_FOR_CONTAINER:
-            Update_Scale_Reading(); // Get a fresh reading
-            if (current_weight_grams >= CONTAINER_MIN_WEIGHT_GRAMS) {
-                currentJob.state = DISPENSE_STATE_TARING;
-            }
-            break;
+    case DISPENSE_STATE_WAITING_FOR_CONTAINER:
+    {
+        Update_Scale_Reading();
+        if (current_weight_grams >= CONTAINER_MIN_WEIGHT_GRAMS) {
+            // --- NEW: Increment stable reading counter ---
+            stable_reading_count++;
+        } else {
+            // --- NEW: Reset counter if weight is unstable or removed ---
+            stable_reading_count = 0;
+        }
+
+        // --- NEW: Only proceed if we reach the target count ---
+        if (stable_reading_count >= STABLE_READING_COUNT_TARGET) {
+            stable_reading_count = 0; // Reset for next time
+            currentJob.state = DISPENSE_STATE_TARING;
+        }
+        break;
+    }
 
         case DISPENSE_STATE_TARING:
             // This is the correct way to tare with your library
@@ -250,20 +317,44 @@ void DispenseManager_Process(void)
             }
             break;
 
+        case DISPENSE_STATE_DONE:
+            // --- MODIFIED: Store the final weight before waiting for removal ---
+            weight_at_job_end = current_weight_grams;
+            currentJob.state = DISPENSE_STATE_WAITING_FOR_REMOVAL;
+            break;
+
+            // --- NEW STATE: Wait for the container to be removed ---
+        case DISPENSE_STATE_WAITING_FOR_REMOVAL:
+             Update_Scale_Reading();
+
+             // The container is considered "removed" if the current weight
+             // has dropped by at least half of the minimum container weight.
+             // This works even if the current weight is negative.
+             // Example: end weight is 150g. Threshold is 150 - 12.5 = 137.5g.
+             // When container is removed, weight becomes -100g. -100g is less than 137.5g, so it passes.
+             if (current_weight_grams < (weight_at_job_end - (CONTAINER_MIN_WEIGHT_GRAMS / 2.0f)))
+             {
+                 currentJob.state = DISPENSE_STATE_POST_JOB_TARE;
+             }
+             break;
+
+            // --- NEW STATE: Perform the final, automatic re-tare ---
+            case DISPENSE_STATE_POST_JOB_TARE:
+                hx711_tare(&my_scale, 10); // Re-tare the scale to zero it out.
+                current_weight_grams = 0.0f;
+                // The job is now truly finished. The UI will see the IDLE state
+                // and know it's time to return to the home screen.
+                currentJob.state = DISPENSE_STATE_IDLE;
+                break;
+
         case DISPENSE_STATE_IDLE:
             // The system is idle. The state machine has no work to do.
             // It is waiting for the UI to call DispenseManager_StartJob().
             break;
 
-        case DISPENSE_STATE_DONE:
-            // The dispense job has finished successfully. The state machine's work is over.
-            // It will remain in this state until the UI starts a new job or the
-            // DispenseManager_Init() function is called upon leaving the screen.
-            break;
-
         case DISPENSE_STATE_CANCELLED:
-            // Do nothing in these terminal states.
-            // The job is over until a new one is started.
+            // This state is now a passthrough. If it's ever entered by other means,
+            // it will be handled by the explicit call in CancelJob().
             break;
     }
 }

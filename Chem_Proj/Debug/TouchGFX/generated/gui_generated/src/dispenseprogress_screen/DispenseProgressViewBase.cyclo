@@ -100,7 +100,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:77:10:void touchgfx::ButtonWithLabel::setLabelColor(touchgfx::colortype)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:94:10:void touchgfx::ButtonWithLabel::setLabelColorPressed(touchgfx::colortype)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	2
-../TouchGFX/generated/gui_generated/include/gui_generated/dispenseprogress_screen/DispenseProgressViewBase.hpp:27:26:FrontendApplication& DispenseProgressViewBase::application()	1
+../TouchGFX/generated/gui_generated/include/gui_generated/dispenseprogress_screen/DispenseProgressViewBase.hpp:29:18:virtual void DispenseProgressViewBase::cancelButtonPressed()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<DispenseProgressPresenter>::~View()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<DispenseProgressPresenter>::~View()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	1
@@ -128,10 +128,10 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<DispenseProgressViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<DispenseProgressViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 ../TouchGFX/generated/gui_generated/src/dispenseprogress_screen/DispenseProgressViewBase.cpp:10:1:DispenseProgressViewBase::DispenseProgressViewBase()	1
-../TouchGFX/generated/gui_generated/src/dispenseprogress_screen/DispenseProgressViewBase.cpp:93:1:DispenseProgressViewBase::~DispenseProgressViewBase()	1
-../TouchGFX/generated/gui_generated/src/dispenseprogress_screen/DispenseProgressViewBase.cpp:93:1:virtual DispenseProgressViewBase::~DispenseProgressViewBase()	1
-../TouchGFX/generated/gui_generated/src/dispenseprogress_screen/DispenseProgressViewBase.cpp:98:6:virtual void DispenseProgressViewBase::setupScreen()	1
-../TouchGFX/generated/gui_generated/src/dispenseprogress_screen/DispenseProgressViewBase.cpp:103:6:void DispenseProgressViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	3
+../TouchGFX/generated/gui_generated/src/dispenseprogress_screen/DispenseProgressViewBase.cpp:104:1:DispenseProgressViewBase::~DispenseProgressViewBase()	1
+../TouchGFX/generated/gui_generated/src/dispenseprogress_screen/DispenseProgressViewBase.cpp:104:1:virtual DispenseProgressViewBase::~DispenseProgressViewBase()	1
+../TouchGFX/generated/gui_generated/src/dispenseprogress_screen/DispenseProgressViewBase.cpp:109:6:virtual void DispenseProgressViewBase::setupScreen()	1
+../TouchGFX/generated/gui_generated/src/dispenseprogress_screen/DispenseProgressViewBase.cpp:114:6:void DispenseProgressViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = DispenseProgressPresenter]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButton&>::GenericCallback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = DispenseProgressViewBase; T1 = const touchgfx::AbstractButton&]	1

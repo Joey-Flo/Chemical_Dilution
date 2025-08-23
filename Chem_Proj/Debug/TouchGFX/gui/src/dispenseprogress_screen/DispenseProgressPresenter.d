@@ -112,7 +112,8 @@ TouchGFX/gui/src/dispenseprogress_screen/DispenseProgressPresenter.o: \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
  ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
- ../Core/Inc/Sounds.h ../Core/Inc/DispenseManager_shared_types.h
+ ../Core/Inc/Sounds.h ../Core/Inc/DispenseManager_shared_types.h \
+ ../Core/Inc/hx711.h
 ../TouchGFX/gui/include/gui/dispenseprogress_screen/DispenseProgressView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/dispenseprogress_screen/DispenseProgressViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -237,3 +238,4 @@ TouchGFX/gui/src/dispenseprogress_screen/DispenseProgressPresenter.o: \
 ../Core/Inc/shared_types.h:
 ../Core/Inc/Sounds.h:
 ../Core/Inc/DispenseManager_shared_types.h:
+../Core/Inc/hx711.h:

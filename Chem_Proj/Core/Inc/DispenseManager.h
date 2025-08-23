@@ -10,6 +10,7 @@
 void DispenseManager_Init(void);
 void DispenseManager_Process(void);
 int DispenseManager_StartJob(int8_t recipe_index, int8_t size);
+int DispenseManager_StartJob_SkipContainerCheck(int8_t recipe_index, int8_t size);
 void DispenseManager_CancelJob(void);
 const DispenseJob_t* DispenseManager_GetJobStatus(void);
 float DispenseManager_GetCurrentWeight(void);

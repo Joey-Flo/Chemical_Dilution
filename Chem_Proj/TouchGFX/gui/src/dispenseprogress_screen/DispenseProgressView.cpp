@@ -26,20 +26,36 @@ void DispenseProgressView::handleTickEvent()
     }
 }
 
-void DispenseProgressView::updateProgress(DispenseState_e state, int8_t recipe_index, int8_t size,
+void DispenseProgressView::updateProgress(DispenseState_e state, bool wasCancelled, int8_t recipe_index, int8_t size,
                                         float currentWeight, float totalTargetWeight)
 {
-    bool isDone = (state == DISPENSE_STATE_DONE);
-    bool isCancelled = (state == DISPENSE_STATE_CANCELLED);
-    bool isIdle = (state == DISPENSE_STATE_IDLE);
+    // Determine the high-level status of the job
+    bool isJobRunning = (state > DISPENSE_STATE_TARING && state < DISPENSE_STATE_DONE);
+    bool isWaitingForRemoval = (state == DISPENSE_STATE_WAITING_FOR_REMOVAL || state == DISPENSE_STATE_DONE || state == DISPENSE_STATE_CANCELLED);
+    bool isWaitingForContainer = (state == DISPENSE_STATE_WAITING_FOR_CONTAINER);
+    bool isComplete = (state == DISPENSE_STATE_POST_JOB_TARE || state == DISPENSE_STATE_IDLE);
 
-    // --- Manage Visibility ---
-    ContainerPromptText.setVisible(state == DISPENSE_STATE_WAITING_FOR_CONTAINER);
-    DispensingText.setVisible(state > DISPENSE_STATE_TARING && !isDone && !isCancelled);
-    DispenseCompleteText.setVisible(isDone || isCancelled);
-    ProgressIndicators.setVisible(state > DISPENSE_STATE_TARING && !isDone && !isCancelled);
-    CancelButton.setVisible(!isDone && !isCancelled && !isIdle);
-    ReturnHomeButton.setVisible(isDone || isCancelled);
+    // --- Manage Visibility based on the new workflow ---
+    LoadingText.setVisible(false);
+    ContainerPromptText.setVisible(isWaitingForContainer);
+    DispensingText.setVisible(isJobRunning);
+    DispenseCompleteText.setVisible(isWaitingForRemoval); // This text is no longer needed with the new prompt
+
+    // NEW: Show the removal prompt when job is done or cancelled
+    ContainerRemovePromptText.setVisible(isWaitingForRemoval);
+
+    ProgressIndicators.setVisible(isJobRunning ||isWaitingForRemoval);
+    CancelButton.setVisible(isJobRunning || isWaitingForContainer); // Can cancel while waiting for container too
+
+    if (isWaitingForRemoval) {
+        // If we are waiting for removal, check the flag to see how we got here.
+        DispenseCompleteText.setVisible(!wasCancelled);
+        DispenseCancelledText.setVisible(wasCancelled);
+    } else {
+        // If the job isn't over yet, hide both final texts.
+        DispenseCompleteText.setVisible(false);
+        DispenseCancelledText.setVisible(false);
+    }
 
     // --- Update Text Wildcards ---
     if (DispensingText.isVisible()) {
@@ -47,7 +63,6 @@ void DispenseProgressView::updateProgress(DispenseState_e state, int8_t recipe_i
         Unicode::strncpy(DispensingTextBuffer1, sizeStr, DISPENSINGTEXTBUFFER1_SIZE);
         Unicode::strncpy(DispensingTextBuffer2, getRecipeName(recipe_index), DISPENSINGTEXTBUFFER2_SIZE);
     }
-
 
     // --- Update Progress Bar ---
     if (ProgressIndicators.isVisible()) {
@@ -66,9 +81,10 @@ void DispenseProgressView::updateProgress(DispenseState_e state, int8_t recipe_i
     ContainerPromptText.invalidate();
     DispensingText.invalidate();
     DispenseCompleteText.invalidate();
+    DispenseCancelledText.invalidate();
+    ContainerRemovePromptText.invalidate();
     ProgressIndicators.invalidate();
     CancelButton.invalidate();
-    ReturnHomeButton.invalidate();
 }
 
 // Helper to get recipe name

@@ -35,6 +35,7 @@ public:
 
 private:
     DispenseProgressPresenter();
+    bool wasCancelled;
 
     DispenseProgressView& view;
 };

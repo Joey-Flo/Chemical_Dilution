@@ -19,7 +19,10 @@ typedef enum {
     DISPENSE_STATE_START_WATER,
     DISPENSE_STATE_WATER_FILL,
     DISPENSE_STATE_DONE,
-    DISPENSE_STATE_CANCELLED
+    DISPENSE_STATE_CANCELLED,
+    DISPENSE_STATE_WAITING_FOR_REMOVAL,
+    DISPENSE_STATE_POST_JOB_TARE
+
 } DispenseState_e;
 
 // A struct to hold all information about the current job

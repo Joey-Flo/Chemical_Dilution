@@ -23,6 +23,14 @@ public:
     virtual ~DispenseProgressViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void cancelButtonPressed()
+    {
+        // Override and implement this function in DispenseProgress
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -38,10 +46,12 @@ protected:
     touchgfx::CircleProgress circleProgress1;
     touchgfx::PainterRGB565 circleProgress1Painter;
     touchgfx::ButtonWithLabel CancelButton;
-    touchgfx::ButtonWithLabel ReturnHomeButton;
     touchgfx::TextArea ContainerPromptText;
     touchgfx::TextAreaWithTwoWildcards DispensingText;
     touchgfx::TextArea DispenseCompleteText;
+    touchgfx::TextArea LoadingText;
+    touchgfx::TextArea ContainerRemovePromptText;
+    touchgfx::TextArea DispenseCancelledText;
 
     /*
      * Wildcard Buffers

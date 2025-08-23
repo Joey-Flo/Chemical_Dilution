@@ -5124,16 +5124,15 @@
           {
             "Type": "Container",
             "Name": "ProgressIndicators",
-            "Y": -11,
-            "Width": 250,
-            "Height": 250,
+            "Width": 240,
+            "Height": 239,
             "Visible": false,
             "Components": [
               {
                 "Type": "TextArea",
                 "Name": "WildcardTextProgress",
                 "X": 70,
-                "Y": 157,
+                "Y": 121,
                 "Width": 101,
                 "Height": 28,
                 "TextId": "__SingleUse_730L",
@@ -5152,7 +5151,7 @@
                 "Type": "CircleProgress",
                 "Name": "circleProgress1",
                 "X": 65,
-                "Y": 116,
+                "Y": 80,
                 "Width": 110,
                 "Height": 110,
                 "Color": {
@@ -5193,28 +5192,6 @@
             "TextRotation": "0"
           },
           {
-            "Type": "ButtonWithLabel",
-            "Name": "ReturnHomeButton",
-            "Y": 254,
-            "Width": 240,
-            "Height": 66,
-            "Visible": false,
-            "Pressed": "Button1 large clicked.png",
-            "Released": "Button1 large.png",
-            "TextId": "__SingleUse_NLY9",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
-          },
-          {
             "Type": "TextArea",
             "Name": "ContainerPromptText",
             "X": 32,
@@ -5234,7 +5211,7 @@
           {
             "Type": "TextArea",
             "Name": "DispensingText",
-            "Y": 37,
+            "Y": 199,
             "Width": 240,
             "Height": 40,
             "Visible": false,
@@ -5258,7 +5235,7 @@
             "Type": "TextArea",
             "Name": "DispenseCompleteText",
             "X": 45,
-            "Y": 151,
+            "Y": 261,
             "Width": 151,
             "Height": 18,
             "Visible": false,
@@ -5270,21 +5247,59 @@
               "Blue": 255
             },
             "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "LoadingText",
+            "X": 84,
+            "Y": 151,
+            "Width": 73,
+            "Height": 18,
+            "TextId": "__SingleUse_UN2I",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "ContainerRemovePromptText",
+            "X": 4,
+            "Y": 203,
+            "Width": 233,
+            "Height": 36,
+            "Visible": false,
+            "TextId": "__SingleUse_349Z",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DispenseCancelledText",
+            "X": 45,
+            "Y": 261,
+            "Width": 146,
+            "Height": 18,
+            "Visible": false,
+            "TextId": "__SingleUse_J41U",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
           }
         ],
         "Interactions": [
-          {
-            "InteractionName": "Home",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "ReturnHomeButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "HomeScreen"
-            }
-          },
           {
             "InteractionName": "Cancel",
             "Trigger": {
@@ -5292,9 +5307,8 @@
               "TriggerComponent": "CancelButton"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "HomeScreen"
+              "Type": "ActionCustom",
+              "FunctionName": "cancelButtonPressed"
             }
           }
         ]

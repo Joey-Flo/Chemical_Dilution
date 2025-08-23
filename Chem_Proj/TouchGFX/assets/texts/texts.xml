@@ -16,8 +16,14 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_NLY9" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">RETURN HOME</Translation>
+      <Text Id="__SingleUse_J41U" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Dispense Cancelled</Translation>
+      </Text>
+      <Text Id="__SingleUse_349Z" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Please remove your container&#10;from the scale...</Translation>
+      </Text>
+      <Text Id="__SingleUse_UN2I" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Loading...</Translation>
       </Text>
       <Text Id="__SingleUse_7N8Q" Alignment="Left" TypographyId="Display">
         <Translation Language="GB">Dispense Complete!</Translation>

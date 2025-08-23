@@ -20,9 +20,9 @@ DispenseProgressViewBase::DispenseProgressViewBase() :
     image1.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
     add(image1);
 
-    ProgressIndicators.setPosition(0, -11, 250, 250);
+    ProgressIndicators.setPosition(0, 0, 240, 239);
     ProgressIndicators.setVisible(false);
-    WildcardTextProgress.setPosition(70, 157, 101, 28);
+    WildcardTextProgress.setPosition(70, 121, 101, 28);
     WildcardTextProgress.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     WildcardTextProgress.setLinespacing(0);
     WildcardTextProgressBuffer[0] = 0;
@@ -30,7 +30,7 @@ DispenseProgressViewBase::DispenseProgressViewBase() :
     WildcardTextProgress.setTypedText(touchgfx::TypedText(T___SINGLEUSE_730L));
     ProgressIndicators.add(WildcardTextProgress);
 
-    circleProgress1.setXY(65, 116);
+    circleProgress1.setXY(65, 80);
     circleProgress1.setProgressIndicatorPosition(0, 0, 110, 110);
     circleProgress1.setRange(0, 100);
     circleProgress1.setCenter(54.9f, 54.7f);
@@ -55,15 +55,6 @@ DispenseProgressViewBase::DispenseProgressViewBase() :
     CancelButton.setAction(buttonCallback);
     add(CancelButton);
 
-    ReturnHomeButton.setXY(0, 254);
-    ReturnHomeButton.setBitmaps(touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_ID), touchgfx::Bitmap(BITMAP_BUTTON1_LARGE_CLICKED_ID));
-    ReturnHomeButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_NLY9));
-    ReturnHomeButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ReturnHomeButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ReturnHomeButton.setVisible(false);
-    ReturnHomeButton.setAction(buttonCallback);
-    add(ReturnHomeButton);
-
     ContainerPromptText.setXY(32, 142);
     ContainerPromptText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     ContainerPromptText.setLinespacing(0);
@@ -71,7 +62,7 @@ DispenseProgressViewBase::DispenseProgressViewBase() :
     ContainerPromptText.setVisible(false);
     add(ContainerPromptText);
 
-    DispensingText.setPosition(0, 37, 240, 40);
+    DispensingText.setPosition(0, 199, 240, 40);
     DispensingText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     DispensingText.setLinespacing(0);
     DispensingTextBuffer1[0] = 0;
@@ -82,12 +73,32 @@ DispenseProgressViewBase::DispenseProgressViewBase() :
     DispensingText.setVisible(false);
     add(DispensingText);
 
-    DispenseCompleteText.setXY(45, 151);
+    DispenseCompleteText.setXY(45, 261);
     DispenseCompleteText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     DispenseCompleteText.setLinespacing(0);
     DispenseCompleteText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7N8Q));
     DispenseCompleteText.setVisible(false);
     add(DispenseCompleteText);
+
+    LoadingText.setXY(84, 151);
+    LoadingText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    LoadingText.setLinespacing(0);
+    LoadingText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UN2I));
+    add(LoadingText);
+
+    ContainerRemovePromptText.setXY(4, 203);
+    ContainerRemovePromptText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ContainerRemovePromptText.setLinespacing(0);
+    ContainerRemovePromptText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_349Z));
+    ContainerRemovePromptText.setVisible(false);
+    add(ContainerRemovePromptText);
+
+    DispenseCancelledText.setXY(45, 261);
+    DispenseCancelledText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DispenseCancelledText.setLinespacing(0);
+    DispenseCancelledText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_J41U));
+    DispenseCancelledText.setVisible(false);
+    add(DispenseCancelledText);
 }
 
 DispenseProgressViewBase::~DispenseProgressViewBase()
@@ -102,18 +113,11 @@ void DispenseProgressViewBase::setupScreen()
 
 void DispenseProgressViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &ReturnHomeButton)
-    {
-        //Home
-        //When ReturnHomeButton clicked change screen to HomeScreen
-        //Go to HomeScreen with no screen transition
-        application().gotoHomeScreenScreenNoTransition();
-    }
     if (&src == &CancelButton)
     {
         //Cancel
-        //When CancelButton clicked change screen to HomeScreen
-        //Go to HomeScreen with no screen transition
-        application().gotoHomeScreenScreenNoTransition();
+        //When CancelButton clicked call virtual function
+        //Call cancelButtonPressed
+        cancelButtonPressed();
     }
 }

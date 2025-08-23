@@ -16,8 +16,8 @@ public:
     virtual void handleTickEvent();
 
     // Called by the Presenter to update the entire screen
-    void updateProgress(DispenseState_e state, int8_t recipe_index, int8_t size,
-                        float currentWeight, float totalTargetWeight);
+    void updateProgress(DispenseState_e state, bool wasCancelled, int8_t recipe_index, int8_t size,
+            float currentWeight, float totalTargetWeight);
 
     // Interaction handlers
     void cancelButtonPressed();
