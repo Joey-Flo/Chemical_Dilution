@@ -50,6 +50,7 @@ public:
     void updateBrightness(uint8_t brightness);
     void updateScaleCalibrationFactor(float newFactor);
     float getScaleCalibrationFactor() const;
+    uint8_t getBrightness() const;
 
 
 protected:

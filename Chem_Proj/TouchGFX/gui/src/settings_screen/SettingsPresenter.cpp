@@ -58,3 +58,15 @@ void SettingsPresenter::saveNewBrightnessValue(int value)
     //    (We will create this function in the Model next).
     model->updateBrightness(value);
 }
+
+int8_t SettingsPresenter::getVolumeUnit() const
+{
+    // The Presenter gets the value from the Model and returns it to the View.
+    return model->getVolumeUnit();
+}
+
+uint8_t SettingsPresenter::getBrightness() const
+{
+    // We will create this function in the Model next.
+    return model->getBrightness();
+}

@@ -273,3 +273,9 @@ float Model::getScaleCalibrationFactor() const
 {
     return myDeviceConfig.scale_calibration_factor;
 }
+
+uint8_t Model::getBrightness() const
+{
+    // Return the value directly from the master configuration struct.
+    return myDeviceConfig.brightness_level;
+}

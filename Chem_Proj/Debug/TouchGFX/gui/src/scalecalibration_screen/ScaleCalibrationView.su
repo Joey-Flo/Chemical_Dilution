@@ -68,22 +68,22 @@
 ../TouchGFX/gui/include/gui/common/CustomKeyboard.hpp:25:13:virtual CustomKeyboard::~CustomKeyboard()	16	static
 ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp:12:13:ScaleCalibrationView::~ScaleCalibrationView()	16	static
 ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp:12:13:virtual ScaleCalibrationView::~ScaleCalibrationView()	16	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:5:1:ScaleCalibrationView::ScaleCalibrationView()	24	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:12:6:virtual void ScaleCalibrationView::setupScreen()	16	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:17:6:virtual void ScaleCalibrationView::tearDownScreen()	16	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:22:6:virtual void ScaleCalibrationView::handleTickEvent()	24	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:76:6:virtual void ScaleCalibrationView::ScaleCalibrate()	16	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:86:6:virtual void ScaleCalibrationView::TareScale()	16	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:95:6:virtual void ScaleCalibrationView::EnterPressed()	40	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:116:6:virtual void ScaleCalibrationView::ExitPressed()	16	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:6:1:ScaleCalibrationView::ScaleCalibrationView()	24	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:13:6:virtual void ScaleCalibrationView::setupScreen()	16	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:18:6:virtual void ScaleCalibrationView::tearDownScreen()	16	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:23:6:virtual void ScaleCalibrationView::handleTickEvent()	24	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:77:6:virtual void ScaleCalibrationView::ScaleCalibrate()	16	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:87:6:virtual void ScaleCalibrationView::TareScale()	16	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:97:6:virtual void ScaleCalibrationView::EnterPressed()	40	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:118:6:virtual void ScaleCalibrationView::ExitPressed()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = short unsigned int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = short unsigned int]	16	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:125:1:void __static_initialization_and_destruction_0()	24	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:127:1:void __static_initialization_and_destruction_0()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	16	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:125:1:void __static_initialization_and_destruction_1()	8	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:127:1:void __static_initialization_and_destruction_1()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = CustomKeyboard; T1 = short unsigned int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = CustomKeyboard; T1 = short unsigned int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = CustomKeyboard]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = CustomKeyboard]	16	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:125:1:cpp)	8	static
-../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:125:1:cpp)	8	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:127:1:cpp)	8	static
+../TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationView.cpp:127:1:cpp)	8	static

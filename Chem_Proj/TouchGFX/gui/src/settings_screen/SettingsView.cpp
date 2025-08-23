@@ -25,6 +25,7 @@ void SettingsView::Reset_Defaults()
 	Config_Save(&myDeviceConfig);
 	DefaultsContainer.setVisible(false);
 	DefaultsContainer.invalidate();
+	updateAllSettings();
 }
 
 void SettingsView::setUnitText(int8_t unit)
@@ -74,4 +75,25 @@ void SettingsView::DefaultsExit()
 {
 	DefaultsContainer.setVisible(false);
 	DefaultsContainer.invalidate();
+}
+
+void SettingsView::updateAllSettings()
+{
+    // --- 1. Update the Unit Text ---
+    // Ask the presenter for the new, fresh default value.
+    int8_t currentUnit = presenter->getVolumeUnit(); // Assuming you have a getVolumeUnit in your presenter
+
+    // Now call your existing setUnitText function to update the display.
+    setUnitText(currentUnit);
+
+    // --- 2. Update the Brightness Slider ---
+    // Ask the presenter for the new, fresh default brightness.
+    uint8_t brightness = presenter->getBrightness(); // Assuming you have a getBrightness in your presenter
+
+    // Now call your existing setSliderValue function.
+    setSliderValue(brightness);
+
+    // --- 3. Add any other settings controls here ---
+    // If you have other controls on this page that depend on the config,
+    // you would add their update logic here as well.
 }

@@ -18,6 +18,7 @@ public:
     void brightnessSliderChanged(int value);
     void DefaultsSummon();
     void DefaultsExit();
+    void updateAllSettings();
 protected:
 };
 

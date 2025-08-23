@@ -64,6 +64,5 @@ float ScaleCalibrationPresenter::getLiveWeight()
 
 void ScaleCalibrationPresenter::tareScale()
 {
-    PlaySound(1);
 	hx711_tare(&my_scale, 10);
 }

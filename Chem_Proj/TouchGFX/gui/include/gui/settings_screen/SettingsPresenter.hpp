@@ -31,6 +31,8 @@ public:
 
     void setInitialBrightness();
     void saveNewBrightnessValue(int value);
+    int8_t getVolumeUnit() const;
+    uint8_t getBrightness() const;
 
 private:
     SettingsPresenter();

@@ -1,6 +1,7 @@
 #include <gui/scalecalibration_screen/ScaleCalibrationView.hpp>
 #include <cstring>
 #include <cmath>
+#include "main.h"
 
 ScaleCalibrationView::ScaleCalibrationView()
 {
@@ -88,6 +89,7 @@ void ScaleCalibrationView::TareScale()
     // The View commands the Presenter to perform the tare action.
     // The Presenter will then call the C-level hx711_tare function.
     // (You will need to add a simple "tareScale()" function to your presenter).
+	PlaySound(1);
     presenter->tareScale();
 }
 

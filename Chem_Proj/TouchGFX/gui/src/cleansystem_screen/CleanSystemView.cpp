@@ -47,7 +47,7 @@ void CleanSystemView::setSystemReady(bool isReady)
     ContainerPromptText.invalidate();
     ReadyText.invalidate();
 
-    if ((isReady != lastSystemReadyState) && (tickVal > 10))
+    if ((isReady != lastSystemReadyState) && (tickVal > 3))
     {
         if (isReady)
         {
