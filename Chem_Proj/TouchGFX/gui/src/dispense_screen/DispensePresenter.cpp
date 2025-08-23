@@ -45,6 +45,17 @@ void DispensePresenter::loadScreenData(int page_index)
     view.displayData(recipe, enabled_pumps, unit);
 }
 
+void DispensePresenter::dispenseButtonPressed(int dispense_size)
+{
+    // 1. The Presenter updates the Model using the new public functions.
+    model->setSelectedRecipeIndex(activePageIndex);
+    model->setSelectedDispenseSize(dispense_size);
+
+    // 2. The Presenter now has access to the application instance
+    //    because it inherits from touchgfx::Presenter.
+    static_cast<FrontendApplication*>(Application::getInstance())->gotoDispenseProgressScreenNoTransition();
+}
+
 
 void DispensePresenter::startDispense(int dispense_size)
 {

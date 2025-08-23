@@ -31,6 +31,7 @@ public:
     void currentPageChanged(int page_index);
     void startDispense(int dispense_size);
     void loadScreenData(int page_index);
+    void dispenseButtonPressed(int dispense_size);
 
     virtual ~DispensePresenter() {}
 

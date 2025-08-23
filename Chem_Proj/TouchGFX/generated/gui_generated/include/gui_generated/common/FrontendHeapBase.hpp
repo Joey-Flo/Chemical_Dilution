@@ -28,6 +28,8 @@
 #include <gui/cleansystem_screen/CleanSystemPresenter.hpp>
 #include <gui/dispense_screen/DispenseView.hpp>
 #include <gui/dispense_screen/DispensePresenter.hpp>
+#include <gui/dispenseprogress_screen/DispenseProgressView.hpp>
+#include <gui/dispenseprogress_screen/DispenseProgressPresenter.hpp>
 
 
 /**
@@ -58,7 +60,8 @@ public:
             touchgfx::meta::TypeList< PrimePumpsView,
             touchgfx::meta::TypeList< CleanSystemView,
             touchgfx::meta::TypeList< DispenseView,
-            touchgfx::meta::Nil > > > > > > >
+            touchgfx::meta::TypeList< DispenseProgressView,
+            touchgfx::meta::Nil > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -78,7 +81,8 @@ public:
             touchgfx::meta::TypeList< PrimePumpsPresenter,
             touchgfx::meta::TypeList< CleanSystemPresenter,
             touchgfx::meta::TypeList< DispensePresenter,
-            touchgfx::meta::Nil > > > > > > >
+            touchgfx::meta::TypeList< DispenseProgressPresenter,
+            touchgfx::meta::Nil > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**

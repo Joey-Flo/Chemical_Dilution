@@ -90,14 +90,19 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:37:5:touchgfx::AbstractButtonContainer::AbstractButtonContainer()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:51:10:void touchgfx::AbstractButtonContainer::setPressed(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:64:10:bool touchgfx::AbstractButtonContainer::getPressed() const	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:70:10:void touchgfx::AbstractButtonContainer::setAlpha(uint8_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:77:13:uint8_t touchgfx::AbstractButtonContainer::getAlpha() const	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:89:10:void touchgfx::AbstractButtonContainer::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButtonContainer&>&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:114:18:virtual void touchgfx::AbstractButtonContainer::handlePressedUpdated()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:119:18:virtual void touchgfx::AbstractButtonContainer::handleAlphaUpdated()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:virtual touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp:28:26:FrontendApplication& DispenseViewBase::application()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp:30:18:virtual void DispenseViewBase::mediumButtonClicked()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp:34:18:virtual void DispenseViewBase::heavyButtonClicked()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp:38:18:virtual void DispenseViewBase::lightButtonClicked()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp:44:26:FrontendApplication& DispenseViewBase::application()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<DispensePresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<DispensePresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
@@ -114,27 +119,36 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:43:7:virtual touchgfx::TextButtonStyle<touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger> >::~TextButtonStyle()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<DispenseViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<DispenseViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
-../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:9:1:DispenseViewBase::DispenseViewBase()	1304	static
-../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:354:1:DispenseViewBase::~DispenseViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:354:1:virtual DispenseViewBase::~DispenseViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:359:6:virtual void DispenseViewBase::setupScreen()	16	static
-../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:364:6:void DispenseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<DispenseViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<DispenseViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	16	static
+../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:9:1:DispenseViewBase::DispenseViewBase()	1344	static
+../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:367:1:DispenseViewBase::~DispenseViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:367:1:virtual DispenseViewBase::~DispenseViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:372:6:virtual void DispenseViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:377:6:void DispenseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../TouchGFX/generated/gui_generated/src/dispense_screen/DispenseViewBase.cpp:388:6:void DispenseViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = DispensePresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:46:5:touchgfx::TextButtonStyle<T>::TextButtonStyle() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButton&>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = DispenseViewBase; T1 = const touchgfx::AbstractButton&]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButton&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButton&]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButtonContainer&>::GenericCallback()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = DispenseViewBase; T1 = const touchgfx::AbstractButtonContainer&]	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButtonContainer&]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButtonContainer&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:61:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderPosition(int16_t, int16_t, int16_t, int16_t) [with T = touchgfx::ClickButtonTrigger]	40	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:110:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBorderSize(uint8_t) [with T = touchgfx::ClickButtonTrigger]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:94:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderColors(touchgfx::colortype, touchgfx::colortype, touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::ClickButtonTrigger]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:67:10:void touchgfx::TextButtonStyle<T>::setText(touchgfx::TypedText) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:113:10:void touchgfx::TextButtonStyle<T>::setTextPosition(int16_t, int16_t, int16_t, int16_t) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	40	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:134:10:void touchgfx::TextButtonStyle<T>::setTextColors(touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:148:18:void touchgfx::TextButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	32	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = DispenseViewBase; T1 = const touchgfx::AbstractButtonContainer&]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = DispenseViewBase; T1 = const touchgfx::AbstractButtonContainer&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = DispenseViewBase; T1 = const touchgfx::AbstractButton&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = DispenseViewBase; T1 = const touchgfx::AbstractButton&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:155:18:void touchgfx::TextButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	24	static

@@ -280,6 +280,18 @@
     <Filter Include="Header Files\generated\gui_generated\dispense_screen">
       <UniqueIdentifier>DB3651FC-E8DA-5557-5592-6FAFEAE8C09B</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\dispenseprogress_screen">
+      <UniqueIdentifier>B37FEDD3-5657-6912-8F53-D255CD653F80</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\dispenseprogress_screen">
+      <UniqueIdentifier>32779FE0-C588-8520-788E-0B4D5B300D32</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\dispenseprogress_screen">
+      <UniqueIdentifier>83AB682C-FFDB-2D44-28AC-71F33B0D3436</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\dispenseprogress_screen">
+      <UniqueIdentifier>8E2B44C6-0B45-2CC6-C76E-733811117059</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -413,6 +425,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\dispense_screen\DispenseViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\dispense_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\dispenseprogress_screen\DispenseProgressPresenter.cpp">
+      <Filter>Source Files\gui\dispenseprogress_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\dispenseprogress_screen\DispenseProgressView.cpp">
+      <Filter>Source Files\gui\dispenseprogress_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\dispenseprogress_screen\DispenseProgressViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\dispenseprogress_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -966,6 +987,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\dispense_screen\DispenseViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\dispense_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\dispenseprogress_screen\DispenseProgressPresenter.hpp">
+      <Filter>Header Files\gui\dispenseprogress_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\dispenseprogress_screen\DispenseProgressView.hpp">
+      <Filter>Header Files\gui\dispenseprogress_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\dispenseprogress_screen\DispenseProgressViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\dispenseprogress_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

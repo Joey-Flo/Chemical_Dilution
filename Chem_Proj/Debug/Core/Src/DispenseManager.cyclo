@@ -1,0 +1,9 @@
+../Core/Src/DispenseManager.c:32:13:Pump_On	1
+../Core/Src/DispenseManager.c:41:13:Pump_Off	1
+../Core/Src/DispenseManager.c:50:13:Update_Scale_Reading	2
+../Core/Src/DispenseManager.c:75:6:DispenseManager_Init	1
+../Core/Src/DispenseManager.c:82:5:DispenseManager_StartJob	7
+../Core/Src/DispenseManager.c:136:6:DispenseManager_CancelJob	1
+../Core/Src/DispenseManager.c:143:22:DispenseManager_GetJobStatus	1
+../Core/Src/DispenseManager.c:148:7:DispenseManager_GetCurrentWeight	1
+../Core/Src/DispenseManager.c:155:6:DispenseManager_Process	18

@@ -17,6 +17,7 @@ RM := rm -rf
 -include TouchGFX/gui/src/primepumps_screen/subdir.mk
 -include TouchGFX/gui/src/model/subdir.mk
 -include TouchGFX/gui/src/homescreen_screen/subdir.mk
+-include TouchGFX/gui/src/dispenseprogress_screen/subdir.mk
 -include TouchGFX/gui/src/dispense_screen/subdir.mk
 -include TouchGFX/gui/src/containers/subdir.mk
 -include TouchGFX/gui/src/common/subdir.mk
@@ -30,6 +31,7 @@ RM := rm -rf
 -include TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/primepumps_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/homescreen_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/dispenseprogress_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/dispense_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/containers/subdir.mk
 -include TouchGFX/generated/gui_generated/src/common/subdir.mk

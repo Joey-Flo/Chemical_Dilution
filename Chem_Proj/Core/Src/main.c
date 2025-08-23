@@ -99,6 +99,7 @@ int main(void)
   {
 
 	  MX_TouchGFX_Process();
+	  DispenseManager_Process();
 //	  MultiplexerTest();
 //	  PlayHappyBirthday(&htim4, TIM_CHANNEL_1);
     /* USER CODE BEGIN 3 */

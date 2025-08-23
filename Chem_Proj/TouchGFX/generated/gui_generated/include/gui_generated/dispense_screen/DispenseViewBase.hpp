@@ -24,6 +24,22 @@ public:
     virtual ~DispenseViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void mediumButtonClicked()
+    {
+        // Override and implement this function in Dispense
+    }
+    virtual void heavyButtonClicked()
+    {
+        // Override and implement this function in Dispense
+    }
+    virtual void lightButtonClicked()
+    {
+        // Override and implement this function in Dispense
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -88,6 +104,7 @@ protected:
     touchgfx::Container Page6;
     touchgfx::Container Page7;
     touchgfx::Container Page8;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1;
 
     /*
      * Wildcard Buffers
@@ -105,11 +122,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<DispenseViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<DispenseViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

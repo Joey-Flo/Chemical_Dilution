@@ -16,6 +16,24 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_NLY9" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">RETURN HOME</Translation>
+      </Text>
+      <Text Id="__SingleUse_7N8Q" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">Dispense Complete!</Translation>
+      </Text>
+      <Text Id="__SingleUse_9NKP" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Dispensing&#10; &lt;value1&gt; &lt;value2&gt;...</Translation>
+      </Text>
+      <Text Id="__SingleUse_7JTG" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">CANCEL</Translation>
+      </Text>
+      <Text Id="__SingleUse_SP4D" Alignment="Center" TypographyId="Display">
+        <Translation Language="GB">Please place container&#10; on scale...</Translation>
+      </Text>
+      <Text Id="__SingleUse_730L" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
+      </Text>
       <Text Id="__SingleUse_QK37" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Heavy</Translation>
       </Text>

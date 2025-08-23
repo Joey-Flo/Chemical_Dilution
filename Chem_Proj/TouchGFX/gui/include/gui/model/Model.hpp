@@ -51,10 +51,16 @@ public:
     void updateScaleCalibrationFactor(float newFactor);
     float getScaleCalibrationFactor() const;
     uint8_t getBrightness() const;
+    void setSelectedRecipeIndex(int8_t index);
+    int8_t getSelectedRecipeIndex() const;
+    void setSelectedDispenseSize(int8_t size);
+    int8_t getSelectedDispenseSize() const;
 
 
 protected:
     ModelListener* modelListener;
+    int8_t selectedRecipeIndex;
+    int8_t selectedDispenseSize;
 };
 
 #endif // MODEL_HPP

@@ -7,7 +7,8 @@
 #include <texts/TextKeysAndLanguages.hpp>
 
 DispenseViewBase::DispenseViewBase() :
-    buttonCallback(this, &DispenseViewBase::buttonCallbackHandler)
+    buttonCallback(this, &DispenseViewBase::buttonCallbackHandler),
+    flexButtonCallback(this, &DispenseViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -149,6 +150,7 @@ DispenseViewBase::DispenseViewBase() :
     HeavyButton_Center.setText(TypedText(T___SINGLEUSE_C6P6));
     HeavyButton_Center.setTextPosition(0, 9, 211, 47);
     HeavyButton_Center.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(173, 173, 173));
+    HeavyButton_Center.setAction(flexButtonCallback);
     HeavyButton_Center.setPosition(15, 257, 211, 47);
     WidgetBuffer_Center.add(HeavyButton_Center);
 
@@ -158,6 +160,7 @@ DispenseViewBase::DispenseViewBase() :
     MediumButton_Center.setText(TypedText(T___SINGLEUSE_Q4BE));
     MediumButton_Center.setTextPosition(0, 9, 210, 47);
     MediumButton_Center.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(173, 173, 173));
+    MediumButton_Center.setAction(flexButtonCallback);
     MediumButton_Center.setPosition(15, 194, 210, 47);
     WidgetBuffer_Center.add(MediumButton_Center);
 
@@ -167,6 +170,7 @@ DispenseViewBase::DispenseViewBase() :
     LightButton_Center.setText(TypedText(T___SINGLEUSE_AHUF));
     LightButton_Center.setTextPosition(0, 9, 211, 47);
     LightButton_Center.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(173, 173, 173));
+    LightButton_Center.setAction(flexButtonCallback);
     LightButton_Center.setPosition(14, 131, 211, 47);
     WidgetBuffer_Center.add(LightButton_Center);
 
@@ -349,6 +353,15 @@ DispenseViewBase::DispenseViewBase() :
 
     swipeContainer1.setSelectedPage(0);
     add(swipeContainer1);
+
+    flexButton1.setBoxWithBorderPosition(0, 0, 15, 15);
+    flexButton1.setBorderSize(5);
+    flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton1.setAlpha(0);
+    flexButton1.setVisible(false);
+    flexButton1.setAction(flexButtonCallback);
+    flexButton1.setPosition(198, -15, 15, 15);
+    add(flexButton1);
 }
 
 DispenseViewBase::~DispenseViewBase()
@@ -369,5 +382,37 @@ void DispenseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //When BackButton clicked change screen to HomeScreen
         //Go to HomeScreen with no screen transition
         application().gotoHomeScreenScreenNoTransition();
+    }
+}
+
+void DispenseViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &MediumButton_Center)
+    {
+        //MediumClicked
+        //When MediumButton_Center clicked call virtual function
+        //Call mediumButtonClicked
+        mediumButtonClicked();
+    }
+    if (&src == &HeavyButton_Center)
+    {
+        //HeavyClicked
+        //When HeavyButton_Center clicked call virtual function
+        //Call heavyButtonClicked
+        heavyButtonClicked();
+    }
+    if (&src == &LightButton_Center)
+    {
+        //LightClicked
+        //When LightButton_Center clicked call virtual function
+        //Call lightButtonClicked
+        lightButtonClicked();
+    }
+    if (&src == &flexButton1)
+    {
+        //Interaction1
+        //When flexButton1 clicked change screen to DispenseProgress
+        //Go to DispenseProgress with no screen transition
+        application().gotoDispenseProgressScreenNoTransition();
     }
 }

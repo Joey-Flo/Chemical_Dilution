@@ -25,6 +25,8 @@
 #include <gui/cleansystem_screen/CleanSystemPresenter.hpp>
 #include <gui/dispense_screen/DispenseView.hpp>
 #include <gui/dispense_screen/DispensePresenter.hpp>
+#include <gui/dispenseprogress_screen/DispenseProgressView.hpp>
+#include <gui/dispenseprogress_screen/DispenseProgressPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -147,4 +149,17 @@ void FrontendApplicationBase::gotoDispenseScreenNoTransition()
 void FrontendApplicationBase::gotoDispenseScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<DispenseView, DispensePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// DispenseProgress
+
+void FrontendApplicationBase::gotoDispenseProgressScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDispenseProgressScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDispenseProgressScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<DispenseProgressView, DispenseProgressPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

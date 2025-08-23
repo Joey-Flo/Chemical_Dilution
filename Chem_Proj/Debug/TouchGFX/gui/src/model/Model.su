@@ -23,6 +23,10 @@ C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 ../TouchGFX/gui/src/model/Model.cpp:263:6:void Model::updateScaleCalibrationFactor(float)	16	static
 ../TouchGFX/gui/src/model/Model.cpp:272:7:float Model::getScaleCalibrationFactor() const	16	static
 ../TouchGFX/gui/src/model/Model.cpp:277:9:uint8_t Model::getBrightness() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:283:6:void Model::setSelectedRecipeIndex(int8_t)	16	static
+../TouchGFX/gui/src/model/Model.cpp:288:8:int8_t Model::getSelectedRecipeIndex() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:293:6:void Model::setSelectedDispenseSize(int8_t)	16	static
+../TouchGFX/gui/src/model/Model.cpp:298:8:int8_t Model::getSelectedDispenseSize() const	16	static
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:137:2:std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_Vector_impl() [with _Tp = int; _Alloc = std::allocator<int>]	24	static
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:1281:7:void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = int; _Alloc = std::allocator<int>]	48	static
 C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/bits/stl_vector.h:99:2:std::_Vector_base<_Tp, _Alloc>::_Vector_impl_data::_Vector_impl_data() [with _Tp = int; _Alloc = std::allocator<int>]	16	static

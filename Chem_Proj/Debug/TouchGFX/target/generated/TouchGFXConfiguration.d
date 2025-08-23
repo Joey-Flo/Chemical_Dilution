@@ -135,6 +135,15 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../TouchGFX/gui/include/gui/dispense_screen/DispenseView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp \
  ../TouchGFX/gui/include/gui/dispense_screen/DispensePresenter.hpp \
+ ../TouchGFX/gui/include/gui/dispenseprogress_screen/DispenseProgressView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/dispenseprogress_screen/DispenseProgressViewBase.hpp \
+ ../TouchGFX/gui/include/gui/dispenseprogress_screen/DispenseProgressPresenter.hpp \
+ ../Core/Inc/DispenseManager_shared_types.h \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/CircleProgress.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
  ../TouchGFX/target/generated/STM32DMA.hpp \
  ../TouchGFX/target/TouchGFXHAL.hpp \
@@ -306,6 +315,15 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../TouchGFX/gui/include/gui/dispense_screen/DispenseView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp:
 ../TouchGFX/gui/include/gui/dispense_screen/DispensePresenter.hpp:
+../TouchGFX/gui/include/gui/dispenseprogress_screen/DispenseProgressView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/dispenseprogress_screen/DispenseProgressViewBase.hpp:
+../TouchGFX/gui/include/gui/dispenseprogress_screen/DispenseProgressPresenter.hpp:
+../Core/Inc/DispenseManager_shared_types.h:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/CircleProgress.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:
 ../TouchGFX/target/generated/STM32DMA.hpp:
 ../TouchGFX/target/TouchGFXHAL.hpp:

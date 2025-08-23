@@ -3,6 +3,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+../TouchGFX/generated/gui_generated/include/gui_generated/dispense_screen/DispenseViewBase.hpp:44:26:FrontendApplication& DispenseViewBase::application()	1
 ../TouchGFX/gui/include/gui/dispense_screen/DispenseView.hpp:13:13:DispenseView::~DispenseView()	1
 ../TouchGFX/gui/include/gui/dispense_screen/DispenseView.hpp:13:13:virtual DispenseView::~DispenseView()	1
 ../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:4:1:DispenseView::DispenseView()	1
@@ -14,6 +15,6 @@
 ../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:154:6:virtual void DispenseView::handleTickEvent()	2
 ../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:168:6:void DispenseView::requestDataLoad()	1
 ../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:175:6:void DispenseView::displayData(const ChemicalRecipe_t&, const std::vector<int>&, int8_t)	15
-../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:258:6:void DispenseView::lightButtonClicked()	1
-../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:259:6:void DispenseView::mediumButtonClicked()	1
-../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:260:6:void DispenseView::heavyButtonClicked()	1
+../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:258:6:virtual void DispenseView::lightButtonClicked()	1
+../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:267:6:virtual void DispenseView::mediumButtonClicked()	1
+../TouchGFX/gui/src/dispense_screen/DispenseView.cpp:274:6:virtual void DispenseView::heavyButtonClicked()	1

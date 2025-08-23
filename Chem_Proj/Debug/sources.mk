@@ -63,6 +63,7 @@ TouchGFX/generated/gui_generated/src/cleansystem_screen \
 TouchGFX/generated/gui_generated/src/common \
 TouchGFX/generated/gui_generated/src/containers \
 TouchGFX/generated/gui_generated/src/dispense_screen \
+TouchGFX/generated/gui_generated/src/dispenseprogress_screen \
 TouchGFX/generated/gui_generated/src/homescreen_screen \
 TouchGFX/generated/gui_generated/src/primepumps_screen \
 TouchGFX/generated/gui_generated/src/pumpsetupscreen_screen \
@@ -76,6 +77,7 @@ TouchGFX/gui/src/cleansystem_screen \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/containers \
 TouchGFX/gui/src/dispense_screen \
+TouchGFX/gui/src/dispenseprogress_screen \
 TouchGFX/gui/src/homescreen_screen \
 TouchGFX/gui/src/model \
 TouchGFX/gui/src/primepumps_screen \

@@ -44,6 +44,9 @@ public:
     // Dispense
     void gotoDispenseScreenNoTransition();
 
+    // DispenseProgress
+    void gotoDispenseProgressScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -72,6 +75,9 @@ protected:
 
     // Dispense
     void gotoDispenseScreenNoTransitionImpl();
+
+    // DispenseProgress
+    void gotoDispenseProgressScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

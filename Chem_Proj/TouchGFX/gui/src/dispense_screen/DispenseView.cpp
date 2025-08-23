@@ -255,6 +255,25 @@ void DispenseView::displayData(const ChemicalRecipe_t& data, const std::vector<i
     }
 }
 
-void DispenseView::lightButtonClicked()  { presenter->startDispense(0); }
-void DispenseView::mediumButtonClicked() { presenter->startDispense(1); }
-void DispenseView::heavyButtonClicked()  { presenter->startDispense(2); }
+void DispenseView::lightButtonClicked()
+{
+    // 1. Tell the model what was selected.
+	 presenter->dispenseButtonPressed(0);
+
+    // 2. Transition to the progress screen.
+    application().gotoDispenseProgressScreenNoTransition();
+}
+
+void DispenseView::mediumButtonClicked()
+{
+	presenter->dispenseButtonPressed(1);
+
+    application().gotoDispenseProgressScreenNoTransition();
+}
+
+void DispenseView::heavyButtonClicked()
+{
+	presenter->dispenseButtonPressed(2);
+
+    application().gotoDispenseProgressScreenNoTransition();
+}

@@ -51,10 +51,10 @@
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:14:13:FrontendApplication::~FrontendApplication()	1
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:14:13:virtual FrontendApplication::~FrontendApplication()	1
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:16:18:virtual void FrontendApplication::handleTickEvent()	1
-../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:102:18:virtual void FrontendHeapBase::gotoStartScreen(FrontendApplication&)	1
-../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:107:5:FrontendHeapBase::FrontendHeapBase(touchgfx::AbstractPartition&, touchgfx::AbstractPartition&, touchgfx::AbstractPartition&, FrontendApplication&)	1
-../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:46:7:FrontendHeapBase::~FrontendHeapBase()	1
-../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:46:7:virtual FrontendHeapBase::~FrontendHeapBase()	1
+../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:106:18:virtual void FrontendHeapBase::gotoStartScreen(FrontendApplication&)	1
+../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:111:5:FrontendHeapBase::FrontendHeapBase(touchgfx::AbstractPartition&, touchgfx::AbstractPartition&, touchgfx::AbstractPartition&, FrontendApplication&)	1
+../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:48:7:FrontendHeapBase::~FrontendHeapBase()	1
+../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:48:7:virtual FrontendHeapBase::~FrontendHeapBase()	1
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:42:7:touchgfx::Partition<touchgfx::meta::TypeList<ChemicalsSetupPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::~Partition()	1
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:42:7:virtual touchgfx::Partition<touchgfx::meta::TypeList<ChemicalsSetupPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::~Partition()	1
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:42:7:touchgfx::Partition<touchgfx::meta::TypeList<ChemicalsSetupView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::~Partition()	1

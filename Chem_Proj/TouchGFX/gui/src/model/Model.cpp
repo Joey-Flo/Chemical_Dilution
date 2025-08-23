@@ -5,7 +5,7 @@
 
 extern DeviceConfiguration_t myDeviceConfig; // The model has access to the real data
 
-Model::Model() : modelListener(0)
+Model::Model() : modelListener(0), selectedRecipeIndex(0), selectedDispenseSize(0)
 {
 
 }
@@ -278,4 +278,24 @@ uint8_t Model::getBrightness() const
 {
     // Return the value directly from the master configuration struct.
     return myDeviceConfig.brightness_level;
+}
+
+void Model::setSelectedRecipeIndex(int8_t index)
+{
+    selectedRecipeIndex = index;
+}
+
+int8_t Model::getSelectedRecipeIndex() const
+{
+    return selectedRecipeIndex;
+}
+
+void Model::setSelectedDispenseSize(int8_t size)
+{
+    selectedDispenseSize = size;
+}
+
+int8_t Model::getSelectedDispenseSize() const
+{
+    return selectedDispenseSize;
 }
