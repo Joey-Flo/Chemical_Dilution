@@ -32,6 +32,7 @@ TIM_HandleTypeDef htim4;
 TIM_HandleTypeDef htim5;
 hx711_t my_scale;
 DeviceConfiguration_t myDeviceConfig;
+uint8_t lastSystemReadyState = 1;
 
 extern int16_t _width;       								///< (oriented) display width
 extern int16_t _height;      								///< (oriented) display height
@@ -90,6 +91,8 @@ int main(void)
     Displ_Init(Displ_Orientat_0);       // Initialize display controller. Adjust orientation (0, 90, 180, 270) as needed for your UI design.
     Displ_BackLight('I'); // Initialize backlight timer
     BKLIT_TIMER->BKLIT_CCR = (uint32_t)myDeviceConfig.brightness_level;
+
+    PlaySound(5);
 
 
   while (1)

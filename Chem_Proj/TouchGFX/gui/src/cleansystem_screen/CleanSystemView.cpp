@@ -1,4 +1,6 @@
 #include <gui/cleansystem_screen/CleanSystemView.hpp>
+#include "main.h"
+extern uint8_t lastSystemReadyState;
 
 CleanSystemView::CleanSystemView()
 {
@@ -8,6 +10,7 @@ CleanSystemView::CleanSystemView()
 void CleanSystemView::setupScreen()
 {
     CleanSystemViewBase::setupScreen();
+    tickVal = 0;
     setSystemReady(false);
 }
 
@@ -25,12 +28,14 @@ void CleanSystemView::handleTickEvent()
     {
         presenter->checkScaleStatus();
     }
+    tickVal++;
 }
 
 // The function the Presenter calls to update our state
 void CleanSystemView::setSystemReady(bool isReady)
 {
-    systemIsReady = isReady;
+    // --- THIS IS THE NEW LOGIC ---
+
 
     // Update the UI elements based on the state
     DisabledOverlay.setVisible(!isReady);
@@ -41,6 +46,22 @@ void CleanSystemView::setSystemReady(bool isReady)
     DisabledOverlay.invalidate();
     ContainerPromptText.invalidate();
     ReadyText.invalidate();
+
+    if ((isReady != lastSystemReadyState) && (tickVal > 10))
+    {
+        if (isReady)
+        {
+            PlaySound(2);
+        }
+        else
+        {
+            PlaySound(3);
+        }
+    }
+
+    // Update the current state and the last known state for the next check.
+    systemIsReady = isReady;
+    lastSystemReadyState = isReady;
 }
 
 // The event handler for the "press and hold" button

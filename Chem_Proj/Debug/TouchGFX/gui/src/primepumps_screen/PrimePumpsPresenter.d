@@ -108,7 +108,8 @@ TouchGFX/gui/src/primepumps_screen/PrimePumpsPresenter.o: \
  ../Core/Inc/hx711Config.h ../Core/Inc/PWMDriver.h ../Core/Inc/HAL_Init.h \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
- ../Core/Inc/device_config.h ../Core/Inc/shared_types.h
+ ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
+ ../Core/Inc/Sounds.h
 ../TouchGFX/gui/include/gui/primepumps_screen/PrimePumpsView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/primepumps_screen/PrimePumpsViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -228,3 +229,4 @@ TouchGFX/gui/src/primepumps_screen/PrimePumpsPresenter.o: \
 ../Core/Inc/Flash.h:
 ../Core/Inc/device_config.h:
 ../Core/Inc/shared_types.h:
+../Core/Inc/Sounds.h:

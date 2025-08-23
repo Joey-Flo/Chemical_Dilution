@@ -5,13 +5,13 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
 ../TouchGFX/gui/include/gui/settings_screen/SettingsView.hpp:11:13:SettingsView::~SettingsView()	16	static
 ../TouchGFX/gui/include/gui/settings_screen/SettingsView.hpp:11:13:virtual SettingsView::~SettingsView()	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:5:1:SettingsView::SettingsView()	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:10:6:virtual void SettingsView::setupScreen()	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:15:6:virtual void SettingsView::tearDownScreen()	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:20:6:virtual void SettingsView::Reset_Defaults()	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:28:6:void SettingsView::setUnitText(int8_t)	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:46:6:virtual void SettingsView::unitButtonClicked()	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:52:6:void SettingsView::setSliderValue(int)	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:58:6:virtual void SettingsView::brightnessSliderChanged(int)	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:65:6:virtual void SettingsView::DefaultsSummon()	16	static
-../TouchGFX/gui/src/settings_screen/SettingsView.cpp:71:6:virtual void SettingsView::DefaultsExit()	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:6:1:SettingsView::SettingsView()	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:11:6:virtual void SettingsView::setupScreen()	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:16:6:virtual void SettingsView::tearDownScreen()	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:21:6:virtual void SettingsView::Reset_Defaults()	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:30:6:void SettingsView::setUnitText(int8_t)	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:48:6:virtual void SettingsView::unitButtonClicked()	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:54:6:void SettingsView::setSliderValue(int)	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:60:6:virtual void SettingsView::brightnessSliderChanged(int)	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:67:6:virtual void SettingsView::DefaultsSummon()	16	static
+../TouchGFX/gui/src/settings_screen/SettingsView.cpp:73:6:virtual void SettingsView::DefaultsExit()	16	static

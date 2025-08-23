@@ -15,5 +15,6 @@
 void PlayHappyBirthday(TIM_HandleTypeDef *htim, uint32_t Channel);
 void WeightTest(int min, int max, TIM_HandleTypeDef *htim, uint32_t Channel);
 void MultiplexerTest(void);
+void SoundTest(void);
 
 #endif /* INC_HARDWARETEST_H_ */

@@ -1,5 +1,5 @@
-Core/Src/z_displ_ILI9XXX.o: ../Core/Src/z_displ_ILI9XXX.c \
- ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
+Core/Src/Sounds.o: ../Core/Src/Sounds.c ../Core/Inc/main.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h \
@@ -36,7 +36,7 @@ Core/Src/z_displ_ILI9XXX.o: ../Core/Src/z_displ_ILI9XXX.c \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
  ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
- ../Core/Inc/Sounds.h ../Core/Inc/z_displ_ILI9XXX.h ../Core/Inc/fonts.h
+ ../Core/Inc/Sounds.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -85,5 +85,3 @@ Core/Src/z_displ_ILI9XXX.o: ../Core/Src/z_displ_ILI9XXX.c \
 ../Core/Inc/device_config.h:
 ../Core/Inc/shared_types.h:
 ../Core/Inc/Sounds.h:
-../Core/Inc/z_displ_ILI9XXX.h:
-../Core/Inc/fonts.h:

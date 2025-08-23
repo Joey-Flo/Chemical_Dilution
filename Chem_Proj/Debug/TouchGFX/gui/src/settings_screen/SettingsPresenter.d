@@ -95,7 +95,7 @@ TouchGFX/gui/src/settings_screen/SettingsPresenter.o: \
  ../Core/Inc/HAL_Init.h ../Core/Inc/MuxDriver.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/Flash.h ../Core/Inc/device_config.h \
- ../Core/Inc/shared_types.h
+ ../Core/Inc/shared_types.h ../Core/Inc/Sounds.h
 ../TouchGFX/gui/include/gui/settings_screen/SettingsView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/settings_screen/SettingsViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -202,3 +202,4 @@ TouchGFX/gui/src/settings_screen/SettingsPresenter.o: \
 ../Core/Inc/Flash.h:
 ../Core/Inc/device_config.h:
 ../Core/Inc/shared_types.h:
+../Core/Inc/Sounds.h:

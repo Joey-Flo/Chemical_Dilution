@@ -41,7 +41,7 @@ TouchGFX/target/STM32TouchController.o: \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
  ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
- ../Core/Inc/z_touch_XPT2046.h
+ ../Core/Inc/Sounds.h ../Core/Inc/z_touch_XPT2046.h
 ../TouchGFX/target/STM32TouchController.hpp:
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:
@@ -93,4 +93,5 @@ TouchGFX/target/STM32TouchController.o: \
 ../Core/Inc/Flash.h:
 ../Core/Inc/device_config.h:
 ../Core/Inc/shared_types.h:
+../Core/Inc/Sounds.h:
 ../Core/Inc/z_touch_XPT2046.h:

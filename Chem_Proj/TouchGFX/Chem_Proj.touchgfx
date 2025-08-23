@@ -3870,6 +3870,7 @@
               {
                 "Type": "BoxWithBorder",
                 "Name": "boxWithBorder3",
+                "X": 1,
                 "Y": 245,
                 "Width": 239,
                 "Height": 62,

@@ -36,7 +36,7 @@ Core/Src/HAL_Init.o: ../Core/Src/HAL_Init.c ../Core/Inc/main.h \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
  ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
- ../Core/Inc/HAL_Init.h
+ ../Core/Inc/Sounds.h ../Core/Inc/HAL_Init.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -84,4 +84,5 @@ Core/Src/HAL_Init.o: ../Core/Src/HAL_Init.c ../Core/Inc/main.h \
 ../Core/Inc/Flash.h:
 ../Core/Inc/device_config.h:
 ../Core/Inc/shared_types.h:
+../Core/Inc/Sounds.h:
 ../Core/Inc/HAL_Init.h:

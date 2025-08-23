@@ -89,7 +89,14 @@ TouchGFX/gui/src/settings_screen/SettingsView.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
- ../Core/Inc/shared_types.h
+ ../Core/Inc/shared_types.h ../Core/Inc/main.h ../Core/Inc/fonts.h \
+ ../Core/Inc/z_displ_ILI9XXX.h ../Core/Inc/main.h \
+ ../Core/Inc/z_displ_ILI9XXX_test.h ../Core/Inc/z_touch_XPT2046.h \
+ ../Core/Inc/z_touch_XPT2046_menu.h ../Core/Inc/hx711.h \
+ ../Core/Inc/hx711Config.h ../Core/Inc/PWMDriver.h ../Core/Inc/HAL_Init.h \
+ ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
+ ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
+ ../Core/Inc/device_config.h ../Core/Inc/Sounds.h
 ../TouchGFX/gui/include/gui/settings_screen/SettingsView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/settings_screen/SettingsViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -181,3 +188,20 @@ TouchGFX/gui/src/settings_screen/SettingsView.o: \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Core/Inc/shared_types.h:
+../Core/Inc/main.h:
+../Core/Inc/fonts.h:
+../Core/Inc/z_displ_ILI9XXX.h:
+../Core/Inc/main.h:
+../Core/Inc/z_displ_ILI9XXX_test.h:
+../Core/Inc/z_touch_XPT2046.h:
+../Core/Inc/z_touch_XPT2046_menu.h:
+../Core/Inc/hx711.h:
+../Core/Inc/hx711Config.h:
+../Core/Inc/PWMDriver.h:
+../Core/Inc/HAL_Init.h:
+../Core/Inc/MuxDriver.h:
+../Core/Inc/HardwareTest.h:
+../Core/Inc/HardwareTest.h:
+../Core/Inc/Flash.h:
+../Core/Inc/device_config.h:
+../Core/Inc/Sounds.h:

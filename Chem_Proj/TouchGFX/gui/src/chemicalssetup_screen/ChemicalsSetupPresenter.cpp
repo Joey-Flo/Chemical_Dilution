@@ -2,6 +2,7 @@
 #include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
 #include <gui/common/FieldIDs.hpp>
 #include <cstdlib>
+#include "main.h"
 
 ChemicalsSetupPresenter::ChemicalsSetupPresenter(ChemicalsSetupView& v)
     : view(v),
@@ -155,18 +156,21 @@ void ChemicalsSetupPresenter::newValueEntered(const char* text)
     }
 
     // --- 3. RELOAD THE SCREEN ---
+    PlaySound(1);
     loadScreenData(activePageIndex);
 }
 
 void ChemicalsSetupPresenter::addPumpSetup(int page_index)
 {
     model->addPumpToRecipe(page_index);
+    PlaySound(1);
     loadScreenData(page_index);
 }
 
 void ChemicalsSetupPresenter::removePumpSetup(int page_index)
 {
     model->removePumpFromRecipe(page_index);
+    PlaySound(1);
     loadScreenData(page_index);
 }
 
@@ -177,6 +181,7 @@ void ChemicalsSetupPresenter::chemicalEnableToggled()
     bool new_state_is_on = !(recipe.is_enabled == 1);
     model->setChemicalEnableState(activePageIndex, new_state_is_on);
     view.invalidateEnableButton();
+    PlaySound(1);
 }
 
 const ChemicalRecipe_t& ChemicalsSetupPresenter::getRecipeDataForPage(int page_index) const

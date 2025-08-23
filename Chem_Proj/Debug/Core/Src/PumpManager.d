@@ -37,7 +37,7 @@ Core/Src/PumpManager.o: ../Core/Src/PumpManager.c \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
  ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
- ../Core/Inc/MuxDriver.h ../Core/Inc/PWMDriver.h
+ ../Core/Inc/Sounds.h ../Core/Inc/MuxDriver.h ../Core/Inc/PWMDriver.h
 ../Core/Inc/PumpManager.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
@@ -85,5 +85,6 @@ Core/Src/PumpManager.o: ../Core/Src/PumpManager.c \
 ../Core/Inc/Flash.h:
 ../Core/Inc/device_config.h:
 ../Core/Inc/shared_types.h:
+../Core/Inc/Sounds.h:
 ../Core/Inc/MuxDriver.h:
 ../Core/Inc/PWMDriver.h:

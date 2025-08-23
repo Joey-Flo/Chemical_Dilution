@@ -2,6 +2,7 @@
 #include <gui/pumpsetupscreen_screen/PumpSetupScreenPresenter.hpp>
 #include <cstdlib> // For strtof
 #include <gui/common/CustomKeyboard.hpp>
+#include "main.h"
 
 PumpSetupScreenPresenter::PumpSetupScreenPresenter(PumpSetupScreenView& v)
     : view(v)
@@ -29,6 +30,7 @@ void PumpSetupScreenPresenter::pumpToggledHandler(int8_t index)
     // and flip it.
     bool current_state_is_on = (model->getPumpEnableState(array_index) == 1);
     bool new_state_is_on = !current_state_is_on;
+    PlaySound(1);
 
     // Tell the model to update its data in RAM and save to flash.
     model->setPumpEnableState(array_index, new_state_is_on);
@@ -60,5 +62,6 @@ void PumpSetupScreenPresenter::newDensityEntered(int8_t index, const char* keybo
     // ELSE: The input was invalid, so we do nothing.
 
     // --- Tell the View to refresh its screen to show the final value ---
+    PlaySound(1);
     view.setupScreen();
 }

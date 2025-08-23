@@ -35,6 +35,7 @@ void SettingsPresenter::updateUnitText()
 void SettingsPresenter::unitButtonClicked()
 {
     // 1. Command the Model to flip the setting
+	PlaySound(1);
     model->toggleVolumeUnit();
 
     // 2. After the model is updated, tell the view to show the new value

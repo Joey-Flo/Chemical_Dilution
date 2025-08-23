@@ -1,5 +1,6 @@
 #include <gui/settings_screen/SettingsView.hpp>
 #include "device_config.h"
+#include "main.h"
 extern DeviceConfiguration_t myDeviceConfig;
 
 SettingsView::SettingsView()
@@ -19,6 +20,7 @@ void SettingsView::tearDownScreen()
 
 void SettingsView::Reset_Defaults()
 {
+	PlaySound(1);
 	Config_SetDefaults(&myDeviceConfig);
 	Config_Save(&myDeviceConfig);
 	DefaultsContainer.setVisible(false);

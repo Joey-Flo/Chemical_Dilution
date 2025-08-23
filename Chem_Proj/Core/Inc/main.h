@@ -41,6 +41,7 @@ extern "C" {
 #include "Flash.h"
 #include "device_config.h"
 #include "shared_types.h"
+#include "Sounds.h"
 
 extern CRC_HandleTypeDef hcrc;
 extern SPI_HandleTypeDef hspi1;

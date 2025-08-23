@@ -40,6 +40,7 @@ void CleanSystemPresenter::checkScaleStatus()
     }
     else
     {
+    	Valve_Close();
         view.setSystemReady(false); // Container is missing
     }
 }

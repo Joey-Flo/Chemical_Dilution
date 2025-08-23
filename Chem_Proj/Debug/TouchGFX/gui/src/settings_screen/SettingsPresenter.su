@@ -13,5 +13,5 @@
 ../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:19:6:virtual void SettingsPresenter::activate()	16	static
 ../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:26:6:void SettingsPresenter::updateUnitText()	24	static
 ../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:35:6:void SettingsPresenter::unitButtonClicked()	16	static
-../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:44:6:void SettingsPresenter::setInitialBrightness()	24	static
-../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:51:6:void SettingsPresenter::saveNewBrightnessValue(int)	16	static
+../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:45:6:void SettingsPresenter::setInitialBrightness()	24	static
+../TouchGFX/gui/src/settings_screen/SettingsPresenter.cpp:52:6:void SettingsPresenter::saveNewBrightnessValue(int)	16	static

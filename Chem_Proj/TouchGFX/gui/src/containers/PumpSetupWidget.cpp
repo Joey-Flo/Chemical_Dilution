@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <algorithm>
 #include <gui/chemicalssetup_screen/ChemicalsSetupPresenter.hpp>
+#include "main.h"
 
 PumpSetupWidget::PumpSetupWidget() :
     presenter(nullptr),
@@ -115,7 +116,7 @@ void PumpSetupWidget::dropdownPumpSelectedHandler(int pump_index)
     // Update the button's text to show the new selection
     Unicode::snprintf(PumpSelectTextBuffer, PUMPSELECTTEXT_SIZE, "Pump %d", currentData.pump_index + 1);
     PumpSelectText.invalidate();
-
+    PlaySound(1);
     // Signal to the main screen that our data has changed
     if (saveDataCallback && saveDataCallback->isValid()) {
         saveDataCallback->execute(setupIndex, currentData);

@@ -36,7 +36,8 @@ Core/Src/ValveDriver.o: ../Core/Src/ValveDriver.c \
  ../Core/Inc/hx711Config.h ../Core/Inc/PWMDriver.h ../Core/Inc/HAL_Init.h \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
- ../Core/Inc/device_config.h ../Core/Inc/shared_types.h
+ ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
+ ../Core/Inc/Sounds.h
 ../Core/Inc/ValveDriver.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
@@ -84,3 +85,4 @@ Core/Src/ValveDriver.o: ../Core/Src/ValveDriver.c \
 ../Core/Inc/Flash.h:
 ../Core/Inc/device_config.h:
 ../Core/Inc/shared_types.h:
+../Core/Inc/Sounds.h:

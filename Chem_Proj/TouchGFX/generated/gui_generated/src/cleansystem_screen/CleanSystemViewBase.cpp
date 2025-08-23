@@ -69,7 +69,7 @@ CleanSystemViewBase::CleanSystemViewBase() :
     add(ScreenDescriptionText);
 
     DisabledOverlay.setPosition(0, 0, 240, 320);
-    boxWithBorder3.setPosition(0, 245, 239, 62);
+    boxWithBorder3.setPosition(1, 245, 239, 62);
     boxWithBorder3.setColor(touchgfx::Color::getColorFromRGB(87, 84, 84));
     boxWithBorder3.setBorderColor(touchgfx::Color::getColorFromRGB(33, 31, 31));
     boxWithBorder3.setBorderSize(8);

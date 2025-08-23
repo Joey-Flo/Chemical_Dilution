@@ -1,5 +1,6 @@
 #include <gui/scalecalibration_screen/ScaleCalibrationView.hpp>
 #include <gui/scalecalibration_screen/ScaleCalibrationPresenter.hpp>
+#include "main.h"
 extern "C" {
 #include "hx711.h"
 }
@@ -63,5 +64,6 @@ float ScaleCalibrationPresenter::getLiveWeight()
 
 void ScaleCalibrationPresenter::tareScale()
 {
+    PlaySound(1);
 	hx711_tare(&my_scale, 10);
 }

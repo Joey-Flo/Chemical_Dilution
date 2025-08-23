@@ -15,6 +15,7 @@ public:
     virtual void handleClickEvent(const touchgfx::ClickEvent& event);
     void setSystemReady(bool isReady);
     bool systemIsReady;
+    int tickVal;
 protected:
 };
 

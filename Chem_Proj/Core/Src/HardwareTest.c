@@ -153,3 +153,22 @@ void MultiplexerTest(void){
 
 	  DutyCycleAdjust(&htim5, TIM_CHANNEL_2, 0);
 }
+
+void SoundTest(void){
+    FrequencyAdjust(&htim5, TIM_CHANNEL_2, 2500);
+    DutyCycleAdjust(&htim5, TIM_CHANNEL_2, 500);
+	  for (int i = 1; i < 6; i++){
+		  PumpChannelSelect(i - 1);
+		  if (i == 1){
+			  for (int j = 0; j < 4; j++){
+				  PlaySound(i);
+				  HAL_Delay(500);
+			  }
+		  }
+
+		  else{
+			  PlaySound(i);
+		  }
+		 HAL_Delay(2000);
+	  }
+}

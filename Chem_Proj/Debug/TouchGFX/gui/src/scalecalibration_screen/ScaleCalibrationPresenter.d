@@ -65,8 +65,7 @@ TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationPresenter.o: \
  ../TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../TouchGFX/gui/include/gui/common/KeyboardKeyMapping.hpp \
- ../Core/Inc/hx711.h ../Core/Inc/main.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
+ ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h \
@@ -96,13 +95,14 @@ TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationPresenter.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
- ../Core/Inc/fonts.h ../Core/Inc/z_displ_ILI9XXX.h \
+ ../Core/Inc/fonts.h ../Core/Inc/z_displ_ILI9XXX.h ../Core/Inc/main.h \
  ../Core/Inc/z_displ_ILI9XXX_test.h ../Core/Inc/z_touch_XPT2046.h \
  ../Core/Inc/z_touch_XPT2046_menu.h ../Core/Inc/hx711.h \
  ../Core/Inc/hx711Config.h ../Core/Inc/PWMDriver.h ../Core/Inc/HAL_Init.h \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
- ../Core/Inc/device_config.h ../Core/Inc/shared_types.h
+ ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
+ ../Core/Inc/Sounds.h ../Core/Inc/hx711.h
 ../TouchGFX/gui/include/gui/scalecalibration_screen/ScaleCalibrationView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/scalecalibration_screen/ScaleCalibrationViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -169,7 +169,6 @@ TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationPresenter.o: \
 ../TouchGFX/generated/images/include/BitmapDatabase.hpp:
 ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../TouchGFX/gui/include/gui/common/KeyboardKeyMapping.hpp:
-../Core/Inc/hx711.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -203,6 +202,7 @@ TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationPresenter.o: \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Core/Inc/fonts.h:
 ../Core/Inc/z_displ_ILI9XXX.h:
+../Core/Inc/main.h:
 ../Core/Inc/z_displ_ILI9XXX_test.h:
 ../Core/Inc/z_touch_XPT2046.h:
 ../Core/Inc/z_touch_XPT2046_menu.h:
@@ -216,3 +216,5 @@ TouchGFX/gui/src/scalecalibration_screen/ScaleCalibrationPresenter.o: \
 ../Core/Inc/Flash.h:
 ../Core/Inc/device_config.h:
 ../Core/Inc/shared_types.h:
+../Core/Inc/Sounds.h:
+../Core/Inc/hx711.h:

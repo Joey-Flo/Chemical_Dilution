@@ -109,7 +109,7 @@ TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.o: \
  ../Core/Inc/MuxDriver.h ../Core/Inc/HardwareTest.h \
  ../Core/Inc/HardwareTest.h ../Core/Inc/Flash.h \
  ../Core/Inc/device_config.h ../Core/Inc/shared_types.h \
- ../Core/Inc/ValveDriver.h
+ ../Core/Inc/Sounds.h ../Core/Inc/ValveDriver.h
 ../TouchGFX/gui/include/gui/cleansystem_screen/CleanSystemView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/cleansystem_screen/CleanSystemViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -229,4 +229,5 @@ TouchGFX/gui/src/cleansystem_screen/CleanSystemPresenter.o: \
 ../Core/Inc/Flash.h:
 ../Core/Inc/device_config.h:
 ../Core/Inc/shared_types.h:
+../Core/Inc/Sounds.h:
 ../Core/Inc/ValveDriver.h:
