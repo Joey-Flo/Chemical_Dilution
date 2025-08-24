@@ -34,7 +34,7 @@ void CleanSystemPresenter::checkScaleStatus()
     float current_weight = (float)tared_value / factor;
 
     // Now, command the view based on the weight
-    if (current_weight >= 200.0f)
+    if (current_weight >= 25.0f)
     {
         view.setSystemReady(true); // Container is present
     }

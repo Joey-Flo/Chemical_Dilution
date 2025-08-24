@@ -13,7 +13,7 @@
 #define CONTAINER_MIN_WEIGHT_GRAMS    25.0f
 #define CLOSE_THRESHOLD_PERCENT       0.80f  // Slow down at 80% of target
 #define PUMP_PWM_FAST                 1000   // 100% duty cycle
-#define PUMP_PWM_SLOW                 200    // 20% duty cycle
+#define PUMP_PWM_SLOW                 700    // 20% duty cycle
 #define DRIP_SETTLE_DELAY_MS          500    // Wait 0.5s for drips after stopping a pump
 #define STABLE_READING_COUNT_TARGET   12
 
